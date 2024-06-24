@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SIGE_Project
 {
+    //este es un nuevo cambio
     internal class clasePrueba
     {
     }
