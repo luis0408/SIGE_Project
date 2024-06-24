@@ -14,7 +14,7 @@ namespace SIGE_Project
     //Aqui esta dejando un comentario JESFEL XD
      class Utilerias
     {
-        // nuevo comentario
+        // nuevo comentario ejemplo
         public SqlConnection con;
         public DataSet ds = new DataSet();
         public SqlDataAdapter da;
