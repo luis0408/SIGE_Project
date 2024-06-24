@@ -30,12 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.checkEdit_recordar = new DevExpress.XtraEditors.CheckEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_user = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -44,17 +49,12 @@
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cambiarConexiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkEdit_recordar = new DevExpress.XtraEditors.CheckEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_recordar.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_recordar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +68,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Appearance.BackColor = System.Drawing.Color.White;
+            this.simpleButton5.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.simpleButton5.Appearance.BorderColor = System.Drawing.Color.White;
+            this.simpleButton5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton5.Appearance.Options.UseBackColor = true;
+            this.simpleButton5.Appearance.Options.UseBorderColor = true;
+            this.simpleButton5.Appearance.Options.UseForeColor = true;
+            this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton5.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_minimize_window_32;
+            this.simpleButton5.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton5.Location = new System.Drawing.Point(421, 2);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(37, 31);
+            this.simpleButton5.TabIndex = 12;
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.White;
+            this.simpleButton3.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.simpleButton3.Appearance.BorderColor = System.Drawing.Color.White;
+            this.simpleButton3.Appearance.Options.UseBackColor = true;
+            this.simpleButton3.Appearance.Options.UseBorderColor = true;
+            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton3.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_close_window_32;
+            this.simpleButton3.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton3.Location = new System.Drawing.Point(464, 0);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(36, 35);
+            this.simpleButton3.TabIndex = 11;
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // label1
             // 
@@ -121,6 +155,18 @@
             this.panel4.Size = new System.Drawing.Size(500, 250);
             this.panel4.TabIndex = 3;
             // 
+            // checkEdit_recordar
+            // 
+            this.checkEdit_recordar.Location = new System.Drawing.Point(163, 141);
+            this.checkEdit_recordar.Name = "checkEdit_recordar";
+            this.checkEdit_recordar.Properties.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit_recordar.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.checkEdit_recordar.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit_recordar.Properties.Appearance.Options.UseForeColor = true;
+            this.checkEdit_recordar.Properties.Caption = "Recordar crendenciales";
+            this.checkEdit_recordar.Size = new System.Drawing.Size(200, 18);
+            this.checkEdit_recordar.TabIndex = 0;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -147,6 +193,26 @@
             this.simpleButton4.TabIndex = 10;
             this.simpleButton4.Text = "Ingresar";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton2.ImageOptions.Image = global::SIGE_Project.Properties.Resources.iconfinder_lock_safe_password_2992204__2_;
+            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton2.Location = new System.Drawing.Point(57, 68);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(82, 40);
+            this.simpleButton2.TabIndex = 7;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton1.ImageOptions.Image = global::SIGE_Project.Properties.Resources.iconfinder_Customize_user_profile_Account_man_1_4484738;
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(57, 22);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(82, 40);
+            this.simpleButton1.TabIndex = 6;
             // 
             // textBox_password
             // 
@@ -227,72 +293,6 @@
             this.cambiarConexiónToolStripMenuItem.Text = "Cambiar conexión";
             this.cambiarConexiónToolStripMenuItem.Click += new System.EventHandler(this.cambiarConexiónToolStripMenuItem_Click);
             // 
-            // checkEdit_recordar
-            // 
-            this.checkEdit_recordar.Location = new System.Drawing.Point(163, 141);
-            this.checkEdit_recordar.Name = "checkEdit_recordar";
-            this.checkEdit_recordar.Properties.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit_recordar.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.checkEdit_recordar.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit_recordar.Properties.Appearance.Options.UseForeColor = true;
-            this.checkEdit_recordar.Properties.Caption = "Recordar crendenciales";
-            this.checkEdit_recordar.Size = new System.Drawing.Size(200, 20);
-            this.checkEdit_recordar.TabIndex = 0;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton2.ImageOptions.Image = global::SIGE_Project.Properties.Resources.iconfinder_lock_safe_password_2992204__2_;
-            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(57, 68);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(82, 40);
-            this.simpleButton2.TabIndex = 7;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton1.ImageOptions.Image = global::SIGE_Project.Properties.Resources.iconfinder_Customize_user_profile_Account_man_1_4484738;
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(57, 22);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(82, 40);
-            this.simpleButton1.TabIndex = 6;
-            // 
-            // simpleButton5
-            // 
-            this.simpleButton5.Appearance.BackColor = System.Drawing.Color.White;
-            this.simpleButton5.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.simpleButton5.Appearance.BorderColor = System.Drawing.Color.White;
-            this.simpleButton5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.simpleButton5.Appearance.Options.UseBackColor = true;
-            this.simpleButton5.Appearance.Options.UseBorderColor = true;
-            this.simpleButton5.Appearance.Options.UseForeColor = true;
-            this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton5.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_minimize_window_32;
-            this.simpleButton5.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton5.Location = new System.Drawing.Point(421, 2);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(37, 31);
-            this.simpleButton5.TabIndex = 12;
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.BorderColor = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.Appearance.Options.UseBorderColor = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton3.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_close_window_32;
-            this.simpleButton3.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(464, 0);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(36, 35);
-            this.simpleButton3.TabIndex = 11;
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
             // LOGIN
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gray;
@@ -312,9 +312,9 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_recordar.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_recordar.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
