@@ -8,5 +8,8 @@ namespace SIGE_Project
 {
     internal class Class1
     {
+        string nombre;
+        string apellidoPaterno;
+        string apellidoMaterno;
     }
 }
