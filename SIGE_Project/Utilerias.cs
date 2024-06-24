@@ -13,7 +13,7 @@ namespace SIGE_Project
 {
      class Utilerias
     {
-        // nuevo comentario
+        // nuevo comentario ejemplo
         public SqlConnection con;
         public DataSet ds = new DataSet();
         public SqlDataAdapter da;
