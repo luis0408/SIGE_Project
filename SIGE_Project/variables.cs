@@ -13,4 +13,6 @@ namespace SIGE_Project
         public static string nombreCompleto = "";
         public static string tipoUser = "";
     }
+
+
 }
