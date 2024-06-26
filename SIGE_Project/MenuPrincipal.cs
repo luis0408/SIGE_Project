@@ -173,9 +173,9 @@ namespace SIGE_Project
                     break;
 
             }
-            //SqlCommand cm = new SqlCommand("select nomubiform from [PV_CONF_Menus] where replace((replace(item,' ','')+convert(varchar,coditem)+'.png'),'/','')='" + cad + "'", cnn);
-            SqlCommand cm = new SqlCommand("select ubicform from [PV_CONF_Menus] where replace((convert(varchar,idpestaña)+convert(varchar,idcat) + replace(item,' ','')+convert(varchar,iditem)+'.png'),'/','')='" + cad + "'", cnn);
-            //MessageBox.Show(cnn.ConnectionString);
+            //SqlCommand cm = new SqlCommand("select nomubiform from [SIGE_Configuracion_Menus] where replace((replace(item,' ','')+convert(varchar,coditem)+'.png'),'/','')='" + cad + "'", cnn);
+            SqlCommand cm = new SqlCommand("select ubicform from [SIGE_Configuracion_Menus] where replace((convert(varchar,idpestaña)+convert(varchar,idcat) + replace(item,' ','')+convert(varchar,iditem)+'.png'),'/','')='" + cad + "'", cnn);
+            
             SqlDataReader dr;
             cnn.Open();
             dr = cm.ExecuteReader();
@@ -188,43 +188,11 @@ namespace SIGE_Project
                 }
                 else
                 {
-                    MessageBox.Show("Modulo en Proceso de Desarrollo", "Desarrollo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Módulo en Proceso de Desarrollo", "Desarrollo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             cnn.Close();
-            //switch (e.Item.Name) 
-            //switch (e.Item.Name)
-            //{
-
-            //    case "Ficha30.png":
-            //        usuarios.FrmUsuarios frm = new usuarios.FrmUsuarios();
-            //        frm.MdiParent = this;
-            //        frm.Show();
-
-            //        break;
-            //    case "Permisos40.png":
-            //        usuarios.frmCFPermisos frm2 = new usuarios.frmCFPermisos();
-            //        frm2.MdiParent = this;
-            //        frm2.Show();
-            //        break;
-            //    case "reporteNomina320.png":
-
-            //        break;
-            //    case "Informes330.png":
-            //        Reportes.frmMenuReportes frm4 = new Reportes.frmMenuReportes();
-            //        frm4.MdiParent = this;
-            //        frm4.Show();
-            //        break;
-            //    case "Empleados240.png":
-
-            //        break;
-            //    default:
-            //        mostrarForm("nombreform");
-            //        MessageBox.Show("Modulo en Proceso de Desarrollo", "Desarrollo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        break;
-            //}
-
-            //   MessageBox.Show ("Presiono "+ cad,cad);
+            
 
 
         }
@@ -316,37 +284,33 @@ namespace SIGE_Project
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            ///habilitarformulariosparaabrirtipotab();
-            //cargarmenus();
-            //habilitarformulariosparaabrirtipotab();
-            //cargarmenus();
+            
             SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             Image tnImage;
             string sql = "";
-            //this.Text = " S I S P R E M --" + this.Text + "-- Versión." + obtenerversioninsatalada();
-            this.Text = this.Text + "- Versión: " + obtenerversioninsatalada();
-            if (Convert.ToInt32(variables.tipoUser) == 1) //"ADMINISTRADOR"))
+            this.Text = " SIGE --" + this.Text + "-- Versión." + obtenerversioninsatalada();
+            //this.Text = this.Text + "- Versión: " + obtenerversioninsatalada();
+            if (variables.tipoUser.Equals("ADMIN")) //"ADMINISTRADOR"))
+            
             {
-                sql = "select pestaña,categoria,idcat,item,replace((convert(varchar,idpestaña)+convert(varchar,idcat) + replace(item,' ','')+convert(varchar,iditem)+'.png'),'/','') id_item,Imagen  from [PV_CONF_Menus] order by idpestaña, idcat, idItem";
+                sql = "select pestaña,categoria,idcat,item,replace((convert(varchar,idpestaña)+convert(varchar,idcat) + replace(item,' ','')+convert(varchar,iditem)+'.png'),'/','') id_item,Imagen  from [SIGE_Configuracion_Menus] order by idpestaña, idcat, idItem";
 
             }
             else
             {
                 sql = "  select pestaña,categoria,mn.idCat,mn.item "
-+ "  ,replace((convert(varchar,mn.idPestaña)+convert(varchar,mn.idCat) +"
-+ "   replace(mn.item,' ','')+convert(varchar,mn.idItem)+'.png'),'/','') id_item,Imagen "
-+ "    from [PV_CONF_Menus] mn,PV_Usuarios_PermisosXUsuario pr  where 1 = 1 "
-+ "    and mn.idpestaña=pr.idPestaña and mn.idcat=pr.idCat and mn.idItem=pr.iditem  "
-+ "    and upper(pr.cve_usu)=upper('" + variables.varUser + "') order by mn.idpestaña, idcat, mn.idItem";
+                    + "  ,replace((convert(varchar,mn.idPestaña)+convert(varchar,mn.idCat) +"
+                    + "  replace(mn.item,' ','')+convert(varchar,mn.idItem)+'.png'),'/','') id_item,Imagen "
+                    + "  from [SIGE_Configuracion_Menus] mn,PV_Usuarios_PermisosXUsuario pr  where 1 = 1 "
+                    + "  and mn.idpestaña=pr.idPestaña and mn.idcat=pr.idCat and mn.idItem=pr.iditem  "
+                    + "  and upper(pr.cve_usu)=upper('" + variables.varUser + "') order by mn.idpestaña, idcat, mn.idItem";
             }
 
             SqlCommand cmd = new SqlCommand(sql, cnn);
             SqlDataReader dr;
             cnn.Open();
-            //' Create a RibbonControl
-            // ' Dim RibbonControl As New RibbonControl()
             this.Controls.Add(ribbon);
-            // ' Assign the image collection that will provide images for bar items.
+            ////Se asigna la colección de imágenes que proporcionará imágenes para los elementos de la barra
             dr = cmd.ExecuteReader();
             string pest_ant = "";
             string grup_ant = "";
@@ -354,42 +318,29 @@ namespace SIGE_Project
             string pest = "";
             string grup = "";
             string itm = "";
-            bool pest_sts, cat_sts, btn_sts;
-
+           // bool pest_sts, cat_sts, btn_sts;
             var page1 = new RibbonPage();
             var group1 = new RibbonPageGroup();
             BarButtonItem itembutton;
-            //RibbonControl RibbonControl = new RibbonControl();
-
 
 
             while (dr.Read())
             {
-                int p;
+                //int p;
                 pest = Convert.ToString(dr.GetValue(0));
                 grup = Convert.ToString(dr.GetValue(1));
                 itm = Convert.ToString(dr.GetValue(3));
                 nomimg = Convert.ToString(dr.GetValue(4));
 
-                //  ' Create a Ribbon page.
+                ////Se crea Ribbon page y Ribbon group.
                 if (pest_ant == "")
                 {
                     page1 = new RibbonPage(pest);
                     group1 = new RibbonPageGroup(grup);
                     grup_ant = grup;
-                    // ' Create another Ribbon page group.
-                    //if (btn_sts)
-                    //{
+                    
                     itembutton = Ribbon.Items.CreateButton(itm);
                     itembutton.Name = nomimg;
-
-
-                    //tnImage = ((dotNetclass ,"System.Drawing.Bitmap").fromFile( getDir #maxRoot +"ui\\icons\\Splines_24i.bmp"));
-                    //itembutton.LargeGlyph = tnImage;
-                    //if (checaruta (Application.StartupPath + "\\images\\" + nomimg))
-
-                    //itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\" + nomimg); 
-
 
                     if (dr["Imagen"] != DBNull.Value)
                     {
@@ -400,27 +351,22 @@ namespace SIGE_Project
                         }
                     }
                     else
-                        itembutton.LargeGlyph = Properties.Resources.invalido;// System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png");
+                    {
+                        itembutton.LargeGlyph = Properties.Resources.invalido;
+                    }
+                        
 
                     itembutton.ItemClick += new ItemClickEventHandler(itemOpen_ItemClick);
                     group1.ItemLinks.Add(itembutton);
-                    //}
-
                     pest_ant = pest;
                 }
                 else if (pest_ant == pest)
                 {
                     if (grup_ant == grup)
                     {
-                        //if (btn_sts)
-                        //{
                         itembutton = Ribbon.Items.CreateButton(itm);
                         itembutton.Name = nomimg;
-                        // if (checaruta (Application.StartupPath + "\\images\\" + nomimg))
 
-                        //itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\" + nomimg); 
-                        //else
-                        //     itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png"); 
                         if (dr["Imagen"] != DBNull.Value)
                         {
                             Image img = u.Bytes2Image((byte[])dr["Imagen"]);
@@ -430,11 +376,14 @@ namespace SIGE_Project
                             }
                         }
                         else
-                            itembutton.LargeGlyph = Properties.Resources.invalido;// System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png");
+                        {
+                            itembutton.LargeGlyph = Properties.Resources.invalido;
+
+                        }
 
                         itembutton.ItemClick += new ItemClickEventHandler(itemOpen_ItemClick);
                         group1.ItemLinks.Add(itembutton);
-                        // }
+                       
                         grup_ant = grup;
                     }
                     else
@@ -442,16 +391,9 @@ namespace SIGE_Project
                         page1.Groups.Add(group1);
                         group1 = new RibbonPageGroup(grup);
                         grup_ant = grup;
-                        // ' Create another Ribbon page group.
-                        //if (btn_sts)
-                        //{
+                        
                         itembutton = Ribbon.Items.CreateButton(itm);
                         itembutton.Name = nomimg;
-                        // if (checaruta (Application.StartupPath + "\\images\\" + nomimg))
-
-                        //itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\" + nomimg); 
-                        //else
-                        //     itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png"); 
                         if (dr["Imagen"] != DBNull.Value)
                         {
                             Image img = u.Bytes2Image((byte[])dr["Imagen"]);
@@ -461,7 +403,7 @@ namespace SIGE_Project
                             }
                         }
                         else
-                            itembutton.LargeGlyph = Properties.Resources.invalido;// System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png");
+                            itembutton.LargeGlyph = Properties.Resources.invalido;
 
                         itembutton.ItemClick += new ItemClickEventHandler(itemOpen_ItemClick);
                         group1.ItemLinks.Add(itembutton);
@@ -476,16 +418,8 @@ namespace SIGE_Project
                     page1 = new RibbonPage(pest);
                     group1 = new RibbonPageGroup(grup);
                     grup_ant = grup;
-                    //' Create another Ribbon page group.
-                    //if (btn_sts)
-                    //{
                     itembutton = Ribbon.Items.CreateButton(itm);
                     itembutton.Name = nomimg;
-                    // if (checaruta (Application.StartupPath + "\\images\\" + nomimg))
-
-                    //itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\" + nomimg); 
-                    //else
-                    //     itembutton.LargeGlyph = System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png"); 
                     if (dr["Imagen"] != DBNull.Value)
                     {
                         Image img = u.Bytes2Image((byte[])dr["Imagen"]);
@@ -495,7 +429,7 @@ namespace SIGE_Project
                         }
                     }
                     else
-                        itembutton.LargeGlyph = Properties.Resources.invalido;//System.Drawing.Image.FromFile(Application.StartupPath + "\\images\\Cancelar59.png");
+                        itembutton.LargeGlyph = Properties.Resources.invalido;
 
 
                     itembutton.ItemClick += new ItemClickEventHandler(itemOpen_ItemClick);
@@ -506,13 +440,7 @@ namespace SIGE_Project
                 }
             }
             page1.Groups.Add(group1);
-
-
-
             ribbon.Pages.Add(page1);
-
-
-
 
             cnn.Close();
 
@@ -523,8 +451,6 @@ namespace SIGE_Project
             galleryBarItem.Gallery.Groups.Add(itemGroup1);
 
 
-
-
             page1 = new RibbonPage("Styles");
             group1 = new RibbonPageGroup("Estilos");
             grup_ant = grup;
@@ -533,8 +459,6 @@ namespace SIGE_Project
             page1.Groups.Add(group1);
             ribbon.Pages.Add(page1);
 
-
-            // RibbonControl1.Pages[0].Groups[0].ItemLinks.Add(galleryBarItem);
 
             BarLocalizer.Active = new MyBarLocalizer();
 
@@ -605,11 +529,6 @@ namespace SIGE_Project
         {
             barStaticItem2.Caption = DateTime.Now.ToString();
 
-            /*if (DateTime.Now.Minute % 1 == 0)
-            {
-                checarNotificaciones();
-            }*/
-
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -627,8 +546,6 @@ namespace SIGE_Project
                              this.GetType().Assembly.GetName().Name,
                              System.String.Concat(this.GetType().Assembly.GetName().Name, ".",
                              nombreform));
-
-
 
 
                 //Llamamos la rutina que no permitira abrir 2 veces el formulario
@@ -654,16 +571,11 @@ namespace SIGE_Project
                         && frm != formulario)
                     {
                         escargado = true;
-
-
-
                         //Sale del loop si es verdadero
                         break;
                         frm.Close();
                     }
                 }
-
-
                 if (!escargado)
                 {
                     //Carga el formulario si no esta llamado

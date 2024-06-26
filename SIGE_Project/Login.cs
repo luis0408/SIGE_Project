@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
@@ -16,18 +17,18 @@ namespace SIGE_Project
 {
     public partial class LOGIN : DevExpress.XtraEditors.XtraForm
     {
-        bool cons;
         
-        Utilerias util = new Utilerias();
-        //string tipoUser;
 
-        global::System.Text.UTF8Encoding ue = new global::System.Text.UTF8Encoding();
+       // global::System.Text.UTF8Encoding ue = new global::System.Text.UTF8Encoding();
+
+        // //Variable para la encriptacion
         string Encrypted = "";
         string Desencrypted = "";
         public LOGIN()
         {
             InitializeComponent();
            
+            // //Si esta la configuracion de recordar se colocan los valores guardados
             if (Settings.Default.recordarme.Contains("1"))
             {
                 textBox_user.Text = Settings.Default.usuario;
@@ -43,106 +44,86 @@ namespace SIGE_Project
         }
         public void ingresar()
         {
-            if (textBox_user.Text == "")
+            // //Se validan los campos llenos correctamente
+            if (string.IsNullOrEmpty(textBox_user.Text))
             {
                 textBox_user.Focus();
-                //textBox_user.Text = "Ingrese un usuario";
                 XtraMessageBox.Show("Ingrese un usuario.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
 
+            }
+            if (string.IsNullOrEmpty(textBox_password.Text))
+            {
+                textBox_password.Focus();
+                XtraMessageBox.Show("Ingrese una constraseña", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                if (textBox_password.Text == "")
+                
+                string usuario = textBox_user.Text;
+                string constrsenia = textBox_password.Text;
+                string constrseniaEncriptada = Encriptar(constrsenia);
+
+                //se evalua que el usuario y contraseña sean correctas
+                object[] datos = {usuario,constrseniaEncriptada };
+                string[] parametors = { "@usuario", "@constrasenia" };
+                DataSet ds = new DataSet();
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_DATOSLOGIN", datos,parametors);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    textBox_password.Focus();
-                    //textBox_password.Text = "Ingrese una contraseña";
-                    XtraMessageBox.Show("Ingrese una constraseña", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-
-
-                }
-                else
-                {
-                    string functionReturnValue = null;
-                    string user = textBox_user.Text;
-                    string pass = textBox_password.Text;
-                    string en = Encriptar(pass);
-
-                    //se evalua que el usuario y contraseña sean correctas
-                    cons = util.Consultar1("PV_tblUsuarios", "cuenta_usuario", user.ToUpper(), "contrasenia", en);
-
-                    if (cons)
+                    DataTable dt = ds.Tables[0];
+                    int estadoUsuario = Convert.ToInt32(dt.Rows[0]["estadoUser"]);
+                    if (estadoUsuario==0)/////Se valida el estado del usuario ingresado
                     {
-                        //se obtienen los datos del usuario
-                        DataSet ds = new DataSet();
-                        string CONSULTA = "select*from PV_tblUsuarios where cuenta_usuario='" + user.ToUpper()+"'";
-                        ds = util.ejecutarQueryDataset("datosUser", CONSULTA);
-                        DataTable dt = ds.Tables[0];
-                        //variables.idUser = Convert.ToInt32(dt.Rows[0]["id_usuario"].ToString());
-                        variables.nombreCompleto = Convert.ToString(dt.Rows[0]["nombreUsuario"].ToString());
-                        variables.varUser = Convert.ToString(dt.Rows[0]["cuenta_usuario"].ToString());
-                        variables.tipoUser = Convert.ToString(dt.Rows[0]["tipoUsuario"].ToString());
-                        //variables.esVendedor = Convert.ToInt32(dt.Rows[0]["esVendedor"].ToString());
-                        
-                        if (checkEdit_recordar.Checked)
-                        {
-                            Settings.Default.usuario = textBox_user.Text;
-                            Settings.Default.passw = textBox_password.Text;
-                            Settings.Default.recordarme = "1";
-                            Settings.Default.Save();
-                        }
-                        else
-                        {
-                            Settings.Default.usuario = "Usuario";
-                            Settings.Default.passw = "Constraseña";
-                            Settings.Default.recordarme = "";
-                            Settings.Default.Save();
+                        XtraMessageBox.Show("El usuario ingresado se encuentra inactivo, contacte al departamento de sistemas.", "Usuario inactivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
-                        }
-                        //splashScreenManager3.ShowWaitForm();
-                        MenuPrincipal p = new MenuPrincipal();
-                        //splashScreenManager3.CloseWaitForm();
+                    ////Se asignan los valores de la tabla a las variables publicas
+                    variables.nombreCompleto = dt.Rows[0]["nombreCompleto"].ToString();
+                    variables.varUser = dt.Rows[0]["cuentaUsuario"].ToString();
+                    variables.cveTipoUser = dt.Rows[0]["cveTipoUsuario"].ToString();
 
-                        p.Show();
-                        this.Close();
-
+                    if (checkEdit_recordar.Checked)
+                    {
+                        ////Si marca la casilla se guardan los valores ingresados 
+                        Settings.Default.usuario = textBox_user.Text;
+                        Settings.Default.passw = textBox_password.Text;
+                        Settings.Default.recordarme = "1";
+                        Settings.Default.Save();
                     }
                     else
                     {
-                        ///label3.Visible = true;
-                        XtraMessageBox.Show("Usuario y/o constraseña incorrectos.", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //textBox_user.Text = "";
-                        textBox_user.Focus();
-                        textBox_password.Text = "";
-                    }
+                        ////Si no se marca, se guardan los valores por default
+                        Settings.Default.usuario = "Usuario";
+                        Settings.Default.passw = "Constraseña";
+                        Settings.Default.recordarme = "";
+                        Settings.Default.Save();
 
+                    }
+                    //splashScreenManager3.ShowWaitForm();
+                    MenuPrincipal objMenuPrincipal = new MenuPrincipal();
+                    //splashScreenManager3.CloseWaitForm();
+
+                    objMenuPrincipal.Show();////Se muestra el menu principal
+                    this.Close();
                 }
+                else
+                {
+                    ////Se muestra mensaje de error por ingresar mal las credenciales
+                    ///label3.Visible = true;
+                    XtraMessageBox.Show("Usuario y/o constraseña incorrectos.", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //textBox_user.Text = "";
+                    textBox_user.Focus();
+                    textBox_password.Text = "";
+                }
+
             }
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
-        {
-            Application.ExitThread();
-        }
-
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            textBox_user.Text = "";
-            textBox_user.ForeColor = Color.Black;
-        }
-
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            textBox_password.Text = "";
-            textBox_password.ForeColor = Color.Black;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            textBox_password.PasswordChar = '*';
-            textBox_password.ForeColor = Color.Black;
-        }
+        
+        ////Metodo para encriptar una cadena de texto
         public string Encriptar(string EncriptString)
         {
             string functionReturnValue = null;
@@ -173,6 +154,7 @@ namespace SIGE_Project
             return functionReturnValue;
 
         }
+        ////Metodo para desencriptar una cadena de texto
         public string Desencriptar(string TextEncripted)
         {
             string functionReturnValue = null;
@@ -203,7 +185,7 @@ namespace SIGE_Project
             return functionReturnValue;
 
         }
-
+        ////Metodo para validar tecla ingresada en el textbox
         private void textBox_password_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -212,7 +194,7 @@ namespace SIGE_Project
 
             }
         }
-
+        ////Metodo para validar tecla ingresada en el textbox
         private void textBox_user_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -222,103 +204,47 @@ namespace SIGE_Project
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-       
-
-        }
+        
 
         private void LOGIN_Load(object sender, EventArgs e)
         {
-            //if(variables.primera==0)
-            //{
-            //    for (int i = 0; i < 100; i++)
-            //    {
-
-            //        Thread.Sleep(100);
-            //    }
-            //}
            
-
-            //LongInitialization();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+
+        private void simpleButton_exit_Click(object sender, EventArgs e)
         {
-
+            Application.ExitThread();
         }
 
-        private void simpleButton5_Click(object sender, EventArgs e)
+       
+        private void simpleButton_minisize(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void cambiarConexiónToolStripMenuItem_Click(object sender, EventArgs e)
+        private void textBox_user_Click(object sender, EventArgs e)
         {
-
+            textBox_user.Text = "";
+            textBox_user.ForeColor = Color.Black;
         }
 
-        private void simpleButton6_Click(object sender, EventArgs e)
+        private void textBox_password_Click(object sender, EventArgs e)
         {
+            textBox_password.Text = "";
+            textBox_password.ForeColor = Color.Black;
+        }
 
+        private void textBox_password_TextChanged(object sender, EventArgs e)
+        {
+            textBox_password.PasswordChar = '*';
+            textBox_password.ForeColor = Color.Black;
+        }
+
+        private void simpleButton_configConex_Click(object sender, EventArgs e)
+        {
             Configuraciones.configInicial obj = new Configuraciones.configInicial();
             obj.ShowDialog();
         }
-        //SplashScreen1 spla = new SplashScreen1();
-        //protected void LongInitialization()
-        //{
-        //    BaseInitialization();
-        //    LoadFonts();
-        //    LoadTextures();
-        //}
-
-        //void BaseInitialization()
-        //{
-        //    // Set progress stage to be displayed by SplashImagePainter
-        //    //SplashImagePainter.Painter.ViewInfo.Stage = "c";
-        //    spla.labelControl2.Text = "Inicializando aplicación";
-        //    for (int i = 1; i <= 100; i++)
-        //    {
-        //        System.Threading.Thread.Sleep(20);
-
-        //        //// Change progress to be displayed by SplashImagePainter
-        //        //SplashImagePainter.Painter.ViewInfo.Counter = i;
-        //        ////Force SplashImagePainter to repaint information
-        //        //SplashScreenManager.Default.Invalidate();
-
-        //    }
-        //}
-        //void LoadFonts()
-        //{
-        //    // Set progress stage to be displayed by SplashImagePainter
-        //    //SplashImagePainter.Painter.ViewInfo.Stage = "Actualizando archivos";
-        //    spla.labelControl2.Text = "Actualizando archivos";
-        //    for (int i = 1; i <= 100; i++)
-        //    {
-        //        System.Threading.Thread.Sleep(20);
-
-        //        // Change progress to be displayed by SplashImagePainter
-        //        //SplashImagePainter.Painter.ViewInfo.Counter = i;
-        //        //Force SplashImagePainter to repaint information
-        //       // SplashScreenManager.Default.Invalidate();
-        //    }
-        //}
-        //void LoadTextures()
-        //{
-        //    // Set progress stage to be displayed by SplashImagePainter
-        //    //SplashImagePainter.Painter.ViewInfo.Stage = "Cargando base de datos";
-        //    spla.labelControl2.Text = "Cargando base de datoss";
-
-        //    for (int i = 1; i <= 100; i++)
-        //    {
-        //        System.Threading.Thread.Sleep(20);
-
-        //        // Change progress to be displayed by SplashImagePainter
-        //        //SplashImagePainter.Painter.ViewInfo.Counter = i;
-        //        //Force SplashImagePainter to repaint information
-        //        //SplashScreenManager.Default.Invalidate();
-        //    }
-        //}
     }
 }

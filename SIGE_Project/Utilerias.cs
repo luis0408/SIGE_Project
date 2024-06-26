@@ -343,24 +343,24 @@ namespace SIGE_Project
             }
             return resultado;
         }
-        public bool Consultar1(string tabla, string campo1, string campo2, string campo3, string campo4)
-        {
-            string sql = "SELECT * FROM " + tabla + " WHERE " + campo1 + "='" + campo2 + "'AND " + campo3 + "='" + campo4 + "' and statusUsuario=1";
-            con.Open();
-            da = new SqlDataAdapter(sql, con);
-            dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
-            if (dt.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        //public bool Consultar1(string tabla, string campo1, string campo2, string campo3, string campo4)
+        //{
+        //    string sql = "SELECT * FROM " + tabla + " WHERE " + campo1 + "='" + campo2 + "'AND " + campo3 + "='" + campo4 + "' and statusUsuario=1";
+        //    con.Open();
+        //    da = new SqlDataAdapter(sql, con);
+        //    dt = new DataTable();
+        //    da.Fill(dt);
+        //    con.Close();
+        //    if (dt.Rows.Count > 0)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
 
-        }
+        //}
         public static DataTable llenarlookupeditvalue(string consulta)
         {
             try

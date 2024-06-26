@@ -11,7 +11,7 @@ namespace SIGE_Project
         ///public static int idUser = 0;
         public static string varUser = "";
         public static string nombreCompleto = "";
-        public static string tipoUser = "";
+        public static string cveTipoUser = "";
     }
 
 

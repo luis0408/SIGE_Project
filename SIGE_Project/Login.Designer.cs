@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_exit = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.checkEdit_recordar = new DevExpress.XtraEditors.CheckEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_errorMensaje = new System.Windows.Forms.Label();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -46,22 +45,19 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cambiarConexiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpleButton_configConex = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_recordar.Properties)).BeginInit();
             this.panel2.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.simpleButton5);
-            this.panel1.Controls.Add(this.simpleButton3);
+            this.panel1.Controls.Add(this.simpleButton_exit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -85,23 +81,23 @@
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(37, 31);
             this.simpleButton5.TabIndex = 12;
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton_minisize);
             // 
-            // simpleButton3
+            // simpleButton_exit
             // 
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.BorderColor = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.Appearance.Options.UseBorderColor = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton3.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_close_window_32;
-            this.simpleButton3.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(464, 0);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(36, 35);
-            this.simpleButton3.TabIndex = 11;
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            this.simpleButton_exit.Appearance.BackColor = System.Drawing.Color.White;
+            this.simpleButton_exit.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.simpleButton_exit.Appearance.BorderColor = System.Drawing.Color.White;
+            this.simpleButton_exit.Appearance.Options.UseBackColor = true;
+            this.simpleButton_exit.Appearance.Options.UseBorderColor = true;
+            this.simpleButton_exit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton_exit.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_close_window_32;
+            this.simpleButton_exit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton_exit.Location = new System.Drawing.Point(464, 0);
+            this.simpleButton_exit.Name = "simpleButton_exit";
+            this.simpleButton_exit.Size = new System.Drawing.Size(36, 35);
+            this.simpleButton_exit.TabIndex = 11;
+            this.simpleButton_exit.Click += new System.EventHandler(this.simpleButton_exit_Click);
             // 
             // label1
             // 
@@ -135,13 +131,12 @@
             this.label2.Size = new System.Drawing.Size(500, 100);
             this.label2.TabIndex = 1;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Controls.Add(this.checkEdit_recordar);
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label_errorMensaje);
             this.panel4.Controls.Add(this.simpleButton4);
             this.panel4.Controls.Add(this.simpleButton2);
             this.panel4.Controls.Add(this.simpleButton1);
@@ -164,20 +159,20 @@
             this.checkEdit_recordar.Properties.Appearance.Options.UseFont = true;
             this.checkEdit_recordar.Properties.Appearance.Options.UseForeColor = true;
             this.checkEdit_recordar.Properties.Caption = "Recordar crendenciales";
-            this.checkEdit_recordar.Size = new System.Drawing.Size(200, 18);
+            this.checkEdit_recordar.Size = new System.Drawing.Size(200, 20);
             this.checkEdit_recordar.TabIndex = 0;
             // 
-            // label3
+            // label_errorMensaje
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(142, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 14);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Usuario o contraseña incorrectos";
-            this.label3.Visible = false;
+            this.label_errorMensaje.AutoSize = true;
+            this.label_errorMensaje.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_errorMensaje.ForeColor = System.Drawing.Color.Red;
+            this.label_errorMensaje.Location = new System.Drawing.Point(142, 124);
+            this.label_errorMensaje.Name = "label_errorMensaje";
+            this.label_errorMensaje.Size = new System.Drawing.Size(255, 14);
+            this.label_errorMensaje.TabIndex = 11;
+            this.label_errorMensaje.Text = "Usuario o contraseña incorrectos";
+            this.label_errorMensaje.Visible = false;
             // 
             // simpleButton4
             // 
@@ -223,8 +218,8 @@
             this.textBox_password.Size = new System.Drawing.Size(298, 37);
             this.textBox_password.TabIndex = 4;
             this.textBox_password.Text = "Contraseña";
-            this.textBox_password.Click += new System.EventHandler(this.textBox2_Click);
-            this.textBox_password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox_password.Click += new System.EventHandler(this.textBox_password_Click);
+            this.textBox_password.TextChanged += new System.EventHandler(this.textBox_password_TextChanged);
             this.textBox_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_password_KeyDown);
             // 
             // textBox_user
@@ -238,7 +233,7 @@
             this.textBox_user.Size = new System.Drawing.Size(298, 30);
             this.textBox_user.TabIndex = 3;
             this.textBox_user.Text = "Usuario";
-            this.textBox_user.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox_user.Click += new System.EventHandler(this.textBox_user_Click);
             this.textBox_user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_user_KeyDown);
             // 
             // panel5
@@ -262,36 +257,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.simpleButton6);
+            this.panel2.Controls.Add(this.simpleButton_configConex);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 435);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 65);
             this.panel2.TabIndex = 4;
             // 
-            // simpleButton6
+            // simpleButton_configConex
             // 
-            this.simpleButton6.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton6.Location = new System.Drawing.Point(26, 3);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton6.Size = new System.Drawing.Size(79, 59);
-            this.simpleButton6.TabIndex = 0;
-            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cambiarConexiónToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 26);
-            // 
-            // cambiarConexiónToolStripMenuItem
-            // 
-            this.cambiarConexiónToolStripMenuItem.Name = "cambiarConexiónToolStripMenuItem";
-            this.cambiarConexiónToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.cambiarConexiónToolStripMenuItem.Text = "Cambiar conexión";
-            this.cambiarConexiónToolStripMenuItem.Click += new System.EventHandler(this.cambiarConexiónToolStripMenuItem_Click);
+            this.simpleButton_configConex.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton_configConex.Location = new System.Drawing.Point(26, 3);
+            this.simpleButton_configConex.Name = "simpleButton_configConex";
+            this.simpleButton_configConex.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton_configConex.Size = new System.Drawing.Size(79, 59);
+            this.simpleButton_configConex.TabIndex = 0;
+            this.simpleButton_configConex.Click += new System.EventHandler(this.simpleButton_configConex_Click);
             // 
             // LOGIN
             // 
@@ -314,7 +295,6 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_recordar.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -335,15 +315,11 @@
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.CheckEdit checkEdit_recordar;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_exit;
+        private System.Windows.Forms.Label label_errorMensaje;
         //private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        //private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager2;
-        //private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cambiarConexiónToolStripMenuItem;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_configConex;
         //private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager_cargandoInicioSesion;
     }
 }

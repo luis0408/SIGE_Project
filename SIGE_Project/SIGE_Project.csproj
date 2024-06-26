@@ -165,5 +165,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invalido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
