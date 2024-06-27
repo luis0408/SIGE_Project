@@ -65,37 +65,24 @@ namespace SIGE_Project
                         return;
                     }
                     break;
-                case "10.0010.00Aperturardía10.00.png":
-                    //realizarApertura();
-                    return;
-                    break;
-                case "10.0010.00Aperturarcaja20.00.png":
-                    //aperturarCaja();
-                    return;
-                    break;
-                case "10.0010.00Cerrarcaja40.00.png":
-                    //cerrarCaja();
-                    return;
-                    break;
-
-                case "10.0010.00Cerrardía50.00.png":
-                    //realizarCierreDia();
-                    return;
-                    break;
-                //case "6010ConsultaRequisiciones20.png":
-
-                //    Requisiciones.ConsultaRequisiciones frm4 = new Requisiciones.ConsultaRequisiciones(Variables.var_cveare);
-                //        frm4.MdiParent = this;
-                //        frm4.Show();
-                //        return;
-                //        break;
-                //case "10.0010.00Minimizar20.00.png":
-
-                //    WindowState = FormWindowState.Minimized;
+                //case "10.0010.00Aperturardía10.00.png":
+                //    //realizarApertura();
+                //    return;
+                //    break;
+                //case "10.0010.00Aperturarcaja20.00.png":
+                //    //aperturarCaja();
+                //    return;
+                //    break;
+                //case "10.0010.00Cerrarcaja40.00.png":
+                //    //cerrarCaja();
                 //    return;
                 //    break;
 
-
+                //case "10.0010.00Cerrardía50.00.png":
+                //    //realizarCierreDia();
+                //    return;
+                //    break;
+                
 
                 case "30.0010.00Actualizarsistema20.00.png":
 
@@ -114,63 +101,7 @@ namespace SIGE_Project
                     return;
                     break;
 
-                case "30.0010.00Cambiarsucursal60.00.png":
-                    //Configuraciones.selectSucursal obj = new Configuraciones.selectSucursal();
-                    //DialogResult dResult = obj.ShowDialog();
-                    //if (dResult == DialogResult.OK)
-                    //{
-                    //    barStaticItem4.Caption = "Sucursal: " + variables.nombreSuc;
-                    //}
-                    return;
-                    break;
-
-                    //case "10.0050.00Cambiardeempresa30.00.png":
-                    //    SeleccionarEmpresa x = new SeleccionarEmpresa();
-                    //    System.Windows.Forms.DialogResult okk = x.ShowDialog();
-                    //    if (okk == System.Windows.Forms.DialogResult.OK)
-                    //    {
-                    //        barStaticItem4.Caption = Variables.varNomEmpresa;
-                    //        barStaticItem6.Caption = Variables.rfc;
-                    //    }
-                    //    return;
-
-                    //Trafico.frmprogramarviaje progviajes = new Trafico.frmprogramarviaje();
-                    ////progviajes.MdiParent = this;
-                    //progviajes.Show();
-                    //return;
-                    break;
-                case "110.0010.00DescargamasivaSAT5.00.png":
-                    //object[] dats = { DateTime.Now.ToShortDateString(), Variables.rfc };
-                    //string[] parr = { "@fecha", "@rfccc" };
-                    //DataSet descargados = Utilerias.consultarprocedimientoSAT("ERP_FAC_ObtenerTotaldescargadosXRFC", dats, parr);
-
-                    //if (Convert.ToInt32(descargados.Tables[0].Rows[0]["totaldescargados"].ToString()) >= 2000)
-                    //{
-                    //    XtraMessageBox.Show("No se pueden descargar mas de 2000 archivos por día.", "Descargas excedidas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //}
-                    //else
-                    //{
-
-
-                    //    string searchWithinThis = Application.UserAppDataPath;
-                    //    string searchForThis = "Local";
-                    //    int firstCharacter = searchWithinThis.IndexOf(searchForThis);
-                    //    string cadenaroaming = (Application.UserAppDataPath.Substring(0, firstCharacter) + @"Roaming\Microsoft\Windows\Start Menu\Programs\ConsorcioEstival");
-                    //    string path = Path.Combine(cadenaroaming, "DescargaMasivaSAT.appref-ms");
-                    //    Process.Start(path);
-                    //}
-                    //return;
-                    break;
-
-                case "50.0010.00ServidorSIFAR_DATA10.00.png":
-                    System.Diagnostics.Process.Start("C:\\Program Files\\Internet Explorer\\IExplore.exe", "http://simiserver.estivalsistemas.com/sifar/SIFAR_DATA/SIFAR_DATA.application");
-                    return;
-                    break;
-
-                case "50.0010.00ServidorSIFAR_FAC20.00.png":
-                    System.Diagnostics.Process.Start("C:\\Program Files\\Internet Explorer\\IExplore.exe", "http://simiserver.estivalsistemas.com/sifar/SIFAR_FAC2.0/SIFAR_FAC2.application");
-                    return;
-                    break;
+                
 
             }
             //SqlCommand cm = new SqlCommand("select nomubiform from [SIGE_Configuracion_Menus] where replace((replace(item,' ','')+convert(varchar,coditem)+'.png'),'/','')='" + cad + "'", cnn);
@@ -256,7 +187,7 @@ namespace SIGE_Project
                             ad.Update();
                             //splashScreenManager1.CloseWaitForm();
                             XtraMessageBox.Show("Se ha actualizado la aplicación y se reiniciará.", "Actualización correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            u.reiniciarApplicacion();
+                            util.reiniciarApplicacion();
                             //Application.Restart();
                         }
                         catch (DeploymentDownloadException dde)
@@ -290,7 +221,7 @@ namespace SIGE_Project
             string sql = "";
             this.Text = " SIGE --" + this.Text + "-- Versión." + obtenerversioninsatalada();
             //this.Text = this.Text + "- Versión: " + obtenerversioninsatalada();
-            if (variables.tipoUser.Equals("ADMIN")) //"ADMINISTRADOR"))
+            if (variables.cveTipoUser.Equals("ADMIN")) //"ADMINISTRADOR"))
             
             {
                 sql = "select pestaña,categoria,idcat,item,replace((convert(varchar,idpestaña)+convert(varchar,idcat) + replace(item,' ','')+convert(varchar,iditem)+'.png'),'/','') id_item,Imagen  from [SIGE_Configuracion_Menus] order by idpestaña, idcat, idItem";
@@ -344,7 +275,7 @@ namespace SIGE_Project
 
                     if (dr["Imagen"] != DBNull.Value)
                     {
-                        Image img = u.Bytes2Image((byte[])dr["Imagen"]);
+                        Image img = util.Bytes2Image((byte[])dr["Imagen"]);
                         if (img != null)
                         {
                             itembutton.LargeGlyph = img;
@@ -369,7 +300,7 @@ namespace SIGE_Project
 
                         if (dr["Imagen"] != DBNull.Value)
                         {
-                            Image img = u.Bytes2Image((byte[])dr["Imagen"]);
+                            Image img = util.Bytes2Image((byte[])dr["Imagen"]);
                             if (img != null)
                             {
                                 itembutton.LargeGlyph = img;
@@ -396,7 +327,7 @@ namespace SIGE_Project
                         itembutton.Name = nomimg;
                         if (dr["Imagen"] != DBNull.Value)
                         {
-                            Image img = u.Bytes2Image((byte[])dr["Imagen"]);
+                            Image img = util.Bytes2Image((byte[])dr["Imagen"]);
                             if (img != null)
                             {
                                 itembutton.LargeGlyph = img;
@@ -422,7 +353,7 @@ namespace SIGE_Project
                     itembutton.Name = nomimg;
                     if (dr["Imagen"] != DBNull.Value)
                     {
-                        Image img = u.Bytes2Image((byte[])dr["Imagen"]);
+                        Image img = util.Bytes2Image((byte[])dr["Imagen"]);
                         if (img != null)
                         {
                             itembutton.LargeGlyph = img;

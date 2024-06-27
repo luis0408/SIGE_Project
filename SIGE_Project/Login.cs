@@ -60,64 +60,75 @@ namespace SIGE_Project
             }
             else
             {
-                
-                string usuario = textBox_user.Text;
-                string constrsenia = textBox_password.Text;
-                string constrseniaEncriptada = Encriptar(constrsenia);
-
-                //se evalua que el usuario y contraseña sean correctas
-                object[] datos = {usuario,constrseniaEncriptada };
-                string[] parametors = { "@usuario", "@constrasenia" };
-                DataSet ds = new DataSet();
-                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_DATOSLOGIN", datos,parametors);
-                if (ds.Tables[0].Rows.Count > 0)
+                try
                 {
-                    DataTable dt = ds.Tables[0];
-                    int estadoUsuario = Convert.ToInt32(dt.Rows[0]["estadoUser"]);
-                    if (estadoUsuario==0)/////Se valida el estado del usuario ingresado
-                    {
-                        XtraMessageBox.Show("El usuario ingresado se encuentra inactivo, contacte al departamento de sistemas.", "Usuario inactivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                    string usuario = textBox_user.Text;
+                    string constrsenia = textBox_password.Text;
+                    string constrseniaEncriptada = Encriptar(constrsenia);
 
-                    ////Se asignan los valores de la tabla a las variables publicas
-                    variables.nombreCompleto = dt.Rows[0]["nombreCompleto"].ToString();
-                    variables.varUser = dt.Rows[0]["cuentaUsuario"].ToString();
-                    variables.cveTipoUser = dt.Rows[0]["cveTipoUsuario"].ToString();
-
-                    if (checkEdit_recordar.Checked)
+                    //se evalua que el usuario y contraseña sean correctas
+                    object[] datos = { usuario, constrseniaEncriptada };
+                    string[] parametors = { "@usuario", "@constrasenia" };
+                    DataSet ds = new DataSet();
+                    ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_DATOSLOGIN", datos, parametors);
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        ////Si marca la casilla se guardan los valores ingresados 
-                        Settings.Default.usuario = textBox_user.Text;
-                        Settings.Default.passw = textBox_password.Text;
-                        Settings.Default.recordarme = "1";
-                        Settings.Default.Save();
+                        DataTable dt = ds.Tables[0];
+                        int estadoUsuario = Convert.ToInt32(dt.Rows[0]["estadoUser"]);
+                        if (estadoUsuario == 0)/////Se valida el estado del usuario ingresado
+                        {
+                            XtraMessageBox.Show("El usuario ingresado se encuentra inactivo, contacte al departamento de sistemas.", "Usuario inactivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        ////Se asignan los valores de la tabla a las variables publicas
+                        variables.nombreCompleto = dt.Rows[0]["nombreCompleto"].ToString();
+                        variables.varUser = dt.Rows[0]["cuentaUsuario"].ToString();
+                        variables.cveTipoUser = dt.Rows[0]["cveTipoUsuario"].ToString();
+
+                        if (checkEdit_recordar.Checked)
+                        {
+                            ////Si marca la casilla se guardan los valores ingresados 
+                            Settings.Default.usuario = textBox_user.Text;
+                            Settings.Default.passw = textBox_password.Text;
+                            Settings.Default.recordarme = "1";
+                            Settings.Default.Save();
+                        }
+                        else
+                        {
+                            ////Si no se marca, se guardan los valores por default
+                            Settings.Default.usuario = "Usuario";
+                            Settings.Default.passw = "Constraseña";
+                            Settings.Default.recordarme = "";
+                            Settings.Default.Save();
+
+                        }
+                        //splashScreenManager3.ShowWaitForm();
+                        MenuPrincipal objMenuPrincipal = new MenuPrincipal();
+                        //splashScreenManager3.CloseWaitForm();
+
+                        objMenuPrincipal.Show();////Se muestra el menu principal
+                        this.Close();
                     }
                     else
                     {
-                        ////Si no se marca, se guardan los valores por default
-                        Settings.Default.usuario = "Usuario";
-                        Settings.Default.passw = "Constraseña";
-                        Settings.Default.recordarme = "";
-                        Settings.Default.Save();
-
+                        ////Se muestra mensaje de error por ingresar mal las credenciales
+                        ///label3.Visible = true;
+                        XtraMessageBox.Show("Usuario y/o constraseña incorrectos.", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //textBox_user.Text = "";
+                        textBox_user.Focus();
+                        textBox_password.Text = "";
                     }
-                    //splashScreenManager3.ShowWaitForm();
-                    MenuPrincipal objMenuPrincipal = new MenuPrincipal();
-                    //splashScreenManager3.CloseWaitForm();
 
-                    objMenuPrincipal.Show();////Se muestra el menu principal
-                    this.Close();
                 }
-                else
+                catch (Exception ex)
                 {
-                    ////Se muestra mensaje de error por ingresar mal las credenciales
-                    ///label3.Visible = true;
                     XtraMessageBox.Show("Usuario y/o constraseña incorrectos.", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //textBox_user.Text = "";
+                    
                     textBox_user.Focus();
                     textBox_password.Text = "";
                 }
+                
 
             }
         }

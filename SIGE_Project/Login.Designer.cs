@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGIN));
             this.panel1 = new System.Windows.Forms.Panel();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_exit = new DevExpress.XtraEditors.SimpleButton();
@@ -267,6 +268,7 @@
             // simpleButton_configConex
             // 
             this.simpleButton_configConex.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton_configConex.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_configConex.ImageOptions.SvgImage")));
             this.simpleButton_configConex.Location = new System.Drawing.Point(26, 3);
             this.simpleButton_configConex.Name = "simpleButton_configConex";
             this.simpleButton_configConex.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;

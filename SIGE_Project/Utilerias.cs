@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 using System.Windows.Forms;
 using DevExpress.DataAccess.ConnectionParameters;
+using System.Drawing;
+using System.IO;
+using SIGE_Project.Properties;
+using System.Diagnostics;
 
 namespace SIGE_Project
 {
@@ -378,6 +382,137 @@ namespace SIGE_Project
                 return null;
             }
 
+
+        }
+        public Image Bytes2Image(byte[] bytes)
+        {
+            if (bytes == null) return null;
+            //
+            MemoryStream ms = new MemoryStream(bytes);
+            Bitmap bm = null;
+            try
+            {
+                bm = new Bitmap(ms);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            return bm;
+        }
+        public object EjecutarQueryEscalar(string query)
+        {
+            string resultado = "";
+
+            //Try
+            using (System.Data.SqlClient.SqlConnection conexionSQL = new System.Data.SqlClient.SqlConnection(Settings.Default.CadenaConexion.ToString()))
+            {
+                conexionSQL.Open();
+                using (System.Data.SqlClient.SqlCommand comandoSQL = new System.Data.SqlClient.SqlCommand(query, conexionSQL))
+                {
+                    resultado = Convert.ToString(comandoSQL.ExecuteScalar());
+                }
+                conexionSQL.Close();
+            }
+
+            return resultado;
+
+        }
+        public string obtenerdato(string CADENA)
+        {
+            string sql_q = CADENA;
+            System.Data.SqlClient.SqlConnection cn = new System.Data.SqlClient.SqlConnection(Settings.Default.CadenaConexion.ToString());
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql_q, cn);
+            string dato = "";
+            cn.Open();
+            System.Data.SqlClient.SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                dato = Convert.ToString(rd.GetValue(0).ToString());
+            }
+
+            cn.Close();
+            return dato;
+
+        }
+        public byte[] Image2Bytes(Image img)
+        {
+            string sTemp = Path.GetTempFileName();
+            FileStream fs = new FileStream(sTemp, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            img.Save(fs, System.Drawing.Imaging.ImageFormat.Png);
+            fs.Position = 0;
+            //
+            int imgLength = Convert.ToInt32(fs.Length);
+            byte[] bytes = new byte[imgLength];
+            fs.Read(bytes, 0, imgLength);
+            fs.Close();
+            return bytes;
+        }
+        public void reiniciarApplicacion()
+        {
+            ejecutarbat();
+            //Application.DoEvents();
+            Environment.Exit(0);
+            //GC.Collect();
+            //this.Dispose();
+        }
+
+        public void ejecutarbat()
+        {
+            string searchWithinThis = Application.UserAppDataPath;
+            string searchForThis = "Local";
+            int firstCharacter = searchWithinThis.IndexOf(searchForThis);
+            string cadenaroaming = (Application.UserAppDataPath.Substring(0, firstCharacter) + @"Roaming\Microsoft\Windows\Start Menu\Programs\GAlfaSystems");
+            //MessageBox.Show(Application.UserAppDataPath.ToString());
+            //MessageBox.Show(Application.ExecutablePath.ToString());
+            try
+            {
+                var bat = Path.Combine(Application.StartupPath, "inicio.bat");
+                if (File.Exists(bat))
+                    File.Delete(bat);
+                string lineee = " @echo off \n" +
+                " timeout /t 1 /nobreak \n" +
+                " FOR %%X IN (" + "\"" + Path.Combine(cadenaroaming, "ERP_Gasera.appref-ms") + "\"" + ") DO rundll32 shell32.dll,ShellExec_RunDLL %%X ";
+                ;
+                using (var fileStream = File.Create(bat))
+                {
+                    var texto = new UTF8Encoding(true).GetBytes(lineee);
+                    fileStream.Write(texto, 0, texto.Length);
+                    fileStream.Flush();
+                }
+
+                Process p = new Process();
+                p.StartInfo.FileName = Path.Combine(Application.StartupPath, "inicio.bat");
+                p.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+                p.Start();
+                //Checar si funciona
+                p.WaitForExit();
+
+
+
+
+            }
+            catch (Exception ejeje)
+            {
+                MessageBox.Show("Error al ejecutar el bat: " + ejeje.Message);
+                // sendmessagetoclien("Error al generar .bat" + ejeje.Message);
+            }
+
+        }
+        public int VERIFICAEXIST(string CADENA)
+        {
+            string sql_q = CADENA;
+            System.Data.SqlClient.SqlConnection cn = new System.Data.SqlClient.SqlConnection(Settings.Default.CadenaConexion);
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql_q, cn);
+            int cantidad = 0;
+            cn.Open();
+            System.Data.SqlClient.SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                cantidad = Convert.ToInt32(rd.GetValue(0).ToString());
+            }
+            cn.Close();
+            return cantidad;
 
         }
     }

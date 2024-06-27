@@ -69,16 +69,7 @@ namespace SIGE_Project.Configuraciones
                 XtraMessageBox.Show("La cadena de conexión no es correcta, no se pueden guardar los nuevos cambios. " , "Error de conexión", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
-            if(lookUpEdit_tipoMaquina.EditValue==null)
-            {
-                XtraMessageBox.Show("Selccione el tipo de equipo que esta configurando.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(textEdit_noCaja.Text))
-            {
-                XtraMessageBox.Show("Ingrese el número de caja que sera el equipo.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+           
             try
             {
                 XtraInputBoxArgs args = new XtraInputBoxArgs();
@@ -93,9 +84,10 @@ namespace SIGE_Project.Configuraciones
                 if (contrasenia == "s1st3m4s")
                 {
 
-                    //Settings.Default["CadenaConexionLocal"] = textEdit_cadenaConexion.Text;
-                    Settings.Default.tipoEquipo = lookUpEdit_tipoMaquina.Text;
-                    Settings.Default.NoCaja = textEdit_noCaja.Text;
+                    Settings.Default["CadenaConexionLocal"] = textEdit_cadenaConexion.Text;
+                    //Settings.Default.CadenaConexion = textEdit_cadenaConexion.Text;
+                    //Settings.Default.tipoEquipo = lookUpEdit_tipoMaquina.Text;
+                    //Settings.Default.NoCaja = textEdit_noCaja.Text;
                     Settings.Default.Save();
                     if (MessageBox.Show("La configuración fue aplicada correctamente \n ¿Desea reiniciar el sistema?", "Configuración correcta", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                         Application.Restart();
