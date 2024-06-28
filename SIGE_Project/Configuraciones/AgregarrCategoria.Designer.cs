@@ -180,7 +180,9 @@
             this.ClientSize = new System.Drawing.Size(387, 160);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("AgregarrCategoria.IconOptions.SvgImage")));
+            this.MaximizeBox = false;
             this.Name = "AgregarrCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar categoría";
             this.Load += new System.EventHandler(this.AgregarrCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

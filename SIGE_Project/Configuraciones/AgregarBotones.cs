@@ -27,7 +27,7 @@ namespace SIGE_Project.Configuraciones
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show("Se generó un error: "+ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                //XtraMessageBox.Show("Se generó un error: "+ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             if (idPestania > -1)
             {

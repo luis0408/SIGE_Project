@@ -107,12 +107,13 @@
             // 
             // pictureEdit_imgBoton
             // 
+            this.pictureEdit_imgBoton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureEdit_imgBoton.Location = new System.Drawing.Point(133, 84);
             this.pictureEdit_imgBoton.Name = "pictureEdit_imgBoton";
             this.pictureEdit_imgBoton.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit_imgBoton.Size = new System.Drawing.Size(148, 124);
             this.pictureEdit_imgBoton.StyleController = this.layoutControl1;
-            this.pictureEdit_imgBoton.TabIndex = 8;
+            this.pictureEdit_imgBoton.TabIndex = 13;
             // 
             // textEdit_aplicacion
             // 
@@ -262,7 +263,9 @@
             this.ClientSize = new System.Drawing.Size(566, 421);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("AgregarBotones.IconOptions.SvgImage")));
+            this.MaximizeBox = false;
             this.Name = "AgregarBotones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar botones";
             this.Load += new System.EventHandler(this.AgregarBotones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

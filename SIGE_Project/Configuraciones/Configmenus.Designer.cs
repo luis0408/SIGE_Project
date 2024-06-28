@@ -76,7 +76,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(679, 394);
+            this.xtraTabControl1.Size = new System.Drawing.Size(609, 394);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -87,7 +87,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.gridControlpestañas);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(677, 371);
+            this.xtraTabPage1.Size = new System.Drawing.Size(607, 371);
             this.xtraTabPage1.Text = "Pestañas";
             // 
             // gridControlpestañas
@@ -96,7 +96,7 @@
             this.gridControlpestañas.Location = new System.Drawing.Point(0, 0);
             this.gridControlpestañas.MainView = this.gridViewpestañas;
             this.gridControlpestañas.Name = "gridControlpestañas";
-            this.gridControlpestañas.Size = new System.Drawing.Size(677, 371);
+            this.gridControlpestañas.Size = new System.Drawing.Size(607, 371);
             this.gridControlpestañas.TabIndex = 0;
             this.gridControlpestañas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewpestañas});
@@ -164,7 +164,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 410);
             this.gridControl1.MainView = this.menusDataGridView;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(679, 314);
+            this.gridControl1.Size = new System.Drawing.Size(609, 314);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.menusDataGridView});
@@ -186,10 +186,10 @@
             this.navBarItem1,
             this.navBarItem2,
             this.navBarItem3});
-            this.navBarControl1.Location = new System.Drawing.Point(703, 0);
+            this.navBarControl1.Location = new System.Drawing.Point(633, 0);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 140;
-            this.navBarControl1.Size = new System.Drawing.Size(140, 736);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 210;
+            this.navBarControl1.Size = new System.Drawing.Size(210, 736);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -233,7 +233,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(703, 736);
+            this.layoutControl1.Size = new System.Drawing.Size(633, 736);
             this.layoutControl1.TabIndex = 5;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -245,7 +245,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(703, 736);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(633, 736);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -253,7 +253,7 @@
             this.layoutControlItem1.Control = this.xtraTabControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(683, 398);
+            this.layoutControlItem1.Size = new System.Drawing.Size(613, 398);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -262,7 +262,7 @@
             this.layoutControlItem2.Control = this.gridControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 398);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(683, 318);
+            this.layoutControlItem2.Size = new System.Drawing.Size(613, 318);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 

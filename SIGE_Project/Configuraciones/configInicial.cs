@@ -23,7 +23,7 @@ namespace SIGE_Project.Configuraciones
 
         private void simpleButton_testConex_Click(object sender, EventArgs e)
         {
-            string cadeneishon = "Data Source=" + textEdit_servidor.Text + ";Initial Catalog=" + textEdit_baseDatos.Text + ";User ID=" + textEdit_usuario.Text + ";Password=" + textEdit_contrasenia.Text + "";
+            string cadeneishon = "Data Source=" + textEdit_servidor.Text + ";Initial Catalog=" + textEdit_baseDatos.Text + ";User ID=" + textEdit_usuario.Text + ";Password=" + textEdit_contrasenia.Text + ";Encrypt=True;TrustServerCertificate=True";
             textEdit_cadenaConexion.Text = ConnectToDatabase(cadeneishon);
         }
         SqlConnection cnn = null;
