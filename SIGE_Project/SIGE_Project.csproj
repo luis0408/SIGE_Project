@@ -82,6 +82,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogo\catalogoCicloEscolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCicloEscolar.Designer.cs">
+      <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDepartamentos.Designer.cs">
+      <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstadoCivil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstadoCivil.Designer.cs">
+      <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGenero.Designer.cs">
+      <DependentUpon>catalogoGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciatura.Designer.cs">
+      <DependentUpon>catalogoLicenciatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoMediosDeDifusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoMediosDeDifusion.Designer.cs">
+      <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoPeriodos.Designer.cs">
+      <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
+      <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuraciones\AgregarBotones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +189,30 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogo\catalogoCicloEscolar.resx">
+      <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoDepartamentos.resx">
+      <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoEstadoCivil.resx">
+      <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoGenero.resx">
+      <DependentUpon>catalogoGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoLicenciatura.resx">
+      <DependentUpon>catalogoLicenciatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoMediosDeDifusion.resx">
+      <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoPeriodos.resx">
+      <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoTipoUsuarios.resx">
+      <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\AgregarBotones.resx">
       <DependentUpon>AgregarBotones.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,7 +277,6 @@
     <None Include="Resources\icons8-minimize-window-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Catalogos\" />
     <Folder Include="Usuarios\" />
   </ItemGroup>
   <ItemGroup>
