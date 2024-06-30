@@ -286,7 +286,7 @@
     <None Include="Resources\icons8-minimize-window-32.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+ HEAD
     <Folder Include="Usuarios\" />
 =======
     <Folder Include="Catalogos\" />
