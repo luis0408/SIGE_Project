@@ -152,7 +152,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
                     {
                         if (Convert.ToInt32(util.EjecutarQueryEscalar("select count(*) from  [SIGE_Configuracion_Menus] where idpestaña =" + idpestaña + " and idcat=" + idcat)) <= 0)
                         {
-                            util.EjecutarQueryNonQuery("insert into [[SIGE_Configuracion_Menus]] ([idpestaña]      ,[Pestaña]      ,[Categoria]      ,[idCat]  )values(" + idpestaña + ",'" + nompestaña + "','" + nombrecat + "'," + idcat + " )");
+                            util.EjecutarQueryNonQuery("insert into [SIGE_Configuracion_Menus] ([idpestaña]      ,[Pestaña]      ,[Categoria]      ,[idCat]  )values(" + idpestaña + ",'" + nompestaña + "','" + nombrecat + "'," + idcat + " )");
                             cargagrupos();
                             cargabotones();
                         }

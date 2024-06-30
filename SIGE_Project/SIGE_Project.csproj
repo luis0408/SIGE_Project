@@ -285,12 +285,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-minimize-window-32.png" />
   </ItemGroup>
-  <ItemGroup>
-
-    <Folder Include="Usuarios\" />
-    <Folder Include="Catalogos\" />
-
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">
       <Visible>False</Visible>
