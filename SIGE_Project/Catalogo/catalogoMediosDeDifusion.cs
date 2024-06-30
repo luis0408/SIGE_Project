@@ -123,5 +123,48 @@ namespace SIGE_Project.Catalogo
         {
             exportarDoc(gridView_mediosDifusion, gridControl_mediosDifusion, "MediosDifusion");
         }
+
+        private void navBarItem_add_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            DatosMedioDifusion objDatosMedioDifusion= new DatosMedioDifusion();
+            objDatosMedioDifusion.ShowDialog();
+            if (objDatosMedioDifusion.DialogResult==DialogResult.OK)
+            {
+                consultarDatos();
+            }
+        }
+
+        private void navBarItem_edit_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            
+            string cveMedio = gridView_mediosDifusion.GetRowCellValue(gridView_mediosDifusion.FocusedRowHandle, "cveMedio").ToString();
+            string descMedio = gridView_mediosDifusion.GetRowCellValue(gridView_mediosDifusion.FocusedRowHandle, "descripcion").ToString();
+            int estado = Convert.ToInt32(gridView_mediosDifusion.GetRowCellValue(gridView_mediosDifusion.FocusedRowHandle, "estado").ToString());
+            DatosMedioDifusion objDatosMedioDifusion = new DatosMedioDifusion(cveMedio,descMedio,estado);
+            objDatosMedioDifusion.ShowDialog();
+            if (objDatosMedioDifusion.DialogResult == DialogResult.OK)
+            {
+                consultarDatos();
+            }
+        }
+        Utilerias util= new Utilerias();
+        private void navBarItem_delete_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            string cveMedio = gridView_mediosDifusion.GetRowCellValue(gridView_mediosDifusion.FocusedRowHandle, "cveMedio").ToString();
+            int estado = Convert.ToInt32(gridView_mediosDifusion.GetRowCellValue(gridView_mediosDifusion.FocusedRowHandle, "estado").ToString());
+            estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
+            int resul = util.EjecutarQueryNonQuery("update [SIGE_Catalogo_MediosDifusion] set estado="+estado+" where cveMedio='"+cveMedio+"'");
+            if (resul!=0)
+            {
+                XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                XtraMessageBox.Show("Se generó un error al actualiar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            consultarDatos();
+        }
     }
 }

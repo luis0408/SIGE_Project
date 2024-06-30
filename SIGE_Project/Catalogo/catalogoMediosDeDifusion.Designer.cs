@@ -194,18 +194,21 @@
             this.navBarItem_add.Caption = "Agregar";
             this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
             this.navBarItem_add.Name = "navBarItem_add";
+            this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
             // 
             // navBarItem_edit
             // 
             this.navBarItem_edit.Caption = "Editar";
             this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_edit.ImageOptions.SvgImage")));
             this.navBarItem_edit.Name = "navBarItem_edit";
+            this.navBarItem_edit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_edit_LinkClicked);
             // 
             // navBarItem_delete
             // 
             this.navBarItem_delete.Caption = "Activar/Desactivar";
             this.navBarItem_delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_delete.ImageOptions.SvgImage")));
             this.navBarItem_delete.Name = "navBarItem_delete";
+            this.navBarItem_delete.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_delete_LinkClicked);
             // 
             // navBarGroup2
             // 

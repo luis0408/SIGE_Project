@@ -130,6 +130,13 @@
     <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\ClsMedioDifusion.cs" />
+    <Compile Include="Catalogo\DatosMedioDifusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosMedioDifusion.Designer.cs">
+      <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuraciones\AgregarBotones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoTipoUsuarios.resx">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
+      <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\AgregarBotones.resx">
       <DependentUpon>AgregarBotones.cs</DependentUpon>
