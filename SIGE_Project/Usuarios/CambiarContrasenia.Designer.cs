@@ -34,7 +34,7 @@
             this.gridControl_TablaUsuarios = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton_Cancelar = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton_Acepta = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_Aceptar = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit_ConfirmarContrasenia = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_NuevaContrasenia = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_ContraseniaActual = new DevExpress.XtraEditors.TextEdit();
@@ -79,7 +79,7 @@
             // 
             this.dataLayoutControl1.Controls.Add(this.gridControl_TablaUsuarios);
             this.dataLayoutControl1.Controls.Add(this.simpleButton_Cancelar);
-            this.dataLayoutControl1.Controls.Add(this.simpleButton_Acepta);
+            this.dataLayoutControl1.Controls.Add(this.simpleButton_Aceptar);
             this.dataLayoutControl1.Controls.Add(this.textEdit_ConfirmarContrasenia);
             this.dataLayoutControl1.Controls.Add(this.textEdit_NuevaContrasenia);
             this.dataLayoutControl1.Controls.Add(this.textEdit_ContraseniaActual);
@@ -118,15 +118,15 @@
             this.simpleButton_Cancelar.TabIndex = 13;
             this.simpleButton_Cancelar.Text = "Cancelar";
             // 
-            // simpleButton_Acepta
+            // simpleButton_Aceptar
             // 
-            this.simpleButton_Acepta.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_Aceptar.ImageOptions.SvgImage")));
-            this.simpleButton_Acepta.Location = new System.Drawing.Point(632, 142);
-            this.simpleButton_Acepta.Name = "simpleButton_Acepta";
-            this.simpleButton_Acepta.Size = new System.Drawing.Size(227, 44);
-            this.simpleButton_Acepta.StyleController = this.dataLayoutControl1;
-            this.simpleButton_Acepta.TabIndex = 12;
-            this.simpleButton_Acepta.Text = "Aceptar";
+            this.simpleButton_Aceptar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_Acepta.ImageOptions.SvgImage")));
+            this.simpleButton_Aceptar.Location = new System.Drawing.Point(632, 142);
+            this.simpleButton_Aceptar.Name = "simpleButton_Aceptar";
+            this.simpleButton_Aceptar.Size = new System.Drawing.Size(227, 44);
+            this.simpleButton_Aceptar.StyleController = this.dataLayoutControl1;
+            this.simpleButton_Aceptar.TabIndex = 12;
+            this.simpleButton_Aceptar.Text = "Aceptar";
             // 
             // textEdit_ConfirmarContrasenia
             // 
@@ -241,7 +241,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.simpleButton_Acepta;
+            this.layoutControlItem2.Control = this.simpleButton_Aceptar;
             this.layoutControlItem2.Location = new System.Drawing.Point(620, 130);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(231, 455);
@@ -316,7 +316,7 @@
         private DevExpress.XtraBars.Alerter.AlertControl alertControl2;
         private DevExpress.XtraBars.Alerter.AlertControl alertControl3;
         private DevExpress.XtraBars.Alerter.AlertControl alertControl4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton_Acepta;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_Aceptar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.SimpleButton simpleButton_Cancelar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
