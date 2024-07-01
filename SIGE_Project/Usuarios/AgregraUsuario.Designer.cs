@@ -35,7 +35,7 @@
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton_eliminar = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_editar = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton_agregar = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_agrega = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_visible = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_guardar = new DevExpress.XtraEditors.SimpleButton();
             this.lookUpEdit_tipoUsuario = new DevExpress.XtraEditors.LookUpEdit();
@@ -123,7 +123,7 @@
             // 
             this.layoutControl2.Controls.Add(this.simpleButton_eliminar);
             this.layoutControl2.Controls.Add(this.simpleButton_editar);
-            this.layoutControl2.Controls.Add(this.simpleButton_agregar);
+            this.layoutControl2.Controls.Add(this.simpleButton_agrega);
             this.layoutControl2.Controls.Add(this.simpleButton_visible);
             this.layoutControl2.Controls.Add(this.simpleButton_guardar);
             this.layoutControl2.Controls.Add(this.lookUpEdit_tipoUsuario);
@@ -158,15 +158,15 @@
             this.simpleButton_editar.TabIndex = 11;
             this.simpleButton_editar.Text = "Editar";
             // 
-            // simpleButton_agregar
+            // simpleButton_agrega
             // 
-            this.simpleButton_agregar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_agregar.ImageOptions.Image")));
-            this.simpleButton_agregar.Location = new System.Drawing.Point(12, 12);
-            this.simpleButton_agregar.Name = "simpleButton_agregar";
-            this.simpleButton_agregar.Size = new System.Drawing.Size(137, 22);
-            this.simpleButton_agregar.StyleController = this.layoutControl2;
-            this.simpleButton_agregar.TabIndex = 10;
-            this.simpleButton_agregar.Text = "Agregar";
+            this.simpleButton_agrega.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_agregar.ImageOptions.Image")));
+            this.simpleButton_agrega.Location = new System.Drawing.Point(12, 12);
+            this.simpleButton_agrega.Name = "simpleButton_agrega";
+            this.simpleButton_agrega.Size = new System.Drawing.Size(137, 22);
+            this.simpleButton_agrega.StyleController = this.layoutControl2;
+            this.simpleButton_agrega.TabIndex = 10;
+            this.simpleButton_agrega.Text = "Agregar";
             // 
             // simpleButton_visible
             // 
@@ -289,7 +289,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.simpleButton_agregar;
+            this.layoutControlItem3.Control = this.simpleButton_agrega;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(141, 26);
@@ -481,7 +481,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraEditors.SimpleButton simpleButton_eliminar;
         private DevExpress.XtraEditors.SimpleButton simpleButton_editar;
-        private DevExpress.XtraEditors.SimpleButton simpleButton_agregar;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_agrega;
         private DevExpress.XtraEditors.SimpleButton simpleButton_visible;
         private DevExpress.XtraEditors.SimpleButton simpleButton_cancelar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
