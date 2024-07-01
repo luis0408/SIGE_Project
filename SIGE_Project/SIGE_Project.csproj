@@ -194,6 +194,18 @@
     <Compile Include="Usuarios\AgregraUsuario.Designer.cs">
       <DependentUpon>AgregraUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\CambiarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\CambiarContrasenia.Designer.cs">
+      <DependentUpon>CambiarContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\RecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\RecuperarContrasenia.Designer.cs">
+      <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilerias.cs" />
     <Compile Include="variables.cs" />
     <Compile Include="WaitForm1.cs">
@@ -266,6 +278,12 @@
     </Compile>
     <EmbeddedResource Include="Usuarios\AgregraUsuario.resx">
       <DependentUpon>AgregraUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\CambiarContrasenia.resx">
+      <DependentUpon>CambiarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\RecuperarContrasenia.resx">
+      <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
