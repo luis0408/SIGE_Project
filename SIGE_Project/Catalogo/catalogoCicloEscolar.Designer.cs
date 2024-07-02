@@ -163,27 +163,27 @@
             // navBarItem_add
             // 
             this.navBarItem_add.Caption = "Agregar ciclo escolar.";
-            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
             this.navBarItem_add.Name = "navBarItem_add";
             // 
             // navBarItem_edit
             // 
             this.navBarItem_edit.Caption = "Editar ciclo escolar.";
-            this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_edit.ImageOptions.SvgImage")));
             this.navBarItem_edit.Name = "navBarItem_edit";
             // 
             // navBarItem_delete
             // 
             this.navBarItem_delete.Caption = "Eliminar ciclo escolar.";
-            this.navBarItem_delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
+            this.navBarItem_delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_delete.ImageOptions.SvgImage")));
             this.navBarItem_delete.Name = "navBarItem_delete";
             // 
             // navBarItem_refresh
             // 
             this.navBarItem_refresh.Caption = "Actualizar.";
-            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
+            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_refresh.ImageOptions.SvgImage")));
             this.navBarItem_refresh.Name = "navBarItem_refresh";
-            this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
+            //this.navBarItem_refresh.ItemChanged += new System.EventHandler(this.navBarItem_refresh_ItemChanged);
             // 
             // Root
             // 
