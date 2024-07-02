@@ -39,10 +39,12 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem_refresh = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_add = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_edit = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem_delete = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem_refresh = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_status = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem_export = new DevExpress.XtraNavBar.NavBarItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -73,7 +75,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 233, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(981, 494);
+            this.layoutControl1.Size = new System.Drawing.Size(626, 494);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -84,7 +86,7 @@
             this.gridControl_cicloEscolar.MainView = this.gridView_cicloEscolar;
             this.gridControl_cicloEscolar.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_cicloEscolar.Name = "gridControl_cicloEscolar";
-            this.gridControl_cicloEscolar.Size = new System.Drawing.Size(653, 470);
+            this.gridControl_cicloEscolar.Size = new System.Drawing.Size(410, 470);
             this.gridControl_cicloEscolar.TabIndex = 5;
             this.gridControl_cicloEscolar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_cicloEscolar});
@@ -100,6 +102,10 @@
             this.gridView_cicloEscolar.DetailHeight = 239;
             this.gridView_cicloEscolar.GridControl = this.gridControl_cicloEscolar;
             this.gridView_cicloEscolar.Name = "gridView_cicloEscolar";
+            this.gridView_cicloEscolar.OptionsBehavior.Editable = false;
+            this.gridView_cicloEscolar.OptionsBehavior.ReadOnly = true;
+            this.gridView_cicloEscolar.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_cicloEscolar.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn2
             // 
@@ -135,55 +141,71 @@
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1});
+            this.navBarGroup1,
+            this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem_refresh,
             this.navBarItem_add,
             this.navBarItem_edit,
-            this.navBarItem_delete,
-            this.navBarItem_refresh});
-            this.navBarControl1.Location = new System.Drawing.Point(669, 12);
+            this.navBarItem_status,
+            this.navBarItem_export});
+            this.navBarControl1.Location = new System.Drawing.Point(426, 12);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 300;
-            this.navBarControl1.Size = new System.Drawing.Size(300, 470);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 188;
+            this.navBarControl1.Size = new System.Drawing.Size(188, 470);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
             // navBarGroup1
             // 
-            this.navBarGroup1.Caption = "ACCIONES";
+            this.navBarGroup1.Caption = "Acciones";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_refresh),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_add),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_edit),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_delete),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_refresh)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_status)});
             this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem_refresh
+            // 
+            this.navBarItem_refresh.Caption = "Actualizar";
+            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_refresh.ImageOptions.SvgImage")));
+            this.navBarItem_refresh.Name = "navBarItem_refresh";
+            this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
             // 
             // navBarItem_add
             // 
-            this.navBarItem_add.Caption = "Agregar ciclo escolar.";
+            this.navBarItem_add.Caption = "Agregar";
             this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
             this.navBarItem_add.Name = "navBarItem_add";
             // 
             // navBarItem_edit
             // 
-            this.navBarItem_edit.Caption = "Editar ciclo escolar.";
+            this.navBarItem_edit.Caption = "Editar";
             this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_edit.ImageOptions.SvgImage")));
             this.navBarItem_edit.Name = "navBarItem_edit";
             // 
-            // navBarItem_delete
+            // navBarItem_status
             // 
-            this.navBarItem_delete.Caption = "Eliminar ciclo escolar.";
-            this.navBarItem_delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_delete.ImageOptions.SvgImage")));
-            this.navBarItem_delete.Name = "navBarItem_delete";
+            this.navBarItem_status.Caption = "Activar/Desactivar";
+            this.navBarItem_status.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_status.Name = "navBarItem_status";
             // 
-            // navBarItem_refresh
+            // navBarGroup2
             // 
-            this.navBarItem_refresh.Caption = "Actualizar.";
-            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_refresh.ImageOptions.SvgImage")));
-            this.navBarItem_refresh.Name = "navBarItem_refresh";
-            //this.navBarItem_refresh.ItemChanged += new System.EventHandler(this.navBarItem_refresh_ItemChanged);
+            this.navBarGroup2.Caption = "Reportes";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_export)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarItem_export
+            // 
+            this.navBarItem_export.Caption = "Exportar";
+            this.navBarItem_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem_export.Name = "navBarItem_export";
             // 
             // Root
             // 
@@ -193,15 +215,15 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(981, 494);
+            this.Root.Size = new System.Drawing.Size(626, 494);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(657, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(414, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(304, 474);
+            this.layoutControlItem1.Size = new System.Drawing.Size(192, 474);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -210,7 +232,7 @@
             this.layoutControlItem2.Control = this.gridControl_cicloEscolar;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(657, 474);
+            this.layoutControlItem2.Size = new System.Drawing.Size(414, 474);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -218,11 +240,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 494);
+            this.ClientSize = new System.Drawing.Size(626, 494);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoCicloEscolar.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoCicloEscolar";
-            this.Text = "catalogoCicloEscolar";
+            this.Text = "Catalogo Ciclo Escolar";
+            this.Load += new System.EventHandler(this.catalogoCicloEscolar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_cicloEscolar)).EndInit();
@@ -245,13 +269,15 @@
         private DevExpress.XtraGrid.GridControl gridControl_cicloEscolar;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_cicloEscolar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem_add;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem_edit;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem_delete;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_refresh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_add;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_edit;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_status;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_export;
     }
 }

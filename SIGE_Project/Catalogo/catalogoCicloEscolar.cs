@@ -17,7 +17,10 @@ namespace SIGE_Project.Catalogo
         {
             InitializeComponent();
         }
-
+        private void catalogoCicloEscolar_Load(object sender, EventArgs e)
+        {
+            consultarDatos();
+        }
         public void consultarDatos()
         {
             try
@@ -36,6 +39,9 @@ namespace SIGE_Project.Catalogo
             }
         }
 
-        
+        private void navBarItem_refresh_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            consultarDatos();
+        }
     }
 }
