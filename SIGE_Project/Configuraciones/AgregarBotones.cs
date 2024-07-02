@@ -37,7 +37,7 @@ namespace SIGE_Project.Configuraciones
                 textEdit_idBoton.ReadOnly = true;
                 textEdit_nombreBoton.Text = nombreBoton;
                 textEdit_aplicacion.Text = nombreAplicacion;
-                cargaImagen("select imagen  from PV_CONF_Menus where idpestaña=" + idPestania + " and idcat=" + idCategoria + " and iditem=" + idBoton);
+                cargaImagen("select imagen  from SIGE_Configuracion_Menus where idpestaña=" + idPestania + " and idcat=" + idCategoria + " and iditem=" + idBoton);
             }
         }
 

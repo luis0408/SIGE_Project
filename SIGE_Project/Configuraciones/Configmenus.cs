@@ -257,7 +257,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
                             try
                             {
                                 cnn.Open();
-                                string sql_c = "insert into [[SIGE_Configuracion_Menus]](  [idpestaña]      ,[Pestaña]      ,[Categoria]      ,[idCat]  ,[Item]      ,[idItem]      ,[ubicform]      ,[Imagen])values(@id_pestaña,@pestaña,@categoria,@codcat ,@Item, @CodItem,@NomUbiform,@imagen  )";
+                                string sql_c = "insert into [SIGE_Configuracion_Menus](  [idpestaña]      ,[Pestaña]      ,[Categoria]      ,[idCat]  ,[Item]      ,[idItem]      ,[ubicform]      ,[Imagen])values(@id_pestaña,@pestaña,@categoria,@codcat ,@Item, @CodItem,@NomUbiform,@imagen  )";
                                 cmd = new SqlCommand(sql_c, cnn);
                                 cmd.Parameters.Add("@CodItem", SqlDbType.Money).Value = coditem;
                                 cmd.Parameters.Add("@pestaña", SqlDbType.VarChar).Value = npestaña;
@@ -430,7 +430,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
                 {
                     if (XtraMessageBox.Show("Esta pestaña contiene categorias existentes,... \r\n ¿Desea continuar Eliminando esta Pestaña?", "Existentes...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        util.EjecutarQueryNonQuery("delete from [[SIGE_Configuracion_Menus]] where  idpestaña =" + idpestaña);
+                        util.EjecutarQueryNonQuery("delete from [SIGE_Configuracion_Menus] where  idpestaña =" + idpestaña);
                         cargapestañas();
                         cargagrupos();
                         cargabotones();
@@ -442,7 +442,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
                 {
                     if (XtraMessageBox.Show("¿Desea Eliminar esta Pestaña?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        util.EjecutarQueryNonQuery("delete from [[SIGE_Configuracion_Menus]] where  idpestaña =" + idpestaña);
+                        util.EjecutarQueryNonQuery("delete from [SIGE_Configuracion_Menus] where  idpestaña =" + idpestaña);
                         cargapestañas();
                         cargagrupos();
                         cargabotones();
@@ -471,7 +471,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
                 {
                     if (XtraMessageBox.Show("Esta Categoria contiene botones existentes,...\r \n ¿Desea continuar Eliminando esta categoria?", "Existentes...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        util.EjecutarQueryNonQuery("delete from [[SIGE_Configuracion_Menus]] where   idpestaña =" + idpestaña + " and idcat =" + idcat);
+                        util.EjecutarQueryNonQuery("delete from [SIGE_Configuracion_Menus] where   idpestaña =" + idpestaña + " and idcat =" + idcat);
 
                         cargagrupos();
                         cargabotones();
@@ -483,7 +483,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
                 {
                     if (XtraMessageBox.Show("¿Desea Eliminar esta Pestaña?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        util.EjecutarQueryNonQuery("delete from [[SIGE_Configuracion_Menus]] where   idpestaña =" + idpestaña + " and idcat =" + idcat);
+                        util.EjecutarQueryNonQuery("delete from [SIGE_Configuracion_Menus] where   idpestaña =" + idpestaña + " and idcat =" + idcat);
                         cargagrupos();
                         cargabotones();
                         cargagrid();
@@ -500,7 +500,7 @@ new GridColumnSortInfo(colcat , DevExpress.Data.ColumnSortOrder.None),
 
                 if (XtraMessageBox.Show("¿Desea Eliminar este boton?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    util.EjecutarQueryNonQuery("delete from [[SIGE_Configuracion_Menus]] where   id =" + id);
+                    util.EjecutarQueryNonQuery("delete from [SIGE_Configuracion_Menus] where   id =" + id);
                     cargabotones();
                     cargagrid();
                 }
