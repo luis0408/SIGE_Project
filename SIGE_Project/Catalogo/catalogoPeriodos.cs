@@ -17,5 +17,38 @@ namespace SIGE_Project.Catalogo
         {
             InitializeComponent();
         }
+        private void catalogoPeriodos_Load(object sender, EventArgs e)
+        {
+            consultarDatos();
+        }
+        private void consultarDatos()
+        {
+            try
+            {
+                gridControl_periodos.DataSource = null;
+                object[] datos = { };
+                string[] parametros = { };
+                DataSet ds = new DataSet();
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_PERIODOS", datos, parametros);
+                DataTable dt = ds.Tables[0];
+                gridControl_periodos.DataSource = dt;
+                gridView_periodos.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Se generó un error al consultar los datos. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void navBarItem_add_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            DatosPeriodos objDatosPeriodos = new DatosPeriodos();
+            objDatosPeriodos.ShowDialog();
+            if (objDatosPeriodos.DialogResult == DialogResult.OK)
+            {
+                consultarDatos();
+            }
+        }
+
     }
 }

@@ -130,12 +130,19 @@
     <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
     <Compile Include="Catalogo\DatosMedioDifusion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\DatosMedioDifusion.Designer.cs">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosPeriodos.Designer.cs">
+      <DependentUpon>DatosPeriodos.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuraciones\AgregarBotones.cs">
       <SubType>Form</SubType>
@@ -241,6 +248,9 @@
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosPeriodos.resx">
+      <DependentUpon>DatosPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\AgregarBotones.resx">
       <DependentUpon>AgregarBotones.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,7 +323,9 @@
   <ItemGroup>
     <None Include="Resources\icons8-minimize-window-32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\save1.svg" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">
       <Visible>False</Visible>
@@ -340,6 +352,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
