@@ -132,6 +132,18 @@
     </Compile>
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
+    <Compile Include="Catalogo\DatosCicloEscolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosCicloEscolar.Designer.cs">
+      <DependentUpon>DatosCicloEscolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosDepartamento.Designer.cs">
+      <DependentUpon>DatosDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\DatosMedioDifusion.cs">
       <SubType>Form</SubType>
     </Compile>
