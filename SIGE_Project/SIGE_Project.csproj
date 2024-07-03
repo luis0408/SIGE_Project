@@ -264,6 +264,12 @@
     <EmbeddedResource Include="Catalogo\catalogoTipoUsuarios.resx">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosCicloEscolar.resx">
+      <DependentUpon>DatosCicloEscolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosDepartamento.resx">
+      <DependentUpon>DatosDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </EmbeddedResource>
