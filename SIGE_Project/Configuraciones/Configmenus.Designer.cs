@@ -113,7 +113,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.gridControlgrupos);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(677, 371);
+            this.xtraTabPage2.Size = new System.Drawing.Size(607, 369);
             this.xtraTabPage2.Text = "Grupos";
             // 
             // gridControlgrupos
@@ -122,7 +122,7 @@
             this.gridControlgrupos.Location = new System.Drawing.Point(0, 0);
             this.gridControlgrupos.MainView = this.gridViewgrupos;
             this.gridControlgrupos.Name = "gridControlgrupos";
-            this.gridControlgrupos.Size = new System.Drawing.Size(677, 371);
+            this.gridControlgrupos.Size = new System.Drawing.Size(607, 369);
             this.gridControlgrupos.TabIndex = 0;
             this.gridControlgrupos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewgrupos});
@@ -138,7 +138,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.gridControlbotones);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(677, 371);
+            this.xtraTabPage3.Size = new System.Drawing.Size(607, 369);
             this.xtraTabPage3.Text = "Botones";
             // 
             // gridControlbotones
@@ -147,7 +147,7 @@
             this.gridControlbotones.Location = new System.Drawing.Point(0, 0);
             this.gridControlbotones.MainView = this.gridViewbotones;
             this.gridControlbotones.Name = "gridControlbotones";
-            this.gridControlbotones.Size = new System.Drawing.Size(677, 371);
+            this.gridControlbotones.Size = new System.Drawing.Size(607, 369);
             this.gridControlbotones.TabIndex = 0;
             this.gridControlbotones.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewbotones});
