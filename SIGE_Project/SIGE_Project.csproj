@@ -199,6 +199,12 @@
     <Compile Include="DatosEstadoCivil.Designer.cs">
       <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosGenero.Designer.cs">
+      <DependentUpon>DatosGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatosEstadoCivil.resx">
       <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosGenero.resx">
+      <DependentUpon>DatosGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
