@@ -48,6 +48,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -57,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // gridColumn1
@@ -67,6 +70,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.gridControl_cicloEscolar);
             this.layoutControl1.Controls.Add(this.navBarControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,11 +86,11 @@
             // gridControl_cicloEscolar
             // 
             this.gridControl_cicloEscolar.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
-            this.gridControl_cicloEscolar.Location = new System.Drawing.Point(12, 12);
+            this.gridControl_cicloEscolar.Location = new System.Drawing.Point(12, 35);
             this.gridControl_cicloEscolar.MainView = this.gridView_cicloEscolar;
             this.gridControl_cicloEscolar.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_cicloEscolar.Name = "gridControl_cicloEscolar";
-            this.gridControl_cicloEscolar.Size = new System.Drawing.Size(410, 470);
+            this.gridControl_cicloEscolar.Size = new System.Drawing.Size(410, 447);
             this.gridControl_cicloEscolar.TabIndex = 5;
             this.gridControl_cicloEscolar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_cicloEscolar});
@@ -149,11 +153,11 @@
             this.navBarItem_edit,
             this.navBarItem_status,
             this.navBarItem_export});
-            this.navBarControl1.Location = new System.Drawing.Point(426, 12);
+            this.navBarControl1.Location = new System.Drawing.Point(426, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 188;
-            this.navBarControl1.Size = new System.Drawing.Size(188, 470);
+            this.navBarControl1.Size = new System.Drawing.Size(188, 447);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -180,18 +184,21 @@
             this.navBarItem_add.Caption = "Agregar";
             this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
             this.navBarItem_add.Name = "navBarItem_add";
+            this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
             // 
             // navBarItem_edit
             // 
             this.navBarItem_edit.Caption = "Editar";
             this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_edit.ImageOptions.SvgImage")));
             this.navBarItem_edit.Name = "navBarItem_edit";
+            this.navBarItem_edit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_edit_LinkClicked);
             // 
             // navBarItem_status
             // 
             this.navBarItem_status.Caption = "Activar/Desactivar";
-            this.navBarItem_status.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_status.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_status.ImageOptions.SvgImage")));
             this.navBarItem_status.Name = "navBarItem_status";
+            this.navBarItem_status.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_status_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -204,8 +211,9 @@
             // navBarItem_export
             // 
             this.navBarItem_export.Caption = "Exportar";
-            this.navBarItem_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_export.ImageOptions.SvgImage")));
             this.navBarItem_export.Name = "navBarItem_export";
+            this.navBarItem_export.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_export_LinkClicked);
             // 
             // Root
             // 
@@ -213,7 +221,8 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem3});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(626, 494);
             this.Root.TextVisible = false;
@@ -221,20 +230,40 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(414, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(414, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(192, 474);
+            this.layoutControlItem1.Size = new System.Drawing.Size(192, 451);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl_cicloEscolar;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(414, 474);
+            this.layoutControlItem2.Size = new System.Drawing.Size(414, 451);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(102, 19);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Ciclo Escolar";
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.labelControl1;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(606, 23);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // catalogoCicloEscolar
             // 
@@ -245,6 +274,7 @@
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoCicloEscolar.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoCicloEscolar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Ciclo Escolar";
             this.Load += new System.EventHandler(this.catalogoCicloEscolar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -255,6 +285,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +310,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem_status;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_export;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }
