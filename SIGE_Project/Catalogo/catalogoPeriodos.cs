@@ -135,17 +135,25 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_edit_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            // SE OBTIENEN LOS VALORES DE CADA COLUMNA 
             int idCicloEscolar = Convert.ToInt32(gridView_periodos.GetRowCellValue(gridView_periodos.FocusedRowHandle, "idCicloEscolar"));
             string cveMesInicio = gridView_periodos.GetRowCellValue(gridView_periodos.FocusedRowHandle, "cveMesInicio").ToString();
             int anioInicio = Convert.ToInt32(gridView_periodos.GetRowCellValue(gridView_periodos.FocusedRowHandle, "anioInicio").ToString());
             string cveMesFin = gridView_periodos.GetRowCellValue(gridView_periodos.FocusedRowHandle, "cveMesFin").ToString();
             int anioFin = Convert.ToInt32(gridView_periodos.GetRowCellValue(gridView_periodos.FocusedRowHandle, "anioFin").ToString());
+
             DatosPeriodos objDatosPeriodos = new DatosPeriodos(idCicloEscolar, cveMesInicio, anioInicio, cveMesFin, anioFin);
             objDatosPeriodos.ShowDialog();
+
             if (objDatosPeriodos.DialogResult == DialogResult.OK)
             {
                 consultarDatos();
             }
+        }
+
+        private void dashboardDesigner1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

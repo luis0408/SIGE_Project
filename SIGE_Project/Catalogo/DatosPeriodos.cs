@@ -43,16 +43,25 @@ namespace SIGE_Project.Catalogo
             objPeriodos.anioInicio = _anioInicio;
             objPeriodos.cveMesFin = _cveMesFin;
             objPeriodos.anioFin = _anioFin;
+            setValores();
             nuevo = false;
         }
+
         private void setValores()
         {
             //ESTE METODO SE OCUPA PARA COLOCAR LOS VALORES EN LOS CONTROLES 
+
+            // SE CONCATENA EL MES DE INICIO Y AÑO DE INICIO EN EL FORMATO ADECUADO
+            string mesAnioInicio = $"{int.Parse(objPeriodos.cveMesInicio):00}/{objPeriodos.anioInicio}";
+            DateTime fechaInicio = DateTime.ParseExact(mesAnioInicio, "MM/yyyy", null);
+
+            // SE CONCATENA EL MES DE FINALIZACION Y AÑO DE FINALIZACION EN EL FORMATO ADECUADO
+            string mesAnioFin = $"{int.Parse(objPeriodos.cveMesFin):00}/{objPeriodos.anioFin}";
+            DateTime fechaFin = DateTime.ParseExact(mesAnioFin, "MM/yyyy", null);
+
             textEdit_idCicloEscolar.Text = objPeriodos.idCicloEscolar.ToString();
-            mesInicio = Convert.ToInt32(objPeriodos.cveMesInicio);
-            anioInicio = objPeriodos.anioInicio;
-            mesFin = Convert.ToInt32(objPeriodos.cveMesFin);
-            anioFin = objPeriodos.anioFin;
+            dateEdit_inicio.DateTime = fechaInicio;
+            dateEdit_fin.DateTime = fechaFin;
 
             textEdit_idCicloEscolar.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
         }

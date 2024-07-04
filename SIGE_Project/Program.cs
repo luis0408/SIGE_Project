@@ -19,7 +19,8 @@ namespace SIGE_Project
             //Application.Run(new managerforms());
             //Application.Run(new  ControlEscolar.FichaEscolar());
             //Application.Run(new Catalogo.catalogoPeriodos());
-            Application.Run(new Catalogo.catalogoMediosDeDifusion());
+            //Application.Run(new Catalogo.catalogoMediosDeDifusion());
+            Application.Run(new Catalogo.catalogoTipoUsuarios());
 
         }
     }
