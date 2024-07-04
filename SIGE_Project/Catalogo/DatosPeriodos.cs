@@ -15,6 +15,11 @@ namespace SIGE_Project.Catalogo
     {
         ClsPeriodos objPeriodos;
         bool nuevo = true;
+
+        private int mesInicio;
+        private int anioInicio;
+        private int mesFin;
+        private int anioFin;
         public DatosPeriodos()
         {
             InitializeComponent();
@@ -38,17 +43,25 @@ namespace SIGE_Project.Catalogo
             objPeriodos.anioInicio = _anioInicio;
             objPeriodos.cveMesFin = _cveMesFin;
             objPeriodos.anioFin = _anioFin;
+            setValores();
             nuevo = false;
         }
 
         private void setValores()
         {
             //ESTE METODO SE OCUPA PARA COLOCAR LOS VALORES EN LOS CONTROLES 
+
+            // SE CONCATENA EL MES DE INICIO Y AÑO DE INICIO EN EL FORMATO ADECUADO
+            string mesAnioInicio = $"{int.Parse(objPeriodos.cveMesInicio):00}/{objPeriodos.anioInicio}";
+            DateTime fechaInicio = DateTime.ParseExact(mesAnioInicio, "MM/yyyy", null);
+
+            // SE CONCATENA EL MES DE FINALIZACION Y AÑO DE FINALIZACION EN EL FORMATO ADECUADO
+            string mesAnioFin = $"{int.Parse(objPeriodos.cveMesFin):00}/{objPeriodos.anioFin}";
+            DateTime fechaFin = DateTime.ParseExact(mesAnioFin, "MM/yyyy", null);
+
             textEdit_idCicloEscolar.Text = objPeriodos.idCicloEscolar.ToString();
-            textEdit_cveMesInicio.Text = objPeriodos.cveMesInicio;
-            textEdit_anioInicio.Text = objPeriodos.anioInicio.ToString();
-            textEdit_cveMesFin.Text = objPeriodos.cveMesFin;
-            textEdit_anioFin.Text = objPeriodos.anioFin.ToString();
+            dateEdit_inicio.DateTime = fechaInicio;
+            dateEdit_fin.DateTime = fechaFin;
 
             textEdit_idCicloEscolar.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
         }
@@ -69,32 +82,41 @@ namespace SIGE_Project.Catalogo
                 XtraMessageBox.Show("Ingrese un id para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrEmpty(textEdit_cveMesInicio.Text))
+            if (dateEdit_inicio.EditValue == null)
             {
-                XtraMessageBox.Show("Ingrese una clave de mes de inicio para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Por favor, seleccione una fecha de inicio", "Fecha vacía", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrEmpty(textEdit_anioInicio.Text))
+            if (dateEdit_fin.EditValue == null)
             {
-                XtraMessageBox.Show("Ingrese un año de inicio para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Por favor, seleccione una fecha de finalización", "Fecha vacía", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrEmpty(textEdit_cveMesFin.Text))
-            {
-                XtraMessageBox.Show("Ingrese una clave de mes de finalización para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(textEdit_anioFin.Text))
-            {
-                XtraMessageBox.Show("Ingrese un año de finalización para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (string.IsNullOrEmpty(textEdit_cveMesFin.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese una clave de mes de finalización para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //if (string.IsNullOrEmpty(textEdit_anioFin.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese un año de finalización para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+            // Obtener el mes y el año de los controles DateEdit
+            DateTime selectedDate_inicio = dateEdit_inicio.DateTime;
+            DateTime selectedDate_fin = dateEdit_fin.DateTime;
+
+            mesInicio = selectedDate_inicio.Month;
+            anioInicio = selectedDate_inicio.Year;
+            mesFin = selectedDate_fin.Month;
+            anioFin = selectedDate_fin.Year;
 
             objPeriodos.idCicloEscolar = Convert.ToInt32(textEdit_idCicloEscolar.Text);
-            objPeriodos.cveMesInicio = textEdit_cveMesInicio.Text;
-            objPeriodos.anioInicio = Convert.ToInt32(textEdit_anioFin.Text);
-            objPeriodos.cveMesFin = textEdit_cveMesFin.Text;
-            objPeriodos.anioFin = Convert.ToInt32(textEdit_anioFin.Text);
+            objPeriodos.cveMesInicio = mesInicio.ToString();
+            objPeriodos.anioInicio = anioInicio;
+            objPeriodos.cveMesFin = mesFin.ToString();
+            objPeriodos.anioFin = anioFin;
 
             int result = nuevo == true ? objPeriodos.insertDatoPeriodos() : objPeriodos.updateDescPeriodos();
             if (result == 1)
