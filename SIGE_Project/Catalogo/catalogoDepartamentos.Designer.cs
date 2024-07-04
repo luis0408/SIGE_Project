@@ -75,24 +75,22 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(168, 19);
+            this.labelControl1.Size = new System.Drawing.Size(112, 13);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Departamentos IESE";
+            this.labelControl1.Text = "DEPARTAMENTOS IESE";
             // 
             // gridControl_departamento
             // 
             this.gridControl_departamento.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
-            this.gridControl_departamento.Location = new System.Drawing.Point(12, 35);
+            this.gridControl_departamento.Location = new System.Drawing.Point(12, 29);
             this.gridControl_departamento.MainView = this.gridView_departamento;
             this.gridControl_departamento.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_departamento.Name = "gridControl_departamento";
-            this.gridControl_departamento.Size = new System.Drawing.Size(377, 349);
+            this.gridControl_departamento.Size = new System.Drawing.Size(377, 355);
             this.gridControl_departamento.TabIndex = 5;
             this.gridControl_departamento.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_departamento});
@@ -144,11 +142,11 @@
             this.navBarItem_add,
             this.navBarItem_edit,
             this.navBarItem_status});
-            this.navBarControl1.Location = new System.Drawing.Point(393, 35);
+            this.navBarControl1.Location = new System.Drawing.Point(393, 29);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 208;
-            this.navBarControl1.Size = new System.Drawing.Size(208, 349);
+            this.navBarControl1.Size = new System.Drawing.Size(208, 355);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -216,18 +214,18 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(381, 23);
+            this.layoutControlItem1.Location = new System.Drawing.Point(381, 17);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(212, 353);
+            this.layoutControlItem1.Size = new System.Drawing.Size(212, 359);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl_departamento;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 17);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(381, 353);
+            this.layoutControlItem2.Size = new System.Drawing.Size(381, 359);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -236,7 +234,7 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(593, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(593, 17);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -251,7 +249,6 @@
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoDepartamentos.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoDepartamentos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Departamentos";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

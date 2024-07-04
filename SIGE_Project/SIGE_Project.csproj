@@ -131,7 +131,6 @@
     <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogo\ClsCicloEscolar.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
     <Compile Include="Catalogo\DatosCicloEscolar.cs">
