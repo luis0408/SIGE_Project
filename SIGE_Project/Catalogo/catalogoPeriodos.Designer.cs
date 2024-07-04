@@ -40,13 +40,12 @@
             this.gridColumn1_anioFin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem_refresh = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_add = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_edit = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_export = new DevExpress.XtraNavBar.NavBarItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -71,8 +70,9 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 317, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(865, 426);
+            this.layoutControl1.Size = new System.Drawing.Size(790, 426);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -93,7 +93,7 @@
             this.gridControl_periodos.MainView = this.gridView_periodos;
             this.gridControl_periodos.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_periodos.Name = "gridControl_periodos";
-            this.gridControl_periodos.Size = new System.Drawing.Size(588, 385);
+            this.gridControl_periodos.Size = new System.Drawing.Size(541, 385);
             this.gridControl_periodos.TabIndex = 0;
             this.gridControl_periodos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_periodos});
@@ -163,16 +163,15 @@
             this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem_add,
-            this.navBarItem2,
+            this.navBarItem_edit,
             this.navBarItem3,
-            this.navBarItem4,
-            this.navBarItem5,
-            this.navBarItem6});
-            this.navBarControl1.Location = new System.Drawing.Point(604, 29);
+            this.navBarItem_refresh,
+            this.navBarItem_export});
+            this.navBarControl1.Location = new System.Drawing.Point(557, 29);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 249;
-            this.navBarControl1.Size = new System.Drawing.Size(249, 385);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 221;
+            this.navBarControl1.Size = new System.Drawing.Size(221, 385);
             this.navBarControl1.TabIndex = 1;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -181,57 +180,53 @@
             this.navBarGroup1.Caption = "ACCIONES.";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_refresh),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_add),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_edit),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
             this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem_refresh
+            // 
+            this.navBarItem_refresh.Caption = "Actualizar";
+            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
+            this.navBarItem_refresh.Name = "navBarItem_refresh";
+            this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
             // 
             // navBarItem_add
             // 
-            this.navBarItem_add.Caption = "Nuevo periodo.";
-            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
+            this.navBarItem_add.Caption = "Agregar";
+            this.navBarItem_add.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.addparagraphtotableofcontents;
             this.navBarItem_add.Name = "navBarItem_add";
             this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
             // 
-            // navBarItem2
+            // navBarItem_edit
             // 
-            this.navBarItem2.Caption = "Editar periodo.";
-            this.navBarItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navBarItem2.Name = "navBarItem2";
+            this.navBarItem_edit.Caption = "Editar";
+            this.navBarItem_edit.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.actions_edit;
+            this.navBarItem_edit.Name = "navBarItem_edit";
+            this.navBarItem_edit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_edit_LinkClicked);
             // 
             // navBarItem3
             // 
-            this.navBarItem3.Caption = "Eliminar periodo.";
-            this.navBarItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
+            this.navBarItem3.Caption = "Activar/Desactivar";
+            this.navBarItem3.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.actions_rating;
             this.navBarItem3.Name = "navBarItem3";
-            // 
-            // navBarItem4
-            // 
-            this.navBarItem4.Caption = "Actualizar.";
-            this.navBarItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
-            this.navBarItem4.Name = "navBarItem4";
             // 
             // navBarGroup2
             // 
-            this.navBarGroup2.Caption = "REPORTES.";
+            this.navBarGroup2.Caption = "REPORTES";
             this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_export)});
             this.navBarGroup2.Name = "navBarGroup2";
             // 
-            // navBarItem5
+            // navBarItem_export
             // 
-            this.navBarItem5.Caption = "Reporte de todos los periodos.";
-            this.navBarItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
-            this.navBarItem5.Name = "navBarItem5";
-            // 
-            // navBarItem6
-            // 
-            this.navBarItem6.Caption = "Reporte filtrado de periodos.";
-            this.navBarItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem6.ImageOptions.SvgImage")));
-            this.navBarItem6.Name = "navBarItem6";
+            this.navBarItem_export.Caption = "Exportar";
+            this.navBarItem_export.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.exporttoxlsx;
+            this.navBarItem_export.Name = "navBarItem_export";
+            this.navBarItem_export.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_export_LinkClicked);
             // 
             // Root
             // 
@@ -242,15 +237,15 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(865, 426);
+            this.Root.Size = new System.Drawing.Size(790, 426);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(592, 17);
+            this.layoutControlItem1.Location = new System.Drawing.Point(545, 17);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(253, 389);
+            this.layoutControlItem1.Size = new System.Drawing.Size(225, 389);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -259,7 +254,7 @@
             this.layoutControlItem2.Control = this.gridControl_periodos;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 17);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(592, 389);
+            this.layoutControlItem2.Size = new System.Drawing.Size(545, 389);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -268,7 +263,7 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(845, 17);
+            this.layoutControlItem3.Size = new System.Drawing.Size(770, 17);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -276,14 +271,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 426);
+            this.ClientSize = new System.Drawing.Size(790, 426);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.SvgImage = global::SIGE_Project.Properties.Resources.actions_calendar1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoPeriodos";
-            this.Text = "catalogoPeriodos";
+            this.Text = "Periodos";
             this.Load += new System.EventHandler(this.catalogoPeriodos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_periodos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_periodos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
@@ -304,15 +301,14 @@
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_add;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_edit;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_refresh;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_export;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1_cveMesInicio;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1_anioInicio;
