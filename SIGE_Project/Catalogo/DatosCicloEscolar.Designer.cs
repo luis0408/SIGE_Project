@@ -36,28 +36,28 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.checkEdit_status = new DevExpress.XtraEditors.CheckEdit();
+            this.dateEdit_anioInicio = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit_anioFin = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateEdit_anioInicio = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit_anioFin = new DevExpress.XtraEditors.DateEdit();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioInicio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioInicio.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioFin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioFin.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -138,6 +138,14 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(317, 24);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(108, 24);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // checkEdit_status
             // 
             this.checkEdit_status.Location = new System.Drawing.Point(329, 12);
@@ -146,6 +154,42 @@
             this.checkEdit_status.Size = new System.Drawing.Size(104, 20);
             this.checkEdit_status.StyleController = this.layoutControl1;
             this.checkEdit_status.TabIndex = 8;
+            // 
+            // dateEdit_anioInicio
+            // 
+            this.dateEdit_anioInicio.EditValue = null;
+            this.dateEdit_anioInicio.Location = new System.Drawing.Point(71, 12);
+            this.dateEdit_anioInicio.Name = "dateEdit_anioInicio";
+            this.dateEdit_anioInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_anioInicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_anioInicio.Properties.DisplayFormat.FormatString = "";
+            this.dateEdit_anioInicio.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit_anioInicio.Properties.EditFormat.FormatString = "";
+            this.dateEdit_anioInicio.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit_anioInicio.Properties.MaskSettings.Set("mask", "");
+            this.dateEdit_anioInicio.Size = new System.Drawing.Size(254, 20);
+            this.dateEdit_anioInicio.StyleController = this.layoutControl1;
+            this.dateEdit_anioInicio.TabIndex = 4;
+            // 
+            // dateEdit_anioFin
+            // 
+            this.dateEdit_anioFin.EditValue = null;
+            this.dateEdit_anioFin.Location = new System.Drawing.Point(71, 36);
+            this.dateEdit_anioFin.Name = "dateEdit_anioFin";
+            this.dateEdit_anioFin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_anioFin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_anioFin.Properties.DisplayFormat.FormatString = "";
+            this.dateEdit_anioFin.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit_anioFin.Properties.EditFormat.FormatString = "";
+            this.dateEdit_anioFin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit_anioFin.Properties.MaskSettings.Set("mask", "");
+            this.dateEdit_anioFin.Size = new System.Drawing.Size(254, 20);
+            this.dateEdit_anioFin.StyleController = this.layoutControl1;
+            this.dateEdit_anioFin.TabIndex = 5;
             // 
             // layoutControlItem
             // 
@@ -174,48 +218,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // dateEdit_anioInicio
-            // 
-            this.dateEdit_anioInicio.EditValue = null;
-            this.dateEdit_anioInicio.Location = new System.Drawing.Point(71, 12);
-            this.dateEdit_anioInicio.Name = "dateEdit_anioInicio";
-            this.dateEdit_anioInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_anioInicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_anioInicio.Properties.DisplayFormat.FormatString = "";
-            this.dateEdit_anioInicio.Properties.EditFormat.FormatString = "";
-            this.dateEdit_anioInicio.Properties.Mask.EditMask = "";
-            this.dateEdit_anioInicio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit_anioInicio.Size = new System.Drawing.Size(254, 20);
-            this.dateEdit_anioInicio.StyleController = this.layoutControl1;
-            this.dateEdit_anioInicio.TabIndex = 4;
-            // 
-            // dateEdit_anioFin
-            // 
-            this.dateEdit_anioFin.EditValue = null;
-            this.dateEdit_anioFin.Location = new System.Drawing.Point(71, 36);
-            this.dateEdit_anioFin.Name = "dateEdit_anioFin";
-            this.dateEdit_anioFin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_anioFin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_anioFin.Properties.DisplayFormat.FormatString = "";
-            this.dateEdit_anioFin.Properties.EditFormat.FormatString = "";
-            this.dateEdit_anioFin.Properties.Mask.EditMask = "";
-            this.dateEdit_anioFin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit_anioFin.Size = new System.Drawing.Size(254, 20);
-            this.dateEdit_anioFin.StyleController = this.layoutControl1;
-            this.dateEdit_anioFin.TabIndex = 5;
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(317, 24);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(108, 24);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // DatosCicloEscolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,15 +233,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioInicio.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioInicio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioFin.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_anioFin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }

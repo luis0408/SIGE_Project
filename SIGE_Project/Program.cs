@@ -16,9 +16,11 @@ namespace SIGE_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new managerforms());
-           //Application.Run(new  ControlEscolar.FichaEscolar());
-           // Application.Run(new Catalogo.catalogoPeriodos());
+            //Application.Run(new managerforms());
+            //Application.Run(new  ControlEscolar.FichaEscolar());
+            //Application.Run(new Catalogo.catalogoPeriodos());
+            Application.Run(new Catalogo.catalogoMediosDeDifusion());
+
         }
     }
 }

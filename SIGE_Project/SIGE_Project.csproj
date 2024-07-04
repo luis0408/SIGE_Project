@@ -384,5 +384,26 @@
   <ItemGroup>
     <None Include="Resources\close.svg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_calendar.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_calendar1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addparagraphtotableofcontents.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_edit.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_rating.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sendxlsx.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
