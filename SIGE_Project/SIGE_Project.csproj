@@ -160,6 +160,8 @@
     <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\ClsCicloEscolar.cs" />
+    <Compile Include="Catalogo\ClsDepartamento.cs" />
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
