@@ -25,9 +25,9 @@ namespace SIGE_Project.ControlEscolar
         private void llenarLookups()
         {
             ////PAIS
-            lookUpEdit_pais.Properties.DataSource = Utilerias.llenarlookupeditvalue("select c_Pais,descripcion  from [dbo].[SIGE_Catalogo_Pais]");
-            lookUpEdit_pais.Properties.DisplayMember = "descripcion";
-            lookUpEdit_pais.Properties.ValueMember = "c_Pais";
+            lookUpEdit_paisNacimiento.Properties.DataSource = Utilerias.llenarlookupeditvalue("select c_Pais,descripcion  from [dbo].[SIGE_Catalogo_Pais]");
+            lookUpEdit_paisNacimiento.Properties.DisplayMember = "descripcion";
+            lookUpEdit_paisNacimiento.Properties.ValueMember = "c_Pais";
             ////GENERO
             lookUpEdit_genero.Properties.DataSource = Utilerias.llenarlookupeditvalue("select cveGenero,descripcion from SIGE_Catalogo_Genero where estado=1");
             lookUpEdit_genero.Properties.DisplayMember = "descripcion";

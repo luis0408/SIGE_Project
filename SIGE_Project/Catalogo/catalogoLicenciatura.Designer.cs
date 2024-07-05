@@ -35,16 +35,16 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -63,7 +63,7 @@
             this.layoutControl1.Controls.Add(this.navBarControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(861, 584);
@@ -74,8 +74,8 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(8, 8);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(107, 19);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -84,12 +84,12 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.gridControl1.Location = new System.Drawing.Point(8, 29);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
+            this.gridControl1.Location = new System.Drawing.Point(12, 35);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(670, 547);
+            this.gridControl1.Size = new System.Drawing.Size(663, 537);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -112,11 +112,11 @@
             this.navBarItem4,
             this.navBarItem5,
             this.navBarItem2});
-            this.navBarControl1.Location = new System.Drawing.Point(680, 29);
-            this.navBarControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navBarControl1.Location = new System.Drawing.Point(679, 35);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 173;
-            this.navBarControl1.Size = new System.Drawing.Size(173, 547);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 170;
+            this.navBarControl1.Size = new System.Drawing.Size(170, 537);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -131,6 +131,12 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "Actualizar";
+            this.navBarItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
+            this.navBarItem4.Name = "navBarItem4";
+            // 
             // navBarItem1
             // 
             this.navBarItem1.Caption = "Agregar";
@@ -143,11 +149,11 @@
             this.navBarItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
             this.navBarItem3.Name = "navBarItem3";
             // 
-            // navBarItem4
+            // navBarItem2
             // 
-            this.navBarItem4.Caption = "Actualizar";
-            this.navBarItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
-            this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem2.Caption = "Activar/Desactivar";
+            this.navBarItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem2.Name = "navBarItem2";
             // 
             // navBarGroup2
             // 
@@ -178,18 +184,18 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(672, 21);
+            this.layoutControlItem1.Location = new System.Drawing.Point(667, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(175, 549);
+            this.layoutControlItem1.Size = new System.Drawing.Size(174, 541);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 21);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(672, 549);
+            this.layoutControlItem2.Size = new System.Drawing.Size(667, 541);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -198,15 +204,9 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(847, 21);
+            this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "Activar/Desactivar";
-            this.navBarItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navBarItem2.Name = "navBarItem2";
             // 
             // catalogoLicenciatura
             // 
@@ -215,9 +215,10 @@
             this.ClientSize = new System.Drawing.Size(861, 584);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoLicenciatura.IconOptions.SvgImage")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoLicenciatura";
             this.Text = "Licenciaturas";
+            this.Load += new System.EventHandler(this.catalogoLicenciatura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
