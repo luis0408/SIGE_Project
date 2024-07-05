@@ -31,24 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(catalogoLicenciatura));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl_licenciaturas = new DevExpress.XtraGrid.GridControl();
+            this.gridView_licenciaturas = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_refresh = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_export = new DevExpress.XtraNavBar.NavBarItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_licenciaturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_licenciaturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -59,7 +64,7 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.gridControl_licenciaturas);
             this.layoutControl1.Controls.Add(this.navBarControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -82,23 +87,65 @@
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Licenciaturas";
             // 
-            // gridControl1
+            // gridControl_licenciaturas
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
-            this.gridControl1.Location = new System.Drawing.Point(12, 35);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(663, 537);
-            this.gridControl1.TabIndex = 5;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControl_licenciaturas.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
+            this.gridControl_licenciaturas.Location = new System.Drawing.Point(12, 35);
+            this.gridControl_licenciaturas.MainView = this.gridView_licenciaturas;
+            this.gridControl_licenciaturas.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl_licenciaturas.Name = "gridControl_licenciaturas";
+            this.gridControl_licenciaturas.Size = new System.Drawing.Size(663, 537);
+            this.gridControl_licenciaturas.TabIndex = 5;
+            this.gridControl_licenciaturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_licenciaturas});
             // 
-            // gridView1
+            // gridView_licenciaturas
             // 
-            this.gridView1.DetailHeight = 239;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gridView_licenciaturas.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
+            this.gridView_licenciaturas.DetailHeight = 239;
+            this.gridView_licenciaturas.GridControl = this.gridControl_licenciaturas;
+            this.gridView_licenciaturas.Name = "gridView_licenciaturas";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Clave licenciatura";
+            this.gridColumn1.FieldName = "cveLicenciatura";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Descripción";
+            this.gridColumn2.FieldName = "descripcionLicenciatura";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Estado";
+            this.gridColumn3.FieldName = "estadoLetra";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Estado num";
+            this.gridColumn4.FieldName = "estado";
+            this.gridColumn4.Name = "gridColumn4";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Id registro";
+            this.gridColumn5.FieldName = "idRegistro";
+            this.gridColumn5.Name = "gridColumn5";
             // 
             // navBarControl1
             // 
@@ -109,8 +156,8 @@
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
             this.navBarItem3,
-            this.navBarItem4,
-            this.navBarItem5,
+            this.navBarItem_refresh,
+            this.navBarItem_export,
             this.navBarItem2});
             this.navBarControl1.Location = new System.Drawing.Point(679, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -125,17 +172,18 @@
             this.navBarGroup1.Caption = "Acciones";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_refresh),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
-            // navBarItem4
+            // navBarItem_refresh
             // 
-            this.navBarItem4.Caption = "Actualizar";
-            this.navBarItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
-            this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem_refresh.Caption = "Actualizar";
+            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_refresh.ImageOptions.SvgImage")));
+            this.navBarItem_refresh.Name = "navBarItem_refresh";
+            this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
             // 
             // navBarItem1
             // 
@@ -160,14 +208,15 @@
             this.navBarGroup2.Caption = "Reportes";
             this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_export)});
             this.navBarGroup2.Name = "navBarGroup2";
             // 
-            // navBarItem5
+            // navBarItem_export
             // 
-            this.navBarItem5.Caption = "Exportar";
-            this.navBarItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
-            this.navBarItem5.Name = "navBarItem5";
+            this.navBarItem_export.Caption = "Exportar";
+            this.navBarItem_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_export.ImageOptions.SvgImage")));
+            this.navBarItem_export.Name = "navBarItem_export";
+            this.navBarItem_export.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_export_LinkClicked);
             // 
             // Root
             // 
@@ -192,7 +241,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.gridControl1;
+            this.layoutControlItem2.Control = this.gridControl_licenciaturas;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(667, 541);
@@ -221,8 +270,8 @@
             this.Load += new System.EventHandler(this.catalogoLicenciatura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_licenciaturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_licenciaturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -236,19 +285,24 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControl_licenciaturas;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView_licenciaturas;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_refresh;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_export;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }
