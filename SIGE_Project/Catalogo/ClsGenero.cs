@@ -26,8 +26,18 @@ namespace SIGE_Project.Catalogo
 
         public int insertarDatosGenero()
         {
-            datos = new object[] {cveGenero, descGenero, estadoCivil};
-            parametros = new string[] { };
+            datos = new object[] { cveGenero, descGenero, estadoCivil };
+            parametros = new string[] { "@cveGenero", "@descripcion", "@estado" };
+            int result = Utilerias.ejecutarprocedimiento("[SIGE_INSERTAR_GENERO]", datos, parametros);
+            return result;
+        }
 
+        public int updateDescGenero()
+        {
+            datos = new object[] { cveGenero, descGenero, estadoCivil };
+            parametros = new string[] { "@cveGenero", "@descripcion", "@estado" };
+            int result = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_GENERO]", datos, parametros);
+            return result;
+        }
     }
 }
