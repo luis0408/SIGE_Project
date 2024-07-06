@@ -47,6 +47,9 @@ namespace SIGE_Project.Catalogo
             int result = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_GENERO]", datos, parametros);
             return result;
         }
+<<<<<<< HEAD
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
+=======
 >>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
     }
 }

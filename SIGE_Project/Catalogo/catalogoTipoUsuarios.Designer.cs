@@ -84,10 +84,17 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.labelControl1.Size = new System.Drawing.Size(142, 19);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Tipos de usuarios";
+=======
+            this.labelControl1.Size = new System.Drawing.Size(136, 19);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Tipod de usuario";
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
 =======
             this.labelControl1.Size = new System.Drawing.Size(136, 19);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -103,7 +110,11 @@
             this.gridControl_tipoUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_tipoUsuarios.Name = "gridControl_tipoUsuarios";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.gridControl_tipoUsuarios.Size = new System.Drawing.Size(478, 391);
+=======
+            this.gridControl_tipoUsuarios.Size = new System.Drawing.Size(660, 537);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
 =======
             this.gridControl_tipoUsuarios.Size = new System.Drawing.Size(660, 537);
 >>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
@@ -176,11 +187,19 @@
             this.navBarItem_refresh,
             this.navBarItem_export});
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.navBarControl1.Location = new System.Drawing.Point(494, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 246;
             this.navBarControl1.Size = new System.Drawing.Size(246, 391);
+=======
+            this.navBarControl1.Location = new System.Drawing.Point(676, 35);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 173;
+            this.navBarControl1.Size = new System.Drawing.Size(173, 537);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
 =======
             this.navBarControl1.Location = new System.Drawing.Point(676, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -262,9 +281,15 @@
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.layoutControlItem1.Location = new System.Drawing.Point(482, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(250, 395);
+=======
+            this.layoutControlItem1.Location = new System.Drawing.Point(664, 23);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(177, 541);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
 =======
             this.layoutControlItem1.Location = new System.Drawing.Point(664, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
@@ -279,7 +304,11 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.layoutControlItem2.Size = new System.Drawing.Size(482, 395);
+=======
+            this.layoutControlItem2.Size = new System.Drawing.Size(664, 541);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
 =======
             this.layoutControlItem2.Size = new System.Drawing.Size(664, 541);
 >>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
@@ -292,7 +321,11 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.layoutControlItem3.Size = new System.Drawing.Size(732, 23);
+=======
+            this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
 =======
             this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
 >>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
