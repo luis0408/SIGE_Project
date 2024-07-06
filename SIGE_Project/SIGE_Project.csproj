@@ -234,6 +234,8 @@
     <Compile Include="Configuraciones\Configmenus.Designer.cs">
       <DependentUpon>Configmenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlEscolar\ClsApirante.cs" />
+    <Compile Include="ControlEscolar\ClsPersona.cs" />
     <Compile Include="ControlEscolar\FichaEscolar.cs">
       <SubType>Form</SubType>
     </Compile>
