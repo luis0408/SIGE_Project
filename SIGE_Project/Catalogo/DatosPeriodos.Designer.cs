@@ -77,15 +77,9 @@
             this.textEdit_idCicloEscolar.Name = "textEdit_idCicloEscolar";
             this.textEdit_idCicloEscolar.Properties.Appearance.Options.UseTextOptions = true;
             this.textEdit_idCicloEscolar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(245, 20);
-=======
             this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(329, 20);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
-=======
             this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(329, 20);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.textEdit_idCicloEscolar.StyleController = this.layoutControl1;
             this.textEdit_idCicloEscolar.TabIndex = 10;
             // 
@@ -127,16 +121,10 @@
             this.dateEdit_inicio.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEdit_inicio.Properties.MaskSettings.Set("mask", "y");
             this.dateEdit_inicio.Properties.UseMaskAsDisplayFormat = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.dateEdit_inicio.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dateEdit_inicio.Size = new System.Drawing.Size(77, 20);
-=======
             this.dateEdit_inicio.Size = new System.Drawing.Size(131, 20);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
-=======
             this.dateEdit_inicio.Size = new System.Drawing.Size(131, 20);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.dateEdit_inicio.StyleController = this.layoutControl1;
             this.dateEdit_inicio.TabIndex = 4;
             // 
@@ -170,15 +158,9 @@
             this.layoutControlItem7,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.Root.Size = new System.Drawing.Size(355, 108);
-=======
             this.Root.Size = new System.Drawing.Size(439, 132);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
-=======
             this.Root.Size = new System.Drawing.Size(439, 132);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -195,36 +177,24 @@
             this.layoutControlItem5.Control = this.simpleButton_aceptar;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.layoutControlItem5.Size = new System.Drawing.Size(167, 40);
-=======
             this.layoutControlItem5.Size = new System.Drawing.Size(221, 64);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
-=======
             this.layoutControlItem5.Size = new System.Drawing.Size(221, 64);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton_cancelar;
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.layoutControlItem6.Location = new System.Drawing.Point(167, 48);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(168, 40);
-=======
             this.layoutControlItem6.Location = new System.Drawing.Point(221, 48);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(198, 64);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
-=======
             this.layoutControlItem6.Location = new System.Drawing.Point(221, 48);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(198, 64);
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 

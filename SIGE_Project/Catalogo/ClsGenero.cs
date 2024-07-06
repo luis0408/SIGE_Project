@@ -24,14 +24,14 @@ namespace SIGE_Project.Catalogo
         object[] datos = { };
         string[] parametros = { };
 
-<<<<<<< HEAD
+ 
         //public int insertarDatosGenero()
         //{
         //    datos = new object[] { cveGenero, descGenero, estadoCivil };
         //    parametros = new string[] { };
         //    retu
         //}
-=======
+ 
         public int insertarDatosGenero()
         {
             datos = new object[] { cveGenero, descGenero, estadoGenero };
@@ -47,9 +47,9 @@ namespace SIGE_Project.Catalogo
             int result = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_GENERO]", datos, parametros);
             return result;
         }
-<<<<<<< HEAD
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
-=======
->>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
+ 
+ 
+ 
+ 
     }
 }
