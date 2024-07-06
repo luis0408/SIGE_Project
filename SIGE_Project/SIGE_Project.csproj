@@ -13,6 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -52,6 +52,7 @@
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Dashboard.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Dashboard.v22.2.Win, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -61,9 +62,11 @@
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Map.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.TreeMap.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -84,6 +87,7 @@
     <Reference Include="DevExpress.XtraPivotGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -156,7 +160,11 @@
     <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\ClsCicloEscolar.cs" />
+    <Compile Include="Catalogo\ClsDepartamento.cs" />
+    <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
+    <Compile Include="Catalogo\ClsLicenciatura.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
     <Compile Include="Catalogo\ClsTipoUsuarios.cs" />
@@ -171,6 +179,12 @@
     </Compile>
     <Compile Include="Catalogo\DatosDepartamento.Designer.cs">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciatura.Designer.cs">
+      <DependentUpon>DatosLicenciatura.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\DatosMedioDifusion.cs">
       <SubType>Form</SubType>
@@ -226,16 +240,16 @@
     <Compile Include="ControlEscolar\FichaEscolar.Designer.cs">
       <DependentUpon>FichaEscolar.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatosEstadoCivil.cs">
+    <Compile Include="Catalogo\DatosEstadoCivil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosEstadoCivil.Designer.cs">
+    <Compile Include="Catalogo\DatosEstadoCivil.Designer.cs">
       <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatosGenero.cs">
+    <Compile Include="Catalogo\DatosGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosGenero.Designer.cs">
+    <Compile Include="Catalogo\DatosGenero.Designer.cs">
       <DependentUpon>DatosGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -259,6 +273,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Ejemplo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ejemplo.Designer.cs">
+      <DependentUpon>Ejemplo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\AgregraUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +335,9 @@
     <EmbeddedResource Include="Catalogo\DatosDepartamento.resx">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosLicenciatura.resx">
+      <DependentUpon>DatosLicenciatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,10 +365,10 @@
     <EmbeddedResource Include="ControlEscolar\FichaEscolar.resx">
       <DependentUpon>FichaEscolar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatosEstadoCivil.resx">
+    <EmbeddedResource Include="Catalogo\DatosEstadoCivil.resx">
       <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatosGenero.resx">
+    <EmbeddedResource Include="Catalogo\DatosGenero.resx">
       <DependentUpon>DatosGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -368,6 +391,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Ejemplo.resx">
+      <DependentUpon>Ejemplo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\AgregraUsuario.resx">
       <DependentUpon>AgregraUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,5 +506,6 @@
   <ItemGroup>
     <None Include="Resources\exporttoxlsx1.svg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

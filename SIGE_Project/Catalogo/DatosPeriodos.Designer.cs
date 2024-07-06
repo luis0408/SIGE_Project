@@ -67,7 +67,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(507, 0, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(355, 108);
+            this.layoutControl1.Size = new System.Drawing.Size(439, 132);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -77,16 +77,20 @@
             this.textEdit_idCicloEscolar.Name = "textEdit_idCicloEscolar";
             this.textEdit_idCicloEscolar.Properties.Appearance.Options.UseTextOptions = true;
             this.textEdit_idCicloEscolar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+<<<<<<< HEAD
             this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(245, 20);
+=======
+            this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(329, 20);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.textEdit_idCicloEscolar.StyleController = this.layoutControl1;
             this.textEdit_idCicloEscolar.TabIndex = 10;
             // 
             // simpleButton_cancelar
             // 
             this.simpleButton_cancelar.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.close;
-            this.simpleButton_cancelar.Location = new System.Drawing.Point(179, 60);
+            this.simpleButton_cancelar.Location = new System.Drawing.Point(233, 60);
             this.simpleButton_cancelar.Name = "simpleButton_cancelar";
-            this.simpleButton_cancelar.Size = new System.Drawing.Size(164, 36);
+            this.simpleButton_cancelar.Size = new System.Drawing.Size(194, 36);
             this.simpleButton_cancelar.StyleController = this.layoutControl1;
             this.simpleButton_cancelar.TabIndex = 9;
             this.simpleButton_cancelar.Text = "Cancelar";
@@ -97,7 +101,7 @@
             this.simpleButton_aceptar.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.save;
             this.simpleButton_aceptar.Location = new System.Drawing.Point(12, 60);
             this.simpleButton_aceptar.Name = "simpleButton_aceptar";
-            this.simpleButton_aceptar.Size = new System.Drawing.Size(163, 36);
+            this.simpleButton_aceptar.Size = new System.Drawing.Size(217, 36);
             this.simpleButton_aceptar.StyleController = this.layoutControl1;
             this.simpleButton_aceptar.TabIndex = 8;
             this.simpleButton_aceptar.Text = "Aceptar";
@@ -119,15 +123,19 @@
             this.dateEdit_inicio.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEdit_inicio.Properties.MaskSettings.Set("mask", "y");
             this.dateEdit_inicio.Properties.UseMaskAsDisplayFormat = true;
+<<<<<<< HEAD
             this.dateEdit_inicio.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dateEdit_inicio.Size = new System.Drawing.Size(77, 20);
+=======
+            this.dateEdit_inicio.Size = new System.Drawing.Size(131, 20);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.dateEdit_inicio.StyleController = this.layoutControl1;
             this.dateEdit_inicio.TabIndex = 4;
             // 
             // dateEdit_fin
             // 
             this.dateEdit_fin.EditValue = null;
-            this.dateEdit_fin.Location = new System.Drawing.Point(265, 36);
+            this.dateEdit_fin.Location = new System.Drawing.Point(319, 36);
             this.dateEdit_fin.Name = "dateEdit_fin";
             this.dateEdit_fin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -139,7 +147,7 @@
             this.dateEdit_fin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEdit_fin.Properties.MaskSettings.Set("mask", "MM/yyyy");
             this.dateEdit_fin.Properties.UseMaskAsDisplayFormat = true;
-            this.dateEdit_fin.Size = new System.Drawing.Size(78, 20);
+            this.dateEdit_fin.Size = new System.Drawing.Size(108, 20);
             this.dateEdit_fin.StyleController = this.layoutControl1;
             this.dateEdit_fin.TabIndex = 5;
             // 
@@ -154,7 +162,11 @@
             this.layoutControlItem7,
             this.layoutControlItem2});
             this.Root.Name = "Root";
+<<<<<<< HEAD
             this.Root.Size = new System.Drawing.Size(355, 108);
+=======
+            this.Root.Size = new System.Drawing.Size(439, 132);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -162,7 +174,7 @@
             this.layoutControlItem1.Control = this.dateEdit_inicio;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(167, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(221, 24);
             this.layoutControlItem1.Text = "Inicio:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(74, 13);
             // 
@@ -171,16 +183,26 @@
             this.layoutControlItem5.Control = this.simpleButton_aceptar;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
+<<<<<<< HEAD
             this.layoutControlItem5.Size = new System.Drawing.Size(167, 40);
+=======
+            this.layoutControlItem5.Size = new System.Drawing.Size(221, 64);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton_cancelar;
+<<<<<<< HEAD
             this.layoutControlItem6.Location = new System.Drawing.Point(167, 48);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(168, 40);
+=======
+            this.layoutControlItem6.Location = new System.Drawing.Point(221, 48);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(198, 64);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -189,16 +211,16 @@
             this.layoutControlItem7.Control = this.textEdit_idCicloEscolar;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(335, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(419, 24);
             this.layoutControlItem7.Text = "Id ciclo escolar:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(74, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.dateEdit_fin;
-            this.layoutControlItem2.Location = new System.Drawing.Point(167, 24);
+            this.layoutControlItem2.Location = new System.Drawing.Point(221, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(168, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(198, 24);
             this.layoutControlItem2.Text = "Fin:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(74, 13);
             // 
@@ -206,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 108);
+            this.ClientSize = new System.Drawing.Size(439, 132);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = global::SIGE_Project.Properties.Resources.actions_calendar;
             this.MaximizeBox = false;

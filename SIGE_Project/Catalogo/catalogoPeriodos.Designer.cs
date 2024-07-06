@@ -73,7 +73,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(362, 313, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(790, 426);
+            this.layoutControl1.Size = new System.Drawing.Size(861, 584);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -96,7 +96,11 @@
             this.gridControl_periodos.MainView = this.gridView_periodos;
             this.gridControl_periodos.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_periodos.Name = "gridControl_periodos";
+<<<<<<< HEAD
             this.gridControl_periodos.Size = new System.Drawing.Size(541, 379);
+=======
+            this.gridControl_periodos.Size = new System.Drawing.Size(663, 537);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.gridControl_periodos.TabIndex = 0;
             this.gridControl_periodos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_periodos});
@@ -172,11 +176,19 @@
             this.navBarItem_delete,
             this.navBarItem_refresh,
             this.navBarItem_export});
+<<<<<<< HEAD
             this.navBarControl1.Location = new System.Drawing.Point(557, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 221;
             this.navBarControl1.Size = new System.Drawing.Size(221, 379);
+=======
+            this.navBarControl1.Location = new System.Drawing.Point(679, 35);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 170;
+            this.navBarControl1.Size = new System.Drawing.Size(170, 537);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.navBarControl1.TabIndex = 1;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -201,7 +213,7 @@
             // navBarItem_add
             // 
             this.navBarItem_add.Caption = "Agregar";
-            this.navBarItem_add.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.addparagraphtotableofcontents;
+            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
             this.navBarItem_add.Name = "navBarItem_add";
             this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
             // 
@@ -242,15 +254,21 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(790, 426);
+            this.Root.Size = new System.Drawing.Size(861, 584);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
+<<<<<<< HEAD
             this.layoutControlItem1.Location = new System.Drawing.Point(545, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(225, 383);
+=======
+            this.layoutControlItem1.Location = new System.Drawing.Point(667, 23);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(174, 541);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -259,7 +277,11 @@
             this.layoutControlItem2.Control = this.gridControl_periodos;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
+<<<<<<< HEAD
             this.layoutControlItem2.Size = new System.Drawing.Size(545, 383);
+=======
+            this.layoutControlItem2.Size = new System.Drawing.Size(667, 541);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -268,7 +290,11 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
+<<<<<<< HEAD
             this.layoutControlItem3.Size = new System.Drawing.Size(770, 23);
+=======
+            this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
+>>>>>>> ea01c4fed8ce2ef9f9d42c28ffb91264715aa9fd
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -276,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 426);
+            this.ClientSize = new System.Drawing.Size(861, 584);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = global::SIGE_Project.Properties.Resources.actions_calendar1;
             this.Margin = new System.Windows.Forms.Padding(2);
