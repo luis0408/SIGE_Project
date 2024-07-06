@@ -24,10 +24,11 @@ namespace SIGE_Project.Catalogo
         object[] datos = { };
         string[] parametros = { };
 
-        public int insertarDatosGenero()
-        {
-            datos = new object[] {cveGenero, descGenero, estadoCivil};
-            parametros = new string[] { };
-
+        //public int insertarDatosGenero()
+        //{
+        //    datos = new object[] { cveGenero, descGenero, estadoCivil };
+        //    parametros = new string[] { };
+        //    retu
+        //}
     }
 }

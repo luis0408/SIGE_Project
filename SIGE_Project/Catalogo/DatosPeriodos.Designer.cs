@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.textEdit_idCicloEscolar = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton_cancelar = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_aceptar = new DevExpress.XtraEditors.SimpleButton();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit_idCicloEscolar = new DevExpress.XtraEditors.TextEdit();
             this.dateEdit_inicio = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit_fin = new DevExpress.XtraEditors.DateEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_idCicloEscolar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_inicio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_inicio.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fin.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(355, 108);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // textEdit_idCicloEscolar
+            // 
+            this.textEdit_idCicloEscolar.Location = new System.Drawing.Point(98, 12);
+            this.textEdit_idCicloEscolar.Name = "textEdit_idCicloEscolar";
+            this.textEdit_idCicloEscolar.Properties.Appearance.Options.UseTextOptions = true;
+            this.textEdit_idCicloEscolar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(245, 20);
+            this.textEdit_idCicloEscolar.StyleController = this.layoutControl1;
+            this.textEdit_idCicloEscolar.TabIndex = 10;
             // 
             // simpleButton_cancelar
             // 
@@ -93,48 +103,6 @@
             this.simpleButton_aceptar.Text = "Aceptar";
             this.simpleButton_aceptar.Click += new System.EventHandler(this.simpleButton_aceptar_Click);
             // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem2});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(355, 108);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.simpleButton_aceptar;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(167, 40);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.simpleButton_cancelar;
-            this.layoutControlItem6.Location = new System.Drawing.Point(167, 48);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(168, 40);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
-            // textEdit_idCicloEscolar
-            // 
-            this.textEdit_idCicloEscolar.Location = new System.Drawing.Point(98, 12);
-            this.textEdit_idCicloEscolar.Name = "textEdit_idCicloEscolar";
-            this.textEdit_idCicloEscolar.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit_idCicloEscolar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit_idCicloEscolar.Size = new System.Drawing.Size(245, 20);
-            this.textEdit_idCicloEscolar.StyleController = this.layoutControl1;
-            this.textEdit_idCicloEscolar.TabIndex = 10;
-            // 
             // dateEdit_inicio
             // 
             this.dateEdit_inicio.EditValue = null;
@@ -144,12 +112,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit_inicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_inicio.Properties.DisplayFormat.FormatString = "";
+            this.dateEdit_inicio.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+            this.dateEdit_inicio.Properties.DisplayFormat.FormatString = "Y";
             this.dateEdit_inicio.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit_inicio.Properties.EditFormat.FormatString = "";
+            this.dateEdit_inicio.Properties.EditFormat.FormatString = "Y";
             this.dateEdit_inicio.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit_inicio.Properties.MaskSettings.Set("mask", "MM/yyyy");
+            this.dateEdit_inicio.Properties.MaskSettings.Set("mask", "y");
             this.dateEdit_inicio.Properties.UseMaskAsDisplayFormat = true;
+            this.dateEdit_inicio.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dateEdit_inicio.Size = new System.Drawing.Size(77, 20);
             this.dateEdit_inicio.StyleController = this.layoutControl1;
             this.dateEdit_inicio.TabIndex = 4;
@@ -173,6 +143,20 @@
             this.dateEdit_fin.StyleController = this.layoutControl1;
             this.dateEdit_fin.TabIndex = 5;
             // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem2});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(355, 108);
+            this.Root.TextVisible = false;
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dateEdit_inicio;
@@ -181,6 +165,24 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(167, 24);
             this.layoutControlItem1.Text = "Inicio:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(74, 13);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.simpleButton_aceptar;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(167, 40);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.simpleButton_cancelar;
+            this.layoutControlItem6.Location = new System.Drawing.Point(167, 48);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(168, 40);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
@@ -214,15 +216,15 @@
             this.Load += new System.EventHandler(this.DatosPeriodos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_idCicloEscolar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_inicio.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_inicio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fin.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
