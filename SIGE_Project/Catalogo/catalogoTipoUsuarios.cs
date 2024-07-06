@@ -174,5 +174,10 @@ namespace SIGE_Project.Catalogo
             }
             consultarDatos();
         }
+
+        private void navBarControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
