@@ -73,7 +73,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(985, 396);
+            this.layoutControl1.Size = new System.Drawing.Size(861, 584);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -84,10 +84,10 @@
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(204, 19);
+            this.labelControl1.Size = new System.Drawing.Size(126, 19);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Catalogo Departamentos";
+            this.labelControl1.Text = "Departamentos";
             // 
             // gridControl_departamento
             // 
@@ -96,7 +96,7 @@
             this.gridControl_departamento.MainView = this.gridView_departamento;
             this.gridControl_departamento.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_departamento.Name = "gridControl_departamento";
-            this.gridControl_departamento.Size = new System.Drawing.Size(764, 349);
+            this.gridControl_departamento.Size = new System.Drawing.Size(665, 537);
             this.gridControl_departamento.TabIndex = 5;
             this.gridControl_departamento.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_departamento});
@@ -178,11 +178,11 @@
             this.navBarItem_add,
             this.navBarItem_edit,
             this.navBarItem_status});
-            this.navBarControl1.Location = new System.Drawing.Point(780, 35);
+            this.navBarControl1.Location = new System.Drawing.Point(681, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 193;
-            this.navBarControl1.Size = new System.Drawing.Size(193, 349);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 168;
+            this.navBarControl1.Size = new System.Drawing.Size(168, 537);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -249,15 +249,15 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(985, 396);
+            this.Root.Size = new System.Drawing.Size(861, 584);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(768, 23);
+            this.layoutControlItem1.Location = new System.Drawing.Point(669, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(197, 353);
+            this.layoutControlItem1.Size = new System.Drawing.Size(172, 541);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -266,7 +266,7 @@
             this.layoutControlItem2.Control = this.gridControl_departamento;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(768, 353);
+            this.layoutControlItem2.Size = new System.Drawing.Size(669, 541);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -275,7 +275,7 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(965, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -284,14 +284,14 @@
             this.ActiveGlowColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 396);
+            this.ClientSize = new System.Drawing.Size(861, 584);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoDepartamentos.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoDepartamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalogo Departamentos";
+            this.Text = "Departamentos";
             this.Load += new System.EventHandler(this.catalogoDepartamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

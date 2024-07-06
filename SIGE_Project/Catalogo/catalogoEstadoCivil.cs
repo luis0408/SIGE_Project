@@ -150,7 +150,7 @@ namespace SIGE_Project.Catalogo
             int idEstadoCivil = Convert.ToInt32(gridView_estadoCivil.GetRowCellValue(gridView_estadoCivil.FocusedRowHandle, "idEstadoCivil").ToString());
             string descripcion = gridView_estadoCivil.GetRowCellValue(gridView_estadoCivil.FocusedRowHandle, "descripcion").ToString();
             int estado = Convert.ToInt32(gridView_estadoCivil.GetRowCellValue(gridView_estadoCivil.FocusedRowHandle, "estado").ToString());
-            DatosEstadoCivil objDatosEstadoCivil = new DatosEstadoCivil(descripcion, estado);
+            DatosEstadoCivil objDatosEstadoCivil = new DatosEstadoCivil(idEstadoCivil,descripcion, estado);
             objDatosEstadoCivil.ShowDialog();
             if (objDatosEstadoCivil.DialogResult == DialogResult.OK)
             {

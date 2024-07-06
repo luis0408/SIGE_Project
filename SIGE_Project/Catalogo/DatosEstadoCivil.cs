@@ -23,11 +23,12 @@ namespace SIGE_Project
             nuevo = true;
         }
 
-        public DatosEstadoCivil(string _descEstadoCivil, int _estadoCivil)
+        public DatosEstadoCivil(int idEstadoCivil,string _descEstadoCivil, int _estadoCivil)
         {
             ////ESTE CONSTRUCTOR SE OCUPARA PARA CUANDO SE EDITE UN REGISTRO
             InitializeComponent();
             objEstadoCivil = new ClsEstadoCivil();
+            objEstadoCivil.idEstadoCivil=idEstadoCivil; 
             objEstadoCivil.descEstadoCivil = _descEstadoCivil;
             objEstadoCivil.estadoCivil = _estadoCivil;
             setValores();
@@ -40,7 +41,7 @@ namespace SIGE_Project
             memoEdit_DescripcionRegistroCivil.Text = objEstadoCivil.descEstadoCivil;
             checkEdit_estado.Checked = objEstadoCivil.estadoCivil == 1 ? true : false;
 
-            memoEdit_DescripcionRegistroCivil.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
+           // memoEdit_DescripcionRegistroCivil.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
         }
         private void DatosEstadoCivil_Load(object sender, EventArgs e)
         {

@@ -9,13 +9,15 @@ namespace SIGE_Project.Catalogo
 {
     internal class ClsEstadoCivil
     {
+        public int idEstadoCivil {  get; set; } 
         public string descEstadoCivil { set; get; }
         public int estadoCivil { set; get; }
 
         public ClsEstadoCivil() { }
         
-        public void setDatosEstadoCivil(string _descEstadoCivil, int _estadoCivil)
+        public void setDatosEstadoCivil(int _idEstadoCivil, string _descEstadoCivil, int _estadoCivil)
         {
+            idEstadoCivil = _idEstadoCivil;
             descEstadoCivil = _descEstadoCivil;
             estadoCivil = _estadoCivil;
         }
@@ -33,8 +35,8 @@ namespace SIGE_Project.Catalogo
 
         public int updateDescEstadoCivil()
         {
-            datos = new object[] { descEstadoCivil,estadoCivil };
-            parametros = new string[] { "@descripcion", "@estado" };
+            datos = new object[] { idEstadoCivil,descEstadoCivil,estadoCivil };
+            parametros = new string[] { "@idEstadoCivil","@descripcion", "@estado" };
             int result = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_ESTADOCIVIL]", datos, parametros);
             return result;
         }

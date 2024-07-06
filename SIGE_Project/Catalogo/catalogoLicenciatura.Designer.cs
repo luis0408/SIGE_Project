@@ -41,9 +41,9 @@
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_refresh = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_add = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_edit = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_onOff = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_export = new DevExpress.XtraNavBar.NavBarItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -110,6 +110,8 @@
             this.gridView_licenciaturas.DetailHeight = 239;
             this.gridView_licenciaturas.GridControl = this.gridControl_licenciaturas;
             this.gridView_licenciaturas.Name = "gridView_licenciaturas";
+            this.gridView_licenciaturas.OptionsBehavior.Editable = false;
+            this.gridView_licenciaturas.OptionsBehavior.ReadOnly = true;
             // 
             // gridColumn1
             // 
@@ -154,11 +156,11 @@
             this.navBarGroup1,
             this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem3,
+            this.navBarItem_add,
+            this.navBarItem_edit,
             this.navBarItem_refresh,
             this.navBarItem_export,
-            this.navBarItem2});
+            this.navBarItem_onOff});
             this.navBarControl1.Location = new System.Drawing.Point(679, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
@@ -173,9 +175,9 @@
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_refresh),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_add),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_edit),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_onOff)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navBarItem_refresh
@@ -185,23 +187,26 @@
             this.navBarItem_refresh.Name = "navBarItem_refresh";
             this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
             // 
-            // navBarItem1
+            // navBarItem_add
             // 
-            this.navBarItem1.Caption = "Agregar";
-            this.navBarItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
-            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItem_add.Caption = "Agregar";
+            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
+            this.navBarItem_add.Name = "navBarItem_add";
+            this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
             // 
-            // navBarItem3
+            // navBarItem_edit
             // 
-            this.navBarItem3.Caption = "Editar";
-            this.navBarItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
-            this.navBarItem3.Name = "navBarItem3";
+            this.navBarItem_edit.Caption = "Editar";
+            this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_edit.ImageOptions.SvgImage")));
+            this.navBarItem_edit.Name = "navBarItem_edit";
+            this.navBarItem_edit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_edit_LinkClicked);
             // 
-            // navBarItem2
+            // navBarItem_onOff
             // 
-            this.navBarItem2.Caption = "Activar/Desactivar";
-            this.navBarItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navBarItem2.Name = "navBarItem2";
+            this.navBarItem_onOff.Caption = "Activar/Desactivar";
+            this.navBarItem_onOff.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_onOff.ImageOptions.SvgImage")));
+            this.navBarItem_onOff.Name = "navBarItem_onOff";
+            this.navBarItem_onOff.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_onOff_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -266,6 +271,7 @@
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoLicenciatura.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoLicenciatura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Licenciaturas";
             this.Load += new System.EventHandler(this.catalogoLicenciatura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -289,8 +295,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_licenciaturas;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_add;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_edit;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_refresh;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_export;
@@ -298,7 +304,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_onOff;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;

@@ -164,6 +164,7 @@
     <Compile Include="Catalogo\ClsDepartamento.cs" />
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
+    <Compile Include="Catalogo\ClsLicenciatura.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
     <Compile Include="Catalogo\ClsTipoUsuarios.cs" />
@@ -178,6 +179,12 @@
     </Compile>
     <Compile Include="Catalogo\DatosDepartamento.Designer.cs">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciatura.Designer.cs">
+      <DependentUpon>DatosLicenciatura.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\DatosMedioDifusion.cs">
       <SubType>Form</SubType>
@@ -233,16 +240,16 @@
     <Compile Include="ControlEscolar\FichaEscolar.Designer.cs">
       <DependentUpon>FichaEscolar.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatosEstadoCivil.cs">
+    <Compile Include="Catalogo\DatosEstadoCivil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosEstadoCivil.Designer.cs">
+    <Compile Include="Catalogo\DatosEstadoCivil.Designer.cs">
       <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatosGenero.cs">
+    <Compile Include="Catalogo\DatosGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosGenero.Designer.cs">
+    <Compile Include="Catalogo\DatosGenero.Designer.cs">
       <DependentUpon>DatosGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -328,6 +335,9 @@
     <EmbeddedResource Include="Catalogo\DatosDepartamento.resx">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosLicenciatura.resx">
+      <DependentUpon>DatosLicenciatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,10 +365,10 @@
     <EmbeddedResource Include="ControlEscolar\FichaEscolar.resx">
       <DependentUpon>FichaEscolar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatosEstadoCivil.resx">
+    <EmbeddedResource Include="Catalogo\DatosEstadoCivil.resx">
       <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatosGenero.resx">
+    <EmbeddedResource Include="Catalogo\DatosGenero.resx">
       <DependentUpon>DatosGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">

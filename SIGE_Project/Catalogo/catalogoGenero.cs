@@ -117,7 +117,7 @@ namespace SIGE_Project.Catalogo
 
         private void catalogoGenero_Load_1(object sender, EventArgs e)
         {
-
+            consultarDatos();
         }
 
         private void navBarItem_actualizar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

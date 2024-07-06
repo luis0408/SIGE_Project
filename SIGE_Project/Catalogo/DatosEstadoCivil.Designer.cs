@@ -38,10 +38,9 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit_idEstadoCivil = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_estado.Properties)).BeginInit();
@@ -50,42 +49,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_idEstadoCivil.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.textEdit_idEstadoCivil);
             this.layoutControl1.Controls.Add(this.checkEdit_estado);
             this.layoutControl1.Controls.Add(this.simpleButton_cancelar);
             this.layoutControl1.Controls.Add(this.simpleButton_aceptar);
             this.layoutControl1.Controls.Add(this.memoEdit_DescripcionRegistroCivil);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(2435, 0, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(545, 188);
+            this.layoutControl1.Size = new System.Drawing.Size(431, 201);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // checkEdit_estado
             // 
-            this.checkEdit_estado.Location = new System.Drawing.Point(451, 12);
+            this.checkEdit_estado.Location = new System.Drawing.Point(303, 10);
+            this.checkEdit_estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkEdit_estado.Name = "checkEdit_estado";
             this.checkEdit_estado.Properties.Caption = "Activo";
-            this.checkEdit_estado.Size = new System.Drawing.Size(82, 24);
+            this.checkEdit_estado.Size = new System.Drawing.Size(117, 20);
             this.checkEdit_estado.StyleController = this.layoutControl1;
             this.checkEdit_estado.TabIndex = 8;
             // 
             // simpleButton_cancelar
             // 
             this.simpleButton_cancelar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancelar.ImageOptions.SvgImage")));
-            this.simpleButton_cancelar.Location = new System.Drawing.Point(231, 109);
+            this.simpleButton_cancelar.Location = new System.Drawing.Point(223, 105);
+            this.simpleButton_cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton_cancelar.Name = "simpleButton_cancelar";
-            this.simpleButton_cancelar.Size = new System.Drawing.Size(302, 44);
+            this.simpleButton_cancelar.Size = new System.Drawing.Size(197, 36);
             this.simpleButton_cancelar.StyleController = this.layoutControl1;
             this.simpleButton_cancelar.TabIndex = 7;
             this.simpleButton_cancelar.Text = "Cancelar";
@@ -94,9 +95,10 @@
             // simpleButton_aceptar
             // 
             this.simpleButton_aceptar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_aceptar.ImageOptions.SvgImage")));
-            this.simpleButton_aceptar.Location = new System.Drawing.Point(12, 109);
+            this.simpleButton_aceptar.Location = new System.Drawing.Point(11, 105);
+            this.simpleButton_aceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton_aceptar.Name = "simpleButton_aceptar";
-            this.simpleButton_aceptar.Size = new System.Drawing.Size(215, 44);
+            this.simpleButton_aceptar.Size = new System.Drawing.Size(208, 36);
             this.simpleButton_aceptar.StyleController = this.layoutControl1;
             this.simpleButton_aceptar.TabIndex = 6;
             this.simpleButton_aceptar.Text = "Aceptar";
@@ -104,9 +106,10 @@
             // 
             // memoEdit_DescripcionRegistroCivil
             // 
-            this.memoEdit_DescripcionRegistroCivil.Location = new System.Drawing.Point(102, 40);
+            this.memoEdit_DescripcionRegistroCivil.Location = new System.Drawing.Point(79, 34);
+            this.memoEdit_DescripcionRegistroCivil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.memoEdit_DescripcionRegistroCivil.Name = "memoEdit_DescripcionRegistroCivil";
-            this.memoEdit_DescripcionRegistroCivil.Size = new System.Drawing.Size(431, 65);
+            this.memoEdit_DescripcionRegistroCivil.Size = new System.Drawing.Size(341, 67);
             this.memoEdit_DescripcionRegistroCivil.StyleController = this.layoutControl1;
             this.memoEdit_DescripcionRegistroCivil.TabIndex = 5;
             // 
@@ -119,82 +122,75 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem2,
-            this.layoutControlItem1,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(545, 188);
+            this.Root.Size = new System.Drawing.Size(431, 201);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 145);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 135);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(525, 23);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(413, 50);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.simpleButton_aceptar;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 97);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 95);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(219, 48);
+            this.layoutControlItem3.Size = new System.Drawing.Size(212, 40);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton_cancelar;
-            this.layoutControlItem4.Location = new System.Drawing.Point(219, 97);
+            this.layoutControlItem4.Location = new System.Drawing.Point(212, 95);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(306, 48);
+            this.layoutControlItem4.Size = new System.Drawing.Size(201, 40);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.checkEdit_estado;
-            this.layoutControlItem5.Location = new System.Drawing.Point(439, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(86, 28);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.memoEdit_DescripcionRegistroCivil;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(525, 69);
+            this.layoutControlItem2.Size = new System.Drawing.Size(413, 71);
             this.layoutControlItem2.Text = "Descripcion:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(78, 16);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(58, 13);
             // 
-            // textEdit_idEstadoCivil
+            // layoutControlItem5
             // 
-            this.textEdit_idEstadoCivil.Location = new System.Drawing.Point(102, 12);
-            this.textEdit_idEstadoCivil.Name = "textEdit_idEstadoCivil";
-            this.textEdit_idEstadoCivil.Size = new System.Drawing.Size(345, 22);
-            this.textEdit_idEstadoCivil.StyleController = this.layoutControl1;
-            this.textEdit_idEstadoCivil.TabIndex = 9;
+            this.layoutControlItem5.Control = this.checkEdit_estado;
+            this.layoutControlItem5.Location = new System.Drawing.Point(292, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(121, 24);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
             // 
-            // layoutControlItem1
+            // emptySpaceItem2
             // 
-            this.layoutControlItem1.Control = this.textEdit_idEstadoCivil;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(439, 28);
-            this.layoutControlItem1.Text = "Id estado civil";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 16);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(292, 24);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // DatosEstadoCivil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 188);
+            this.ClientSize = new System.Drawing.Size(431, 201);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosEstadoCivil.IconOptions.SvgImage")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "DatosEstadoCivil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos estado civil";
             this.Load += new System.EventHandler(this.DatosEstadoCivil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -205,10 +201,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_idEstadoCivil.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,7 +221,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.CheckEdit checkEdit_estado;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.TextEdit textEdit_idEstadoCivil;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

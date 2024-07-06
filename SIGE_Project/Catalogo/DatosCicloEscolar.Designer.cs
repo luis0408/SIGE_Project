@@ -262,6 +262,7 @@
             this.ClientSize = new System.Drawing.Size(445, 170);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosCicloEscolar.IconOptions.SvgImage")));
+            this.MaximizeBox = false;
             this.Name = "DatosCicloEscolar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del Ciclo Escolar";

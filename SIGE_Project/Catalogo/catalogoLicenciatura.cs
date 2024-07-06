@@ -38,7 +38,7 @@ namespace SIGE_Project.Catalogo
                 object[] datos = { };
                 string[] parametros = { };
                 DataSet ds = new DataSet();
-                ds = Utilerias.consultarProcedimiento("", datos, parametros);
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_LICENCIATURAS", datos, parametros);
                 DataTable dt = ds.Tables[0];
                 gridControl_licenciaturas.DataSource = dt;
                 gridView_licenciaturas.BestFitColumns();
@@ -126,6 +126,46 @@ namespace SIGE_Project.Catalogo
             exportarDoc(gridView_licenciaturas, gridControl_licenciaturas, "Licenciaturas");
         }
 
-        
+        private void navBarItem_add_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            DatosLicenciatura objLicenciatura = new DatosLicenciatura();
+            objLicenciatura.ShowDialog();
+            if (objLicenciatura.DialogResult == DialogResult.OK)
+            {
+                consultarDatos();
+            }
+        }
+
+        private void navBarItem_edit_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            string cveLicenciatura = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "cveLicenciatura").ToString();
+            string descLicenciatura = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "descripcionLicenciatura").ToString();
+            int estado = Convert.ToInt32(gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "estado").ToString());
+            DatosLicenciatura objLicenciatura = new DatosLicenciatura(cveLicenciatura,descLicenciatura,estado);
+            objLicenciatura.ShowDialog();
+            if (objLicenciatura.DialogResult == DialogResult.OK)
+            {
+                consultarDatos();
+            }
+        }
+        Utilerias util = new Utilerias();
+        private void navBarItem_onOff_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            string cveLic = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "cveLicenciatura").ToString();
+            int estado = Convert.ToInt32(gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "estado").ToString());
+            estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
+            int resul = util.EjecutarQueryNonQuery("update [SIGE_Catalogo_Licenciatura] set estado=" + estado + " where cveLicenciatura='" + cveLic  + "'");
+            if (resul != 0)
+            {
+                XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                XtraMessageBox.Show("Se generó un error al actualiar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            consultarDatos();
+        }
     }
 }

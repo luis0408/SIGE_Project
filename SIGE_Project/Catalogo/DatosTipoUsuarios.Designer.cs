@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.simpleButton_aceptar = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleButton_cancelar = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButton_aceptar = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit_descripcion = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit_estado = new DevExpress.XtraEditors.CheckEdit();
             this.textEdit_cveUsuario = new DevExpress.XtraEditors.TextEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_descripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_estado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_cveUsuario.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -69,40 +69,6 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(433, 110);
-            this.Root.TextVisible = false;
-            // 
-            // simpleButton_aceptar
-            // 
-            this.simpleButton_aceptar.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.save1;
-            this.simpleButton_aceptar.Location = new System.Drawing.Point(12, 60);
-            this.simpleButton_aceptar.Name = "simpleButton_aceptar";
-            this.simpleButton_aceptar.Size = new System.Drawing.Size(202, 36);
-            this.simpleButton_aceptar.StyleController = this.layoutControl1;
-            this.simpleButton_aceptar.TabIndex = 7;
-            this.simpleButton_aceptar.Text = "Aceptar";
-            this.simpleButton_aceptar.Click += new System.EventHandler(this.simpleButton_aceptar_Click);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.simpleButton_aceptar;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(206, 42);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
             // simpleButton_cancelar
             // 
             this.simpleButton_cancelar.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.close1;
@@ -114,14 +80,16 @@
             this.simpleButton_cancelar.Text = "Cancelar";
             this.simpleButton_cancelar.Click += new System.EventHandler(this.simpleButton_cancelar_Click);
             // 
-            // layoutControlItem5
+            // simpleButton_aceptar
             // 
-            this.layoutControlItem5.Control = this.simpleButton_cancelar;
-            this.layoutControlItem5.Location = new System.Drawing.Point(206, 48);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(207, 42);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
+            this.simpleButton_aceptar.ImageOptions.SvgImage = global::SIGE_Project.Properties.Resources.save1;
+            this.simpleButton_aceptar.Location = new System.Drawing.Point(12, 60);
+            this.simpleButton_aceptar.Name = "simpleButton_aceptar";
+            this.simpleButton_aceptar.Size = new System.Drawing.Size(202, 36);
+            this.simpleButton_aceptar.StyleController = this.layoutControl1;
+            this.simpleButton_aceptar.TabIndex = 7;
+            this.simpleButton_aceptar.Text = "Aceptar";
+            this.simpleButton_aceptar.Click += new System.EventHandler(this.simpleButton_aceptar_Click);
             // 
             // textEdit_descripcion
             // 
@@ -147,6 +115,20 @@
             this.textEdit_cveUsuario.Size = new System.Drawing.Size(142, 20);
             this.textEdit_cveUsuario.StyleController = this.layoutControl1;
             this.textEdit_cveUsuario.TabIndex = 4;
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(433, 110);
+            this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -175,6 +157,24 @@
             this.layoutControlItem3.Text = "Descripciòn:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(87, 13);
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.simpleButton_aceptar;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(206, 42);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.simpleButton_cancelar;
+            this.layoutControlItem5.Location = new System.Drawing.Point(206, 48);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(207, 42);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // DatosTipoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,21 +182,22 @@
             this.ClientSize = new System.Drawing.Size(433, 110);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = global::SIGE_Project.Properties.Resources.actions_user;
+            this.MaximizeBox = false;
             this.Name = "DatosTipoUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del tipo de usuario";
             this.Load += new System.EventHandler(this.DatosTipoUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_descripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_estado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_cveUsuario.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }

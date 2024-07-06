@@ -31,6 +31,7 @@
             DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(catalogoCicloEscolar));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl_cicloEscolar = new DevExpress.XtraGrid.GridControl();
             this.gridView_cicloEscolar = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,7 +49,6 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -79,9 +79,20 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 233, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(626, 494);
+            this.layoutControl1.Size = new System.Drawing.Size(861, 584);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(102, 19);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Ciclo escolar";
             // 
             // gridControl_cicloEscolar
             // 
@@ -90,7 +101,7 @@
             this.gridControl_cicloEscolar.MainView = this.gridView_cicloEscolar;
             this.gridControl_cicloEscolar.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_cicloEscolar.Name = "gridControl_cicloEscolar";
-            this.gridControl_cicloEscolar.Size = new System.Drawing.Size(410, 447);
+            this.gridControl_cicloEscolar.Size = new System.Drawing.Size(663, 537);
             this.gridControl_cicloEscolar.TabIndex = 5;
             this.gridControl_cicloEscolar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_cicloEscolar});
@@ -153,11 +164,11 @@
             this.navBarItem_edit,
             this.navBarItem_status,
             this.navBarItem_export});
-            this.navBarControl1.Location = new System.Drawing.Point(426, 35);
+            this.navBarControl1.Location = new System.Drawing.Point(679, 35);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 188;
-            this.navBarControl1.Size = new System.Drawing.Size(188, 447);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 170;
+            this.navBarControl1.Size = new System.Drawing.Size(170, 537);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -224,15 +235,15 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(626, 494);
+            this.Root.Size = new System.Drawing.Size(861, 584);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(414, 23);
+            this.layoutControlItem1.Location = new System.Drawing.Point(667, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(192, 451);
+            this.layoutControlItem1.Size = new System.Drawing.Size(174, 541);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -241,27 +252,16 @@
             this.layoutControlItem2.Control = this.gridControl_cicloEscolar;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(414, 451);
+            this.layoutControlItem2.Size = new System.Drawing.Size(667, 541);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(180, 19);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Catalogo Ciclo Escolar";
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(606, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -269,13 +269,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 494);
+            this.ClientSize = new System.Drawing.Size(861, 584);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoCicloEscolar.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "catalogoCicloEscolar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalogo Ciclo Escolar";
+            this.Text = "Ciclo escolar";
             this.Load += new System.EventHandler(this.catalogoCicloEscolar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

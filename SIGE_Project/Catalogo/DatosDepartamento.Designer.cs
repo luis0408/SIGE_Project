@@ -78,7 +78,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(702, 268);
+            this.layoutControl1.Size = new System.Drawing.Size(528, 260);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -97,16 +97,16 @@
             // 
             this.textEdit_cveDepartamento.Location = new System.Drawing.Point(78, 35);
             this.textEdit_cveDepartamento.Name = "textEdit_cveDepartamento";
-            this.textEdit_cveDepartamento.Size = new System.Drawing.Size(391, 20);
+            this.textEdit_cveDepartamento.Size = new System.Drawing.Size(273, 20);
             this.textEdit_cveDepartamento.StyleController = this.layoutControl1;
             this.textEdit_cveDepartamento.TabIndex = 16;
             // 
             // checkEdit_status
             // 
-            this.checkEdit_status.Location = new System.Drawing.Point(473, 35);
+            this.checkEdit_status.Location = new System.Drawing.Point(355, 35);
             this.checkEdit_status.Name = "checkEdit_status";
             this.checkEdit_status.Properties.Caption = "Activo";
-            this.checkEdit_status.Size = new System.Drawing.Size(217, 20);
+            this.checkEdit_status.Size = new System.Drawing.Size(161, 20);
             this.checkEdit_status.StyleController = this.layoutControl1;
             this.checkEdit_status.TabIndex = 15;
             // 
@@ -114,16 +114,16 @@
             // 
             this.textEdit_descripcion.Location = new System.Drawing.Point(78, 59);
             this.textEdit_descripcion.Name = "textEdit_descripcion";
-            this.textEdit_descripcion.Size = new System.Drawing.Size(612, 20);
+            this.textEdit_descripcion.Size = new System.Drawing.Size(438, 20);
             this.textEdit_descripcion.StyleController = this.layoutControl1;
             this.textEdit_descripcion.TabIndex = 14;
             // 
             // simpleButton_cancel
             // 
             this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
-            this.simpleButton_cancel.Location = new System.Drawing.Point(353, 152);
+            this.simpleButton_cancel.Location = new System.Drawing.Point(266, 152);
             this.simpleButton_cancel.Name = "simpleButton_cancel";
-            this.simpleButton_cancel.Size = new System.Drawing.Size(337, 36);
+            this.simpleButton_cancel.Size = new System.Drawing.Size(250, 36);
             this.simpleButton_cancel.StyleController = this.layoutControl1;
             this.simpleButton_cancel.TabIndex = 12;
             this.simpleButton_cancel.Text = "Cancelar";
@@ -134,7 +134,7 @@
             this.simpleButton_agree.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_agree.ImageOptions.SvgImage")));
             this.simpleButton_agree.Location = new System.Drawing.Point(12, 152);
             this.simpleButton_agree.Name = "simpleButton_agree";
-            this.simpleButton_agree.Size = new System.Drawing.Size(337, 36);
+            this.simpleButton_agree.Size = new System.Drawing.Size(250, 36);
             this.simpleButton_agree.StyleController = this.layoutControl1;
             this.simpleButton_agree.TabIndex = 11;
             this.simpleButton_agree.Text = "Aceptar";
@@ -148,15 +148,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEdit_encargadoCurp.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcionPersona", "Persona")});
+            this.lookUpEdit_encargadoCurp.Properties.DisplayMember = "descripcionPersona";
             this.lookUpEdit_encargadoCurp.Properties.NullText = "";
             this.lookUpEdit_encargadoCurp.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_encargadoCurp.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.lookUpEdit_encargadoCurp.Size = new System.Drawing.Size(588, 20);
+            this.lookUpEdit_encargadoCurp.Properties.ValueMember = "CURP";
+            this.lookUpEdit_encargadoCurp.Size = new System.Drawing.Size(414, 20);
             this.lookUpEdit_encargadoCurp.StyleController = this.layoutControl1;
             this.lookUpEdit_encargadoCurp.TabIndex = 9;
-            this.lookUpEdit_encargadoCurp.Properties.DataSource = Utilerias.llenarlookupeditvalue("select CURP, CONCAT(CURP,'  |  ',nombre,' ',apellidoPaterno,' ',apellidoMaterno) as descripcionPersona from SIGE_Persona");
-            this.lookUpEdit_encargadoCurp.Properties.DisplayMember = "descripcionPersona";
-            this.lookUpEdit_encargadoCurp.Properties.ValueMember = "CURP";
             // 
             // Root
             // 
@@ -172,7 +170,7 @@
             this.layoutControlItem1,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(702, 268);
+            this.Root.Size = new System.Drawing.Size(528, 260);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -181,7 +179,7 @@
             this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 71);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(682, 69);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(508, 69);
             this.layoutControlGroup1.Text = "Encargado";
             // 
             // layoutControlItem6
@@ -189,7 +187,7 @@
             this.layoutControlItem6.Control = this.lookUpEdit_encargadoCurp;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(658, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(484, 24);
             this.layoutControlItem6.Text = "CURP";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(54, 13);
             // 
@@ -198,16 +196,16 @@
             this.layoutControlItem7.Control = this.simpleButton_agree;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 140);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(341, 40);
+            this.layoutControlItem7.Size = new System.Drawing.Size(254, 40);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.simpleButton_cancel;
-            this.layoutControlItem8.Location = new System.Drawing.Point(341, 140);
+            this.layoutControlItem8.Location = new System.Drawing.Point(254, 140);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(341, 40);
+            this.layoutControlItem8.Size = new System.Drawing.Size(254, 40);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -216,7 +214,7 @@
             this.layoutControlItem10.Control = this.textEdit_descripcion;
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 47);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(682, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(508, 24);
             this.layoutControlItem10.Text = "Descripcion";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(54, 13);
             // 
@@ -225,7 +223,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 180);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(682, 68);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(508, 60);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -233,16 +231,16 @@
             this.layoutControlItem2.Control = this.textEdit_cveDepartamento;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(461, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(343, 24);
             this.layoutControlItem2.Text = "Clave";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(54, 13);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.checkEdit_status;
-            this.layoutControlItem1.Location = new System.Drawing.Point(461, 23);
+            this.layoutControlItem1.Location = new System.Drawing.Point(343, 23);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(221, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(165, 24);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -251,7 +249,7 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(682, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(508, 23);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -259,9 +257,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 268);
+            this.ClientSize = new System.Drawing.Size(528, 260);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosDepartamento.IconOptions.SvgImage")));
+            this.MaximizeBox = false;
             this.Name = "DatosDepartamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del Departamento";
