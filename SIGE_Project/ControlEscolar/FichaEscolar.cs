@@ -349,27 +349,28 @@ namespace SIGE_Project.ControlEscolar
 
             try
             {
-                objPersona = new ClsPersona();
-                objPersona.setDatosPersona(textEdit_CURP.Text, textEdit_RFC.Text, textEdit_NSS.Text, textEdit_nombre.Text, textEdit_apellidoPaterno.Text
+                //objPersona = new ClsPersona();
+                objApirante = new ClsApirante();
+                objApirante.setDatosPersona(textEdit_CURP.Text, textEdit_RFC.Text, textEdit_NSS.Text, textEdit_nombre.Text, textEdit_apellidoPaterno.Text
                                            , textEdit_apellidoMaterno.Text, lookUpEdit_genero.EditValue.ToString(), Convert.ToInt32(lookUpEdit_estadoCivil.EditValue), textEdit_correoElectronico.Text
                                            , textEdit_numTelefono.Text, lookUpEdit_tipoSangre.EditValue.ToString());
 
-                objPersona.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, lookUpEdit_colonia.EditValue.ToString()
+                objApirante.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, lookUpEdit_colonia.EditValue.ToString()
                                                     , lookUpEdit_estado.EditValue.ToString(), lookUpEdit_localidad.EditValue.ToString(), lookUpEdit_municipio.EditValue.ToString());
 
-                objPersona.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
+                objApirante.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
                                                      , lookUpEdit_estadoNacimiento.EditValue.ToString(), lookUpEdit_municipioNacimiento.ToString());
 
-                objPersona.setDatosPersonaLenguaIndigena(Convert.ToInt32(radioGroup_lenguaIndigena.EditValue), memoEdit_especifique.Text);
+                objApirante.setDatosPersonaLenguaIndigena(Convert.ToInt32(radioGroup_lenguaIndigena.EditValue), memoEdit_especifique.Text);
 
 
-                if (objPersona.insertarPersona() == 1)
+                if (objApirante.insertarPersona() == 1)
                 {
-                    if (objPersona.insertarPersonaDomicilio() == 1)
+                    if (objApirante.insertarPersonaDomicilio() == 1)
                     {
-                        if (objPersona.insertarPersonaNacimiento() == 1)
+                        if (objApirante.insertarPersonaNacimiento() == 1)
                         {
-                            if (objPersona.insertarPersonaLenguaIndigena() == 1)
+                            if (objApirante.insertarPersonaLenguaIndigena() == 1)
                             {
                                 insertarAspirante();
                             }
@@ -391,7 +392,7 @@ namespace SIGE_Project.ControlEscolar
         }
         private void insertarAspirante()
         {
-            objApirante = new ClsApirante();
+            
             objApirante.setDatosAspirante(lookUpEdit_licenciatura.EditValue.ToString(), lookUpEdit_modalidad.EditValue.ToString(),
                                          Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue), Convert.ToInt32(lookUpEdit_periodo.EditValue), lookUpEdit_bachillerato.EditValue.ToString()
                                          , Convert.ToDecimal(textEdit_promedio.Text), textEdit_medioDifusion.EditValue.ToString(), variables.varUser);
@@ -406,6 +407,9 @@ namespace SIGE_Project.ControlEscolar
                 throw new Exception("Error al insertar datos del aspirante.");
             }
         }
-        
+        private void limpiar()
+        {
+
+        }
     }
 }

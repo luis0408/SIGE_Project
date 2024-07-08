@@ -236,6 +236,12 @@
     </Compile>
     <Compile Include="ControlEscolar\ClsApirante.cs" />
     <Compile Include="ControlEscolar\ClsPersona.cs" />
+    <Compile Include="ControlEscolar\ConsultarAspirantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlEscolar\ConsultarAspirantes.Designer.cs">
+      <DependentUpon>ConsultarAspirantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlEscolar\FichaEscolar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -363,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\Configmenus.resx">
       <DependentUpon>Configmenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEscolar\ConsultarAspirantes.resx">
+      <DependentUpon>ConsultarAspirantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlEscolar\FichaEscolar.resx">
       <DependentUpon>FichaEscolar.cs</DependentUpon>

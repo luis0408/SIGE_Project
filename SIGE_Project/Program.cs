@@ -25,7 +25,7 @@ namespace SIGE_Project
 
             //Application.Run(new Catalogo.catalogoPeriodos());
             //Application.Run(new Catalogo.catalogoMediosDeDifusion());
-            Application.Run(new Catalogo.catalogoGenero());
+            //Application.Run(new Catalogo.catalogoGenero());
             //Application.Run(new Catalogo.catalogoEstadoCivil());
             //Application.Run(new Catalogo.catalogoTipoUsuarios());
         }

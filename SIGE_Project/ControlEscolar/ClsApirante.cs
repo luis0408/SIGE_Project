@@ -37,7 +37,7 @@ namespace SIGE_Project.ControlEscolar
         string[] parametros = { };
         public int insertarAspirante()
         {
-            datos = new object[] { "SESL980804HPLRMS08", cveLicenciatura, cveModalidad, idCicloEscolar, idPeriodo, CCT_Bachillerato, promedio, cveMedio, usuarioRegistro };
+            datos = new object[] { CURP, cveLicenciatura, cveModalidad, idCicloEscolar, idPeriodo, CCT_Bachillerato, promedio, cveMedio, usuarioRegistro };
             parametros = new string[] { "@CURP","@cveLicenciatura","@cveModalidad","@idCicloEscolar","@idPeriodo","@CCT_Bachillerato","@promedio","@cveMedio","@usuarioRegistro" };
             int resultadoInsert = Utilerias.ejecutarprocedimiento("SIGE_INSERTAR_ASPIRANTE", datos, parametros);
             return resultadoInsert;
