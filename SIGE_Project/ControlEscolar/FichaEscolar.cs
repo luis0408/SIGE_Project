@@ -359,7 +359,7 @@ namespace SIGE_Project.ControlEscolar
                                                     , lookUpEdit_estado.EditValue.ToString(), lookUpEdit_localidad.EditValue.ToString(), lookUpEdit_municipio.EditValue.ToString());
 
                 objApirante.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
-                                                     , lookUpEdit_estadoNacimiento.EditValue.ToString(), lookUpEdit_municipioNacimiento.ToString());
+                                                     , lookUpEdit_estadoNacimiento.EditValue.ToString(), lookUpEdit_municipioNacimiento.EditValue.ToString());
 
                 objApirante.setDatosPersonaLenguaIndigena(Convert.ToInt32(radioGroup_lenguaIndigena.EditValue), memoEdit_especifique.Text);
 
