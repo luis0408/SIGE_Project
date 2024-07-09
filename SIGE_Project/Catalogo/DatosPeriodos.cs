@@ -16,9 +16,9 @@ namespace SIGE_Project.Catalogo
         ClsPeriodos objPeriodos;
         bool nuevo = true;
 
-        private int mesInicio;
+        private string mesInicio;
         private int anioInicio;
-        private int mesFin;
+        private string mesFin;
         private int anioFin;
         public DatosPeriodos()
         {
@@ -107,10 +107,90 @@ namespace SIGE_Project.Catalogo
             DateTime selectedDate_inicio = dateEdit_inicio.DateTime;
             DateTime selectedDate_fin = dateEdit_fin.DateTime;
 
-            mesInicio = selectedDate_inicio.Month;
+            mesInicio = selectedDate_inicio.Month.ToString();
             anioInicio = selectedDate_inicio.Year;
-            mesFin = selectedDate_fin.Month;
+            mesFin = selectedDate_fin.Month.ToString();
             anioFin = selectedDate_fin.Year;
+
+            switch (mesInicio)
+            {
+                case "1":
+                    mesInicio = "ENE";
+                    break;
+                case "2":
+                    mesInicio = "FEB";
+                    break;
+                case "3":
+                    mesInicio = "MAR";
+                    break;
+                case "4":
+                    mesInicio = "ABR";
+                    break;
+                case "5":
+                    mesInicio = "MAY";
+                    break;
+                case "6":
+                    mesInicio = "JUN";
+                    break;
+                case "7":
+                    mesInicio = "JUL";
+                    break;
+                case "8":
+                    mesInicio = "AGO";
+                    break;
+                case "9":
+                    mesInicio = "SEP";
+                    break;
+                case "10":
+                    mesInicio = "OCT";
+                    break;
+                case "11":
+                    mesInicio = "NOV";
+                    break;
+                case "12":
+                     mesInicio= "DIC";
+                    break;
+            }
+
+            switch (mesFin)
+            {
+                case "1":
+                    mesFin = "ENE";
+                    break;
+                case "2":
+                    mesFin = "FEB";
+                    break;
+                case "3":
+                    mesFin = "MAR";
+                    break;
+                case "4":
+                    mesFin = "ABR";
+                    break;
+                case "5":
+                    mesFin = "MAY";
+                    break;
+                case "6":
+                    mesFin = "JUN";
+                    break;
+                case "7":
+                    mesFin = "JUL";
+                    break;
+                case "8":
+                    mesFin = "AGO";
+                    break;
+                case "9":
+                    mesFin = "SEP";
+                    break;
+                case "10":
+                    mesFin = "OCT";
+                    break;
+                case "11":
+                    mesFin = "NOV";
+                    break;
+                case "12":
+                    mesFin = "DIC";
+                    break;
+            }
 
             objPeriodos.idCicloEscolar = Convert.ToInt32(textEdit_idCicloEscolar.Text);
             objPeriodos.cveMesInicio = mesInicio.ToString();
