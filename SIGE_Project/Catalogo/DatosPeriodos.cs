@@ -43,6 +43,85 @@ namespace SIGE_Project.Catalogo
             objPeriodos.anioInicio = _anioInicio;
             objPeriodos.cveMesFin = _cveMesFin;
             objPeriodos.anioFin = _anioFin;
+
+            switch (objPeriodos.cveMesInicio)
+            {
+                case "ENE":
+                    objPeriodos.cveMesInicio = "1";
+                    break;
+                case "FEB":
+                    objPeriodos.cveMesInicio = "2";
+                    break;
+                case "MAR":
+                    objPeriodos.cveMesInicio = "3";
+                    break;
+                case "ABR":
+                    objPeriodos.cveMesInicio = "4";
+                    break;
+                case "MAY":
+                    objPeriodos.cveMesInicio = "5";
+                    break;
+                case "JUN":
+                    objPeriodos.cveMesInicio = "6";
+                    break;
+                case "JUL":
+                    objPeriodos.cveMesInicio = "7";
+                    break;
+                case "AGO":
+                    objPeriodos.cveMesInicio = "8";
+                    break;
+                case "SEP":
+                    objPeriodos.cveMesInicio = "9";
+                    break;
+                case "OCT":
+                    objPeriodos.cveMesInicio = "10";
+                    break;
+                case "NOV":
+                    objPeriodos.cveMesInicio = "12";
+                    break;
+                case "DIC":
+                    objPeriodos.cveMesInicio = "12";
+                    break;
+            }
+            switch (objPeriodos.cveMesFin)
+            {
+                case "ENE":
+                    objPeriodos.cveMesFin = "1";
+                    break;
+                case "FEB":
+                    objPeriodos.cveMesFin = "2";
+                    break;
+                case "MAR":
+                    objPeriodos.cveMesFin = "3";
+                    break;
+                case "ABR":
+                    objPeriodos.cveMesFin = "4";
+                    break;
+                case "MAY":
+                    objPeriodos.cveMesFin = "5";
+                    break;
+                case "JUN":
+                    objPeriodos.cveMesFin = "6";
+                    break;
+                case "JUL":
+                    objPeriodos.cveMesFin = "7";
+                    break;
+                case "AGO":
+                    objPeriodos.cveMesFin = "8";
+                    break;
+                case "SEP":
+                    objPeriodos.cveMesFin = "9";
+                    break;
+                case "OCT":
+                    objPeriodos.cveMesFin = "10";
+                    break;
+                case "NOV":
+                    objPeriodos.cveMesFin = "12";
+                    break;
+                case "DIC":
+                    objPeriodos.cveMesFin = "12";
+                    break;
+            }
             setValores();
             nuevo = false;
         }
