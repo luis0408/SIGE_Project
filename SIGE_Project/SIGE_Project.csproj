@@ -517,6 +517,8 @@
   <ItemGroup>
     <None Include="Resources\exporttoxlsx1.svg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\logo IESE.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
