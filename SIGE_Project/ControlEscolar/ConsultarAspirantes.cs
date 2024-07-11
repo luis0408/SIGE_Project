@@ -1,7 +1,10 @@
 ﻿using DevExpress.Export;
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +40,8 @@ namespace SIGE_Project.ControlEscolar
             DataTable dtAspirantes=dsAspirantes.Tables[0];  
             gridControl_enEspera.DataSource= dtAspirantes;
             gridView_enEspera.BestFitColumns();
+            navBarControl_opciones.Enabled = true;
+            xtraTabControl_Aspirantes.SelectedTabPage.Name = "xtraTabPage_espera";
         }
 
         private void navBarItem_exportar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -122,7 +127,7 @@ namespace SIGE_Project.ControlEscolar
         private void xtraTabControl_Aspirantes_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             ////METODO PARA EVALUAR EL CAMBIO DE PAGINA 
-            string nomPag = xtraTabControl_Aspirantes.SelectedTabPage.Name;////SE EVALUA EL NOMBRE DE LA PAGINA SELECCIONADA
+            string nomPag = xtraTabControl_Aspirantes.SelectedTabPage.Name;////SE OBTIENE EL NOMBRE DE LA PAGINA SELECCIONADA
 
 
             switch(nomPag)
@@ -159,6 +164,59 @@ namespace SIGE_Project.ControlEscolar
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void navBarItem_generarFicha_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            try
+            {
+                splashScreenManager1.ShowWaitForm();
+                ArrayList rowsPrev;
+                int aspirantesSelect = gridView_enEspera.SelectedRowsCount;
+                if (aspirantesSelect == 0)
+                {
+                    if (splashScreenManager1.IsSplashFormVisible)
+                        splashScreenManager1.CloseWaitForm();
+                    XtraMessageBox.Show("Selecciona al menos un aspirante.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                rowsPrev = new ArrayList();
+                for (int a = 0; a < gridView_enEspera.SelectedRowsCount; a++)
+                {
+                    /////se agregan las filas seleccionada a la lista
+                    if (gridView_enEspera.GetSelectedRows()[a] >= 0)
+                    {
+                        rowsPrev.Add(gridView_enEspera.GetDataRow(gridView_enEspera.GetSelectedRows()[a]));
+                    }
+                }
+                /////SE RECORRE LA LISTA CREADA Y SE OBTIENE LA RUTA DE CADA FILA SELECCIONADA PARA MOSTRAR EL PDF
+                for (int i = 0; i < rowsPrev.Count; i++)
+                {
+                    DataRow row = rowsPrev[i] as DataRow;
+
+
+                    string CURP = Convert.ToString(row["CURP"]);
+                   
+                    Reportes.FichaAspirante rptFichaAspirante = new Reportes.FichaAspirante();
+                    rptFichaAspirante.sqlDataSource1.ConnectionParameters = Utilerias.GetConnectionParametersBase();
+                    rptFichaAspirante.Parameters["CURP"].Value = CURP;
+                    rptFichaAspirante.RequestParameters = false;
+                    ReportPrintTool p = new ReportPrintTool(rptFichaAspirante);
+                    p.AutoShowParametersPanel = false;
+                    p.ShowPreview();
+                }
+
+
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+
+            }
+            catch (Exception exs)
+            {
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                XtraMessageBox.Show("Error al generar el PDF de la vista previa, detalles: " + exs.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
