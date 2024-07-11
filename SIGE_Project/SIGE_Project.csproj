@@ -287,6 +287,12 @@
     <Compile Include="Reportes\FichaAspirante.Designer.cs">
       <DependentUpon>FichaAspirante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Inscripcion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Inscripcion.Designer.cs">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\AgregraUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +410,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes\FichaAspirante.resx">
       <DependentUpon>FichaAspirante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Inscripcion.resx">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\AgregraUsuario.resx">
       <DependentUpon>AgregraUsuario.cs</DependentUpon>
