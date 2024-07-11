@@ -24,12 +24,14 @@ namespace SIGE_Project.ControlEscolar
         string[] parametros = { };
         private void ConsultarAspirantes_Load(object sender, EventArgs e)
         {
-            consultarAspirantes();
+            //consultarAspirantes();
+            navBarControl_opciones.Enabled = false;
         }
         private void consultarAspirantes() 
         {
-            datos = new object[] { };
-            parametros = new string[] { };  
+            int fechaSelect =  Convert.ToDateTime(dateEdit_fechaConsultar.EditValue).Year;
+            datos = new object[] {fechaSelect };
+            parametros = new string[] { "@anioConsulta" };  
             DataSet dsAspirantes = new DataSet();
             dsAspirantes = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_ASPIRANTES]", datos,parametros);
             DataTable dtAspirantes=dsAspirantes.Tables[0];  
@@ -108,6 +110,55 @@ namespace SIGE_Project.ControlEscolar
                         DevExpress.XtraEditors.XtraMessageBox.Show(msg, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void simpleButton_buscar_Click(object sender, EventArgs e)
+        {
+            consultarAspirantes();
+
+        }
+
+        private void xtraTabControl_Aspirantes_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            ////METODO PARA EVALUAR EL CAMBIO DE PAGINA 
+            string nomPag = xtraTabControl_Aspirantes.SelectedTabPage.Name;////SE EVALUA EL NOMBRE DE LA PAGINA SELECCIONADA
+
+
+            switch(nomPag)
+            {
+                case "xtraTabPage_espera":
+                    navBarItem_aceptar.Visible = true;
+                    navBarItem_inscribir.Visible = false;
+                    navBarItem_reutilizar.Visible = false;
+
+                    navBarItem_editar.Visible = true;
+                    navBarItem_declinar.Visible = true;
+
+                    navBarItem_generarFicha.Visible = true;
+                    break;
+                case "xtraTabPage_aceptados":
+                    navBarItem_aceptar.Visible = false;
+                    navBarItem_inscribir.Visible = true;
+                    navBarItem_reutilizar.Visible = false;
+
+                    navBarItem_editar.Visible = true;
+                    navBarItem_declinar.Visible = true;
+
+                    navBarItem_generarFicha.Visible = true;
+                    break;
+                case "xtraTabPage_declinados":
+                    navBarItem_aceptar.Visible = false;
+                    navBarItem_inscribir.Visible = false;
+                    navBarItem_reutilizar.Visible = true;
+
+                    navBarItem_editar.Visible = false;
+                    navBarItem_declinar.Visible = false;
+
+                    navBarItem_generarFicha.Visible = false;
+                    break;
+                default:
+                    break;
             }
         }
     }
