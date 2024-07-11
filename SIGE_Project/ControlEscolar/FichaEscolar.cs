@@ -26,17 +26,10 @@ namespace SIGE_Project.ControlEscolar
         }
         private void llenarLookups()
         {
-            ////PERIODO
-            lookUpEdit_periodo.Properties.DataSource = Utilerias.llenarlookupeditvalue("select inicioPeriodo.idPeriodo,CONCAT(inicioPeriodo.iniPerido,'-',finPeriodo.finPer)as descripcion from " 
-                                                                                       +" (select  idPeriodo,CONCAT(mes.cveMes,' ',anioInicio)iniPerido from [SIGE_Catalogo_Periodos] periodos"
-                                                                                       +" left join SIGE_Catalogo_Mes mes on periodos.cveMesInicio=mes.numeroMes)inicioPeriodo left join "
-                                                                                       +" (select  idPeriodo,CONCAT(mes.cveMes,' ',anioFin)finPer from [SIGE_Catalogo_Periodos] periodos "
-                                                                                       +" left join SIGE_Catalogo_Mes mes on periodos.cveMesFin=mes.numeroMes)finPeriodo on inicioPeriodo.idPeriodo=finPeriodo.idPeriodo");
-            lookUpEdit_periodo.Properties.DisplayMember = "descripcion";
-            lookUpEdit_periodo.Properties.ValueMember = "idPeriodo";
+            
 
             ////CICLO ESCOLAR
-            lookUpEdit_cicloEscolar.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idCicloEscolar,CONCAT(anioInicio,'-',anioFin)as descripcion from [SIGE_Catalogo_CicloEscolar] where estado=1");
+            lookUpEdit_cicloEscolar.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idCicloEscolar,CONCAT(anioInicio,'-',anioFin)as descripcion from [SIGE_Catalogo_CicloEscolar] where estado=1 order by idCicloEscolar desc");
             lookUpEdit_cicloEscolar.Properties.DisplayMember = "descripcion";
             lookUpEdit_cicloEscolar.Properties.ValueMember = "idCicloEscolar";
 
@@ -90,20 +83,9 @@ namespace SIGE_Project.ControlEscolar
             textEdit_medioDifusion.Properties.DisplayMember = "descripcion";
             textEdit_medioDifusion.Properties.ValueMember = "cveMedio";
 
-            consultarListaDocumentos();
+            
         }
-        private void consultarListaDocumentos()
-        {
-            Utilerias util= new Utilerias();
-            DataSet ds = new DataSet(); 
-            ds= util.ejecutarQueryDataset("ListaDocs", "select idDocumento,descripcion, estado from SIGE_Licenciatura_ListaDocumentos where estado=1");
-            DataTable dt = new DataTable();
-            dt=ds.Tables[0];
-            gridControl_documentos.DataSource = dt;
-            gridView_documentos.BestFitColumns();
-
-
-        }
+        
         private void lookUpEdit_paisNacimiento_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -117,7 +99,22 @@ namespace SIGE_Project.ControlEscolar
             catch (Exception ex) { }
             
         }
+        private void lookUpEdit_cicloEscolar_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ////AL SELECCIONAR EL VALOR SE FILTRA EL LOOKUP "lookUpEdit_cicloEscolar"
+                string idCicloEscolar = lookUpEdit_cicloEscolar.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
 
+                ////PERIODO
+                lookUpEdit_periodo.Properties.DataSource = Utilerias.llenarlookupeditvalue("  select CONCAT(cveMesInicio,' ',anioInicio,'-',cveMesFin,' ',anioFin)as descripcion from SIGE_Catalogo_Periodos periodo where idCicloEscolar=" + idCicloEscolar + " order by idPeriodo desc ");
+                lookUpEdit_periodo.Properties.DisplayMember = "descripcion";
+                lookUpEdit_periodo.Properties.ValueMember = "idPeriodo";
+
+
+            }
+            catch (Exception ex) { }
+        }
         private void lookUpEdit_estadoNacimiento_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -399,7 +396,9 @@ namespace SIGE_Project.ControlEscolar
             int result = objApirante.insertarAspirante();
             if (result==1)
             {
+
                 XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar();
 
             }
             else
@@ -409,7 +408,60 @@ namespace SIGE_Project.ControlEscolar
         }
         private void limpiar()
         {
+            lookUpEdit_cicloEscolar.EditValue = null;
+            lookUpEdit_periodo.EditValue = null;
+            lookUpEdit_modalidad = null;
+            lookUpEdit_licenciatura = null;
+            /////DATOS PERSONALES 
+            textEdit_nombre.Text = "";
+            textEdit_apellidoPaterno.Text = "";
+            textEdit_apellidoMaterno.Text = "";
+            textEdit_CURP.Text = "";
+            textEdit_RFC.Text = "";
+            textEdit_NSS.Text = "";
+            lookUpEdit_genero.EditValue = null;
+            lookUpEdit_estadoCivil.EditValue = null;
+            textEdit_numTelefono.Text = "";
+            radioGroup_lenguaIndigena.SelectedIndex = 1;
+            textEdit_correoElectronico.Text = "";
+            lookUpEdit_tipoSangre.EditValue = null;
+            ////DATPS NACIMIENTO
+            dateEdit_fechaNacimiento.EditValue = null;  
+            lookUpEdit_paisNacimiento.EditValue= null;
+            lookUpEdit_estadoNacimiento.EditValue=null;
+            lookUpEdit_municipioNacimiento.EditValue=null;
+            ////DATOS DOMICILIO
+            textEdit_calle.Text = "";
+            textEdit_numExterior.Text = "";
+            textEdit_numInterior.Text = "";
+            textEdit_codigoPostal.Text = "";
+            lookUpEdit_colonia.EditValue= null;
+            lookUpEdit_estado.EditValue= null;
+            lookUpEdit_localidad.EditValue= null;
+            lookUpEdit_municipio.EditValue= null;
+            ////DATOS BACHILLERATO
+            textEdit_estadoBachillerato.EditValue= null;    
+            textEdit_municipioBachillerato.EditValue = null;
+            lookUpEdit_bachillerato.EditValue= null;
+            textEdit_promedio.Text = "";
+            ////DATOS TUTOR
+            textEdit_nombreTutor.Text = "";
+            textEdit_apellidoPaternoTutor.Text = "";
+            textEdit_apellidoMaternoTutor.Text = "";
+            textEdit_numeroTelfonoTutor.Text = "";
+            textEdit_correoElectronicoTutor.Text = "";
+            lookUpEdit_parentesco.EditValue= null;  
+            textEdit_medioDifusion.EditValue= null;
 
+
+        }
+
+        private void simpleButton_cancel_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("La información aún no se guarda, si cierra el formulario la información se perdera. ¿Desea salir? ","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

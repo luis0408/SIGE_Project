@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarAspirantes));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.simpleButton_buscar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarControl_opciones = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup_accionesEspera = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_aceptar = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_editar = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_declinar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup_Reportes = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_exportar = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.navBarItem_generarFicha = new DevExpress.XtraNavBar.NavBarItem();
+            this.xtraTabControl_Aspirantes = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage_espera = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl_enEspera = new DevExpress.XtraGrid.GridControl();
@@ -75,16 +76,22 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage_aceptados = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage_rechazado = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage_declinados = new DevExpress.XtraTab.XtraTabPage();
+            this.dateEdit_fechaConsultar = new DevExpress.XtraEditors.DateEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.navBarItem_inscribir = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_reutilizar = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl_opciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_Aspirantes)).BeginInit();
+            this.xtraTabControl_Aspirantes.SuspendLayout();
             this.xtraTabPage_espera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -92,25 +99,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_enEspera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaConsultar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaConsultar.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButton_buscar);
             this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Controls.Add(this.navBarControl1);
-            this.layoutControl1.Controls.Add(this.xtraTabControl1);
+            this.layoutControl1.Controls.Add(this.navBarControl_opciones);
+            this.layoutControl1.Controls.Add(this.xtraTabControl_Aspirantes);
+            this.layoutControl1.Controls.Add(this.dateEdit_fechaConsultar);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(739, 341, 650, 400);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(2839, 394, 650, 400);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(1382, 796);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // simpleButton_buscar
+            // 
+            this.simpleButton_buscar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_buscar.ImageOptions.SvgImage")));
+            this.simpleButton_buscar.Location = new System.Drawing.Point(441, 35);
+            this.simpleButton_buscar.Name = "simpleButton_buscar";
+            this.simpleButton_buscar.Size = new System.Drawing.Size(196, 36);
+            this.simpleButton_buscar.StyleController = this.layoutControl1;
+            this.simpleButton_buscar.TabIndex = 13;
+            this.simpleButton_buscar.Text = "Consultar";
+            this.simpleButton_buscar.Click += new System.EventHandler(this.simpleButton_buscar_Click);
             // 
             // labelControl1
             // 
@@ -123,52 +148,56 @@
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Aspirantes";
             // 
-            // navBarControl1
+            // navBarControl_opciones
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup_accionesEspera;
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarControl_opciones.ActiveGroup = this.navBarGroup_accionesEspera;
+            this.navBarControl_opciones.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup_accionesEspera,
             this.navBarGroup_Reportes});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem2,
-            this.navBarItem3,
+            this.navBarControl_opciones.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem_aceptar,
+            this.navBarItem_editar,
+            this.navBarItem_declinar,
             this.navBarItem_exportar,
-            this.navBarItem4});
-            this.navBarControl1.Location = new System.Drawing.Point(1176, 35);
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 194;
-            this.navBarControl1.Size = new System.Drawing.Size(194, 749);
-            this.navBarControl1.TabIndex = 9;
-            this.navBarControl1.Text = "navBarControl1";
+            this.navBarItem_generarFicha,
+            this.navBarItem_inscribir,
+            this.navBarItem_reutilizar});
+            this.navBarControl_opciones.Location = new System.Drawing.Point(1176, 75);
+            this.navBarControl_opciones.Name = "navBarControl_opciones";
+            this.navBarControl_opciones.OptionsNavPane.ExpandedWidth = 194;
+            this.navBarControl_opciones.Size = new System.Drawing.Size(194, 709);
+            this.navBarControl_opciones.TabIndex = 9;
+            this.navBarControl_opciones.Text = "navBarControl_opciones";
             // 
             // navBarGroup_accionesEspera
             // 
             this.navBarGroup_accionesEspera.Caption = "Acciones";
             this.navBarGroup_accionesEspera.Expanded = true;
             this.navBarGroup_accionesEspera.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_aceptar),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_inscribir),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_reutilizar),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_editar),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_declinar)});
             this.navBarGroup_accionesEspera.Name = "navBarGroup_accionesEspera";
             // 
-            // navBarItem1
+            // navBarItem_aceptar
             // 
-            this.navBarItem1.Caption = "Aceptar";
-            this.navBarItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
-            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItem_aceptar.Caption = "Aceptar";
+            this.navBarItem_aceptar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_aceptar.ImageOptions.SvgImage")));
+            this.navBarItem_aceptar.Name = "navBarItem_aceptar";
             // 
-            // navBarItem2
+            // navBarItem_editar
             // 
-            this.navBarItem2.Caption = "Editar";
-            this.navBarItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navBarItem2.Name = "navBarItem2";
+            this.navBarItem_editar.Caption = "Editar";
+            this.navBarItem_editar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_editar.ImageOptions.SvgImage")));
+            this.navBarItem_editar.Name = "navBarItem_editar";
             // 
-            // navBarItem3
+            // navBarItem_declinar
             // 
-            this.navBarItem3.Caption = "Declinar";
-            this.navBarItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
-            this.navBarItem3.Name = "navBarItem3";
+            this.navBarItem_declinar.Caption = "Declinar";
+            this.navBarItem_declinar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_declinar.ImageOptions.SvgImage")));
+            this.navBarItem_declinar.Name = "navBarItem_declinar";
             // 
             // navBarGroup_Reportes
             // 
@@ -176,7 +205,7 @@
             this.navBarGroup_Reportes.Expanded = true;
             this.navBarGroup_Reportes.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_exportar),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_generarFicha)});
             this.navBarGroup_Reportes.Name = "navBarGroup_Reportes";
             // 
             // navBarItem_exportar
@@ -186,29 +215,30 @@
             this.navBarItem_exportar.Name = "navBarItem_exportar";
             this.navBarItem_exportar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_exportar_LinkClicked);
             // 
-            // navBarItem4
+            // navBarItem_generarFicha
             // 
-            this.navBarItem4.Caption = "Generar ficha";
-            this.navBarItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
-            this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem_generarFicha.Caption = "Generar ficha";
+            this.navBarItem_generarFicha.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_generateFicha.ImageOptions.SvgImage")));
+            this.navBarItem_generarFicha.Name = "navBarItem_generarFicha";
             // 
-            // xtraTabControl1
+            // xtraTabControl_Aspirantes
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 35);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage_espera;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1160, 749);
-            this.xtraTabControl1.TabIndex = 4;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabControl_Aspirantes.Location = new System.Drawing.Point(12, 75);
+            this.xtraTabControl_Aspirantes.Name = "xtraTabControl_Aspirantes";
+            this.xtraTabControl_Aspirantes.SelectedTabPage = this.xtraTabPage_espera;
+            this.xtraTabControl_Aspirantes.Size = new System.Drawing.Size(1160, 709);
+            this.xtraTabControl_Aspirantes.TabIndex = 4;
+            this.xtraTabControl_Aspirantes.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage_espera,
             this.xtraTabPage_aceptados,
-            this.xtraTabPage_rechazado});
+            this.xtraTabPage_declinados});
+            this.xtraTabControl_Aspirantes.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl_Aspirantes_SelectedPageChanged);
             // 
             // xtraTabPage_espera
             // 
             this.xtraTabPage_espera.Controls.Add(this.layoutControl2);
             this.xtraTabPage_espera.Name = "xtraTabPage_espera";
-            this.xtraTabPage_espera.Size = new System.Drawing.Size(1158, 724);
+            this.xtraTabPage_espera.Size = new System.Drawing.Size(1158, 684);
             this.xtraTabPage_espera.Text = "En espera";
             // 
             // layoutControl2
@@ -219,7 +249,7 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(3108, 429, 650, 400);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(1158, 724);
+            this.layoutControl2.Size = new System.Drawing.Size(1158, 684);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -228,7 +258,7 @@
             this.gridControl_enEspera.Location = new System.Drawing.Point(12, 12);
             this.gridControl_enEspera.MainView = this.gridView_enEspera;
             this.gridControl_enEspera.Name = "gridControl_enEspera";
-            this.gridControl_enEspera.Size = new System.Drawing.Size(1134, 700);
+            this.gridControl_enEspera.Size = new System.Drawing.Size(1134, 660);
             this.gridControl_enEspera.TabIndex = 4;
             this.gridControl_enEspera.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_enEspera});
@@ -537,7 +567,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1158, 724);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1158, 684);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -545,21 +575,42 @@
             this.layoutControlItem2.Control = this.gridControl_enEspera;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1138, 704);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1138, 664);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // xtraTabPage_aceptados
             // 
             this.xtraTabPage_aceptados.Name = "xtraTabPage_aceptados";
-            this.xtraTabPage_aceptados.Size = new System.Drawing.Size(1158, 724);
+            this.xtraTabPage_aceptados.Size = new System.Drawing.Size(1158, 684);
             this.xtraTabPage_aceptados.Text = "Aceptados";
             // 
-            // xtraTabPage_rechazado
+            // xtraTabPage_declinados
             // 
-            this.xtraTabPage_rechazado.Name = "xtraTabPage_rechazado";
-            this.xtraTabPage_rechazado.Size = new System.Drawing.Size(1158, 724);
-            this.xtraTabPage_rechazado.Text = "Declinados";
+            this.xtraTabPage_declinados.Name = "xtraTabPage_declinados";
+            this.xtraTabPage_declinados.Size = new System.Drawing.Size(1158, 684);
+            this.xtraTabPage_declinados.Text = "Declinados";
+            // 
+            // dateEdit_fechaConsultar
+            // 
+            this.dateEdit_fechaConsultar.EditValue = null;
+            this.dateEdit_fechaConsultar.Location = new System.Drawing.Point(114, 35);
+            this.dateEdit_fechaConsultar.Name = "dateEdit_fechaConsultar";
+            this.dateEdit_fechaConsultar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_fechaConsultar.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_fechaConsultar.Properties.DisplayFormat.FormatString = "Y";
+            this.dateEdit_fechaConsultar.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit_fechaConsultar.Properties.EditFormat.FormatString = "Y";
+            this.dateEdit_fechaConsultar.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit_fechaConsultar.Properties.MaskSettings.Set("mask", "yyyy");
+            this.dateEdit_fechaConsultar.Properties.UseMaskAsDisplayFormat = true;
+            this.dateEdit_fechaConsultar.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearsGroupView;
+            this.dateEdit_fechaConsultar.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearsGroupView;
+            this.dateEdit_fechaConsultar.Size = new System.Drawing.Size(323, 20);
+            this.dateEdit_fechaConsultar.StyleController = this.layoutControl1;
+            this.dateEdit_fechaConsultar.TabIndex = 12;
             // 
             // Root
             // 
@@ -568,26 +619,29 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem7,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.emptySpaceItem1});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1382, 796);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.xtraTabControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem1.Control = this.xtraTabControl_Aspirantes;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 63);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1164, 753);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1164, 713);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.navBarControl1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(1164, 23);
+            this.layoutControlItem7.Control = this.navBarControl_opciones;
+            this.layoutControlItem7.Location = new System.Drawing.Point(1164, 63);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(198, 753);
+            this.layoutControlItem7.Size = new System.Drawing.Size(198, 713);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -599,6 +653,44 @@
             this.layoutControlItem8.Size = new System.Drawing.Size(1362, 23);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.dateEdit_fechaConsultar;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(429, 40);
+            this.layoutControlItem3.Text = "Seleccione un año:";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(90, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.simpleButton_buscar;
+            this.layoutControlItem4.Location = new System.Drawing.Point(429, 23);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(200, 40);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(629, 23);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(733, 40);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // navBarItem_inscribir
+            // 
+            this.navBarItem_inscribir.Caption = "Inscribir";
+            this.navBarItem_inscribir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_inscribir.Name = "navBarItem_inscribir";
+            // 
+            // navBarItem_reutilizar
+            // 
+            this.navBarItem_reutilizar.Caption = "Reiniciar proceso";
+            this.navBarItem_reutilizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem_reutilizar.Name = "navBarItem_reutilizar";
             // 
             // ConsultarAspirantes
             // 
@@ -612,9 +704,9 @@
             this.Load += new System.EventHandler(this.ConsultarAspirantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl_opciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_Aspirantes)).EndInit();
+            this.xtraTabControl_Aspirantes.ResumeLayout(false);
             this.xtraTabPage_espera.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
@@ -622,10 +714,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_enEspera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaConsultar.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaConsultar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -633,23 +730,23 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl_Aspirantes;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_espera;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_aceptados;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage_rechazado;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage_declinados;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.GridControl gridControl_enEspera;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_enEspera;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl_opciones;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup_accionesEspera;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_aceptar;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_editar;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_declinar;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup_Reportes;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_exportar;
@@ -682,6 +779,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_generarFicha;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_buscar;
+        private DevExpress.XtraEditors.DateEdit dateEdit_fechaConsultar;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_inscribir;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_reutilizar;
     }
 }

@@ -30,7 +30,9 @@ namespace SIGE_Project.Catalogo
 
         private void DatosPeriodos_Load(object sender, EventArgs e)
         {
-
+            textEdit_idCicloEscolar.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idCicloEscolar,CONCAT(anioInicio,'-',anioFin)as descripcion from [SIGE_Catalogo_CicloEscolar] where estado=1");
+            textEdit_idCicloEscolar.Properties.DisplayMember = "descripcion";
+            textEdit_idCicloEscolar.Properties.ValueMember = "idCicloEscolar";
         }
 
         public DatosPeriodos(int _idCicloEscolar, string _cveMesInicio, int _anioInicio, string _cveMesFin, int _anioFin)
@@ -156,7 +158,7 @@ namespace SIGE_Project.Catalogo
 
         private void simpleButton_aceptar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textEdit_idCicloEscolar.Text))
+            if (textEdit_idCicloEscolar.EditValue==null)
             {
                 XtraMessageBox.Show("Ingrese un id para el periodo.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -271,7 +273,7 @@ namespace SIGE_Project.Catalogo
                     break;
             }
 
-            objPeriodos.idCicloEscolar = Convert.ToInt32(textEdit_idCicloEscolar.Text);
+            objPeriodos.idCicloEscolar = Convert.ToInt32(textEdit_idCicloEscolar.EditValue.ToString());
             objPeriodos.cveMesInicio = mesInicio.ToString();
             objPeriodos.anioInicio = anioInicio;
             objPeriodos.cveMesFin = mesFin.ToString();
