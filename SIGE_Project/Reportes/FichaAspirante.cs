@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace SIGE_Project.Reportes
 {
-    public partial class Ejemplo : DevExpress.XtraReports.UI.XtraReport
+    public partial class FichaAspirante : DevExpress.XtraReports.UI.XtraReport
     {
-        public Ejemplo()
+        public FichaAspirante()
         {
             InitializeComponent();
         }

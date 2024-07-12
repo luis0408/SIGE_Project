@@ -35,6 +35,8 @@
             this.navBarControl_opciones = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup_accionesEspera = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_aceptar = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_inscribir = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_reutilizar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_editar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_declinar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup_Reportes = new DevExpress.XtraNavBar.NavBarGroup();
@@ -85,8 +87,8 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.navBarItem_inscribir = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem_reutilizar = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_generarGraficas = new DevExpress.XtraNavBar.NavBarItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl_opciones)).BeginInit();
@@ -161,7 +163,8 @@
             this.navBarItem_exportar,
             this.navBarItem_generarFicha,
             this.navBarItem_inscribir,
-            this.navBarItem_reutilizar});
+            this.navBarItem_reutilizar,
+            this.navBarItem_generarGraficas});
             this.navBarControl_opciones.Location = new System.Drawing.Point(1176, 75);
             this.navBarControl_opciones.Name = "navBarControl_opciones";
             this.navBarControl_opciones.OptionsNavPane.ExpandedWidth = 194;
@@ -187,6 +190,18 @@
             this.navBarItem_aceptar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_aceptar.ImageOptions.SvgImage")));
             this.navBarItem_aceptar.Name = "navBarItem_aceptar";
             // 
+            // navBarItem_inscribir
+            // 
+            this.navBarItem_inscribir.Caption = "Inscribir";
+            this.navBarItem_inscribir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_inscribir.ImageOptions.SvgImage")));
+            this.navBarItem_inscribir.Name = "navBarItem_inscribir";
+            // 
+            // navBarItem_reutilizar
+            // 
+            this.navBarItem_reutilizar.Caption = "Reiniciar proceso";
+            this.navBarItem_reutilizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_reutilizar.ImageOptions.SvgImage")));
+            this.navBarItem_reutilizar.Name = "navBarItem_reutilizar";
+            // 
             // navBarItem_editar
             // 
             this.navBarItem_editar.Caption = "Editar";
@@ -205,7 +220,8 @@
             this.navBarGroup_Reportes.Expanded = true;
             this.navBarGroup_Reportes.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_exportar),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_generarFicha)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_generarFicha),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_generarGraficas)});
             this.navBarGroup_Reportes.Name = "navBarGroup_Reportes";
             // 
             // navBarItem_exportar
@@ -218,8 +234,9 @@
             // navBarItem_generarFicha
             // 
             this.navBarItem_generarFicha.Caption = "Generar ficha";
-            this.navBarItem_generarFicha.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_generateFicha.ImageOptions.SvgImage")));
+            this.navBarItem_generarFicha.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_generarFicha.ImageOptions.SvgImage")));
             this.navBarItem_generarFicha.Name = "navBarItem_generarFicha";
+            this.navBarItem_generarFicha.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_generarFicha_LinkClicked);
             // 
             // xtraTabControl_Aspirantes
             // 
@@ -680,17 +697,15 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(733, 40);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // navBarItem_inscribir
+            // navBarItem_generarGraficas
             // 
-            this.navBarItem_inscribir.Caption = "Inscribir";
-            this.navBarItem_inscribir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
-            this.navBarItem_inscribir.Name = "navBarItem_inscribir";
+            this.navBarItem_generarGraficas.Caption = "Generar Graficas";
+            this.navBarItem_generarGraficas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_generarGraficas.Name = "navBarItem_generarGraficas";
             // 
-            // navBarItem_reutilizar
+            // splashScreenManager1
             // 
-            this.navBarItem_reutilizar.Caption = "Reiniciar proceso";
-            this.navBarItem_reutilizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navBarItem_reutilizar.Name = "navBarItem_reutilizar";
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // ConsultarAspirantes
             // 
@@ -787,5 +802,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_inscribir;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_reutilizar;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_generarGraficas;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
