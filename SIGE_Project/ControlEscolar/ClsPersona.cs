@@ -46,6 +46,9 @@ namespace SIGE_Project.ControlEscolar
         public string descripcionLI { get; set; }
         #endregion
 
+        #region tblPersonaDiscapacidad
+        public int idDiscapacidad { get; set; }
+        #endregion
         public ClsPersona() 
         {
 
@@ -90,6 +93,10 @@ namespace SIGE_Project.ControlEscolar
             hablaLenguaIndigena= _hablaLenguaIndigena;  
             descripcionLI = _descripcionLI; 
         }
+        public void setDatosPersonaDiscapacidad(int _idDiscapacidad )
+        {
+            idDiscapacidad = _idDiscapacidad;
+        }
         object[] datos = { };
         string[] parametros = { };
         public int insertarPersona()
@@ -120,6 +127,13 @@ namespace SIGE_Project.ControlEscolar
             int resultadoInsert = Utilerias.ejecutarprocedimiento("SIGE_INSERTAR_PERSONALENGUAINDIGENA", datos, parametros);
             return resultadoInsert;
         }
+        public int insertarPersonaDiscapacidad()
+        {
+            datos = new object[] {CURP, idDiscapacidad };
+            parametros = new string[] { "@CURP", "@idDiscapacidad" };
+            int resultadoInsert = Utilerias.ejecutarprocedimiento("[SIGE_INSERTAR_PERSONADISCAPACIDAD]", datos, parametros);
+            return resultadoInsert;
+        }
         public int updatePersona()
         {
             datos = new object[] { CURP, RFC, NSS, nombre, apellidoPaterno, apellidoMaterno, cveGenero, idEstadoCivil, email, celular, cveTipoSangre };
@@ -146,6 +160,13 @@ namespace SIGE_Project.ControlEscolar
             datos = new object[] {CURP, hablaLenguaIndigena, descripcionLI };
             parametros = new string[] { "@CURP","@hablaLenguaIndigena", "@descripcionLI" };
             int resultadoUpdate = Utilerias.ejecutarprocedimiento("SIGE_ACTUALIZAR_PERSONALENGUAINDIGENA", datos, parametros);
+            return resultadoUpdate;
+        }
+        public int deleteDiscpacidades()
+        {
+            datos = new object[] { CURP };
+            parametros = new string[] { "@CURP" };
+            int resultadoUpdate = Utilerias.ejecutarprocedimiento("[SIGE_ELIMINAR_PERSONADISCAPACIDAD]", datos, parametros);
             return resultadoUpdate;
         }
     }

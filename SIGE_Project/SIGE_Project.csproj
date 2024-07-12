@@ -236,6 +236,7 @@
     </Compile>
     <Compile Include="ControlEscolar\ClsApirante.cs" />
     <Compile Include="ControlEscolar\ClsPersona.cs" />
+    <Compile Include="ControlEscolar\ClsTutor.cs" />
     <Compile Include="ControlEscolar\ConsultarAspirantes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -13,8 +13,9 @@ namespace SIGE_Project.ControlEscolar
 {
     public partial class FichaEscolar : DevExpress.XtraEditors.XtraForm
     {
-        ClsPersona objPersona;
-        ClsApirante objApirante;
+        //ClsPersona objPersona;
+        ClsApirante objApsirante;
+        ClsTutor objTutor;
         public FichaEscolar()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace SIGE_Project.ControlEscolar
         private void FichaEscolar_Load(object sender, EventArgs e)
         {
             llenarLookups();
+            cargarDiscapacidades();
         }
         private void llenarLookups()
         {
@@ -85,7 +87,25 @@ namespace SIGE_Project.ControlEscolar
 
             
         }
-        
+        object[] datos = { };
+        string[] parametros ={ };
+        private void cargarDiscapacidades()
+        {
+            datos= new object[] { };
+            parametros= new string[] { };
+            DataSet ds = new DataSet();
+            ds = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_DISCAPACIDADES]",datos,parametros);
+            DataTable dt = ds.Tables[0];
+
+            /////SE RECORRE EL DATA TABEL PARA IR LLENANDO LOS ITEMS DEL checkedListBox
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string displayValue = dt.Rows[i]["descripcion"].ToString();////VALOR QUE SE MOSTRARA AL USUARIO
+                string valueMember= dt.Rows[i]["idDIscapacidad"].ToString();////VALOR QUE SE OBTIENE AL SELECCIONAR
+
+                checkedListBoxControl_discapacidades.Items.Add(valueMember,displayValue);////SE AGREGA EL ITEM
+            }
+        }
         private void lookUpEdit_paisNacimiento_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -107,7 +127,7 @@ namespace SIGE_Project.ControlEscolar
                 string idCicloEscolar = lookUpEdit_cicloEscolar.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
 
                 ////PERIODO
-                lookUpEdit_periodo.Properties.DataSource = Utilerias.llenarlookupeditvalue("  select CONCAT(cveMesInicio,' ',anioInicio,'-',cveMesFin,' ',anioFin)as descripcion from SIGE_Catalogo_Periodos periodo where idCicloEscolar=" + idCicloEscolar + " order by idPeriodo desc ");
+                lookUpEdit_periodo.Properties.DataSource = Utilerias.llenarlookupeditvalue(" select idPeriodo,CONCAT(cveMesInicio,' ',anioInicio,'-',cveMesFin,' ',anioFin)as descripcion from SIGE_Catalogo_Periodos periodo where idCicloEscolar=" + idCicloEscolar + " order by idPeriodo desc ");
                 lookUpEdit_periodo.Properties.DisplayMember = "descripcion";
                 lookUpEdit_periodo.Properties.ValueMember = "idPeriodo";
 
@@ -347,38 +367,68 @@ namespace SIGE_Project.ControlEscolar
             try
             {
                 //objPersona = new ClsPersona();
-                objApirante = new ClsApirante();
-                objApirante.setDatosPersona(textEdit_CURP.Text, textEdit_RFC.Text, textEdit_NSS.Text, textEdit_nombre.Text, textEdit_apellidoPaterno.Text
+                objApsirante = new ClsApirante();
+                objApsirante.setDatosPersona(textEdit_CURP.Text, textEdit_RFC.Text, textEdit_NSS.Text, textEdit_nombre.Text, textEdit_apellidoPaterno.Text
                                            , textEdit_apellidoMaterno.Text, lookUpEdit_genero.EditValue.ToString(), Convert.ToInt32(lookUpEdit_estadoCivil.EditValue), textEdit_correoElectronico.Text
                                            , textEdit_numTelefono.Text, lookUpEdit_tipoSangre.EditValue.ToString());
 
-                objApirante.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, lookUpEdit_colonia.EditValue.ToString()
+                objApsirante.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, lookUpEdit_colonia.EditValue.ToString()
                                                     , lookUpEdit_estado.EditValue.ToString(), lookUpEdit_localidad.EditValue.ToString(), lookUpEdit_municipio.EditValue.ToString());
 
-                objApirante.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
+                objApsirante.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
                                                      , lookUpEdit_estadoNacimiento.EditValue.ToString(), lookUpEdit_municipioNacimiento.EditValue.ToString());
 
-                objApirante.setDatosPersonaLenguaIndigena(Convert.ToInt32(radioGroup_lenguaIndigena.EditValue), memoEdit_especifique.Text);
+                objApsirante.setDatosPersonaLenguaIndigena(Convert.ToInt32(radioGroup_lenguaIndigena.EditValue), memoEdit_especifique.Text);
+
+                objApsirante.setDatosAspirante(lookUpEdit_licenciatura.EditValue.ToString(), lookUpEdit_modalidad.EditValue.ToString(),
+                                         Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue), Convert.ToInt32(lookUpEdit_periodo.EditValue), lookUpEdit_bachillerato.EditValue.ToString()
+                                         , Convert.ToDecimal(textEdit_promedio.Text), textEdit_medioDifusion.EditValue.ToString(), variables.varUser);
 
 
-                if (objApirante.insertarPersona() == 1)
+                objTutor.setDatosTutor(textEdit_CURP.Text, textEdit_nombreTutor.Text, textEdit_apellidoPaternoTutor.Text, textEdit_apellidoMaternoTutor.Text, textEdit_numeroTelfonoTutor.Text
+                                      , textEdit_correoElectronico.Text, Convert.ToInt32(lookUpEdit_parentesco.EditValue.ToString()));
+
+                if (objApsirante.insertarPersona() != 1)
                 {
-                    if (objApirante.insertarPersonaDomicilio() == 1)
-                    {
-                        if (objApirante.insertarPersonaNacimiento() == 1)
-                        {
-                            if (objApirante.insertarPersonaLenguaIndigena() == 1)
-                            {
-                                insertarAspirante();
-                            }
-                            else
-                            { throw new Exception("Error al insertar los datos de lengua indigena."); }
-                        }
-                        else { throw new Exception("Error al insertar datos de nacimiento."); }
-                    }
-                    else { throw new Exception("Error al insertar datos de domicilio."); }
+                    throw new Exception("Error al insertar datos de la persona.");
                 }
-                else { throw new Exception("Error al insertar datos de la persona."); }
+                if (objApsirante.insertarPersonaDomicilio() != 1)
+                {
+                    throw new Exception("Error al insertar datos de domicilio.");
+                }
+                if (objApsirante.insertarPersonaNacimiento() != 1)
+                {
+                    throw new Exception("Error al insertar datos de nacimiento.");
+                }
+                if (objApsirante.insertarPersonaLenguaIndigena() != 1)
+                {
+                    throw new Exception("Error al insertar los datos de lengua indigena.");
+                }
+                ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
+                int itemsSeleccionados= checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
+                for (int i = 0; i < itemsSeleccionados; i++)
+                {
+                    ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
+                    int valorCheckDiscapacidad=Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
+                    objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
+                    if (objApsirante.insertarPersonaDiscapacidad() != 1)
+                    {
+                        throw new Exception("Error al insertar los datos de discapcidad.");
+                    }
+                   
+                }
+                if (objApsirante.insertarAspirante() != 1)
+                {
+                    throw new Exception("Error al insertar los datos de lengua indigena.");
+                }
+
+
+                if (objTutor.insertarTutor() != 1)
+                {
+                    throw new Exception("Error al insertar los datos del tutor.");
+                }
+                XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar();
             }
             catch (Exception ex)
             {
@@ -387,25 +437,7 @@ namespace SIGE_Project.ControlEscolar
             }
 
         }
-        private void insertarAspirante()
-        {
-            
-            objApirante.setDatosAspirante(lookUpEdit_licenciatura.EditValue.ToString(), lookUpEdit_modalidad.EditValue.ToString(),
-                                         Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue), Convert.ToInt32(lookUpEdit_periodo.EditValue), lookUpEdit_bachillerato.EditValue.ToString()
-                                         , Convert.ToDecimal(textEdit_promedio.Text), textEdit_medioDifusion.EditValue.ToString(), variables.varUser);
-            int result = objApirante.insertarAspirante();
-            if (result==1)
-            {
-
-                XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiar();
-
-            }
-            else
-            {
-                throw new Exception("Error al insertar datos del aspirante.");
-            }
-        }
+        
         private void limpiar()
         {
             lookUpEdit_cicloEscolar.EditValue = null;
@@ -452,6 +484,13 @@ namespace SIGE_Project.ControlEscolar
             textEdit_correoElectronicoTutor.Text = "";
             lookUpEdit_parentesco.EditValue= null;  
             textEdit_medioDifusion.EditValue= null;
+            ////DATOS DE DISCAPACIDAD
+           
+            for (int i = 0; i < checkedListBoxControl_discapacidades.ItemCount; i++)
+            {
+                
+                checkedListBoxControl_discapacidades.SetItemChecked(i,false);
+            }
 
 
         }
