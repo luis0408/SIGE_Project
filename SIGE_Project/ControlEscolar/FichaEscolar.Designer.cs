@@ -138,7 +138,7 @@ namespace SIGE_Project.ControlEscolar
             this.checkedListBoxControl_discapacidades = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
-            //this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -248,7 +248,7 @@ namespace SIGE_Project.ControlEscolar
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl_discapacidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 
             this.SuspendLayout();
             // 
