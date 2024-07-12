@@ -288,6 +288,12 @@
     <Compile Include="Reportes\FichaAspirante.Designer.cs">
       <DependentUpon>FichaAspirante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\GraficasAspirantes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasAspirantes.Designer.cs">
+      <DependentUpon>GraficasAspirantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Inscripcion.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -411,6 +417,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes\FichaAspirante.resx">
       <DependentUpon>FichaAspirante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasAspirantes.resx">
+      <DependentUpon>GraficasAspirantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>

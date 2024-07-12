@@ -19,6 +19,7 @@ namespace SIGE_Project.ControlEscolar
         public FichaEscolar()
         {
             InitializeComponent();
+
         }
 
         private void FichaEscolar_Load(object sender, EventArgs e)
@@ -28,8 +29,6 @@ namespace SIGE_Project.ControlEscolar
         }
         private void llenarLookups()
         {
-            
-
             ////CICLO ESCOLAR
             lookUpEdit_cicloEscolar.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idCicloEscolar,CONCAT(anioInicio,'-',anioFin)as descripcion from [SIGE_Catalogo_CicloEscolar] where estado=1 order by idCicloEscolar desc");
             lookUpEdit_cicloEscolar.Properties.DisplayMember = "descripcion";

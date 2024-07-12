@@ -1052,7 +1052,7 @@
             this.xrTableCell13.StylePriority.UseBorders = false;
             this.xrTableCell13.StylePriority.UseFont = false;
             this.xrTableCell13.StylePriority.UseForeColor = false;
-            this.xrTableCell13.Text = "LICENCIATURA EN: ";
+            this.xrTableCell13.Text = "Licenciatura:";
             this.xrTableCell13.Weight = 0.9696602087664713D;
             // 
             // xrTableCell_licenciatura
@@ -1082,7 +1082,7 @@
             this.xrTableCell16.StylePriority.UseBorders = false;
             this.xrTableCell16.StylePriority.UseFont = false;
             this.xrTableCell16.StylePriority.UseForeColor = false;
-            this.xrTableCell16.Text = "CICLO ESCOLAR:";
+            this.xrTableCell16.Text = "Ciclo escolar:";
             this.xrTableCell16.Weight = 0.9696602087664713D;
             // 
             // xrTableCell_cicloEscolar
@@ -1122,7 +1122,7 @@
             this.xrTableCell19.StylePriority.UseBorders = false;
             this.xrTableCell19.StylePriority.UseFont = false;
             this.xrTableCell19.StylePriority.UseForeColor = false;
-            this.xrTableCell19.Text = "MODALIDAD:";
+            this.xrTableCell19.Text = "Modalidad:";
             this.xrTableCell19.Weight = 0.9696602087664713D;
             // 
             // xrTableCell_modalidad
@@ -1152,7 +1152,7 @@
             this.xrTableCell21.StylePriority.UseBorders = false;
             this.xrTableCell21.StylePriority.UseFont = false;
             this.xrTableCell21.StylePriority.UseForeColor = false;
-            this.xrTableCell21.Text = "PERIODO:";
+            this.xrTableCell21.Text = "Periodo:";
             this.xrTableCell21.Weight = 0.9696602087664713D;
             // 
             // xrTableCell_periodo
