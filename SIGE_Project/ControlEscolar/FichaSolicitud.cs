@@ -27,6 +27,10 @@ namespace SIGE_Project.ControlEscolar
         }
         private void llenarLookups()
         {
+            ////GENERACION
+            lookUpEdit_generacion.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idGeneracion,CONCAT(anioInicio,'-',anioFin)as descripcion from SIGE_Catalogo_Generaciones where estado=1 order by idGeneracion desc");
+            lookUpEdit_generacion.Properties.DisplayMember = "descripcion";
+            lookUpEdit_generacion.Properties.ValueMember = "idGeneracion";
             ////CICLO ESCOLAR
             lookUpEdit_cicloEscolar.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idCicloEscolar,CONCAT(anioInicio,'-',anioFin)as descripcion from [SIGE_Catalogo_CicloEscolar] where estado=1 order by idCicloEscolar desc");
             lookUpEdit_cicloEscolar.Properties.DisplayMember = "descripcion";

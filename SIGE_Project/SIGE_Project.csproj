@@ -298,6 +298,48 @@
     <Compile Include="Reportes\GraficasAspirantes.Designer.cs">
       <DependentUpon>GraficasAspirantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\GraficasDatosBachullerato.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosBachullerato.Designer.cs">
+      <DependentUpon>GraficasDatosBachullerato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosDomicilio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosDomicilio.Designer.cs">
+      <DependentUpon>GraficasDatosDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasEdades.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasEdades.Designer.cs">
+      <DependentUpon>GraficasEdades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasEstadoCivil.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasEstadoCivil.Designer.cs">
+      <DependentUpon>GraficasEstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasGeneros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasGeneros.Designer.cs">
+      <DependentUpon>GraficasGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosNacimiento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosNacimiento.Designer.cs">
+      <DependentUpon>GraficasDatosNacimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasTipoSangre.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasTipoSangre.Designer.cs">
+      <DependentUpon>GraficasTipoSangre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Inscripcion.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -425,6 +467,27 @@
     <EmbeddedResource Include="Reportes\GraficasAspirantes.resx">
       <DependentUpon>GraficasAspirantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasDatosBachullerato.resx">
+      <DependentUpon>GraficasDatosBachullerato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasDatosDomicilio.resx">
+      <DependentUpon>GraficasDatosDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasEdades.resx">
+      <DependentUpon>GraficasEdades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasEstadoCivil.resx">
+      <DependentUpon>GraficasEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasGeneros.resx">
+      <DependentUpon>GraficasGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasDatosNacimiento.resx">
+      <DependentUpon>GraficasDatosNacimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasTipoSangre.resx">
+      <DependentUpon>GraficasTipoSangre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>
     </EmbeddedResource>
@@ -542,6 +605,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\logo IESE.png" />
+    <None Include="Resources\SIGE.png" />
     <None Include="Resources\logo IESE1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

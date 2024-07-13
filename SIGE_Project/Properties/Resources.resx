@@ -124,8 +124,8 @@
   <data name="icons8_minimize_window_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-minimize-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exporttoxlsx1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exporttoxlsx1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="actions_rating1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actions_rating1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="actions_rating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actions_rating.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -136,14 +136,17 @@
   <data name="iconfinder_Customize_user_profile_Account_man_1_4484738" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_Customize_user_profile_Account_man_1_4484738.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="actions_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\actions_calendar.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="iconfinder_lock_safe_password_2992204__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_lock_safe_password_2992204 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_close_window_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-close-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exporttoxlsx1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttoxlsx1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="logo IESE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo IESE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="invalido" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invalido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="actions_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actions_user.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="iconfinder_lock_safe_password_2992204__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_lock_safe_password_2992204 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="actions_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actions_calendar.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="sendxlsx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sendxlsx.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -178,13 +181,13 @@
   <data name="addparagraphtotableofcontents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addparagraphtotableofcontents.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="actions_rating1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\actions_rating1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="icons8_close_window_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-close-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exporttoxlsx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exporttoxlsx.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="logo IESE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo IESE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SIGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

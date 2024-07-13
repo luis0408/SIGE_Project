@@ -72,7 +72,7 @@
             this.lookUpEdit_modalidad = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit_periodo = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit_licenciatura = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit_generacion = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit_estadoCivil = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -189,7 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_modalidad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_periodo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_licenciatura.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_generacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_estadoCivil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -311,7 +311,7 @@
             this.layoutControl1.Controls.Add(this.lookUpEdit_modalidad);
             this.layoutControl1.Controls.Add(this.lookUpEdit_periodo);
             this.layoutControl1.Controls.Add(this.lookUpEdit_licenciatura);
-            this.layoutControl1.Controls.Add(this.lookUpEdit1);
+            this.layoutControl1.Controls.Add(this.lookUpEdit_generacion);
             this.layoutControl1.Controls.Add(this.lookUpEdit_estadoCivil);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -772,18 +772,18 @@
             this.lookUpEdit_licenciatura.StyleController = this.layoutControl1;
             this.lookUpEdit_licenciatura.TabIndex = 5;
             // 
-            // lookUpEdit1
+            // lookUpEdit_generacion
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(139, 39);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpEdit_generacion.Location = new System.Drawing.Point(139, 39);
+            this.lookUpEdit_generacion.Name = "lookUpEdit_generacion";
+            this.lookUpEdit_generacion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.lookUpEdit_generacion.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción")});
-            this.lookUpEdit1.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit1.Size = new System.Drawing.Size(136, 20);
-            this.lookUpEdit1.StyleController = this.layoutControl1;
-            this.lookUpEdit1.TabIndex = 4;
+            this.lookUpEdit_generacion.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.lookUpEdit_generacion.Size = new System.Drawing.Size(136, 20);
+            this.lookUpEdit_generacion.StyleController = this.layoutControl1;
+            this.lookUpEdit_generacion.TabIndex = 4;
             // 
             // lookUpEdit_estadoCivil
             // 
@@ -828,7 +828,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.lookUpEdit1;
+            this.layoutControlItem1.Control = this.lookUpEdit_generacion;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(267, 24);
@@ -1540,7 +1540,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_modalidad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_periodo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_licenciatura.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_generacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_estadoCivil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -1623,7 +1623,7 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit_generacion;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.TextEdit textEdit_nombre;

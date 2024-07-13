@@ -289,5 +289,15 @@ namespace SIGE_Project.Properties {
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIGE {
+            get {
+                object obj = ResourceManager.GetObject("SIGE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
