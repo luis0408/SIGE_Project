@@ -11,18 +11,16 @@ using System.Windows.Forms;
 
 namespace SIGE_Project.ControlEscolar
 {
-    public partial class FichaEscolar : DevExpress.XtraEditors.XtraForm
+    public partial class FichaSolicitud : DevExpress.XtraEditors.XtraForm
     {
-        //ClsPersona objPersona;
         ClsApirante objApsirante;
         ClsTutor objTutor;
-        public FichaEscolar()
+        public FichaSolicitud()
         {
             InitializeComponent();
-
         }
 
-        private void FichaEscolar_Load(object sender, EventArgs e)
+        private void FichaSolicitud_Load(object sender, EventArgs e)
         {
             llenarLookups();
             cargarDiscapacidades();
@@ -84,40 +82,28 @@ namespace SIGE_Project.ControlEscolar
             textEdit_medioDifusion.Properties.DisplayMember = "descripcion";
             textEdit_medioDifusion.Properties.ValueMember = "cveMedio";
 
-            
+
         }
         object[] datos = { };
-        string[] parametros ={ };
+        string[] parametros = { };
         private void cargarDiscapacidades()
         {
-            datos= new object[] { };
-            parametros= new string[] { };
+            datos = new object[] { };
+            parametros = new string[] { };
             DataSet ds = new DataSet();
-            ds = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_DISCAPACIDADES]",datos,parametros);
+            ds = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_DISCAPACIDADES]", datos, parametros);
             DataTable dt = ds.Tables[0];
 
             /////SE RECORRE EL DATA TABEL PARA IR LLENANDO LOS ITEMS DEL checkedListBox
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string displayValue = dt.Rows[i]["descripcion"].ToString();////VALOR QUE SE MOSTRARA AL USUARIO
-                string valueMember= dt.Rows[i]["idDIscapacidad"].ToString();////VALOR QUE SE OBTIENE AL SELECCIONAR
+                string valueMember = dt.Rows[i]["idDIscapacidad"].ToString();////VALOR QUE SE OBTIENE AL SELECCIONAR
 
-                checkedListBoxControl_discapacidades.Items.Add(valueMember,displayValue);////SE AGREGA EL ITEM
+                checkedListBoxControl_discapacidades.Items.Add(valueMember, displayValue);////SE AGREGA EL ITEM
             }
         }
-        private void lookUpEdit_paisNacimiento_EditValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                ////AL SELECCIONAR EL VALOR SE FILTRA EL LOOKUP "lookUpEdit_estadoNacimiento"
-                string paisLookup = lookUpEdit_paisNacimiento.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
-                lookUpEdit_estadoNacimiento.Properties.DataSource = Utilerias.llenarlookupeditvalue("select c_Estado,nombreEstado as descripcion from SIGE_Catalogo_Estado where c_Pais='" + paisLookup + "'");
-                lookUpEdit_estadoNacimiento.Properties.DisplayMember = "descripcion";
-                lookUpEdit_estadoNacimiento.Properties.ValueMember = "c_Estado";
-            }
-            catch (Exception ex) { }
-            
-        }
+
         private void lookUpEdit_cicloEscolar_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -200,14 +186,14 @@ namespace SIGE_Project.ControlEscolar
             string estadoBachillerato = textEdit_estadoBachillerato.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
             string municipioBachillerato = textEdit_municipioBachillerato.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
 
-            lookUpEdit_bachillerato.Properties.DataSource = Utilerias.llenarlookupeditvalue("select CCT,nombreBachillerato, CONCAT(CCT,' | ',nombreBachillerato)as descripcion from SIGE_Catalogo_Bachillerato where cveEntidad='"+estadoBachillerato+"' and cveMunicipio='"+municipioBachillerato+"'");
+            lookUpEdit_bachillerato.Properties.DataSource = Utilerias.llenarlookupeditvalue("select CCT,nombreBachillerato, CONCAT(CCT,' | ',nombreBachillerato)as descripcion from SIGE_Catalogo_Bachillerato where cveEntidad='" + estadoBachillerato + "' and cveMunicipio='" + municipioBachillerato + "'");
             lookUpEdit_bachillerato.Properties.DisplayMember = "descripcion";
             lookUpEdit_bachillerato.Properties.ValueMember = "CCT";
         }
 
         private void radioGroup_lenguaIndigena_EditValueChanged(object sender, EventArgs e)
         {
-            if (radioGroup_lenguaIndigena.SelectedIndex==0)////SE VALIDA QUE LA POSICION 0 SEA SELECCIONA (SI)
+            if (radioGroup_lenguaIndigena.SelectedIndex == 0)////SE VALIDA QUE LA POSICION 0 SEA SELECCIONA (SI)
             {
                 memoEdit_especifique.ReadOnly = false;
             }
@@ -355,9 +341,9 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Ingrese el promedio que salio de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            
 
-            if (textEdit_medioDifusion.EditValue==null)
+
+            if (textEdit_medioDifusion.EditValue == null)
             {
                 XtraMessageBox.Show("Seleccione le medio por el cual se entero de la institución.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -404,17 +390,17 @@ namespace SIGE_Project.ControlEscolar
                     throw new Exception("Error al insertar los datos de lengua indigena.");
                 }
                 ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
-                int itemsSeleccionados= checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
+                int itemsSeleccionados = checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
                 for (int i = 0; i < itemsSeleccionados; i++)
                 {
                     ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
-                    int valorCheckDiscapacidad=Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
+                    int valorCheckDiscapacidad = Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
                     objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
                     if (objApsirante.insertarPersonaDiscapacidad() != 1)
                     {
                         throw new Exception("Error al insertar los datos de discapcidad.");
                     }
-                   
+
                 }
                 if (objApsirante.insertarAspirante() != 1)
                 {
@@ -431,12 +417,12 @@ namespace SIGE_Project.ControlEscolar
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show("Se ha generado un error al realizar el registro. \nDetalles: "+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Se ha generado un error al realizar el registro. \nDetalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
         }
-        
+
         private void limpiar()
         {
             lookUpEdit_cicloEscolar.EditValue = null;
@@ -457,23 +443,23 @@ namespace SIGE_Project.ControlEscolar
             textEdit_correoElectronico.Text = "";
             lookUpEdit_tipoSangre.EditValue = null;
             ////DATPS NACIMIENTO
-            dateEdit_fechaNacimiento.EditValue = null;  
-            lookUpEdit_paisNacimiento.EditValue= null;
-            lookUpEdit_estadoNacimiento.EditValue=null;
-            lookUpEdit_municipioNacimiento.EditValue=null;
+            dateEdit_fechaNacimiento.EditValue = null;
+            lookUpEdit_paisNacimiento.EditValue = null;
+            lookUpEdit_estadoNacimiento.EditValue = null;
+            lookUpEdit_municipioNacimiento.EditValue = null;
             ////DATOS DOMICILIO
             textEdit_calle.Text = "";
             textEdit_numExterior.Text = "";
             textEdit_numInterior.Text = "";
             textEdit_codigoPostal.Text = "";
-            lookUpEdit_colonia.EditValue= null;
-            lookUpEdit_estado.EditValue= null;
-            lookUpEdit_localidad.EditValue= null;
-            lookUpEdit_municipio.EditValue= null;
+            lookUpEdit_colonia.EditValue = null;
+            lookUpEdit_estado.EditValue = null;
+            lookUpEdit_localidad.EditValue = null;
+            lookUpEdit_municipio.EditValue = null;
             ////DATOS BACHILLERATO
-            textEdit_estadoBachillerato.EditValue= null;    
+            textEdit_estadoBachillerato.EditValue = null;
             textEdit_municipioBachillerato.EditValue = null;
-            lookUpEdit_bachillerato.EditValue= null;
+            lookUpEdit_bachillerato.EditValue = null;
             textEdit_promedio.Text = "";
             ////DATOS TUTOR
             textEdit_nombreTutor.Text = "";
@@ -481,14 +467,14 @@ namespace SIGE_Project.ControlEscolar
             textEdit_apellidoMaternoTutor.Text = "";
             textEdit_numeroTelfonoTutor.Text = "";
             textEdit_correoElectronicoTutor.Text = "";
-            lookUpEdit_parentesco.EditValue= null;  
-            textEdit_medioDifusion.EditValue= null;
+            lookUpEdit_parentesco.EditValue = null;
+            textEdit_medioDifusion.EditValue = null;
             ////DATOS DE DISCAPACIDAD
-           
+
             for (int i = 0; i < checkedListBoxControl_discapacidades.ItemCount; i++)
             {
-                
-                checkedListBoxControl_discapacidades.SetItemChecked(i,false);
+
+                checkedListBoxControl_discapacidades.SetItemChecked(i, false);
             }
 
 
@@ -496,7 +482,7 @@ namespace SIGE_Project.ControlEscolar
 
         private void simpleButton_cancel_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("La información aún no se guarda, si cierra el formulario la información se perdera. ¿Desea salir? ","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (XtraMessageBox.Show("La información aún no se guarda, si cierra el formulario la información se perdera. ¿Desea salir? ", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
