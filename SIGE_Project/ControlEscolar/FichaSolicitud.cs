@@ -107,7 +107,17 @@ namespace SIGE_Project.ControlEscolar
                 checkedListBoxControl_discapacidades.Items.Add(valueMember, displayValue);////SE AGREGA EL ITEM
             }
         }
-
+        private void lookUpEdit_paisNacimiento_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string paisLookup = lookUpEdit_paisNacimiento.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
+                lookUpEdit_estadoNacimiento.Properties.DataSource = Utilerias.llenarlookupeditvalue("select c_Estado,nombreEstado as descripcion from SIGE_Catalogo_Estado where c_Pais='" + paisLookup + "'");
+                lookUpEdit_estadoNacimiento.Properties.DisplayMember = "descripcion";
+                lookUpEdit_estadoNacimiento.Properties.ValueMember = "c_Estado";
+            }
+            catch (Exception ex) { }
+        }
         private void lookUpEdit_cicloEscolar_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -236,11 +246,11 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Ingrese un apellido paterno valido.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (string.IsNullOrEmpty(textEdit_CURP.Text))
-            {
-                XtraMessageBox.Show("Ingrese la CURP.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            //if (string.IsNullOrEmpty(textEdit_CURP.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese la CURP.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
             if (string.IsNullOrEmpty(textEdit_RFC.Text))
             {
                 XtraMessageBox.Show("Ingrese su RFC.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -340,11 +350,11 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Seleccione su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (string.IsNullOrEmpty(textEdit_promedio.Text))
-            {
-                XtraMessageBox.Show("Ingrese el promedio que salio de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            //if (string.IsNullOrEmpty(textEdit_promedio.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese el promedio que salio de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
 
 
             if (textEdit_medioDifusion.EditValue == null)
@@ -357,11 +367,16 @@ namespace SIGE_Project.ControlEscolar
             {
                 //objPersona = new ClsPersona();
                 objApsirante = new ClsApirante();
-                objApsirante.setDatosPersona(textEdit_CURP.Text, textEdit_RFC.Text, textEdit_NSS.Text, textEdit_nombre.Text, textEdit_apellidoPaterno.Text
-                                           , textEdit_apellidoMaterno.Text, lookUpEdit_genero.EditValue.ToString(), Convert.ToInt32(lookUpEdit_estadoCivil.EditValue), textEdit_correoElectronico.Text
-                                           , textEdit_numTelefono.Text, lookUpEdit_tipoSangre.EditValue.ToString());
+                objTutor= new ClsTutor();
 
-                objApsirante.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, lookUpEdit_colonia.EditValue.ToString()
+                string tipoSangre = lookUpEdit_tipoSangre.EditValue == null ? "" : lookUpEdit_tipoSangre.EditValue.ToString();
+                objApsirante.setDatosPersona(textEdit_CURP.Text.ToUpper(), textEdit_RFC.Text.ToUpper(), textEdit_NSS.Text.ToUpper(), textEdit_nombre.Text, textEdit_apellidoPaterno.Text
+                                           , textEdit_apellidoMaterno.Text, lookUpEdit_genero.EditValue.ToString(), Convert.ToInt32(lookUpEdit_estadoCivil.EditValue), textEdit_correoElectronico.Text
+                                           , textEdit_numTelefono.Text, tipoSangre);
+
+                string colonia = lookUpEdit_colonia.EditValue == null ? "" : lookUpEdit_colonia.EditValue.ToString();
+
+                objApsirante.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, colonia
                                                     , lookUpEdit_estado.EditValue.ToString(), lookUpEdit_localidad.EditValue.ToString(), lookUpEdit_municipio.EditValue.ToString());
 
                 objApsirante.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
@@ -373,9 +388,11 @@ namespace SIGE_Project.ControlEscolar
                                          Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue), Convert.ToInt32(lookUpEdit_periodo.EditValue), lookUpEdit_bachillerato.EditValue.ToString()
                                          , Convert.ToDecimal(textEdit_promedio.Text), textEdit_medioDifusion.EditValue.ToString(), variables.varUser);
 
+                int idParentesco = Convert.ToInt32(lookUpEdit_parentesco.EditValue);
+                string correoTutor = string.IsNullOrEmpty(textEdit_correoElectronicoTutor.Text) ? "" : textEdit_correoElectronicoTutor.Text;
 
                 objTutor.setDatosTutor(textEdit_CURP.Text, textEdit_nombreTutor.Text, textEdit_apellidoPaternoTutor.Text, textEdit_apellidoMaternoTutor.Text, textEdit_numeroTelfonoTutor.Text
-                                      , textEdit_correoElectronico.Text, Convert.ToInt32(lookUpEdit_parentesco.EditValue.ToString()));
+                                      , correoTutor, idParentesco);
 
                 if (objApsirante.insertarPersona() != 1)
                 {
@@ -491,5 +508,7 @@ namespace SIGE_Project.ControlEscolar
                 this.Close();
             }
         }
+
+        
     }
 }
