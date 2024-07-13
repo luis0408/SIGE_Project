@@ -40,8 +40,10 @@ namespace SIGE_Project.ControlEscolar
             DataTable dtAspirantes=dsAspirantes.Tables[0];  
             gridControl_enEspera.DataSource= dtAspirantes;
             gridView_enEspera.BestFitColumns();
+            xtraTabControl_Aspirantes.SelectedTabPageIndex = 1;
+            xtraTabControl_Aspirantes.SelectedTabPageIndex= 0;
             navBarControl_opciones.Enabled = true;
-            xtraTabControl_Aspirantes.SelectedTabPage.Name = "xtraTabPage_espera";
+            
         }
 
         private void navBarItem_exportar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -137,6 +139,7 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_inscribir.Visible = false;
                     navBarItem_reutilizar.Visible = false;
 
+                    navBarItem_addDocs.Visible = true;
                     navBarItem_editar.Visible = true;
                     navBarItem_declinar.Visible = true;
 
@@ -146,7 +149,7 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_aceptar.Visible = false;
                     navBarItem_inscribir.Visible = true;
                     navBarItem_reutilizar.Visible = false;
-
+                    navBarItem_addDocs.Visible = true;
                     navBarItem_editar.Visible = true;
                     navBarItem_declinar.Visible = true;
 
@@ -156,7 +159,7 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_aceptar.Visible = false;
                     navBarItem_inscribir.Visible = false;
                     navBarItem_reutilizar.Visible = true;
-
+                    navBarItem_addDocs.Visible = false;
                     navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = false;
 
@@ -218,6 +221,24 @@ namespace SIGE_Project.ControlEscolar
                     splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Error al generar el PDF de la vista previa, detalles: " + exs.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void navBarItem_generarGraficas_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Reportes.GraficasAspirantes rptGraficaAspirantes = new Reportes.GraficasAspirantes();
+            rptGraficaAspirantes.sqlDataSource1.ConnectionParameters = Utilerias.GetConnectionParametersBase();
+            //rptGraficaAspirantes.Parameters["CURP"].Value = CURP;
+            rptGraficaAspirantes.RequestParameters = false;
+            ReportPrintTool p = new ReportPrintTool(rptGraficaAspirantes);
+            p.AutoShowParametersPanel = false;
+            p.ShowPreview();
+        }
+
+        private void navBarItem_addDocs_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            string nombreSelect = gridView_enEspera.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "nombre").ToString();
+            Documentacion objDocs = new Documentacion(nombreSelect);
+            objDocs.ShowDialog();
         }
     }
 }

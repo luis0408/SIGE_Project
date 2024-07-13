@@ -18,7 +18,7 @@ namespace SIGE_Project
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new managerforms());
-            //Application.Run(new ControlEscolar.ConsultarAspirantes());
+            //Application.Run(new ControlEscolar.Documentacion("prueba"));
 
             // Application.Run(new  ControlEscolar.FichaEscolar());
 

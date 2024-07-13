@@ -56,7 +56,7 @@
             this.ribbon.MaxItemId = 5;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem_exit);
-            this.ribbon.Size = new System.Drawing.Size(1086, 62);
+            this.ribbon.Size = new System.Drawing.Size(1086, 83);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barStaticItem1
@@ -91,10 +91,10 @@
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem3);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 487);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 474);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1086, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1086, 37);
             // 
             // popupMenu1
             // 
@@ -103,7 +103,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "WXI";
             // 
             // MenuPrincipal
             // 
@@ -116,7 +116,7 @@
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Menú principal";
+            this.Text = "Sistema Información y Gestión Educativa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
