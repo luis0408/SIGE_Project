@@ -472,7 +472,7 @@ namespace SIGE_Project
                     File.Delete(bat);
                 string lineee = " @echo off \n" +
                 " timeout /t 1 /nobreak \n" +
-                " FOR %%X IN (" + "\"" + Path.Combine(cadenaroaming, "ERP_Gasera.appref-ms") + "\"" + ") DO rundll32 shell32.dll,ShellExec_RunDLL %%X ";
+                " FOR %%X IN (" + "\"" + Path.Combine(cadenaroaming, "SIGE_Project.appref-ms") + "\"" + ") DO rundll32 shell32.dll,ShellExec_RunDLL %%X ";
                 ;
                 using (var fileStream = File.Create(bat))
                 {
