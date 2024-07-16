@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraRichEdit.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -246,21 +247,21 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Ingrese un apellido paterno valido.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //if (string.IsNullOrEmpty(textEdit_CURP.Text))
-            //{
-            //    XtraMessageBox.Show("Ingrese la CURP.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
-            if (string.IsNullOrEmpty(textEdit_RFC.Text))
+            if (string.IsNullOrEmpty(textEdit_CURP.Text))
             {
-                XtraMessageBox.Show("Ingrese su RFC.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            if (string.IsNullOrEmpty(textEdit_NSS.Text))
-            {
-                XtraMessageBox.Show("Ingrese su número de seguro social.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                XtraMessageBox.Show("Ingrese la CURP.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            //if (string.IsNullOrEmpty(textEdit_RFC.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese su RFC.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
+
+            //if (string.IsNullOrEmpty(textEdit_NSS.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese su número de seguro social.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
             if (lookUpEdit_genero.EditValue == null)
             {
                 XtraMessageBox.Show("Seleccione un género", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -369,24 +370,106 @@ namespace SIGE_Project.ControlEscolar
                 objApsirante = new ClsApirante();
                 objTutor= new ClsTutor();
 
-                string tipoSangre = lookUpEdit_tipoSangre.EditValue == null ? "" : lookUpEdit_tipoSangre.EditValue.ToString();
-                objApsirante.setDatosPersona(textEdit_CURP.Text.ToUpper(), textEdit_RFC.Text.ToUpper(), textEdit_NSS.Text.ToUpper(), textEdit_nombre.Text, textEdit_apellidoPaterno.Text
-                                           , textEdit_apellidoMaterno.Text, lookUpEdit_genero.EditValue.ToString(), Convert.ToInt32(lookUpEdit_estadoCivil.EditValue), textEdit_correoElectronico.Text
-                                           , textEdit_numTelefono.Text, tipoSangre);
+                ////SE COLOCAN VALORES EN VARIABLES PARA UNA INSERCION LIMPIA
+                #region DATOS PERSONA
+                string CURP = textEdit_CURP.Text.ToUpper();
+                string RFC = string.IsNullOrEmpty(textEdit_RFC.Text) ? null : textEdit_RFC.Text.ToUpper();
+                string NSS = string.IsNullOrEmpty(textEdit_NSS.Text) ? null : textEdit_NSS.Text;
+                string nombre = textEdit_nombre.Text;
+                string apellidoPaterno = textEdit_apellidoPaterno.Text;
+                string apellidoMaterno = textEdit_apellidoMaterno.Text;
+                string cveGenero= lookUpEdit_genero.EditValue==null?null: lookUpEdit_genero.EditValue.ToString();
+                int? idEstadoCivil;
+                if (lookUpEdit_estadoCivil != null)
+                {
+                    idEstadoCivil = Convert.ToInt32(lookUpEdit_estadoCivil.EditValue.ToString());
+                }
+                else
+                {
+                    idEstadoCivil = null;
+                }
+                string email= string.IsNullOrEmpty(textEdit_correoElectronico.Text) ? null : textEdit_correoElectronico.Text.ToUpper();
+                string celular= string.IsNullOrEmpty(textEdit_numTelefono.Text) ? null : textEdit_numTelefono.Text.ToUpper();
+                string cveTipoSangre = lookUpEdit_tipoSangre.EditValue == null ? null : lookUpEdit_tipoSangre.EditValue.ToString();
 
-                string colonia = lookUpEdit_colonia.EditValue == null ? "" : lookUpEdit_colonia.EditValue.ToString();
+                objApsirante.setDatosPersona(CURP, RFC, NSS, nombre, apellidoPaterno, apellidoMaterno, cveGenero, idEstadoCivil, email, celular, cveTipoSangre);
 
-                objApsirante.setDatosPersonaDomicilio(textEdit_calle.Text, textEdit_numExterior.Text, textEdit_numInterior.Text, textEdit_codigoPostal.Text, colonia
-                                                    , lookUpEdit_estado.EditValue.ToString(), lookUpEdit_localidad.EditValue.ToString(), lookUpEdit_municipio.EditValue.ToString());
+                #endregion
 
-                objApsirante.setDatosPersonaNacimiento(Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue), lookUpEdit_paisNacimiento.EditValue.ToString()
-                                                     , lookUpEdit_estadoNacimiento.EditValue.ToString(), lookUpEdit_municipioNacimiento.EditValue.ToString());
+                #region DATOS PERSONA DOMICILIO
+                string calle = textEdit_calle.Text;
+                string numExterior = textEdit_numExterior.Text;
+                string numInteerior = textEdit_numInterior.Text;
+                string codigoPostal = textEdit_codigoPostal.Text;
+                string cveColonia = lookUpEdit_colonia.EditValue == null ? null : lookUpEdit_colonia.EditValue.ToString();
+                string cveEstado= lookUpEdit_estado.EditValue == null ? null : lookUpEdit_estado.EditValue.ToString();
+                string cveLocalidad= lookUpEdit_localidad.EditValue == null ? null : lookUpEdit_localidad.EditValue.ToString();
+                string cveMunicipio= lookUpEdit_municipio.EditValue == null ? null : lookUpEdit_municipio.EditValue.ToString();
 
-                objApsirante.setDatosPersonaLenguaIndigena(Convert.ToInt32(radioGroup_lenguaIndigena.EditValue), memoEdit_especifique.Text);
+                objApsirante.setDatosPersonaDomicilio(calle,numExterior,numInteerior,codigoPostal,cveColonia,cveEstado,cveLocalidad,cveMunicipio);
+                #endregion
 
-                objApsirante.setDatosAspirante(lookUpEdit_licenciatura.EditValue.ToString(), lookUpEdit_modalidad.EditValue.ToString(),
-                                         Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue), Convert.ToInt32(lookUpEdit_periodo.EditValue), lookUpEdit_bachillerato.EditValue.ToString()
-                                         , Convert.ToDecimal(textEdit_promedio.Text), textEdit_medioDifusion.EditValue.ToString(), variables.varUser);
+                #region DATOS PERSONA NACIMIENTO
+                DateTime fechaNacimiento = Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue);
+                string cvePaisNacimiento = lookUpEdit_paisNacimiento.EditValue == null ? null : lookUpEdit_paisNacimiento.EditValue.ToString();
+                string cveEstadoNacimiento = lookUpEdit_estadoNacimiento.EditValue == null ? null : lookUpEdit_estadoNacimiento.EditValue.ToString();
+                string cveMunicipioNacimiento= lookUpEdit_municipioNacimiento.EditValue == null ? null : lookUpEdit_municipioNacimiento.EditValue.ToString();
+
+                objApsirante.setDatosPersonaNacimiento(fechaNacimiento,cvePaisNacimiento,cveEstadoNacimiento,cveMunicipio);
+                #endregion
+
+                #region DATOS PERSONA LENGUA INDIGENA
+                int hablaLI = Convert.ToInt32(radioGroup_lenguaIndigena.EditValue);
+                string descripcionLI = memoEdit_especifique.Text;
+
+                objApsirante.setDatosPersonaLenguaIndigena(hablaLI, descripcionLI);
+                #endregion
+
+                #region DATOS ASPIRANTE
+                string cveLicenciatura= lookUpEdit_licenciatura.EditValue == null ? null : lookUpEdit_licenciatura.EditValue.ToString();
+                string cveModalidad= lookUpEdit_modalidad.EditValue == null ? null : lookUpEdit_modalidad.EditValue.ToString();
+                int? cicloEscolar;
+                if (lookUpEdit_estadoCivil != null)
+                {
+                    cicloEscolar = Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue.ToString());
+                }
+                else
+                {
+                    cicloEscolar = null;
+                }
+                int? periodoEscolar;
+                if (lookUpEdit_periodo != null)
+                {
+                    periodoEscolar = Convert.ToInt32(lookUpEdit_periodo.EditValue.ToString());
+                }
+                else
+                {
+                    periodoEscolar = null;
+                }
+                string bachillerato = lookUpEdit_bachillerato.EditValue == null ? null : lookUpEdit_bachillerato.EditValue.ToString();
+                decimal? promedio;
+                if (!string.IsNullOrEmpty(textEdit_promedio.Text))
+                {
+                    promedio = Convert.ToInt32(textEdit_promedio.Text);
+                }
+                else
+                {
+                    promedio = null;
+                }
+                string cveMedioDifusion=textEdit_medioDifusion.EditValue == null ? null : textEdit_medioDifusion.EditValue.ToString();
+                int? idGeneracion;
+                if (lookUpEdit_generacion != null)
+                {
+                    idGeneracion = Convert.ToInt32(lookUpEdit_generacion.EditValue.ToString());
+                }
+                else
+                {
+                    idGeneracion = null;
+                }
+                objApsirante.setDatosAspirante(cveLicenciatura,cveModalidad,cicloEscolar,periodoEscolar,bachillerato,promedio,cveMedioDifusion, variables.varUser,idGeneracion);
+                #endregion
+
+
 
                 int idParentesco = Convert.ToInt32(lookUpEdit_parentesco.EditValue);
                 string correoTutor = string.IsNullOrEmpty(textEdit_correoElectronicoTutor.Text) ? "" : textEdit_correoElectronicoTutor.Text;

@@ -16,7 +16,7 @@ namespace SIGE_Project.ControlEscolar
         public string apellidoPaterno { get; set; }
         public string apellidoMaterno { get; set; }
         public string cveGenero { get; set; }
-        public int idEstadoCivil { get; set; }
+        public int? idEstadoCivil { get; set; }
         public string email { get; set; }
         public string celular { get; set; }
         public string cveTipoSangre { get; set; }
@@ -55,7 +55,7 @@ namespace SIGE_Project.ControlEscolar
         }
 
         public void setDatosPersona(string _CURP, string _RFC, string _NSS, string _nombre, string _apellidoPaterno, string _apellidoMaterno, 
-                                     string _cveGenero, int _idEstadoCivil, string _email, string _celular, string _cveTipoSangre)
+                                     string _cveGenero, int? _idEstadoCivil, string _email, string _celular, string _cveTipoSangre)
         {
             CURP = _CURP;
             RFC = _RFC; 

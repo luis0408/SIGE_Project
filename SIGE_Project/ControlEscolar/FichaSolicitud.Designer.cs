@@ -126,6 +126,9 @@
             this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem15 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem18 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem19 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem20 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -147,9 +150,6 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem18 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem19 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem20 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_apellidoMaterno.Properties)).BeginInit();
@@ -246,6 +246,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
@@ -267,9 +270,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem20)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -348,6 +348,9 @@
             // 
             this.textEdit_NSS.Location = new System.Drawing.Point(1013, 107);
             this.textEdit_NSS.Name = "textEdit_NSS";
+            this.textEdit_NSS.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.textEdit_NSS.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
+            this.textEdit_NSS.Properties.MaskSettings.Set("mask", "00000000000");
             this.textEdit_NSS.Size = new System.Drawing.Size(301, 20);
             this.textEdit_NSS.StyleController = this.layoutControl1;
             this.textEdit_NSS.TabIndex = 53;
@@ -356,6 +359,9 @@
             // 
             this.textEdit_RFC.Location = new System.Drawing.Point(582, 107);
             this.textEdit_RFC.Name = "textEdit_RFC";
+            this.textEdit_RFC.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.textEdit_RFC.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
+            this.textEdit_RFC.Properties.MaskSettings.Set("mask", "LLLL000000AAA");
             this.textEdit_RFC.Size = new System.Drawing.Size(300, 20);
             this.textEdit_RFC.StyleController = this.layoutControl1;
             this.textEdit_RFC.TabIndex = 52;
@@ -364,6 +370,10 @@
             // 
             this.textEdit_CURP.Location = new System.Drawing.Point(151, 107);
             this.textEdit_CURP.Name = "textEdit_CURP";
+            this.textEdit_CURP.Properties.BeepOnError = false;
+            this.textEdit_CURP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.textEdit_CURP.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
+            this.textEdit_CURP.Properties.MaskSettings.Set("mask", "LLLL000000LLLLLL00");
             this.textEdit_CURP.Size = new System.Drawing.Size(300, 20);
             this.textEdit_CURP.StyleController = this.layoutControl1;
             this.textEdit_CURP.TabIndex = 51;
@@ -382,6 +392,9 @@
             // 
             this.textEdit_numeroTelfonoTutor.Location = new System.Drawing.Point(1021, 272);
             this.textEdit_numeroTelfonoTutor.Name = "textEdit_numeroTelfonoTutor";
+            this.textEdit_numeroTelfonoTutor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.textEdit_numeroTelfonoTutor.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
+            this.textEdit_numeroTelfonoTutor.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.textEdit_numeroTelfonoTutor.Size = new System.Drawing.Size(81, 20);
             this.textEdit_numeroTelfonoTutor.StyleController = this.layoutControl1;
             this.textEdit_numeroTelfonoTutor.TabIndex = 49;
@@ -390,6 +403,10 @@
             // 
             this.textEdit_correoElectronicoTutor.Location = new System.Drawing.Point(809, 272);
             this.textEdit_correoElectronicoTutor.Name = "textEdit_correoElectronicoTutor";
+            this.textEdit_correoElectronicoTutor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.textEdit_correoElectronicoTutor.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.textEdit_correoElectronicoTutor.Properties.MaskSettings.Set("mask", "((((\\w+-*)|(-*\\w+))+\\.*((\\w+-*)|(-*\\w+))+)|(((\\w+-*)|(-*\\w+))+))+@((((\\w+-*)|(-*\\" +
+        "w+))+\\.*((\\w+-*)|(-*\\w+))+)|(((\\w+-*)|(-*\\w+))+))+\\.[A-Za-z]+");
             this.textEdit_correoElectronicoTutor.Size = new System.Drawing.Size(81, 20);
             this.textEdit_correoElectronicoTutor.StyleController = this.layoutControl1;
             this.textEdit_correoElectronicoTutor.TabIndex = 48;
@@ -466,6 +483,9 @@
             // 
             this.textEdit_promedio.Location = new System.Drawing.Point(809, 389);
             this.textEdit_promedio.Name = "textEdit_promedio";
+            this.textEdit_promedio.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_promedio.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_promedio.Properties.MaskSettings.Set("mask", "##.#");
             this.textEdit_promedio.Size = new System.Drawing.Size(112, 20);
             this.textEdit_promedio.StyleController = this.layoutControl1;
             this.textEdit_promedio.TabIndex = 41;
@@ -682,6 +702,10 @@
             // 
             this.textEdit_correoElectronico.Location = new System.Drawing.Point(151, 155);
             this.textEdit_correoElectronico.Name = "textEdit_correoElectronico";
+            this.textEdit_correoElectronico.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.textEdit_correoElectronico.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.textEdit_correoElectronico.Properties.MaskSettings.Set("mask", "((((\\w+-*)|(-*\\w+))+\\.*((\\w+-*)|(-*\\w+))+)|(((\\w+-*)|(-*\\w+))+))+@((((\\w+-*)|(-*\\" +
+        "w+))+\\.*((\\w+-*)|(-*\\w+))+)|(((\\w+-*)|(-*\\w+))+))+\\.[A-Za-z]+");
             this.textEdit_correoElectronico.Size = new System.Drawing.Size(191, 20);
             this.textEdit_correoElectronico.StyleController = this.layoutControl1;
             this.textEdit_correoElectronico.TabIndex = 23;
@@ -690,6 +714,9 @@
             // 
             this.textEdit_numTelefono.Location = new System.Drawing.Point(473, 155);
             this.textEdit_numTelefono.Name = "textEdit_numTelefono";
+            this.textEdit_numTelefono.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.textEdit_numTelefono.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
+            this.textEdit_numTelefono.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.textEdit_numTelefono.Size = new System.Drawing.Size(192, 20);
             this.textEdit_numTelefono.StyleController = this.layoutControl1;
             this.textEdit_numTelefono.TabIndex = 21;
@@ -976,7 +1003,7 @@
             this.layoutControlItem16.Location = new System.Drawing.Point(322, 72);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(323, 24);
-            this.layoutControlItem16.Text = "Celular:";
+            this.layoutControlItem16.Text = "Teléfono:";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(115, 13);
             // 
             // emptySpaceItem2
@@ -1316,6 +1343,30 @@
             this.emptySpaceItem15.Size = new System.Drawing.Size(10, 10);
             this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // emptySpaceItem18
+            // 
+            this.emptySpaceItem18.AllowHotTrack = false;
+            this.emptySpaceItem18.Location = new System.Drawing.Point(614, 50);
+            this.emptySpaceItem18.Name = "emptySpaceItem18";
+            this.emptySpaceItem18.Size = new System.Drawing.Size(20, 10);
+            this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem19
+            // 
+            this.emptySpaceItem19.AllowHotTrack = false;
+            this.emptySpaceItem19.Location = new System.Drawing.Point(614, 30);
+            this.emptySpaceItem19.Name = "emptySpaceItem19";
+            this.emptySpaceItem19.Size = new System.Drawing.Size(20, 10);
+            this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem20
+            // 
+            this.emptySpaceItem20.AllowHotTrack = false;
+            this.emptySpaceItem20.Location = new System.Drawing.Point(614, 40);
+            this.emptySpaceItem20.Name = "emptySpaceItem20";
+            this.emptySpaceItem20.Size = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem20.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // layoutControlGroup7
             // 
             this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1424,7 +1475,7 @@
             this.layoutControlItem44.Location = new System.Drawing.Point(212, 24);
             this.layoutControlItem44.Name = "layoutControlItem44";
             this.layoutControlItem44.Size = new System.Drawing.Size(212, 24);
-            this.layoutControlItem44.Text = "Celular:";
+            this.layoutControlItem44.Text = "Teléfono:";
             this.layoutControlItem44.TextSize = new System.Drawing.Size(115, 13);
             // 
             // layoutControlItem45
@@ -1497,30 +1548,6 @@
             this.emptySpaceItem10.Name = "emptySpaceItem10";
             this.emptySpaceItem10.Size = new System.Drawing.Size(14, 10);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem18
-            // 
-            this.emptySpaceItem18.AllowHotTrack = false;
-            this.emptySpaceItem18.Location = new System.Drawing.Point(614, 50);
-            this.emptySpaceItem18.Name = "emptySpaceItem18";
-            this.emptySpaceItem18.Size = new System.Drawing.Size(20, 10);
-            this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem19
-            // 
-            this.emptySpaceItem19.AllowHotTrack = false;
-            this.emptySpaceItem19.Location = new System.Drawing.Point(614, 30);
-            this.emptySpaceItem19.Name = "emptySpaceItem19";
-            this.emptySpaceItem19.Size = new System.Drawing.Size(20, 10);
-            this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem20
-            // 
-            this.emptySpaceItem20.AllowHotTrack = false;
-            this.emptySpaceItem20.Location = new System.Drawing.Point(614, 40);
-            this.emptySpaceItem20.Name = "emptySpaceItem20";
-            this.emptySpaceItem20.Size = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem20.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FichaSolicitud
             // 
@@ -1628,6 +1655,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
@@ -1649,9 +1679,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem20)).EndInit();
             this.ResumeLayout(false);
 
         }
