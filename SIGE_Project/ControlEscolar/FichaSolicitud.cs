@@ -461,7 +461,7 @@ namespace SIGE_Project.ControlEscolar
                 decimal? promedio;
                 if (!string.IsNullOrEmpty(textEdit_promedio.Text))
                 {
-                    promedio = Convert.ToInt32(textEdit_promedio.Text);
+                    promedio = Convert.ToDecimal(textEdit_promedio.Text);
                 }
                 else
                 {
