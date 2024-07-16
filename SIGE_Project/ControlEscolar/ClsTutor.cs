@@ -14,7 +14,7 @@ namespace SIGE_Project.ControlEscolar
         public string apellidoMaterno { get; set; }
         public string numeroTelefono { get; set; }
         public string email { get; set; }
-        public int idParentesco { get; set; }
+        public int? idParentesco { get; set; }
 
         public ClsTutor()
         {
@@ -22,12 +22,12 @@ namespace SIGE_Project.ControlEscolar
         }
         object[] datos = { };
         string[] parametros = { };
-        public void setDatosTutor(string _noControl, string _nombre, string _apellidoPaterno, string _apellidoMaterno, string _numeroTelefono, string _email, int _idParentesco)
+        public void setDatosTutor(string _noControl, string _nombre, string _apellidoPaterno, string _apellidoMaterno, string _numeroTelefono, string _email, int? _idParentesco)
         {
             noControl= _noControl;
             nombre= _nombre;   
             apellidoMaterno= _apellidoPaterno;
-            apellidoMaterno= apellidoMaterno;
+            apellidoMaterno= _apellidoMaterno;
             numeroTelefono= _numeroTelefono;
             email= _email;  
             idParentesco= _idParentesco;

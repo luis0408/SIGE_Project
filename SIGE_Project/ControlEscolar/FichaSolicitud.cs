@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraRichEdit.Model;
 using System;
 using System.Collections.Generic;
@@ -197,13 +198,18 @@ namespace SIGE_Project.ControlEscolar
 
         private void textEdit_municipioBachillerato_EditValueChanged(object sender, EventArgs e)
         {
-            ///AL SELECCIONAR EL VALOR SE FILTRA EL LOOKUP "lookUpEdit_municipio"
-            string estadoBachillerato = textEdit_estadoBachillerato.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
-            string municipioBachillerato = textEdit_municipioBachillerato.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
+            try
+            {
+                ///AL SELECCIONAR EL VALOR SE FILTRA EL LOOKUP "lookUpEdit_municipio"
+                string estadoBachillerato = textEdit_estadoBachillerato.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
+                string municipioBachillerato = textEdit_municipioBachillerato.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
 
-            lookUpEdit_bachillerato.Properties.DataSource = Utilerias.llenarlookupeditvalue("select CCT,nombreBachillerato, CONCAT(CCT,' | ',nombreBachillerato)as descripcion from SIGE_Catalogo_Bachillerato where cveEntidad='" + estadoBachillerato + "' and cveMunicipio='" + municipioBachillerato + "'");
-            lookUpEdit_bachillerato.Properties.DisplayMember = "descripcion";
-            lookUpEdit_bachillerato.Properties.ValueMember = "CCT";
+                lookUpEdit_bachillerato.Properties.DataSource = Utilerias.llenarlookupeditvalue("select CCT,nombreBachillerato, CONCAT(CCT,' | ',nombreBachillerato)as descripcion from SIGE_Catalogo_Bachillerato where cveEntidad='" + estadoBachillerato + "' and cveMunicipio='" + municipioBachillerato + "'");
+                lookUpEdit_bachillerato.Properties.DisplayMember = "descripcion";
+                lookUpEdit_bachillerato.Properties.ValueMember = "CCT";
+            }
+            catch (Exception ex) { }
+
         }
 
         private void radioGroup_lenguaIndigena_EditValueChanged(object sender, EventArgs e)
@@ -220,6 +226,11 @@ namespace SIGE_Project.ControlEscolar
 
         private void simpleButton_save_Click(object sender, EventArgs e)
         {
+            if (lookUpEdit_generacion.EditValue == null)
+            {
+                XtraMessageBox.Show("Seleccione una generación.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             if (lookUpEdit_modalidad.EditValue == null)
             {
@@ -311,16 +322,16 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Ingrese el número exterior de su domicilio.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (string.IsNullOrEmpty(textEdit_codigoPostal.Text))
-            {
-                XtraMessageBox.Show("Ingrese su código postal.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            if (lookUpEdit_colonia.EditValue == null)
-            {
-                XtraMessageBox.Show("Seleccione la colonia de su domicilio.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            //if (string.IsNullOrEmpty(textEdit_codigoPostal.Text))
+            //{
+            //    XtraMessageBox.Show("Ingrese su código postal.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
+            //if (lookUpEdit_colonia.EditValue == null)
+            //{
+            //    XtraMessageBox.Show("Seleccione la colonia de su domicilio.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
             if (lookUpEdit_estado.EditValue == null)
             {
                 XtraMessageBox.Show("Seleccione el estado donde reside actualmente.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -380,7 +391,7 @@ namespace SIGE_Project.ControlEscolar
                 string apellidoMaterno = textEdit_apellidoMaterno.Text;
                 string cveGenero= lookUpEdit_genero.EditValue==null?null: lookUpEdit_genero.EditValue.ToString();
                 int? idEstadoCivil;
-                if (lookUpEdit_estadoCivil != null)
+                if (lookUpEdit_estadoCivil.EditValue != null)
                 {
                     idEstadoCivil = Convert.ToInt32(lookUpEdit_estadoCivil.EditValue.ToString());
                 }
@@ -397,10 +408,10 @@ namespace SIGE_Project.ControlEscolar
                 #endregion
 
                 #region DATOS PERSONA DOMICILIO
-                string calle = textEdit_calle.Text;
-                string numExterior = textEdit_numExterior.Text;
-                string numInteerior = textEdit_numInterior.Text;
-                string codigoPostal = textEdit_codigoPostal.Text;
+                string calle = string.IsNullOrEmpty(textEdit_calle.Text) ? null : textEdit_calle.Text;
+                string numExterior = string.IsNullOrEmpty(textEdit_numExterior.Text) ? null : textEdit_numExterior.Text;
+                string numInteerior = string.IsNullOrEmpty(textEdit_numInterior.Text) ? null : textEdit_numInterior.Text;
+                string codigoPostal = string.IsNullOrEmpty(textEdit_codigoPostal.Text) ? null : textEdit_codigoPostal.Text;
                 string cveColonia = lookUpEdit_colonia.EditValue == null ? null : lookUpEdit_colonia.EditValue.ToString();
                 string cveEstado= lookUpEdit_estado.EditValue == null ? null : lookUpEdit_estado.EditValue.ToString();
                 string cveLocalidad= lookUpEdit_localidad.EditValue == null ? null : lookUpEdit_localidad.EditValue.ToString();
@@ -420,7 +431,7 @@ namespace SIGE_Project.ControlEscolar
 
                 #region DATOS PERSONA LENGUA INDIGENA
                 int hablaLI = Convert.ToInt32(radioGroup_lenguaIndigena.EditValue);
-                string descripcionLI = memoEdit_especifique.Text;
+                string descripcionLI = string.IsNullOrEmpty(memoEdit_especifique.Text) ? null : memoEdit_especifique.Text;
 
                 objApsirante.setDatosPersonaLenguaIndigena(hablaLI, descripcionLI);
                 #endregion
@@ -469,13 +480,24 @@ namespace SIGE_Project.ControlEscolar
                 objApsirante.setDatosAspirante(cveLicenciatura,cveModalidad,cicloEscolar,periodoEscolar,bachillerato,promedio,cveMedioDifusion, variables.varUser,idGeneracion);
                 #endregion
 
+                #region DATOS TUTOR
+                string nombreTutor = string.IsNullOrEmpty(textEdit_nombreTutor.Text) ? null : textEdit_nombreTutor.Text;
+                string apellidoPaternoTutor = string.IsNullOrEmpty(textEdit_apellidoPaternoTutor.Text) ? null : textEdit_apellidoPaternoTutor.Text;
+                string apellidoMaternoTutor = string.IsNullOrEmpty(textEdit_apellidoMaternoTutor.Text) ? null : textEdit_apellidoMaternoTutor.Text;
+                string numeroTelfonoTutor= string.IsNullOrEmpty(textEdit_numTelefono.Text) ? null : textEdit_numTelefono.Text;
+                string correoTutor = string.IsNullOrEmpty(textEdit_correoElectronicoTutor.Text) ? null : textEdit_correoElectronicoTutor.Text;
+                int? idParentesco;
+                if (lookUpEdit_parentesco != null)
+                {
+                    idParentesco = Convert.ToInt32(lookUpEdit_parentesco.EditValue.ToString());
+                }
+                else
+                {
+                    idParentesco = null;
+                }
 
-
-                int idParentesco = Convert.ToInt32(lookUpEdit_parentesco.EditValue);
-                string correoTutor = string.IsNullOrEmpty(textEdit_correoElectronicoTutor.Text) ? "" : textEdit_correoElectronicoTutor.Text;
-
-                objTutor.setDatosTutor(textEdit_CURP.Text, textEdit_nombreTutor.Text, textEdit_apellidoPaternoTutor.Text, textEdit_apellidoMaternoTutor.Text, textEdit_numeroTelfonoTutor.Text
-                                      , correoTutor, idParentesco);
+                objTutor.setDatosTutor(CURP,nombre,apellidoPaternoTutor,apellidoMaternoTutor,numeroTelfonoTutor,correoTutor,idParentesco);
+                #endregion
 
                 if (objApsirante.insertarPersona() != 1)
                 {
@@ -517,6 +539,7 @@ namespace SIGE_Project.ControlEscolar
                     throw new Exception("Error al insertar los datos del tutor.");
                 }
                 XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mostrarFicha(CURP);
                 limpiar();
             }
             catch (Exception ex)
@@ -526,7 +549,29 @@ namespace SIGE_Project.ControlEscolar
             }
 
         }
+        private void mostrarFicha(string _CURP)
+        {
+            try 
+            {
+                splashScreenManager1.ShowWaitForm();
+                Reportes.FichaAspirante rptFichaAspirante = new Reportes.FichaAspirante();
+                rptFichaAspirante.sqlDataSource1.ConnectionParameters = Utilerias.GetConnectionParametersBase();
+                rptFichaAspirante.Parameters["CURP"].Value = _CURP;
+                rptFichaAspirante.RequestParameters = false;
+                ReportPrintTool p = new ReportPrintTool(rptFichaAspirante);
+                p.AutoShowParametersPanel = false;
+                p.ShowPreview();
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+            }
+            catch (Exception ex)
+            {
+                if(splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                XtraMessageBox.Show("Se ha generado un error al generar el formato de la ficha. \nDetalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
         private void limpiar()
         {
             lookUpEdit_cicloEscolar.EditValue = null;

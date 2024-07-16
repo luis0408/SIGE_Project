@@ -17,10 +17,10 @@ namespace SIGE_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new managerforms());
+            Application.Run(new managerforms());
             //Application.Run(new ControlEscolar.Documentacion("prueba"));
 
-             Application.Run(new  ControlEscolar.FichaSolicitud());
+             //Application.Run(new  ControlEscolar.FichaSolicitud());
 
             //Application.Run(new managerforms());
             //Application.Run(new  ControlEscolar.FichaEscolar());
