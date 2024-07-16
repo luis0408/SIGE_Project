@@ -331,7 +331,7 @@
             // 
             // textEdit_apellidoMaterno
             // 
-            this.textEdit_apellidoMaterno.Location = new System.Drawing.Point(1015, -69);
+            this.textEdit_apellidoMaterno.Location = new System.Drawing.Point(1015, 122);
             this.textEdit_apellidoMaterno.Name = "textEdit_apellidoMaterno";
             this.textEdit_apellidoMaterno.Size = new System.Drawing.Size(291, 28);
             this.textEdit_apellidoMaterno.StyleController = this.layoutControl1;
@@ -339,7 +339,7 @@
             // 
             // textEdit_apellidoPaterno
             // 
-            this.textEdit_apellidoPaterno.Location = new System.Drawing.Point(589, -69);
+            this.textEdit_apellidoPaterno.Location = new System.Drawing.Point(589, 122);
             this.textEdit_apellidoPaterno.Name = "textEdit_apellidoPaterno";
             this.textEdit_apellidoPaterno.Size = new System.Drawing.Size(289, 28);
             this.textEdit_apellidoPaterno.StyleController = this.layoutControl1;
@@ -347,7 +347,7 @@
             // 
             // textEdit_NSS
             // 
-            this.textEdit_NSS.Location = new System.Drawing.Point(1015, -35);
+            this.textEdit_NSS.Location = new System.Drawing.Point(1015, 156);
             this.textEdit_NSS.Name = "textEdit_NSS";
             this.textEdit_NSS.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textEdit_NSS.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -358,7 +358,7 @@
             // 
             // textEdit_RFC
             // 
-            this.textEdit_RFC.Location = new System.Drawing.Point(589, -35);
+            this.textEdit_RFC.Location = new System.Drawing.Point(589, 156);
             this.textEdit_RFC.Name = "textEdit_RFC";
             this.textEdit_RFC.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textEdit_RFC.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -369,18 +369,18 @@
             // 
             // textEdit_CURP
             // 
-            this.textEdit_CURP.Location = new System.Drawing.Point(163, -35);
+            this.textEdit_CURP.Location = new System.Drawing.Point(163, 156);
             this.textEdit_CURP.Name = "textEdit_CURP";
             this.textEdit_CURP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textEdit_CURP.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
-            this.textEdit_CURP.Properties.MaskSettings.Set("mask", "LLLL000000LLLLLL00");
+            this.textEdit_CURP.Properties.MaskSettings.Set("mask", "LLLL000000LLLLLLL0");
             this.textEdit_CURP.Size = new System.Drawing.Size(289, 28);
             this.textEdit_CURP.StyleController = this.layoutControl1;
             this.textEdit_CURP.TabIndex = 51;
             // 
             // lookUpEdit_parentesco
             // 
-            this.lookUpEdit_parentesco.Location = new System.Drawing.Point(1234, 194);
+            this.lookUpEdit_parentesco.Location = new System.Drawing.Point(1234, 385);
             this.lookUpEdit_parentesco.Name = "lookUpEdit_parentesco";
             this.lookUpEdit_parentesco.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -392,7 +392,7 @@
             // 
             // textEdit_numeroTelfonoTutor
             // 
-            this.textEdit_numeroTelfonoTutor.Location = new System.Drawing.Point(1026, 194);
+            this.textEdit_numeroTelfonoTutor.Location = new System.Drawing.Point(1026, 385);
             this.textEdit_numeroTelfonoTutor.Name = "textEdit_numeroTelfonoTutor";
             this.textEdit_numeroTelfonoTutor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textEdit_numeroTelfonoTutor.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -403,7 +403,7 @@
             // 
             // textEdit_correoElectronicoTutor
             // 
-            this.textEdit_correoElectronicoTutor.Location = new System.Drawing.Point(818, 194);
+            this.textEdit_correoElectronicoTutor.Location = new System.Drawing.Point(818, 385);
             this.textEdit_correoElectronicoTutor.Name = "textEdit_correoElectronicoTutor";
             this.textEdit_correoElectronicoTutor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.textEdit_correoElectronicoTutor.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
@@ -415,7 +415,7 @@
             // 
             // textEdit_apellidoMaternoTutor
             // 
-            this.textEdit_apellidoMaternoTutor.Location = new System.Drawing.Point(1234, 160);
+            this.textEdit_apellidoMaternoTutor.Location = new System.Drawing.Point(1234, 351);
             this.textEdit_apellidoMaternoTutor.Name = "textEdit_apellidoMaternoTutor";
             this.textEdit_apellidoMaternoTutor.Size = new System.Drawing.Size(72, 28);
             this.textEdit_apellidoMaternoTutor.StyleController = this.layoutControl1;
@@ -423,7 +423,7 @@
             // 
             // textEdit_apellidoPaternoTutor
             // 
-            this.textEdit_apellidoPaternoTutor.Location = new System.Drawing.Point(1026, 160);
+            this.textEdit_apellidoPaternoTutor.Location = new System.Drawing.Point(1026, 351);
             this.textEdit_apellidoPaternoTutor.Name = "textEdit_apellidoPaternoTutor";
             this.textEdit_apellidoPaternoTutor.Size = new System.Drawing.Size(71, 28);
             this.textEdit_apellidoPaternoTutor.StyleController = this.layoutControl1;
@@ -431,7 +431,7 @@
             // 
             // textEdit_nombreTutor
             // 
-            this.textEdit_nombreTutor.Location = new System.Drawing.Point(818, 160);
+            this.textEdit_nombreTutor.Location = new System.Drawing.Point(818, 351);
             this.textEdit_nombreTutor.Name = "textEdit_nombreTutor";
             this.textEdit_nombreTutor.Size = new System.Drawing.Size(71, 28);
             this.textEdit_nombreTutor.StyleController = this.layoutControl1;
@@ -440,7 +440,7 @@
             // simpleButton_save
             // 
             this.simpleButton_save.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_save.ImageOptions.SvgImage")));
-            this.simpleButton_save.Location = new System.Drawing.Point(1011, 534);
+            this.simpleButton_save.Location = new System.Drawing.Point(1011, 725);
             this.simpleButton_save.Name = "simpleButton_save";
             this.simpleButton_save.Size = new System.Drawing.Size(311, 38);
             this.simpleButton_save.StyleController = this.layoutControl1;
@@ -451,7 +451,7 @@
             // simpleButton_cancel
             // 
             this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
-            this.simpleButton_cancel.Location = new System.Drawing.Point(687, 534);
+            this.simpleButton_cancel.Location = new System.Drawing.Point(687, 725);
             this.simpleButton_cancel.Name = "simpleButton_cancel";
             this.simpleButton_cancel.Size = new System.Drawing.Size(318, 38);
             this.simpleButton_cancel.StyleController = this.layoutControl1;
@@ -461,7 +461,7 @@
             // 
             // textEdit_medioDifusion
             // 
-            this.textEdit_medioDifusion.Location = new System.Drawing.Point(818, 448);
+            this.textEdit_medioDifusion.Location = new System.Drawing.Point(818, 639);
             this.textEdit_medioDifusion.Name = "textEdit_medioDifusion";
             this.textEdit_medioDifusion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -473,7 +473,7 @@
             // 
             // checkedListBoxControl_discapacidades
             // 
-            this.checkedListBoxControl_discapacidades.Location = new System.Drawing.Point(163, 448);
+            this.checkedListBoxControl_discapacidades.Location = new System.Drawing.Point(163, 639);
             this.checkedListBoxControl_discapacidades.MultiColumn = true;
             this.checkedListBoxControl_discapacidades.Name = "checkedListBoxControl_discapacidades";
             this.checkedListBoxControl_discapacidades.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -483,7 +483,7 @@
             // 
             // textEdit_promedio
             // 
-            this.textEdit_promedio.Location = new System.Drawing.Point(818, 355);
+            this.textEdit_promedio.Location = new System.Drawing.Point(818, 546);
             this.textEdit_promedio.Name = "textEdit_promedio";
             this.textEdit_promedio.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.textEdit_promedio.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -494,7 +494,7 @@
             // 
             // lookUpEdit_bachillerato
             // 
-            this.lookUpEdit_bachillerato.Location = new System.Drawing.Point(818, 321);
+            this.lookUpEdit_bachillerato.Location = new System.Drawing.Point(818, 512);
             this.lookUpEdit_bachillerato.Name = "lookUpEdit_bachillerato";
             this.lookUpEdit_bachillerato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -507,7 +507,7 @@
             // 
             // textEdit_municipioBachillerato
             // 
-            this.textEdit_municipioBachillerato.Location = new System.Drawing.Point(1130, 287);
+            this.textEdit_municipioBachillerato.Location = new System.Drawing.Point(1130, 478);
             this.textEdit_municipioBachillerato.Name = "textEdit_municipioBachillerato";
             this.textEdit_municipioBachillerato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -521,7 +521,7 @@
             // 
             // lookUpEdit_municipio
             // 
-            this.lookUpEdit_municipio.Location = new System.Drawing.Point(578, 355);
+            this.lookUpEdit_municipio.Location = new System.Drawing.Point(578, 546);
             this.lookUpEdit_municipio.Name = "lookUpEdit_municipio";
             this.lookUpEdit_municipio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -534,7 +534,7 @@
             // 
             // lookUpEdit_localidad
             // 
-            this.lookUpEdit_localidad.Location = new System.Drawing.Point(371, 355);
+            this.lookUpEdit_localidad.Location = new System.Drawing.Point(371, 546);
             this.lookUpEdit_localidad.Name = "lookUpEdit_localidad";
             this.lookUpEdit_localidad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -547,7 +547,7 @@
             // 
             // lookUpEdit_estado
             // 
-            this.lookUpEdit_estado.Location = new System.Drawing.Point(163, 355);
+            this.lookUpEdit_estado.Location = new System.Drawing.Point(163, 546);
             this.lookUpEdit_estado.Name = "lookUpEdit_estado";
             this.lookUpEdit_estado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -561,7 +561,7 @@
             // 
             // lookUpEdit_colonia
             // 
-            this.lookUpEdit_colonia.Location = new System.Drawing.Point(591, 321);
+            this.lookUpEdit_colonia.Location = new System.Drawing.Point(591, 512);
             this.lookUpEdit_colonia.Name = "lookUpEdit_colonia";
             this.lookUpEdit_colonia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -574,7 +574,7 @@
             // 
             // textEdit_codigoPostal
             // 
-            this.textEdit_codigoPostal.Location = new System.Drawing.Point(404, 321);
+            this.textEdit_codigoPostal.Location = new System.Drawing.Point(404, 512);
             this.textEdit_codigoPostal.Name = "textEdit_codigoPostal";
             this.textEdit_codigoPostal.Size = new System.Drawing.Size(50, 28);
             this.textEdit_codigoPostal.StyleController = this.layoutControl1;
@@ -583,7 +583,7 @@
             // 
             // textEdit_numInterior
             // 
-            this.textEdit_numInterior.Location = new System.Drawing.Point(591, 287);
+            this.textEdit_numInterior.Location = new System.Drawing.Point(591, 478);
             this.textEdit_numInterior.Name = "textEdit_numInterior";
             this.textEdit_numInterior.Size = new System.Drawing.Size(58, 28);
             this.textEdit_numInterior.StyleController = this.layoutControl1;
@@ -591,7 +591,7 @@
             // 
             // textEdit_numExterior
             // 
-            this.textEdit_numExterior.Location = new System.Drawing.Point(404, 287);
+            this.textEdit_numExterior.Location = new System.Drawing.Point(404, 478);
             this.textEdit_numExterior.Name = "textEdit_numExterior";
             this.textEdit_numExterior.Size = new System.Drawing.Size(50, 28);
             this.textEdit_numExterior.StyleController = this.layoutControl1;
@@ -599,7 +599,7 @@
             // 
             // textEdit_estadoBachillerato
             // 
-            this.textEdit_estadoBachillerato.Location = new System.Drawing.Point(818, 287);
+            this.textEdit_estadoBachillerato.Location = new System.Drawing.Point(818, 478);
             this.textEdit_estadoBachillerato.Name = "textEdit_estadoBachillerato";
             this.textEdit_estadoBachillerato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -613,7 +613,7 @@
             // 
             // textEdit_calle
             // 
-            this.textEdit_calle.Location = new System.Drawing.Point(163, 287);
+            this.textEdit_calle.Location = new System.Drawing.Point(163, 478);
             this.textEdit_calle.Name = "textEdit_calle";
             this.textEdit_calle.Size = new System.Drawing.Size(104, 62);
             this.textEdit_calle.StyleController = this.layoutControl1;
@@ -621,7 +621,7 @@
             // 
             // lookUpEdit_municipioNacimiento
             // 
-            this.lookUpEdit_municipioNacimiento.Location = new System.Drawing.Point(483, 194);
+            this.lookUpEdit_municipioNacimiento.Location = new System.Drawing.Point(483, 385);
             this.lookUpEdit_municipioNacimiento.Name = "lookUpEdit_municipioNacimiento";
             this.lookUpEdit_municipioNacimiento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -634,7 +634,7 @@
             // 
             // lookUpEdit_estadoNacimiento
             // 
-            this.lookUpEdit_estadoNacimiento.Location = new System.Drawing.Point(163, 194);
+            this.lookUpEdit_estadoNacimiento.Location = new System.Drawing.Point(163, 385);
             this.lookUpEdit_estadoNacimiento.Name = "lookUpEdit_estadoNacimiento";
             this.lookUpEdit_estadoNacimiento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -648,7 +648,7 @@
             // 
             // lookUpEdit_paisNacimiento
             // 
-            this.lookUpEdit_paisNacimiento.Location = new System.Drawing.Point(483, 160);
+            this.lookUpEdit_paisNacimiento.Location = new System.Drawing.Point(483, 351);
             this.lookUpEdit_paisNacimiento.Name = "lookUpEdit_paisNacimiento";
             this.lookUpEdit_paisNacimiento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -663,7 +663,7 @@
             // dateEdit_fechaNacimiento
             // 
             this.dateEdit_fechaNacimiento.EditValue = null;
-            this.dateEdit_fechaNacimiento.Location = new System.Drawing.Point(163, 160);
+            this.dateEdit_fechaNacimiento.Location = new System.Drawing.Point(163, 351);
             this.dateEdit_fechaNacimiento.Name = "dateEdit_fechaNacimiento";
             this.dateEdit_fechaNacimiento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -675,7 +675,7 @@
             // 
             // lookUpEdit_cicloEscolar
             // 
-            this.lookUpEdit_cicloEscolar.Location = new System.Drawing.Point(410, -146);
+            this.lookUpEdit_cicloEscolar.Location = new System.Drawing.Point(410, 45);
             this.lookUpEdit_cicloEscolar.Name = "lookUpEdit_cicloEscolar";
             this.lookUpEdit_cicloEscolar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -689,7 +689,7 @@
             // 
             // lookUpEdit_tipoSangre
             // 
-            this.lookUpEdit_tipoSangre.Location = new System.Drawing.Point(163, 67);
+            this.lookUpEdit_tipoSangre.Location = new System.Drawing.Point(163, 258);
             this.lookUpEdit_tipoSangre.Name = "lookUpEdit_tipoSangre";
             this.lookUpEdit_tipoSangre.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -702,7 +702,7 @@
             // 
             // textEdit_correoElectronico
             // 
-            this.textEdit_correoElectronico.Location = new System.Drawing.Point(163, 33);
+            this.textEdit_correoElectronico.Location = new System.Drawing.Point(163, 224);
             this.textEdit_correoElectronico.Name = "textEdit_correoElectronico";
             this.textEdit_correoElectronico.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.textEdit_correoElectronico.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
@@ -714,7 +714,7 @@
             // 
             // textEdit_numTelefono
             // 
-            this.textEdit_numTelefono.Location = new System.Drawing.Point(481, 33);
+            this.textEdit_numTelefono.Location = new System.Drawing.Point(481, 224);
             this.textEdit_numTelefono.Name = "textEdit_numTelefono";
             this.textEdit_numTelefono.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textEdit_numTelefono.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -725,7 +725,7 @@
             // 
             // lookUpEdit_genero
             // 
-            this.lookUpEdit_genero.Location = new System.Drawing.Point(163, -1);
+            this.lookUpEdit_genero.Location = new System.Drawing.Point(163, 190);
             this.lookUpEdit_genero.Name = "lookUpEdit_genero";
             this.lookUpEdit_genero.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -738,7 +738,7 @@
             // 
             // memoEdit_especifique
             // 
-            this.memoEdit_especifique.Location = new System.Drawing.Point(1121, -1);
+            this.memoEdit_especifique.Location = new System.Drawing.Point(1121, 190);
             this.memoEdit_especifique.Name = "memoEdit_especifique";
             this.memoEdit_especifique.Properties.ReadOnly = true;
             this.memoEdit_especifique.Size = new System.Drawing.Size(185, 96);
@@ -747,7 +747,7 @@
             // 
             // radioGroup_lenguaIndigena
             // 
-            this.radioGroup_lenguaIndigena.Location = new System.Drawing.Point(801, -1);
+            this.radioGroup_lenguaIndigena.Location = new System.Drawing.Point(801, 190);
             this.radioGroup_lenguaIndigena.Name = "radioGroup_lenguaIndigena";
             this.radioGroup_lenguaIndigena.Properties.Columns = 2;
             this.radioGroup_lenguaIndigena.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -762,7 +762,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(16, -175);
+            this.labelControl1.Location = new System.Drawing.Point(16, 16);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(179, 22);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -771,7 +771,7 @@
             // 
             // textEdit_nombre
             // 
-            this.textEdit_nombre.Location = new System.Drawing.Point(163, -69);
+            this.textEdit_nombre.Location = new System.Drawing.Point(163, 122);
             this.textEdit_nombre.Name = "textEdit_nombre";
             this.textEdit_nombre.Size = new System.Drawing.Size(289, 28);
             this.textEdit_nombre.StyleController = this.layoutControl1;
@@ -779,7 +779,7 @@
             // 
             // lookUpEdit_modalidad
             // 
-            this.lookUpEdit_modalidad.Location = new System.Drawing.Point(1196, -146);
+            this.lookUpEdit_modalidad.Location = new System.Drawing.Point(1196, 45);
             this.lookUpEdit_modalidad.Name = "lookUpEdit_modalidad";
             this.lookUpEdit_modalidad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -792,7 +792,7 @@
             // 
             // lookUpEdit_periodo
             // 
-            this.lookUpEdit_periodo.Location = new System.Drawing.Point(672, -146);
+            this.lookUpEdit_periodo.Location = new System.Drawing.Point(672, 45);
             this.lookUpEdit_periodo.Name = "lookUpEdit_periodo";
             this.lookUpEdit_periodo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -805,7 +805,7 @@
             // 
             // lookUpEdit_licenciatura
             // 
-            this.lookUpEdit_licenciatura.Location = new System.Drawing.Point(935, -146);
+            this.lookUpEdit_licenciatura.Location = new System.Drawing.Point(935, 45);
             this.lookUpEdit_licenciatura.Name = "lookUpEdit_licenciatura";
             this.lookUpEdit_licenciatura.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -818,7 +818,7 @@
             // 
             // lookUpEdit_generacion
             // 
-            this.lookUpEdit_generacion.Location = new System.Drawing.Point(147, -146);
+            this.lookUpEdit_generacion.Location = new System.Drawing.Point(147, 45);
             this.lookUpEdit_generacion.Name = "lookUpEdit_generacion";
             this.lookUpEdit_generacion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -831,7 +831,7 @@
             // 
             // lookUpEdit_estadoCivil
             // 
-            this.lookUpEdit_estadoCivil.Location = new System.Drawing.Point(481, -1);
+            this.lookUpEdit_estadoCivil.Location = new System.Drawing.Point(481, 190);
             this.lookUpEdit_estadoCivil.Name = "lookUpEdit_estadoCivil";
             this.lookUpEdit_estadoCivil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
