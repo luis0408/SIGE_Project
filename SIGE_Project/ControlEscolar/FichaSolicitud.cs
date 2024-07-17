@@ -226,6 +226,8 @@ namespace SIGE_Project.ControlEscolar
 
         private void simpleButton_save_Click(object sender, EventArgs e)
         {
+
+
             if (lookUpEdit_generacion.EditValue == null)
             {
                 XtraMessageBox.Show("Seleccione una generación.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -375,178 +377,183 @@ namespace SIGE_Project.ControlEscolar
                 return;
             }
 
-            try
+
+            if (XtraMessageBox.Show("Verifique que la información sea correcta. ¿Desea continuar?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
-                //objPersona = new ClsPersona();
-                objApsirante = new ClsApirante();
-                objTutor= new ClsTutor();
+                try
+                {
+                    //objPersona = new ClsPersona();
+                    objApsirante = new ClsApirante();
+                    objTutor = new ClsTutor();
 
-                ////SE COLOCAN VALORES EN VARIABLES PARA UNA INSERCION LIMPIA
-                #region DATOS PERSONA
-                string CURP = textEdit_CURP.Text.ToUpper();
-                string RFC = string.IsNullOrEmpty(textEdit_RFC.Text) ? null : textEdit_RFC.Text.ToUpper();
-                string NSS = string.IsNullOrEmpty(textEdit_NSS.Text) ? null : textEdit_NSS.Text;
-                string nombre = textEdit_nombre.Text;
-                string apellidoPaterno = textEdit_apellidoPaterno.Text;
-                string apellidoMaterno = textEdit_apellidoMaterno.Text;
-                string cveGenero= lookUpEdit_genero.EditValue==null?null: lookUpEdit_genero.EditValue.ToString();
-                int? idEstadoCivil;
-                if (lookUpEdit_estadoCivil.EditValue != null)
-                {
-                    idEstadoCivil = Convert.ToInt32(lookUpEdit_estadoCivil.EditValue.ToString());
-                }
-                else
-                {
-                    idEstadoCivil = null;
-                }
-                string email= string.IsNullOrEmpty(textEdit_correoElectronico.Text) ? null : textEdit_correoElectronico.Text.ToUpper();
-                string celular= string.IsNullOrEmpty(textEdit_numTelefono.Text) ? null : textEdit_numTelefono.Text.ToUpper();
-                string cveTipoSangre = lookUpEdit_tipoSangre.EditValue == null ? null : lookUpEdit_tipoSangre.EditValue.ToString();
-
-                objApsirante.setDatosPersona(CURP, RFC, NSS, nombre, apellidoPaterno, apellidoMaterno, cveGenero, idEstadoCivil, email, celular, cveTipoSangre);
-
-                #endregion
-
-                #region DATOS PERSONA DOMICILIO
-                string calle = string.IsNullOrEmpty(textEdit_calle.Text) ? null : textEdit_calle.Text;
-                string numExterior = string.IsNullOrEmpty(textEdit_numExterior.Text) ? null : textEdit_numExterior.Text;
-                string numInteerior = string.IsNullOrEmpty(textEdit_numInterior.Text) ? null : textEdit_numInterior.Text;
-                string codigoPostal = string.IsNullOrEmpty(textEdit_codigoPostal.Text) ? null : textEdit_codigoPostal.Text;
-                string cveColonia = lookUpEdit_colonia.EditValue == null ? null : lookUpEdit_colonia.EditValue.ToString();
-                string cveEstado= lookUpEdit_estado.EditValue == null ? null : lookUpEdit_estado.EditValue.ToString();
-                string cveLocalidad= lookUpEdit_localidad.EditValue == null ? null : lookUpEdit_localidad.EditValue.ToString();
-                string cveMunicipio= lookUpEdit_municipio.EditValue == null ? null : lookUpEdit_municipio.EditValue.ToString();
-
-                objApsirante.setDatosPersonaDomicilio(calle,numExterior,numInteerior,codigoPostal,cveColonia,cveEstado,cveLocalidad,cveMunicipio);
-                #endregion
-
-                #region DATOS PERSONA NACIMIENTO
-                DateTime fechaNacimiento = Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue);
-                string cvePaisNacimiento = lookUpEdit_paisNacimiento.EditValue == null ? null : lookUpEdit_paisNacimiento.EditValue.ToString();
-                string cveEstadoNacimiento = lookUpEdit_estadoNacimiento.EditValue == null ? null : lookUpEdit_estadoNacimiento.EditValue.ToString();
-                string cveMunicipioNacimiento= lookUpEdit_municipioNacimiento.EditValue == null ? null : lookUpEdit_municipioNacimiento.EditValue.ToString();
-
-                objApsirante.setDatosPersonaNacimiento(fechaNacimiento,cvePaisNacimiento,cveEstadoNacimiento,cveMunicipio);
-                #endregion
-
-                #region DATOS PERSONA LENGUA INDIGENA
-                int hablaLI = Convert.ToInt32(radioGroup_lenguaIndigena.EditValue);
-                string descripcionLI = string.IsNullOrEmpty(memoEdit_especifique.Text) ? null : memoEdit_especifique.Text;
-
-                objApsirante.setDatosPersonaLenguaIndigena(hablaLI, descripcionLI);
-                #endregion
-
-                #region DATOS ASPIRANTE
-                string cveLicenciatura= lookUpEdit_licenciatura.EditValue == null ? null : lookUpEdit_licenciatura.EditValue.ToString();
-                string cveModalidad= lookUpEdit_modalidad.EditValue == null ? null : lookUpEdit_modalidad.EditValue.ToString();
-                int? cicloEscolar;
-                if (lookUpEdit_estadoCivil != null)
-                {
-                    cicloEscolar = Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue.ToString());
-                }
-                else
-                {
-                    cicloEscolar = null;
-                }
-                int? periodoEscolar;
-                if (lookUpEdit_periodo != null)
-                {
-                    periodoEscolar = Convert.ToInt32(lookUpEdit_periodo.EditValue.ToString());
-                }
-                else
-                {
-                    periodoEscolar = null;
-                }
-                string bachillerato = lookUpEdit_bachillerato.EditValue == null ? null : lookUpEdit_bachillerato.EditValue.ToString();
-                decimal? promedio;
-                if (!string.IsNullOrEmpty(textEdit_promedio.Text))
-                {
-                    promedio = Convert.ToDecimal(textEdit_promedio.Text);
-                }
-                else
-                {
-                    promedio = null;
-                }
-                string cveMedioDifusion=textEdit_medioDifusion.EditValue == null ? null : textEdit_medioDifusion.EditValue.ToString();
-                int? idGeneracion;
-                if (lookUpEdit_generacion != null)
-                {
-                    idGeneracion = Convert.ToInt32(lookUpEdit_generacion.EditValue.ToString());
-                }
-                else
-                {
-                    idGeneracion = null;
-                }
-                objApsirante.setDatosAspirante(cveLicenciatura,cveModalidad,cicloEscolar,periodoEscolar,bachillerato,promedio,cveMedioDifusion, variables.varUser,idGeneracion);
-                #endregion
-
-                #region DATOS TUTOR
-                string nombreTutor = string.IsNullOrEmpty(textEdit_nombreTutor.Text) ? null : textEdit_nombreTutor.Text;
-                string apellidoPaternoTutor = string.IsNullOrEmpty(textEdit_apellidoPaternoTutor.Text) ? null : textEdit_apellidoPaternoTutor.Text;
-                string apellidoMaternoTutor = string.IsNullOrEmpty(textEdit_apellidoMaternoTutor.Text) ? null : textEdit_apellidoMaternoTutor.Text;
-                string numeroTelfonoTutor= string.IsNullOrEmpty(textEdit_numTelefono.Text) ? null : textEdit_numTelefono.Text;
-                string correoTutor = string.IsNullOrEmpty(textEdit_correoElectronicoTutor.Text) ? null : textEdit_correoElectronicoTutor.Text;
-                int? idParentesco;
-                if (lookUpEdit_parentesco != null)
-                {
-                    idParentesco = Convert.ToInt32(lookUpEdit_parentesco.EditValue.ToString());
-                }
-                else
-                {
-                    idParentesco = null;
-                }
-
-                objTutor.setDatosTutor(CURP,nombre,apellidoPaternoTutor,apellidoMaternoTutor,numeroTelfonoTutor,correoTutor,idParentesco);
-                #endregion
-
-                if (objApsirante.insertarPersona() != 1)
-                {
-                    throw new Exception("Error al insertar datos de la persona.");
-                }
-                if (objApsirante.insertarPersonaDomicilio() != 1)
-                {
-                    throw new Exception("Error al insertar datos de domicilio.");
-                }
-                if (objApsirante.insertarPersonaNacimiento() != 1)
-                {
-                    throw new Exception("Error al insertar datos de nacimiento.");
-                }
-                if (objApsirante.insertarPersonaLenguaIndigena() != 1)
-                {
-                    throw new Exception("Error al insertar los datos de lengua indigena.");
-                }
-                ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
-                int itemsSeleccionados = checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
-                for (int i = 0; i < itemsSeleccionados; i++)
-                {
-                    ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
-                    int valorCheckDiscapacidad = Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
-                    objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
-                    if (objApsirante.insertarPersonaDiscapacidad() != 1)
+                    ////SE COLOCAN VALORES EN VARIABLES PARA UNA INSERCION LIMPIA
+                    #region DATOS PERSONA
+                    string CURP = textEdit_CURP.Text.ToUpper();
+                    string RFC = string.IsNullOrEmpty(textEdit_RFC.Text) ? null : textEdit_RFC.Text.ToUpper();
+                    string NSS = string.IsNullOrEmpty(textEdit_NSS.Text) ? null : textEdit_NSS.Text;
+                    string nombre = textEdit_nombre.Text;
+                    string apellidoPaterno = textEdit_apellidoPaterno.Text;
+                    string apellidoMaterno = textEdit_apellidoMaterno.Text;
+                    string cveGenero = lookUpEdit_genero.EditValue == null ? null : lookUpEdit_genero.EditValue.ToString();
+                    int? idEstadoCivil;
+                    if (lookUpEdit_estadoCivil.EditValue != null)
                     {
-                        throw new Exception("Error al insertar los datos de discapcidad.");
+                        idEstadoCivil = Convert.ToInt32(lookUpEdit_estadoCivil.EditValue.ToString());
+                    }
+                    else
+                    {
+                        idEstadoCivil = null;
+                    }
+                    string email = string.IsNullOrEmpty(textEdit_correoElectronico.Text) ? null : textEdit_correoElectronico.Text;
+                    string celular = string.IsNullOrEmpty(textEdit_numTelefono.Text) ? null : textEdit_numTelefono.Text;
+                    string cveTipoSangre = lookUpEdit_tipoSangre.EditValue == null ? null : lookUpEdit_tipoSangre.EditValue.ToString();
+
+                    objApsirante.setDatosPersona(CURP, RFC, NSS, nombre, apellidoPaterno, apellidoMaterno, cveGenero, idEstadoCivil, email, celular, cveTipoSangre);
+
+                    #endregion
+
+                    #region DATOS PERSONA DOMICILIO
+                    string calle = string.IsNullOrEmpty(textEdit_calle.Text) ? null : textEdit_calle.Text;
+                    string numExterior = string.IsNullOrEmpty(textEdit_numExterior.Text) ? null : textEdit_numExterior.Text;
+                    string numInteerior = string.IsNullOrEmpty(textEdit_numInterior.Text) ? null : textEdit_numInterior.Text;
+                    string codigoPostal = string.IsNullOrEmpty(textEdit_codigoPostal.Text) ? null : textEdit_codigoPostal.Text;
+                    string cveColonia = lookUpEdit_colonia.EditValue == null ? null : lookUpEdit_colonia.EditValue.ToString();
+                    string cveEstado = lookUpEdit_estado.EditValue == null ? null : lookUpEdit_estado.EditValue.ToString();
+                    string cveLocalidad = lookUpEdit_localidad.EditValue == null ? null : lookUpEdit_localidad.EditValue.ToString();
+                    string cveMunicipio = lookUpEdit_municipio.EditValue == null ? null : lookUpEdit_municipio.EditValue.ToString();
+
+                    objApsirante.setDatosPersonaDomicilio(calle, numExterior, numInteerior, codigoPostal, cveColonia, cveEstado, cveLocalidad, cveMunicipio);
+                    #endregion
+
+                    #region DATOS PERSONA NACIMIENTO
+                    DateTime fechaNacimiento = Convert.ToDateTime(dateEdit_fechaNacimiento.EditValue);
+                    string cvePaisNacimiento = lookUpEdit_paisNacimiento.EditValue == null ? null : lookUpEdit_paisNacimiento.EditValue.ToString();
+                    string cveEstadoNacimiento = lookUpEdit_estadoNacimiento.EditValue == null ? null : lookUpEdit_estadoNacimiento.EditValue.ToString();
+                    string cveMunicipioNacimiento = lookUpEdit_municipioNacimiento.EditValue == null ? null : lookUpEdit_municipioNacimiento.EditValue.ToString();
+
+                    objApsirante.setDatosPersonaNacimiento(fechaNacimiento, cvePaisNacimiento, cveEstadoNacimiento, cveMunicipio);
+                    #endregion
+
+                    #region DATOS PERSONA LENGUA INDIGENA
+                    int hablaLI = Convert.ToInt32(radioGroup_lenguaIndigena.EditValue);
+                    string descripcionLI = string.IsNullOrEmpty(memoEdit_especifique.Text) ? null : memoEdit_especifique.Text;
+
+                    objApsirante.setDatosPersonaLenguaIndigena(hablaLI, descripcionLI);
+                    #endregion
+
+                    #region DATOS ASPIRANTE
+                    string cveLicenciatura = lookUpEdit_licenciatura.EditValue == null ? null : lookUpEdit_licenciatura.EditValue.ToString();
+                    string cveModalidad = lookUpEdit_modalidad.EditValue == null ? null : lookUpEdit_modalidad.EditValue.ToString();
+                    int? cicloEscolar;
+                    if (lookUpEdit_estadoCivil != null)
+                    {
+                        cicloEscolar = Convert.ToInt32(lookUpEdit_cicloEscolar.EditValue.ToString());
+                    }
+                    else
+                    {
+                        cicloEscolar = null;
+                    }
+                    int? periodoEscolar;
+                    if (lookUpEdit_periodo != null)
+                    {
+                        periodoEscolar = Convert.ToInt32(lookUpEdit_periodo.EditValue.ToString());
+                    }
+                    else
+                    {
+                        periodoEscolar = null;
+                    }
+                    string bachillerato = lookUpEdit_bachillerato.EditValue == null ? null : lookUpEdit_bachillerato.EditValue.ToString();
+                    decimal? promedio;
+                    if (!string.IsNullOrEmpty(textEdit_promedio.Text))
+                    {
+                        promedio = Convert.ToDecimal(textEdit_promedio.Text);
+                    }
+                    else
+                    {
+                        promedio = null;
+                    }
+                    string cveMedioDifusion = textEdit_medioDifusion.EditValue == null ? null : textEdit_medioDifusion.EditValue.ToString();
+                    int? idGeneracion;
+                    if (lookUpEdit_generacion != null)
+                    {
+                        idGeneracion = Convert.ToInt32(lookUpEdit_generacion.EditValue.ToString());
+                    }
+                    else
+                    {
+                        idGeneracion = null;
+                    }
+                    objApsirante.setDatosAspirante(cveLicenciatura, cveModalidad, cicloEscolar, periodoEscolar, bachillerato, promedio, cveMedioDifusion, variables.varUser, idGeneracion);
+                    #endregion
+
+                    #region DATOS TUTOR
+                    string nombreTutor = string.IsNullOrEmpty(textEdit_nombreTutor.Text) ? null : textEdit_nombreTutor.Text;
+                    string apellidoPaternoTutor = string.IsNullOrEmpty(textEdit_apellidoPaternoTutor.Text) ? null : textEdit_apellidoPaternoTutor.Text;
+                    string apellidoMaternoTutor = string.IsNullOrEmpty(textEdit_apellidoMaternoTutor.Text) ? null : textEdit_apellidoMaternoTutor.Text;
+                    string numeroTelfonoTutor = string.IsNullOrEmpty(textEdit_numTelefono.Text) ? null : textEdit_numTelefono.Text;
+                    string correoTutor = string.IsNullOrEmpty(textEdit_correoElectronicoTutor.Text) ? null : textEdit_correoElectronicoTutor.Text;
+                    int? idParentesco;
+                    if (lookUpEdit_parentesco != null)
+                    {
+                        idParentesco = Convert.ToInt32(lookUpEdit_parentesco.EditValue.ToString());
+                    }
+                    else
+                    {
+                        idParentesco = null;
                     }
 
+                    objTutor.setDatosTutor(CURP, nombreTutor, apellidoPaternoTutor, apellidoMaternoTutor, numeroTelfonoTutor, correoTutor, idParentesco);
+                    #endregion
+
+                    if (objApsirante.insertarPersona() != 1)
+                    {
+                        throw new Exception("Error al insertar datos de la persona.");
+                    }
+                    if (objApsirante.insertarPersonaDomicilio() != 1)
+                    {
+                        throw new Exception("Error al insertar datos de domicilio.");
+                    }
+                    if (objApsirante.insertarPersonaNacimiento() != 1)
+                    {
+                        throw new Exception("Error al insertar datos de nacimiento.");
+                    }
+                    if (objApsirante.insertarPersonaLenguaIndigena() != 1)
+                    {
+                        throw new Exception("Error al insertar los datos de lengua indigena.");
+                    }
+                    ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
+                    int itemsSeleccionados = checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
+                    for (int i = 0; i < itemsSeleccionados; i++)
+                    {
+                        ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
+                        int valorCheckDiscapacidad = Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
+                        objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
+                        if (objApsirante.insertarPersonaDiscapacidad() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos de discapcidad.");
+                        }
+
+                    }
+                    if (objApsirante.insertarAspirante() != 1)
+                    {
+                        throw new Exception("Error al insertar los datos de lengua indigena.");
+                    }
+
+
+                    if (objTutor.insertarTutor() != 1)
+                    {
+                        throw new Exception("Error al insertar los datos del tutor.");
+                    }
+                    XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mostrarFicha(CURP);
+                    limpiar();
                 }
-                if (objApsirante.insertarAspirante() != 1)
+                catch (Exception ex)
                 {
-                    throw new Exception("Error al insertar los datos de lengua indigena.");
+                    XtraMessageBox.Show("Se ha generado un error al realizar el registro. \nDetalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
-
-
-                if (objTutor.insertarTutor() != 1)
-                {
-                    throw new Exception("Error al insertar los datos del tutor.");
-                }
-                XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mostrarFicha(CURP);
-                limpiar();
             }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show("Se ha generado un error al realizar el registro. \nDetalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            
 
         }
         private void mostrarFicha(string _CURP)
@@ -576,8 +583,9 @@ namespace SIGE_Project.ControlEscolar
         {
             lookUpEdit_cicloEscolar.EditValue = null;
             lookUpEdit_periodo.EditValue = null;
-            lookUpEdit_modalidad = null;
-            lookUpEdit_licenciatura = null;
+            lookUpEdit_modalidad.EditValue = null;
+            lookUpEdit_licenciatura.EditValue = null;
+            lookUpEdit_generacion.EditValue = null;
             /////DATOS PERSONALES 
             textEdit_nombre.Text = "";
             textEdit_apellidoPaterno.Text = "";
@@ -637,6 +645,28 @@ namespace SIGE_Project.ControlEscolar
             }
         }
 
-        
+        private void layoutControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            ///ESTE CONTROL EL EL ROOT
+           
+        }
+
+        private void actualizarCatálogosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            llenarLookups();
+            XtraMessageBox.Show("Catálogos cargados correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void FichaSolicitud_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Keys.KeyCode == Keys.F5)
+            {
+                llenarLookups();
+                XtraMessageBox.Show("Catálogos cargados correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace SIGE_Project.ControlEscolar
         {
             noControl= _noControl;
             nombre= _nombre;   
-            apellidoMaterno= _apellidoPaterno;
+            apellidoPaterno= _apellidoPaterno;
             apellidoMaterno= _apellidoMaterno;
             numeroTelefono= _numeroTelefono;
             email= _email;  
