@@ -23,8 +23,7 @@ namespace SIGE_Project.ControlEscolar
         public ClsApirante()
         {
         }
-        public void setDatosAspirante(string _cveLicenciatura , string _cveModalidad, int? _idCicloEscolar, int? _idPeriodo, string _CCT_Bachillerato,
-                                       decimal? _promedio, string _cveMedio, string _usuarioRegistro, int? _idGeneracion)
+        public void setDatosAspirante(string _cveLicenciatura , string _cveModalidad, int? _idCicloEscolar, int? _idPeriodo, string _CCT_Bachillerato, decimal? _promedio, string _cveMedio, string _usuarioRegistro, int? _idGeneracion)
         {
             cveLicenciatura= _cveLicenciatura;
             cveModalidad= _cveModalidad;
@@ -33,7 +32,8 @@ namespace SIGE_Project.ControlEscolar
             CCT_Bachillerato= _CCT_Bachillerato;
             promedio= _promedio;
             cveMedio= _cveMedio;    
-            usuarioRegistro= _usuarioRegistro;  
+            usuarioRegistro= _usuarioRegistro;
+            idGeneracion = _idGeneracion;
         }
         object[] datos = { };
         string[] parametros = { };
