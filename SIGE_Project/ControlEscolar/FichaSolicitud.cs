@@ -324,16 +324,16 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Ingrese el número exterior de su domicilio.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //if (string.IsNullOrEmpty(textEdit_codigoPostal.Text))
-            //{
-            //    XtraMessageBox.Show("Ingrese su código postal.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
-            //if (lookUpEdit_colonia.EditValue == null)
-            //{
-            //    XtraMessageBox.Show("Seleccione la colonia de su domicilio.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
+            if (string.IsNullOrEmpty(textEdit_codigoPostal.Text))
+            {
+                XtraMessageBox.Show("Ingrese su código postal.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (lookUpEdit_colonia.EditValue == null)
+            {
+                XtraMessageBox.Show("Seleccione la colonia de su domicilio.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (lookUpEdit_estado.EditValue == null)
             {
                 XtraMessageBox.Show("Seleccione el estado donde reside actualmente.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
