@@ -391,20 +391,20 @@
             // 
             // lookUpEdit_parentesco
             // 
-            this.lookUpEdit_parentesco.Location = new System.Drawing.Point(1811, 398);
+            this.lookUpEdit_parentesco.Location = new System.Drawing.Point(1817, 398);
             this.lookUpEdit_parentesco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lookUpEdit_parentesco.Name = "lookUpEdit_parentesco";
             this.lookUpEdit_parentesco.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEdit_parentesco.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.lookUpEdit_parentesco.Size = new System.Drawing.Size(98, 26);
+            this.lookUpEdit_parentesco.Size = new System.Drawing.Size(92, 26);
             this.lookUpEdit_parentesco.StyleController = this.layoutControl1;
             this.lookUpEdit_parentesco.TabIndex = 50;
             // 
             // textEdit_numeroTelfonoTutor
             // 
-            this.textEdit_numeroTelfonoTutor.Location = new System.Drawing.Point(1504, 398);
+            this.textEdit_numeroTelfonoTutor.Location = new System.Drawing.Point(1510, 398);
             this.textEdit_numeroTelfonoTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_numeroTelfonoTutor.Name = "textEdit_numeroTelfonoTutor";
             this.textEdit_numeroTelfonoTutor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
@@ -416,7 +416,7 @@
             // 
             // textEdit_correoElectronicoTutor
             // 
-            this.textEdit_correoElectronicoTutor.Location = new System.Drawing.Point(1196, 398);
+            this.textEdit_correoElectronicoTutor.Location = new System.Drawing.Point(1202, 398);
             this.textEdit_correoElectronicoTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_correoElectronicoTutor.Name = "textEdit_correoElectronicoTutor";
             this.textEdit_correoElectronicoTutor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
@@ -429,16 +429,16 @@
             // 
             // textEdit_apellidoMaternoTutor
             // 
-            this.textEdit_apellidoMaternoTutor.Location = new System.Drawing.Point(1811, 366);
+            this.textEdit_apellidoMaternoTutor.Location = new System.Drawing.Point(1817, 366);
             this.textEdit_apellidoMaternoTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_apellidoMaternoTutor.Name = "textEdit_apellidoMaternoTutor";
-            this.textEdit_apellidoMaternoTutor.Size = new System.Drawing.Size(98, 26);
+            this.textEdit_apellidoMaternoTutor.Size = new System.Drawing.Size(92, 26);
             this.textEdit_apellidoMaternoTutor.StyleController = this.layoutControl1;
             this.textEdit_apellidoMaternoTutor.TabIndex = 47;
             // 
             // textEdit_apellidoPaternoTutor
             // 
-            this.textEdit_apellidoPaternoTutor.Location = new System.Drawing.Point(1504, 366);
+            this.textEdit_apellidoPaternoTutor.Location = new System.Drawing.Point(1510, 366);
             this.textEdit_apellidoPaternoTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_apellidoPaternoTutor.Name = "textEdit_apellidoPaternoTutor";
             this.textEdit_apellidoPaternoTutor.Size = new System.Drawing.Size(96, 26);
@@ -447,7 +447,7 @@
             // 
             // textEdit_nombreTutor
             // 
-            this.textEdit_nombreTutor.Location = new System.Drawing.Point(1196, 366);
+            this.textEdit_nombreTutor.Location = new System.Drawing.Point(1202, 366);
             this.textEdit_nombreTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_nombreTutor.Name = "textEdit_nombreTutor";
             this.textEdit_nombreTutor.Size = new System.Drawing.Size(97, 26);
@@ -457,10 +457,10 @@
             // simpleButton_save
             // 
             this.simpleButton_save.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_save.ImageOptions.SvgImage")));
-            this.simpleButton_save.Location = new System.Drawing.Point(1470, 745);
+            this.simpleButton_save.Location = new System.Drawing.Point(1476, 745);
             this.simpleButton_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton_save.Name = "simpleButton_save";
-            this.simpleButton_save.Size = new System.Drawing.Size(456, 52);
+            this.simpleButton_save.Size = new System.Drawing.Size(450, 52);
             this.simpleButton_save.StyleController = this.layoutControl1;
             this.simpleButton_save.TabIndex = 44;
             this.simpleButton_save.Text = "Guardar";
@@ -469,7 +469,7 @@
             // simpleButton_cancel
             // 
             this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
-            this.simpleButton_cancel.Location = new System.Drawing.Point(997, 745);
+            this.simpleButton_cancel.Location = new System.Drawing.Point(1003, 745);
             this.simpleButton_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton_cancel.Name = "simpleButton_cancel";
             this.simpleButton_cancel.Size = new System.Drawing.Size(467, 52);
@@ -480,14 +480,14 @@
             // 
             // textEdit_medioDifusion
             // 
-            this.textEdit_medioDifusion.Location = new System.Drawing.Point(1196, 658);
+            this.textEdit_medioDifusion.Location = new System.Drawing.Point(1202, 658);
             this.textEdit_medioDifusion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_medioDifusion.Name = "textEdit_medioDifusion";
             this.textEdit_medioDifusion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textEdit_medioDifusion.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.textEdit_medioDifusion.Size = new System.Drawing.Size(713, 26);
+            this.textEdit_medioDifusion.Size = new System.Drawing.Size(707, 26);
             this.textEdit_medioDifusion.StyleController = this.layoutControl1;
             this.textEdit_medioDifusion.TabIndex = 42;
             // 
@@ -504,7 +504,7 @@
             // 
             // textEdit_promedio
             // 
-            this.textEdit_promedio.Location = new System.Drawing.Point(1196, 560);
+            this.textEdit_promedio.Location = new System.Drawing.Point(1202, 560);
             this.textEdit_promedio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_promedio.Name = "textEdit_promedio";
             this.textEdit_promedio.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -516,7 +516,7 @@
             // 
             // lookUpEdit_bachillerato
             // 
-            this.lookUpEdit_bachillerato.Location = new System.Drawing.Point(1196, 528);
+            this.lookUpEdit_bachillerato.Location = new System.Drawing.Point(1202, 528);
             this.lookUpEdit_bachillerato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lookUpEdit_bachillerato.Name = "lookUpEdit_bachillerato";
             this.lookUpEdit_bachillerato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -524,13 +524,13 @@
             this.lookUpEdit_bachillerato.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_bachillerato.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_bachillerato.Size = new System.Drawing.Size(713, 26);
+            this.lookUpEdit_bachillerato.Size = new System.Drawing.Size(707, 26);
             this.lookUpEdit_bachillerato.StyleController = this.layoutControl1;
             this.lookUpEdit_bachillerato.TabIndex = 40;
             // 
             // textEdit_municipioBachillerato
             // 
-            this.textEdit_municipioBachillerato.Location = new System.Drawing.Point(1657, 496);
+            this.textEdit_municipioBachillerato.Location = new System.Drawing.Point(1663, 496);
             this.textEdit_municipioBachillerato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_municipioBachillerato.Name = "textEdit_municipioBachillerato";
             this.textEdit_municipioBachillerato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -538,14 +538,14 @@
             this.textEdit_municipioBachillerato.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.textEdit_municipioBachillerato.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.textEdit_municipioBachillerato.Size = new System.Drawing.Size(252, 26);
+            this.textEdit_municipioBachillerato.Size = new System.Drawing.Size(246, 26);
             this.textEdit_municipioBachillerato.StyleController = this.layoutControl1;
             this.textEdit_municipioBachillerato.TabIndex = 39;
             this.textEdit_municipioBachillerato.EditValueChanged += new System.EventHandler(this.textEdit_municipioBachillerato_EditValueChanged);
             // 
             // lookUpEdit_municipio
             // 
-            this.lookUpEdit_municipio.Location = new System.Drawing.Point(854, 560);
+            this.lookUpEdit_municipio.Location = new System.Drawing.Point(876, 560);
             this.lookUpEdit_municipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lookUpEdit_municipio.Name = "lookUpEdit_municipio";
             this.lookUpEdit_municipio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -553,13 +553,13 @@
             this.lookUpEdit_municipio.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_municipio.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_municipio.Size = new System.Drawing.Size(97, 26);
+            this.lookUpEdit_municipio.Size = new System.Drawing.Size(81, 26);
             this.lookUpEdit_municipio.StyleController = this.layoutControl1;
             this.lookUpEdit_municipio.TabIndex = 38;
             // 
             // lookUpEdit_localidad
             // 
-            this.lookUpEdit_localidad.Location = new System.Drawing.Point(548, 560);
+            this.lookUpEdit_localidad.Location = new System.Drawing.Point(590, 560);
             this.lookUpEdit_localidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lookUpEdit_localidad.Name = "lookUpEdit_localidad";
             this.lookUpEdit_localidad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -567,7 +567,7 @@
             this.lookUpEdit_localidad.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_localidad.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_localidad.Size = new System.Drawing.Size(95, 26);
+            this.lookUpEdit_localidad.Size = new System.Drawing.Size(75, 26);
             this.lookUpEdit_localidad.StyleController = this.layoutControl1;
             this.lookUpEdit_localidad.TabIndex = 37;
             // 
@@ -581,7 +581,7 @@
             this.lookUpEdit_estado.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_estado.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_estado.Size = new System.Drawing.Size(97, 26);
+            this.lookUpEdit_estado.Size = new System.Drawing.Size(139, 26);
             this.lookUpEdit_estado.StyleController = this.layoutControl1;
             this.lookUpEdit_estado.TabIndex = 36;
             this.lookUpEdit_estado.EditValueChanged += new System.EventHandler(this.lookUpEdit_estado_EditValueChanged);
@@ -596,7 +596,7 @@
             this.lookUpEdit_colonia.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_colonia.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_colonia.Size = new System.Drawing.Size(75, 26);
+            this.lookUpEdit_colonia.Size = new System.Drawing.Size(81, 26);
             this.lookUpEdit_colonia.StyleController = this.layoutControl1;
             this.lookUpEdit_colonia.TabIndex = 35;
             // 
@@ -615,7 +615,7 @@
             this.textEdit_numInterior.Location = new System.Drawing.Point(876, 496);
             this.textEdit_numInterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_numInterior.Name = "textEdit_numInterior";
-            this.textEdit_numInterior.Size = new System.Drawing.Size(75, 26);
+            this.textEdit_numInterior.Size = new System.Drawing.Size(81, 26);
             this.textEdit_numInterior.StyleController = this.layoutControl1;
             this.textEdit_numInterior.TabIndex = 33;
             // 
@@ -630,7 +630,7 @@
             // 
             // textEdit_estadoBachillerato
             // 
-            this.textEdit_estadoBachillerato.Location = new System.Drawing.Point(1196, 496);
+            this.textEdit_estadoBachillerato.Location = new System.Drawing.Point(1202, 496);
             this.textEdit_estadoBachillerato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit_estadoBachillerato.Name = "textEdit_estadoBachillerato";
             this.textEdit_estadoBachillerato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -662,7 +662,7 @@
             this.lookUpEdit_municipioNacimiento.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_municipioNacimiento.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_municipioNacimiento.Size = new System.Drawing.Size(237, 26);
+            this.lookUpEdit_municipioNacimiento.Size = new System.Drawing.Size(243, 26);
             this.lookUpEdit_municipioNacimiento.StyleController = this.layoutControl1;
             this.lookUpEdit_municipioNacimiento.TabIndex = 29;
             // 
@@ -691,7 +691,7 @@
             this.lookUpEdit_paisNacimiento.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lookUpEdit_paisNacimiento.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_paisNacimiento.Size = new System.Drawing.Size(237, 26);
+            this.lookUpEdit_paisNacimiento.Size = new System.Drawing.Size(243, 26);
             this.lookUpEdit_paisNacimiento.StyleController = this.layoutControl1;
             this.lookUpEdit_paisNacimiento.TabIndex = 27;
             this.lookUpEdit_paisNacimiento.EditValueChanged += new System.EventHandler(this.lookUpEdit_paisNacimiento_EditValueChanged);
@@ -1139,7 +1139,7 @@
             this.layoutControlItem24});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 299);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(956, 130);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(962, 130);
             this.layoutControlGroup2.Text = "Datos de nacimiento";
             // 
             // layoutControlItem22
@@ -1147,7 +1147,7 @@
             this.layoutControlItem22.Control = this.lookUpEdit_paisNacimiento;
             this.layoutControlItem22.Location = new System.Drawing.Point(474, 0);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(448, 32);
+            this.layoutControlItem22.Size = new System.Drawing.Size(454, 32);
             this.layoutControlItem22.Text = "País:";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1174,7 +1174,7 @@
             this.layoutControlItem24.Control = this.lookUpEdit_municipioNacimiento;
             this.layoutControlItem24.Location = new System.Drawing.Point(474, 32);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(448, 32);
+            this.layoutControlItem24.Size = new System.Drawing.Size(454, 32);
             this.layoutControlItem24.Text = "Municipio:";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1198,7 +1198,7 @@
             this.layoutControlItem33});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 429);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(956, 162);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(962, 162);
             this.layoutControlGroup3.Text = "Datos domicilio";
             // 
             // layoutControlItem25
@@ -1224,7 +1224,7 @@
             this.layoutControlItem28.Control = this.textEdit_numInterior;
             this.layoutControlItem28.Location = new System.Drawing.Point(636, 0);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(286, 32);
+            this.layoutControlItem28.Size = new System.Drawing.Size(292, 32);
             this.layoutControlItem28.Text = "Número interior:";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1233,7 +1233,7 @@
             this.layoutControlItem30.Control = this.lookUpEdit_colonia;
             this.layoutControlItem30.Location = new System.Drawing.Point(636, 32);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(286, 32);
+            this.layoutControlItem30.Size = new System.Drawing.Size(292, 32);
             this.layoutControlItem30.Text = "Colonia:  *";
             this.layoutControlItem30.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1251,25 +1251,25 @@
             this.layoutControlItem31.Control = this.lookUpEdit_estado;
             this.layoutControlItem31.Location = new System.Drawing.Point(0, 64);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(308, 32);
+            this.layoutControlItem31.Size = new System.Drawing.Size(350, 32);
             this.layoutControlItem31.Text = "Estado:  *";
             this.layoutControlItem31.TextSize = new System.Drawing.Size(187, 19);
             // 
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.lookUpEdit_localidad;
-            this.layoutControlItem32.Location = new System.Drawing.Point(308, 64);
+            this.layoutControlItem32.Location = new System.Drawing.Point(350, 64);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(306, 32);
+            this.layoutControlItem32.Size = new System.Drawing.Size(286, 32);
             this.layoutControlItem32.Text = "Localidad:  *";
             this.layoutControlItem32.TextSize = new System.Drawing.Size(187, 19);
             // 
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.lookUpEdit_municipio;
-            this.layoutControlItem33.Location = new System.Drawing.Point(614, 64);
+            this.layoutControlItem33.Location = new System.Drawing.Point(636, 64);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(308, 32);
+            this.layoutControlItem33.Size = new System.Drawing.Size(292, 32);
             this.layoutControlItem33.Text = "Municipio:  *";
             this.layoutControlItem33.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1281,9 +1281,9 @@
             this.layoutControlItem35,
             this.layoutControlItem36,
             this.emptySpaceItem3});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(956, 429);
+            this.layoutControlGroup4.Location = new System.Drawing.Point(962, 429);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(958, 162);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(952, 162);
             this.layoutControlGroup4.Text = "Datos bachillerato";
             // 
             // layoutControlItem26
@@ -1300,7 +1300,7 @@
             this.layoutControlItem34.Control = this.textEdit_municipioBachillerato;
             this.layoutControlItem34.Location = new System.Drawing.Point(461, 0);
             this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(463, 32);
+            this.layoutControlItem34.Size = new System.Drawing.Size(457, 32);
             this.layoutControlItem34.Text = "Municipio:  *";
             this.layoutControlItem34.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1309,7 +1309,7 @@
             this.layoutControlItem35.Control = this.lookUpEdit_bachillerato;
             this.layoutControlItem35.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(924, 32);
+            this.layoutControlItem35.Size = new System.Drawing.Size(918, 32);
             this.layoutControlItem35.Text = "CCT/Bachiilerato:  *";
             this.layoutControlItem35.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1327,7 +1327,7 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(353, 64);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(571, 32);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(565, 32);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup5
@@ -1344,7 +1344,7 @@
             this.emptySpaceItem20});
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 591);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(956, 136);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(962, 136);
             this.layoutControlGroup5.Text = "Discapacidad";
             // 
             // layoutControlItem37
@@ -1361,7 +1361,7 @@
             this.emptySpaceItem11.AllowHotTrack = false;
             this.emptySpaceItem11.Location = new System.Drawing.Point(893, 0);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(29, 10);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(35, 10);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem12
@@ -1369,7 +1369,7 @@
             this.emptySpaceItem12.AllowHotTrack = false;
             this.emptySpaceItem12.Location = new System.Drawing.Point(893, 10);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(29, 10);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(35, 10);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem13
@@ -1377,7 +1377,7 @@
             this.emptySpaceItem13.AllowHotTrack = false;
             this.emptySpaceItem13.Location = new System.Drawing.Point(893, 60);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(29, 10);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(35, 10);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem14
@@ -1385,7 +1385,7 @@
             this.emptySpaceItem14.AllowHotTrack = false;
             this.emptySpaceItem14.Location = new System.Drawing.Point(893, 20);
             this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(29, 10);
+            this.emptySpaceItem14.Size = new System.Drawing.Size(35, 10);
             this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem15
@@ -1393,7 +1393,7 @@
             this.emptySpaceItem15.AllowHotTrack = false;
             this.emptySpaceItem15.Location = new System.Drawing.Point(907, 40);
             this.emptySpaceItem15.Name = "emptySpaceItem15";
-            this.emptySpaceItem15.Size = new System.Drawing.Size(15, 10);
+            this.emptySpaceItem15.Size = new System.Drawing.Size(21, 10);
             this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem18
@@ -1401,7 +1401,7 @@
             this.emptySpaceItem18.AllowHotTrack = false;
             this.emptySpaceItem18.Location = new System.Drawing.Point(893, 50);
             this.emptySpaceItem18.Name = "emptySpaceItem18";
-            this.emptySpaceItem18.Size = new System.Drawing.Size(29, 10);
+            this.emptySpaceItem18.Size = new System.Drawing.Size(35, 10);
             this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem19
@@ -1409,7 +1409,7 @@
             this.emptySpaceItem19.AllowHotTrack = false;
             this.emptySpaceItem19.Location = new System.Drawing.Point(893, 30);
             this.emptySpaceItem19.Name = "emptySpaceItem19";
-            this.emptySpaceItem19.Size = new System.Drawing.Size(29, 10);
+            this.emptySpaceItem19.Size = new System.Drawing.Size(35, 10);
             this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem20
@@ -1424,9 +1424,9 @@
             // 
             this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem17});
-            this.layoutControlGroup7.Location = new System.Drawing.Point(956, 591);
+            this.layoutControlGroup7.Location = new System.Drawing.Point(962, 591);
             this.layoutControlGroup7.Name = "layoutControlGroup7";
-            this.layoutControlGroup7.Size = new System.Drawing.Size(958, 136);
+            this.layoutControlGroup7.Size = new System.Drawing.Size(952, 136);
             this.layoutControlGroup7.Text = "Medio por el que se entero";
             // 
             // layoutControlItem17
@@ -1434,16 +1434,16 @@
             this.layoutControlItem17.Control = this.textEdit_medioDifusion;
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(924, 70);
+            this.layoutControlItem17.Size = new System.Drawing.Size(918, 70);
             this.layoutControlItem17.Text = "Medio de difusción:  *";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(187, 19);
             // 
             // layoutControlItem39
             // 
             this.layoutControlItem39.Control = this.simpleButton_save;
-            this.layoutControlItem39.Location = new System.Drawing.Point(1452, 727);
+            this.layoutControlItem39.Location = new System.Drawing.Point(1458, 727);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(462, 58);
+            this.layoutControlItem39.Size = new System.Drawing.Size(456, 58);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem39.TextVisible = false;
             // 
@@ -1452,13 +1452,13 @@
             this.emptySpaceItem16.AllowHotTrack = false;
             this.emptySpaceItem16.Location = new System.Drawing.Point(0, 727);
             this.emptySpaceItem16.Name = "emptySpaceItem16";
-            this.emptySpaceItem16.Size = new System.Drawing.Size(956, 58);
+            this.emptySpaceItem16.Size = new System.Drawing.Size(962, 58);
             this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem17
             // 
             this.emptySpaceItem17.AllowHotTrack = false;
-            this.emptySpaceItem17.Location = new System.Drawing.Point(956, 727);
+            this.emptySpaceItem17.Location = new System.Drawing.Point(962, 727);
             this.emptySpaceItem17.Name = "emptySpaceItem17";
             this.emptySpaceItem17.Size = new System.Drawing.Size(23, 58);
             this.emptySpaceItem17.TextSize = new System.Drawing.Size(0, 0);
@@ -1466,7 +1466,7 @@
             // layoutControlItem38
             // 
             this.layoutControlItem38.Control = this.simpleButton_cancel;
-            this.layoutControlItem38.Location = new System.Drawing.Point(979, 727);
+            this.layoutControlItem38.Location = new System.Drawing.Point(985, 727);
             this.layoutControlItem38.Name = "layoutControlItem38";
             this.layoutControlItem38.Size = new System.Drawing.Size(473, 58);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
@@ -1481,9 +1481,9 @@
             this.layoutControlItem43,
             this.layoutControlItem44,
             this.layoutControlItem45});
-            this.layoutControlGroup8.Location = new System.Drawing.Point(956, 299);
+            this.layoutControlGroup8.Location = new System.Drawing.Point(962, 299);
             this.layoutControlGroup8.Name = "layoutControlGroup8";
-            this.layoutControlGroup8.Size = new System.Drawing.Size(958, 130);
+            this.layoutControlGroup8.Size = new System.Drawing.Size(952, 130);
             this.layoutControlGroup8.Text = "Datos tutor";
             // 
             // layoutControlItem40
@@ -1509,7 +1509,7 @@
             this.layoutControlItem42.Control = this.textEdit_apellidoMaternoTutor;
             this.layoutControlItem42.Location = new System.Drawing.Point(615, 0);
             this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(309, 32);
+            this.layoutControlItem42.Size = new System.Drawing.Size(303, 32);
             this.layoutControlItem42.Text = "Apellido materno:";
             this.layoutControlItem42.TextSize = new System.Drawing.Size(187, 19);
             // 
@@ -1536,7 +1536,7 @@
             this.layoutControlItem45.Control = this.lookUpEdit_parentesco;
             this.layoutControlItem45.Location = new System.Drawing.Point(615, 32);
             this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(309, 32);
+            this.layoutControlItem45.Size = new System.Drawing.Size(303, 32);
             this.layoutControlItem45.Text = "Parentesco:";
             this.layoutControlItem45.TextSize = new System.Drawing.Size(187, 19);
             // 
