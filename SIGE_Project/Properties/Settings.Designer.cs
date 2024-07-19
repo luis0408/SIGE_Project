@@ -86,7 +86,7 @@ namespace SIGE_Project.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=189.190.168.147,52090\\SERV08;Initial Catalog=BD_SIGE;User ID=adminBD;" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=189.190.185.224,52090\\SERV08;Initial Catalog=BD_SIGE;User ID=adminBD;" +
             "Password=4dm1n;Encrypt=True;TrustServerCertificate=True")]
         public string CadenaConexion {
             get {
