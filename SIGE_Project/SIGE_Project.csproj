@@ -382,6 +382,12 @@
     <Compile Include="Reportes\Inscripcion.Designer.cs">
       <DependentUpon>Inscripcion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\SeguroFacultativo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\SeguroFacultativo.Designer.cs">
+      <DependentUpon>SeguroFacultativo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\AgregraUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -532,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\SeguroFacultativo.resx">
+      <DependentUpon>SeguroFacultativo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\AgregraUsuario.resx">
       <DependentUpon>AgregraUsuario.cs</DependentUpon>
