@@ -140,17 +140,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogo\catalogoBachilleratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoBachilleratos.Designer.cs">
+      <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoCicloEscolar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoCicloEscolar.Designer.cs">
       <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoCodigoPostal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCodigoPostal.Designer.cs">
+      <DependentUpon>catalogoCodigoPostal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoColonia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoColonia.Designer.cs">
+      <DependentUpon>catalogoColonia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoDepartamentos.Designer.cs">
       <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDiscapacidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDiscapacidad.Designer.cs">
+      <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\catalogoEstadoCivil.cs">
       <SubType>Form</SubType>
@@ -414,11 +438,23 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogo\catalogoBachilleratos.resx">
+      <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoCicloEscolar.resx">
       <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoCodigoPostal.resx">
+      <DependentUpon>catalogoCodigoPostal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoColonia.resx">
+      <DependentUpon>catalogoColonia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoDepartamentos.resx">
       <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoDiscapacidad.resx">
+      <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoEstadoCivil.resx">
       <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
