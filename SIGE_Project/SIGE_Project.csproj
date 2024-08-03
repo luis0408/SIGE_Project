@@ -200,11 +200,35 @@
     <Compile Include="Catalogo\catalogoMediosDeDifusion.Designer.cs">
       <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoPais.Designer.cs">
+      <DependentUpon>catalogoPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoParentezco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoParentezco.Designer.cs">
+      <DependentUpon>catalogoParentezco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoPeriodos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoPeriodos.Designer.cs">
       <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoSemestres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoSemestres.Designer.cs">
+      <DependentUpon>catalogoSemestres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoSangre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoSangre.Designer.cs">
+      <DependentUpon>catalogoTipoSangre.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\catalogoTipoUsuarios.cs">
       <SubType>Form</SubType>
@@ -468,8 +492,20 @@
     <EmbeddedResource Include="Catalogo\catalogoMediosDeDifusion.resx">
       <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoPais.resx">
+      <DependentUpon>catalogoPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoParentezco.resx">
+      <DependentUpon>catalogoParentezco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoPeriodos.resx">
       <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoSemestres.resx">
+      <DependentUpon>catalogoSemestres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoTipoSangre.resx">
+      <DependentUpon>catalogoTipoSangre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoTipoUsuarios.resx">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
