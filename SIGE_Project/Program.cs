@@ -17,10 +17,10 @@ namespace SIGE_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new managerforms());
+            //Application.Run(new managerforms());
             //Application.Run(new ControlEscolar.Documentacion("prueba"));
 
-             //Application.Run(new  ControlEscolar.FichaSolicitud());
+            //Application.Run(new  ControlEscolar.FichaSolicitud());
 
             //Application.Run(new managerforms());
             //Application.Run(new  ControlEscolar.FichaEscolar());
@@ -30,6 +30,9 @@ namespace SIGE_Project
             //Application.Run(new Catalogo.catalogoGenero());
             //Application.Run(new Catalogo.catalogoEstadoCivil());
             //Application.Run(new Catalogo.catalogoTipoUsuarios());
+            //Application.Run(new Catalogo.catalogoLocalidad());
+            Application.Run(new Catalogo.catalogoMes());
+            //Application.Run(new Catalogo.catalogoModalidad());
         }
     }
 }

@@ -200,6 +200,18 @@
     <Compile Include="Catalogo\catalogoMediosDeDifusion.Designer.cs">
       <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoMes.Designer.cs">
+      <DependentUpon>catalogoMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoModalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoModalidad.Designer.cs">
+      <DependentUpon>catalogoModalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoPais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +253,8 @@
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
     <Compile Include="Catalogo\ClsLicenciatura.cs" />
+    <Compile Include="Catalogo\ClsMes.cs" />
+    <Compile Include="Catalogo\ClsModalidad.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
     <Compile Include="Catalogo\ClsTipoUsuarios.cs" />
@@ -267,6 +281,18 @@
     </Compile>
     <Compile Include="Catalogo\DatosMedioDifusion.Designer.cs">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosMes.Designer.cs">
+      <DependentUpon>DatosMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosModalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosModalidad.Designer.cs">
+      <DependentUpon>DatosModalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\DatosPeriodos.cs">
       <SubType>Form</SubType>
@@ -492,6 +518,12 @@
     <EmbeddedResource Include="Catalogo\catalogoMediosDeDifusion.resx">
       <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoMes.resx">
+      <DependentUpon>catalogoMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoModalidad.resx">
+      <DependentUpon>catalogoModalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoPais.resx">
       <DependentUpon>catalogoPais.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +553,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosMes.resx">
+      <DependentUpon>DatosMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosModalidad.resx">
+      <DependentUpon>DatosModalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosPeriodos.resx">
       <DependentUpon>DatosPeriodos.cs</DependentUpon>
@@ -729,7 +767,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HONGO.ico" />
+    <None Include="Resources\meeting.svg" />
+    <None Include="Resources\save4.svg" />
+    <None Include="Resources\save3.svg" />
+    <None Include="Resources\refreshallpivottable3.svg" />
+    <None Include="Resources\refreshallpivottable2.svg" />
+    <None Include="Resources\refreshallpivottable1.svg" />
+    <None Include="Resources\refreshallpivottable.svg" />
+    <None Include="Resources\actions_refresh.svg" />
+    <None Include="Resources\actions_rating2.svg" />
+    <None Include="Resources\exporttoxlsx2.svg" />
+    <None Include="Resources\customerquicklocations.svg" />
+    <None Include="Resources\customerquicklocations1.svg" />
+    <None Include="Resources\actions_rating3.svg" />
+    <None Include="Resources\exporttoxlsx3.svg" />
+    <None Include="Resources\actions_addcircled.svg" />
+    <None Include="Resources\actions_edit1.svg" />
+    <None Include="Resources\actions_rating4.svg" />
+    <None Include="Resources\exporttoxlsx4.svg" />
+    <None Include="Resources\actions_calendar2.svg" />
+    <None Include="Resources\actions_addcircled1.svg" />
+    <None Include="Resources\actions_edit2.svg" />
+    <None Include="Resources\actions_rating5.svg" />
+    <None Include="Resources\exporttoxlsx5.svg" />
+    <None Include="Resources\groupbyresource.svg" />
+    <None Include="Resources\actions_refresh1.svg" />
+    <None Include="Resources\actions_refresh2.svg" />
+    <None Include="Resources\actions_refresh3.svg" />
+    <None Include="Resources\actions_refresh4.svg" />
+    <None Include="Resources\close2.svg" />
+    <None Include="Resources\actions_calendar3.svg" />
+    <None Include="Resources\close3.svg" />
+    <None Include="Resources\groupbyresource1.svg" />
     <Content Include="Resources\logo IESE.png" />
+    <None Include="Resources\refreshallpivottable_16x161.png" />
+    <None Include="Resources\refreshallpivottable_32x321.png" />
+    <None Include="Resources\refreshallpivottable_16x16.png" />
+    <None Include="Resources\refreshallpivottable_32x32.png" />
     <None Include="Resources\SIGE.png" />
     <None Include="Resources\logo IESE1.png" />
   </ItemGroup>
