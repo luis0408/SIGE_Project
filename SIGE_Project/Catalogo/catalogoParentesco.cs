@@ -1,6 +1,5 @@
 ﻿using DevExpress.Export;
 using DevExpress.XtraEditors;
-using DevExpress.XtraGrid;
 using DevExpress.XtraPrinting;
 using System;
 using System.Collections.Generic;
@@ -13,16 +12,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace SIGE_Project.Catalogo
 {
-    public partial class catalogoTipoSangre : DevExpress.XtraEditors.XtraForm
+    public partial class catalogoParentesco : DevExpress.XtraEditors.XtraForm
     {
-        public catalogoTipoSangre()
+        public catalogoParentesco()
         {
             InitializeComponent();
         }
-        private void catalogoTipoSangre_Load(object sender, EventArgs e)
+
+
+
+        private void catalogoParentezco_Load(object sender, EventArgs e)
         {
             consultarDatos();
         }
@@ -31,21 +32,20 @@ namespace SIGE_Project.Catalogo
         {
             try
             {
-                gridControl_tipoSangre.DataSource = null;
+                gridControl_parentesco.DataSource = null;
                 object[] datos = { };
                 string[] parametros = { };
                 DataSet ds = new DataSet();
-                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_TIPOSANGRE", datos, parametros);
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_PARENTESCO", datos, parametros);
                 DataTable dt = ds.Tables[0];
-                gridControl_tipoSangre.DataSource = dt;
-                gridView_tipoSangre.BestFitColumns();
+                gridControl_parentesco.DataSource = dt;
+                gridView_parentesco.BestFitColumns();
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show("Se generó un error al consultar los datos. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         public static void exportarDoc(DevExpress.XtraGrid.Views.Grid.GridView gvw, DevExpress.XtraGrid.GridControl gr, string sheetna)
         {
@@ -116,8 +116,6 @@ namespace SIGE_Project.Catalogo
                 }
             }
         }
-
-
         Utilerias util = new Utilerias();
 
         private void navBarItem_actualizar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -125,29 +123,24 @@ namespace SIGE_Project.Catalogo
             consultarDatos();
         }
 
-        private void navBarItem_actualizar_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navBarItem_agregar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            consultarDatos();
-        }
-
-        private void navBarItem_agregar_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            DatosTipoSangre objTipoSangre = new DatosTipoSangre();
-            objTipoSangre.ShowDialog();
-            if (objTipoSangre.DialogResult == DialogResult.OK)
+            DatosParentesco objDatosParentesco = new DatosParentesco();
+            objDatosParentesco.ShowDialog();
+            if (objDatosParentesco.DialogResult == DialogResult.OK)
             {
                 consultarDatos();
             }
         }
 
-        private void navBarItem_editar_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navBarItem_editar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string cveTipoSangre = gridView_tipoSangre.GetRowCellValue(gridView_tipoSangre.FocusedRowHandle, "cveTipoSangre").ToString();
-            string descripcion = gridView_tipoSangre.GetRowCellValue(gridView_tipoSangre.FocusedRowHandle, "descripcion").ToString();
-            int estado = Convert.ToInt32(gridView_tipoSangre.GetRowCellValue(gridView_tipoSangre.FocusedRowHandle, "estado").ToString());
-            DatosTipoSangre objTipoSangre = new DatosTipoSangre(cveTipoSangre, descripcion, estado);
-            objTipoSangre.ShowDialog();
-            if (objTipoSangre.DialogResult == DialogResult.OK)
+            int idParentesco = Convert.ToInt32(gridView_parentesco.GetRowCellValue(gridView_parentesco.FocusedRowHandle, "idParentesco").ToString());
+            string descripcion = gridView_parentesco.GetRowCellValue(gridView_parentesco.FocusedRowHandle, "descripcion").ToString();
+            int estado = Convert.ToInt32(gridView_parentesco.GetRowCellValue(gridView_parentesco.FocusedRowHandle, "estado").ToString());
+            DatosParentesco objDatosParentesco = new DatosParentesco( idParentesco, descripcion, estado);
+            objDatosParentesco.ShowDialog();
+            if (objDatosParentesco.DialogResult == DialogResult.OK)
             {
                 consultarDatos();
             }
@@ -155,10 +148,10 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_activarDesactivar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string cveTipoSangre = gridView_tipoSangre.GetRowCellValue(gridView_tipoSangre.FocusedRowHandle, "cveTipoSangre").ToString();
-            int estado = Convert.ToInt32(gridView_tipoSangre.GetRowCellValue(gridView_tipoSangre.FocusedRowHandle, "estado").ToString());
+            string descripcion = gridView_parentesco.GetRowCellValue(gridView_parentesco.FocusedRowHandle, "descripcion").ToString();
+            int estado = Convert.ToInt32(gridView_parentesco.GetRowCellValue(gridView_parentesco.FocusedRowHandle, "estado").ToString());
             estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
-            int resul = util.EjecutarQueryNonQuery("update [SIGE_Catalogo_TipoSangre] set estado=" + estado + " where cveTipoSangre='" + cveTipoSangre + "'");
+            int resul = util.EjecutarQueryNonQuery("update [SIGE_Catalogo_Parentesco] set estado=" + estado + " where descripcion ='" + descripcion + "'");
             if (resul != 0)
             {
                 XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -172,9 +165,9 @@ namespace SIGE_Project.Catalogo
             consultarDatos();
         }
 
-        private void navBarItem_reportes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navBarItem_exportar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            exportarDoc(gridView_tipoSangre, gridControl_tipoSangre, "tipoSangre");
+            exportarDoc(gridView_parentesco, gridControl_parentesco, "genero");
         }
     }
 }

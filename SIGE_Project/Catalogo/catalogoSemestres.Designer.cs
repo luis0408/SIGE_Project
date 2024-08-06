@@ -40,11 +40,11 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_exportar = new DevExpress.XtraNavBar.NavBarItem();
             this.gridControl_semestres = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView_semestres = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.idSemestres = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.descripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.estado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.estadoLetra = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -53,7 +53,7 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_semestres)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_semestres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -69,7 +69,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(617, 515);
+            this.layoutControl1.Size = new System.Drawing.Size(653, 507);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -96,10 +96,10 @@
             this.navBarItem_editar,
             this.navBarItem_activarDesactivar,
             this.navBarItem_exportar});
-            this.navBarControl1.Location = new System.Drawing.Point(406, 40);
+            this.navBarControl1.Location = new System.Drawing.Point(442, 40);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 199;
-            this.navBarControl1.Size = new System.Drawing.Size(199, 463);
+            this.navBarControl1.Size = new System.Drawing.Size(199, 455);
             this.navBarControl1.TabIndex = 5;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -117,26 +117,30 @@
             // navBarItem_actualizar
             // 
             this.navBarItem_actualizar.Caption = "Actualizar";
-            this.navBarItem_actualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_actualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_actualizar.ImageOptions.SvgImage")));
             this.navBarItem_actualizar.Name = "navBarItem_actualizar";
+            this.navBarItem_actualizar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_actualizar_LinkClicked);
             // 
             // navBarItem_agregar
             // 
             this.navBarItem_agregar.Caption = "Agregar";
-            this.navBarItem_agregar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem_agregar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_agregar.ImageOptions.SvgImage")));
             this.navBarItem_agregar.Name = "navBarItem_agregar";
+            this.navBarItem_agregar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_agregar_LinkClicked);
             // 
             // navBarItem_editar
             // 
             this.navBarItem_editar.Caption = "Editar";
-            this.navBarItem_editar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
+            this.navBarItem_editar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_editar.ImageOptions.SvgImage")));
             this.navBarItem_editar.Name = "navBarItem_editar";
+            this.navBarItem_editar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_editar_LinkClicked);
             // 
             // navBarItem_activarDesactivar
             // 
             this.navBarItem_activarDesactivar.Caption = "Activar/Desactivar";
-            this.navBarItem_activarDesactivar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
+            this.navBarItem_activarDesactivar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_activarDesactivar.ImageOptions.SvgImage")));
             this.navBarItem_activarDesactivar.Name = "navBarItem_activarDesactivar";
+            this.navBarItem_activarDesactivar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_activarDesactivar_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -149,63 +153,66 @@
             // navBarItem_exportar
             // 
             this.navBarItem_exportar.Caption = "Exportar";
-            this.navBarItem_exportar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
+            this.navBarItem_exportar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_exportar.ImageOptions.SvgImage")));
             this.navBarItem_exportar.Name = "navBarItem_exportar";
+            this.navBarItem_exportar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_exportar_LinkClicked);
             // 
             // gridControl_semestres
             // 
             this.gridControl_semestres.Location = new System.Drawing.Point(12, 40);
-            this.gridControl_semestres.MainView = this.gridView1;
+            this.gridControl_semestres.MainView = this.gridView_semestres;
             this.gridControl_semestres.Name = "gridControl_semestres";
-            this.gridControl_semestres.Size = new System.Drawing.Size(390, 463);
+            this.gridControl_semestres.Size = new System.Drawing.Size(426, 455);
             this.gridControl_semestres.TabIndex = 4;
             this.gridControl_semestres.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridView_semestres});
             // 
-            // gridView1
+            // gridView_semestres
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4});
-            this.gridView1.GridControl = this.gridControl_semestres;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView_semestres.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.idSemestres,
+            this.descripcion,
+            this.estado,
+            this.estadoLetra});
+            this.gridView_semestres.GridControl = this.gridControl_semestres;
+            this.gridView_semestres.Name = "gridView_semestres";
+            this.gridView_semestres.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // idSemestres
             // 
-            this.gridColumn1.Caption = "Id semestre";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
+            this.idSemestres.Caption = "Id semestre";
+            this.idSemestres.FieldName = "idSemestre";
+            this.idSemestres.MinWidth = 25;
+            this.idSemestres.Name = "idSemestres";
+            this.idSemestres.Width = 94;
             // 
-            // gridColumn2
+            // descripcion
             // 
-            this.gridColumn2.Caption = "Descripción";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
+            this.descripcion.Caption = "Descripción";
+            this.descripcion.FieldName = "descripcion";
+            this.descripcion.MinWidth = 25;
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Visible = true;
+            this.descripcion.VisibleIndex = 0;
+            this.descripcion.Width = 94;
             // 
-            // gridColumn3
+            // estado
             // 
-            this.gridColumn3.Caption = "Activo";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Width = 94;
+            this.estado.Caption = "Estado";
+            this.estado.FieldName = "estado";
+            this.estado.MinWidth = 25;
+            this.estado.Name = "estado";
+            this.estado.Width = 94;
             // 
-            // gridColumn4
+            // estadoLetra
             // 
-            this.gridColumn4.Caption = "Activado";
-            this.gridColumn4.MinWidth = 25;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 94;
+            this.estadoLetra.Caption = "Estado";
+            this.estadoLetra.FieldName = "estadoLetra";
+            this.estadoLetra.MinWidth = 25;
+            this.estadoLetra.Name = "estadoLetra";
+            this.estadoLetra.Visible = true;
+            this.estadoLetra.VisibleIndex = 1;
+            this.estadoLetra.Width = 94;
             // 
             // Root
             // 
@@ -216,7 +223,7 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(617, 515);
+            this.Root.Size = new System.Drawing.Size(653, 507);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -224,16 +231,16 @@
             this.layoutControlItem1.Control = this.gridControl_semestres;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(394, 467);
+            this.layoutControlItem1.Size = new System.Drawing.Size(430, 459);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.navBarControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(394, 28);
+            this.layoutControlItem2.Location = new System.Drawing.Point(430, 28);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(203, 467);
+            this.layoutControlItem2.Size = new System.Drawing.Size(203, 459);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -242,7 +249,7 @@
             this.layoutControlItem3.Control = this.labelControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(597, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(633, 28);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -250,16 +257,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 515);
+            this.ClientSize = new System.Drawing.Size(653, 507);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoSemestres.IconOptions.SvgImage")));
             this.Name = "catalogoSemestres";
             this.Text = "Semestres";
+            this.Load += new System.EventHandler(this.catalogoSemestres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_semestres)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_semestres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -280,15 +288,15 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem_activarDesactivar;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraGrid.GridControl gridControl_semestres;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView_semestres;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_exportar;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn idSemestres;
+        private DevExpress.XtraGrid.Columns.GridColumn descripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn estado;
+        private DevExpress.XtraGrid.Columns.GridColumn estadoLetra;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

@@ -120,16 +120,6 @@ namespace SIGE_Project.Catalogo
             exportarDoc(gridView_estadoCivil, gridControl_estadoCivil, "EstadoCivil");
         }
 
-        //private void navBarItem_add_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        //{
-        //    DatosMedioDifusion objDatosMedioDifusion = new DatosMedioDifusion();
-        //    objDatosMedioDifusion.ShowDialog();
-        //    if (objDatosMedioDifusion.DialogResult == DialogResult.OK)
-        //    {
-        //        consultarDatos();
-        //    }
-        //}
-
         private void navBarItem_actualizar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             consultarDatos();
@@ -181,6 +171,11 @@ namespace SIGE_Project.Catalogo
         private void navBarItem_reportes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             exportarDoc(gridView_estadoCivil, gridControl_estadoCivil, "estadoCivil");
+        }
+
+        private void gridControl_estadoCivil_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
