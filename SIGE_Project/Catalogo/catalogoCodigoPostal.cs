@@ -17,5 +17,10 @@ namespace SIGE_Project.Catalogo
         {
             InitializeComponent();
         }
+
+        private void catalogoCodigoPostal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
