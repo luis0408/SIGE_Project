@@ -232,7 +232,6 @@
     </Compile>
     <Compile Include="Catalogo\ClsCicloEscolar.cs" />
     <Compile Include="Catalogo\ClsDepartamento.cs" />
-    <Compile Include="Catalogo\ClsDiscapacidad.cs" />
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
     <Compile Include="Catalogo\ClsLicenciatura.cs" />
