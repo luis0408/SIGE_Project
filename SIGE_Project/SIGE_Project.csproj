@@ -152,11 +152,23 @@
     <Compile Include="Catalogo\catalogoDepartamentos.Designer.cs">
       <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstado.Designer.cs">
+      <DependentUpon>catalogoEstado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoEstadoCivil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoEstadoCivil.Designer.cs">
       <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosGeneracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosGeneracion.Designer.cs">
+      <DependentUpon>DatosGeneracion.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\catalogoGenero.cs">
       <SubType>Form</SubType>
@@ -169,6 +181,12 @@
     </Compile>
     <Compile Include="Catalogo\catalogoLicenciatura.Designer.cs">
       <DependentUpon>catalogoLicenciatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciaturaMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciaturaMaterias.Designer.cs">
+      <DependentUpon>catalogoLicenciaturaMaterias.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\catalogoMediosDeDifusion.cs">
       <SubType>Form</SubType>
@@ -190,9 +208,12 @@
     </Compile>
     <Compile Include="Catalogo\ClsCicloEscolar.cs" />
     <Compile Include="Catalogo\ClsDepartamento.cs" />
+    <Compile Include="Catalogo\ClsEstado.cs" />
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
+    <Compile Include="Catalogo\ClsGeneracion.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
     <Compile Include="Catalogo\ClsLicenciatura.cs" />
+    <Compile Include="Catalogo\ClsLicenciaturaMaterias.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
     <Compile Include="Catalogo\ClsTipoUsuarios.cs" />
@@ -208,11 +229,29 @@
     <Compile Include="Catalogo\DatosDepartamento.Designer.cs">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\DatosEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstado.Designer.cs">
+      <DependentUpon>DatosEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGeneraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGeneraciones.Designer.cs">
+      <DependentUpon>catalogoGeneraciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\DatosLicenciatura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\DatosLicenciatura.Designer.cs">
       <DependentUpon>DatosLicenciatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciaturaMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciaturaMaterias.Designer.cs">
+      <DependentUpon>DatosLicenciaturaMaterias.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\DatosMedioDifusion.cs">
       <SubType>Form</SubType>
@@ -420,8 +459,17 @@
     <EmbeddedResource Include="Catalogo\catalogoDepartamentos.resx">
       <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoEstado.resx">
+      <DependentUpon>catalogoEstado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoEstadoCivil.resx">
       <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoLicenciaturaMaterias.resx">
+      <DependentUpon>catalogoLicenciaturaMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosGeneracion.resx">
+      <DependentUpon>DatosGeneracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoGenero.resx">
       <DependentUpon>catalogoGenero.cs</DependentUpon>
@@ -444,8 +492,17 @@
     <EmbeddedResource Include="Catalogo\DatosDepartamento.resx">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosEstado.resx">
+      <DependentUpon>DatosEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoGeneraciones.resx">
+      <DependentUpon>catalogoGeneraciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosLicenciatura.resx">
       <DependentUpon>DatosLicenciatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosLicenciaturaMaterias.resx">
+      <DependentUpon>DatosLicenciaturaMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>

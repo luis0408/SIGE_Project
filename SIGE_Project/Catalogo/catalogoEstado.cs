@@ -14,31 +14,32 @@ using System.Windows.Forms;
 
 namespace SIGE_Project.Catalogo
 {
-    public partial class catalogoDepartamentos : DevExpress.XtraEditors.XtraForm
+    public partial class catalogoEstado : DevExpress.XtraEditors.XtraForm
     {
         Utilerias util = new Utilerias();
-        public catalogoDepartamentos()
+        public catalogoEstado()
         {
             InitializeComponent();
         }
 
-        private void catalogoDepartamentos_Load(object sender, EventArgs e)
+        private void catalogoEstado_Load(object sender, EventArgs e)
         {
             consultarDatos();
         }
+
         private void consultarDatos()
         {
             try
             {
-                gridControl_departamento.DataSource = null;
+                gridControl_estado.DataSource = null;
                 object[] datos = { };
                 string[] parametros = { };
                 DataSet ds = new DataSet();
                 DataTable dt = new DataTable();
-                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_DEPARTAMENTO", datos, parametros);
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_ESTADO", datos, parametros);
                 dt = ds.Tables[0];
-                gridControl_departamento.DataSource = dt;
-                gridView_departamento.BestFitColumns();
+                gridControl_estado.DataSource = dt;
+                gridView_estado.BestFitColumns();
             }
             catch (Exception ex)
             {
@@ -53,32 +54,33 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_add_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            DatosDepartamento objDepartamento = new DatosDepartamento();
-            objDepartamento.ShowDialog();
-            if (objDepartamento.DialogResult == DialogResult.OK)
+            DatosEstado objEstado = new DatosEstado();
+            objEstado.ShowDialog();
+            if (objEstado.DialogResult == DialogResult.OK)
                 consultarDatos();
         }
 
         private void navBarItem_edit_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string cveDepartamento = gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "cveDepartamento").ToString();
-            string descripcion = gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "descripcion").ToString();
-            string encargado = gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "encargado").ToString();
-            int estado = Convert.ToInt32(gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "estado").ToString());
-            DatosDepartamento objDatosDepartamento = new DatosDepartamento(cveDepartamento, descripcion, encargado, estado);
-            objDatosDepartamento.ShowDialog();
-            if (objDatosDepartamento.DialogResult == DialogResult.OK)
+            string c_Estado = gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "c_Estado").ToString();
+            string nombrePais = gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "nombrePais").ToString();
+            string nombreEstado = gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "nombreEstado").ToString();
+            //int estado = Convert.ToInt32(gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "estado").ToString());
+            DatosEstado objDatosEstado = new DatosEstado(c_Estado, nombrePais, nombreEstado);
+            objDatosEstado.ShowDialog();
+            if (objDatosEstado.DialogResult == DialogResult.OK)
                 consultarDatos();
         }
 
         private void navBarItem_status_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string cveDepartamento = gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "cveDepartamento").ToString();
-            string descripcion = gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "descripcion").ToString();
-            string encargado = gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "encargado").ToString();
-            int estado = Convert.ToInt32(gridView_departamento.GetRowCellValue(gridView_departamento.FocusedRowHandle, "estado").ToString());
+            /*
+            string c_Estado = gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "c_Estado").ToString();
+            string nombrePais = gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "nombrePais").ToString();
+            string nombreEstado = gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "nombreEstado").ToString();
+            int estado = Convert.ToInt32(gridView_estado.GetRowCellValue(gridView_estado.FocusedRowHandle, "estado").ToString());
             estado = estado == 1 ? 0 : 1;
-            int resul = util.EjecutarQueryNonQuery("update [SIGE_Catalogo_Departamentos] set estado=" + estado + " where cveDepartamento='" + cveDepartamento+"'");
+            int resul = util.EjecutarQueryNonQuery("update [SIGE_Catalogo_Estado] set estado=" + estado + " where c_Estado='" + c_Estado + "'");
             if (resul != 0)
             {
                 XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,6 +92,7 @@ namespace SIGE_Project.Catalogo
 
             }
             consultarDatos();
+            */
         }
 
         public static void exportarDoc(DevExpress.XtraGrid.Views.Grid.GridView gvw, DevExpress.XtraGrid.GridControl gr, string sheetna)
@@ -156,12 +159,7 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_export_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            exportarDoc(gridView_departamento, gridControl_departamento, "CatalogoDepartamentos");
-        }
-
-        private void gridControl_departamento_Click(object sender, EventArgs e)
-        {
-
+            exportarDoc(gridView_estado, gridControl_estado, "CatalogoEstado");
         }
     }
 }

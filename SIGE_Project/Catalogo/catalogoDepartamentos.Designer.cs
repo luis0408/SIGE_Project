@@ -100,6 +100,7 @@
             this.gridControl_departamento.TabIndex = 5;
             this.gridControl_departamento.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_departamento});
+            this.gridControl_departamento.Click += new System.EventHandler(this.gridControl_departamento_Click);
             // 
             // gridView_departamento
             // 
