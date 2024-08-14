@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(catalogoGeneraciones));
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.gridControl_generacion = new DevExpress.XtraGrid.GridControl();
-            this.gridView_generacion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.navBarItem_refresh = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_add = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_edit = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_status = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_export = new DevExpress.XtraNavBar.NavBarItem();
+            this.gridControl_generacion = new DevExpress.XtraGrid.GridControl();
+            this.gridView_generacion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,6 +64,7 @@
             this.navBarItem_export});
             this.navBarControl1.Location = new System.Drawing.Point(528, 43);
             this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 158;
             this.navBarControl1.Size = new System.Drawing.Size(158, 464);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
@@ -78,6 +79,49 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_edit),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_status)});
             this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem_refresh
+            // 
+            this.navBarItem_refresh.Caption = "Actualizar";
+            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_refresh.ImageOptions.SvgImage")));
+            this.navBarItem_refresh.Name = "navBarItem_refresh";
+            this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
+            // 
+            // navBarItem_add
+            // 
+            this.navBarItem_add.Caption = "Agregar";
+            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_add.ImageOptions.SvgImage")));
+            this.navBarItem_add.Name = "navBarItem_add";
+            this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
+            // 
+            // navBarItem_edit
+            // 
+            this.navBarItem_edit.Caption = "Editar";
+            this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_edit.ImageOptions.SvgImage")));
+            this.navBarItem_edit.Name = "navBarItem_edit";
+            this.navBarItem_edit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_edit_LinkClicked);
+            // 
+            // navBarItem_status
+            // 
+            this.navBarItem_status.Caption = "Activar/Desactivar";
+            this.navBarItem_status.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_status.ImageOptions.SvgImage")));
+            this.navBarItem_status.Name = "navBarItem_status";
+            this.navBarItem_status.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_status_LinkClicked);
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Reportes";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_export)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarItem_export
+            // 
+            this.navBarItem_export.Caption = "Exportar";
+            this.navBarItem_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_export.ImageOptions.SvgImage")));
+            this.navBarItem_export.Name = "navBarItem_export";
+            this.navBarItem_export.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_export_LinkClicked);
             // 
             // gridControl_generacion
             // 
@@ -100,49 +144,6 @@
             this.gridView_generacion.GridControl = this.gridControl_generacion;
             this.gridView_generacion.Name = "gridView_generacion";
             this.gridView_generacion.OptionsView.ShowGroupPanel = false;
-            // 
-            // navBarItem_refresh
-            // 
-            this.navBarItem_refresh.Caption = "Actualizar";
-            this.navBarItem_refresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
-            this.navBarItem_refresh.Name = "navBarItem_refresh";
-            this.navBarItem_refresh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_refresh_LinkClicked);
-            // 
-            // navBarItem_add
-            // 
-            this.navBarItem_add.Caption = "Agregar";
-            this.navBarItem_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navBarItem_add.Name = "navBarItem_add";
-            this.navBarItem_add.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_add_LinkClicked);
-            // 
-            // navBarItem_edit
-            // 
-            this.navBarItem_edit.Caption = "Editar";
-            this.navBarItem_edit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
-            this.navBarItem_edit.Name = "navBarItem_edit";
-            this.navBarItem_edit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_edit_LinkClicked);
-            // 
-            // navBarItem_status
-            // 
-            this.navBarItem_status.Caption = "Activar/Desactivar";
-            this.navBarItem_status.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
-            this.navBarItem_status.Name = "navBarItem_status";
-            this.navBarItem_status.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_status_LinkClicked);
-            // 
-            // navBarGroup2
-            // 
-            this.navBarGroup2.Caption = "Reportes";
-            this.navBarGroup2.Expanded = true;
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_export)});
-            this.navBarGroup2.Name = "navBarGroup2";
-            // 
-            // navBarItem_export
-            // 
-            this.navBarItem_export.Caption = "Exportar";
-            this.navBarItem_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
-            this.navBarItem_export.Name = "navBarItem_export";
-            this.navBarItem_export.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_export_LinkClicked);
             // 
             // gridColumn1
             // 
@@ -192,7 +193,7 @@
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Generacion";
             // 
-            // DatosGeneracion
+            // catalogoGeneraciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,11 +201,10 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridControl_generacion);
             this.Controls.Add(this.navBarControl1);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosGeneracion.IconOptions.SvgImage")));
-            this.Name = "DatosGeneracion";
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoGeneraciones.IconOptions.SvgImage")));
+            this.Name = "catalogoGeneraciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generacion";
-            this.Load += new System.EventHandler(this.DatosGeneracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_generacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_generacion)).EndInit();

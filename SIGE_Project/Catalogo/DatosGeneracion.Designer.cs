@@ -263,6 +263,7 @@
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosGeneracion.IconOptions.SvgImage")));
             this.Name = "DatosGeneracion";
             this.Text = "Datos Generacion";
+            this.Load += new System.EventHandler(this.DatosGeneracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).EndInit();

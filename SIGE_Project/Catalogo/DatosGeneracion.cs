@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraEditors;
-using DevExpress.XtraRichEdit.Model.History;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +40,11 @@ namespace SIGE_Project.Catalogo
             string fin = "01/01/" + objGeneracion.anioFin.ToString();
             dateEdit_anioFin.EditValue = Convert.ToDateTime(fin);
             checkEdit_status.Checked = objGeneracion.estado == 1 ? true : false;
+        }
+
+        private void DatosGeneracion_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void simpleButton_agree_Click(object sender, EventArgs e)
