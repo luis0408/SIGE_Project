@@ -158,10 +158,5 @@ namespace SIGE_Project.Catalogo
         {
             exportarDoc(gridView_departamento, gridControl_departamento, "CatalogoDepartamentos");
         }
-
-        private void gridControl_departamento_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

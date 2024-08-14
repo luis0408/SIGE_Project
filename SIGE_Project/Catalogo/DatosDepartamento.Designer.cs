@@ -31,38 +31,38 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosDepartamento));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton_cancel = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton_agree = new DevExpress.XtraEditors.SimpleButton();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.textEdit_cveDepartamento = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit_status = new DevExpress.XtraEditors.CheckEdit();
             this.textEdit_descripcion = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton_cancel = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_agree = new DevExpress.XtraEditors.SimpleButton();
             this.lookUpEdit_encargadoCurp = new DevExpress.XtraEditors.LookUpEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_cveDepartamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_descripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_encargadoCurp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -93,6 +93,31 @@
             this.labelControl1.TabIndex = 17;
             this.labelControl1.Text = "Datos del Departamento";
             // 
+            // textEdit_cveDepartamento
+            // 
+            this.textEdit_cveDepartamento.Location = new System.Drawing.Point(78, 35);
+            this.textEdit_cveDepartamento.Name = "textEdit_cveDepartamento";
+            this.textEdit_cveDepartamento.Size = new System.Drawing.Size(273, 20);
+            this.textEdit_cveDepartamento.StyleController = this.layoutControl1;
+            this.textEdit_cveDepartamento.TabIndex = 16;
+            // 
+            // checkEdit_status
+            // 
+            this.checkEdit_status.Location = new System.Drawing.Point(355, 35);
+            this.checkEdit_status.Name = "checkEdit_status";
+            this.checkEdit_status.Properties.Caption = "Activo";
+            this.checkEdit_status.Size = new System.Drawing.Size(161, 20);
+            this.checkEdit_status.StyleController = this.layoutControl1;
+            this.checkEdit_status.TabIndex = 15;
+            // 
+            // textEdit_descripcion
+            // 
+            this.textEdit_descripcion.Location = new System.Drawing.Point(78, 59);
+            this.textEdit_descripcion.Name = "textEdit_descripcion";
+            this.textEdit_descripcion.Size = new System.Drawing.Size(438, 20);
+            this.textEdit_descripcion.StyleController = this.layoutControl1;
+            this.textEdit_descripcion.TabIndex = 14;
+            // 
             // simpleButton_cancel
             // 
             this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
@@ -114,6 +139,22 @@
             this.simpleButton_agree.TabIndex = 11;
             this.simpleButton_agree.Text = "Aceptar";
             this.simpleButton_agree.Click += new System.EventHandler(this.simpleButton_agree_Click);
+            // 
+            // lookUpEdit_encargadoCurp
+            // 
+            this.lookUpEdit_encargadoCurp.Location = new System.Drawing.Point(90, 116);
+            this.lookUpEdit_encargadoCurp.Name = "lookUpEdit_encargadoCurp";
+            this.lookUpEdit_encargadoCurp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit_encargadoCurp.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcionPersona", "Persona")});
+            this.lookUpEdit_encargadoCurp.Properties.DisplayMember = "descripcionPersona";
+            this.lookUpEdit_encargadoCurp.Properties.NullText = "";
+            this.lookUpEdit_encargadoCurp.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.lookUpEdit_encargadoCurp.Properties.ValueMember = "CURP";
+            this.lookUpEdit_encargadoCurp.Size = new System.Drawing.Size(414, 20);
+            this.lookUpEdit_encargadoCurp.StyleController = this.layoutControl1;
+            this.lookUpEdit_encargadoCurp.TabIndex = 9;
             // 
             // Root
             // 
@@ -141,6 +182,15 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(508, 69);
             this.layoutControlGroup1.Text = "Encargado";
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.lookUpEdit_encargadoCurp;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(484, 24);
+            this.layoutControlItem6.Text = "CURP";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(54, 13);
+            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.simpleButton_agree;
@@ -159,73 +209,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 180);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(508, 60);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.labelControl1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(508, 23);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // textEdit_cveDepartamento
-            // 
-            this.textEdit_cveDepartamento.Location = new System.Drawing.Point(78, 35);
-            this.textEdit_cveDepartamento.Name = "textEdit_cveDepartamento";
-            this.textEdit_cveDepartamento.Size = new System.Drawing.Size(273, 20);
-            this.textEdit_cveDepartamento.StyleController = this.layoutControl1;
-            this.textEdit_cveDepartamento.TabIndex = 16;
-            // 
-            // checkEdit_status
-            // 
-            this.checkEdit_status.Location = new System.Drawing.Point(355, 35);
-            this.checkEdit_status.Name = "checkEdit_status";
-            this.checkEdit_status.Properties.Caption = "Activo";
-            this.checkEdit_status.Size = new System.Drawing.Size(161, 20);
-            this.checkEdit_status.StyleController = this.layoutControl1;
-            this.checkEdit_status.TabIndex = 15;
-            // 
-            // textEdit_descripcion
-            // 
-            this.textEdit_descripcion.Location = new System.Drawing.Point(78, 59);
-            this.textEdit_descripcion.Name = "textEdit_descripcion";
-            this.textEdit_descripcion.Size = new System.Drawing.Size(438, 20);
-            this.textEdit_descripcion.StyleController = this.layoutControl1;
-            this.textEdit_descripcion.TabIndex = 14;
-            // 
-            // lookUpEdit_encargadoCurp
-            // 
-            this.lookUpEdit_encargadoCurp.Location = new System.Drawing.Point(90, 116);
-            this.lookUpEdit_encargadoCurp.Name = "lookUpEdit_encargadoCurp";
-            this.lookUpEdit_encargadoCurp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit_encargadoCurp.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcionPersona", "Persona")});
-            this.lookUpEdit_encargadoCurp.Properties.DisplayMember = "descripcionPersona";
-            this.lookUpEdit_encargadoCurp.Properties.NullText = "";
-            this.lookUpEdit_encargadoCurp.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_encargadoCurp.Properties.ValueMember = "CURP";
-            this.lookUpEdit_encargadoCurp.Size = new System.Drawing.Size(414, 20);
-            this.lookUpEdit_encargadoCurp.StyleController = this.layoutControl1;
-            this.lookUpEdit_encargadoCurp.TabIndex = 9;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.lookUpEdit_encargadoCurp;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(484, 24);
-            this.layoutControlItem6.Text = "CURP";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(54, 13);
-            // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.textEdit_descripcion;
@@ -234,6 +217,14 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(508, 24);
             this.layoutControlItem10.Text = "Descripcion";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(54, 13);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 180);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(508, 60);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
@@ -253,6 +244,15 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.labelControl1;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(508, 23);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
             // DatosDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,21 +267,20 @@
             this.Load += new System.EventHandler(this.DatosDepartamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_cveDepartamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_descripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_encargadoCurp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
