@@ -176,6 +176,12 @@
     <Compile Include="Catalogo\catalogoDiscapacidad.Designer.cs">
       <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstado.Designer.cs">
+      <DependentUpon>catalogoEstado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoEstadoCivil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,7 @@
     <Compile Include="Catalogo\ClsCicloEscolar.cs" />
     <Compile Include="Catalogo\ClsDepartamento.cs" />
     <Compile Include="Catalogo\ClsDiscapacidad.cs" />
+    <Compile Include="Catalogo\ClsEstado.cs" />
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
     <Compile Include="Catalogo\ClsLicenciatura.cs" />
@@ -259,6 +266,12 @@
     </Compile>
     <Compile Include="Catalogo\DatosDiscapacidad.Designer.cs">
       <DependentUpon>DatosDiscapacidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstado.Designer.cs">
+      <DependentUpon>DatosEstado.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\DatosLicenciatura.cs">
       <SubType>Form</SubType>
@@ -502,6 +515,9 @@
     <EmbeddedResource Include="Catalogo\catalogoDiscapacidad.resx">
       <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoEstado.resx">
+      <DependentUpon>catalogoEstado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoEstadoCivil.resx">
       <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
     </EmbeddedResource>
@@ -537,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosDiscapacidad.resx">
       <DependentUpon>DatosDiscapacidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosEstado.resx">
+      <DependentUpon>DatosEstado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosLicenciatura.resx">
       <DependentUpon>DatosLicenciatura.cs</DependentUpon>

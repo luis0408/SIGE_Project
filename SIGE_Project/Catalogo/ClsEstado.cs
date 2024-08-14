@@ -10,7 +10,7 @@ namespace SIGE_Project.Catalogo
     {
         public string c_Estado { get; set; }
         public string nombrePais { get; set; }
-        public string nombreEstado {  get; set; }
+        public string nombreEstado { get; set; }
 
         public ClsEstado() { }
 

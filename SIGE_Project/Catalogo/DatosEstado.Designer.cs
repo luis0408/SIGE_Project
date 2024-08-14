@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosEstado));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.simpleButton_cancel = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_agree = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit_nombreEstado = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_cEstado = new DevExpress.XtraEditors.TextEdit();
+            this.loopUpEdit_nombrePais = new DevExpress.XtraEditors.LookUpEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit_nombreEstado = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.loopUpEdit_nombrePais = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton_agree = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton_cancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_nombreEstado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_cEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loopUpEdit_nombrePais.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_nombreEstado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loopUpEdit_nombrePais.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -75,6 +75,66 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // simpleButton_cancel
+            // 
+            this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
+            this.simpleButton_cancel.Location = new System.Drawing.Point(236, 107);
+            this.simpleButton_cancel.Name = "simpleButton_cancel";
+            this.simpleButton_cancel.Size = new System.Drawing.Size(220, 36);
+            this.simpleButton_cancel.StyleController = this.layoutControl1;
+            this.simpleButton_cancel.TabIndex = 9;
+            this.simpleButton_cancel.Text = "Cancelar";
+            this.simpleButton_cancel.Click += new System.EventHandler(this.simpleButton_cancel_Click);
+            // 
+            // simpleButton_agree
+            // 
+            this.simpleButton_agree.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_agree.ImageOptions.SvgImage")));
+            this.simpleButton_agree.Location = new System.Drawing.Point(12, 107);
+            this.simpleButton_agree.Name = "simpleButton_agree";
+            this.simpleButton_agree.Size = new System.Drawing.Size(220, 36);
+            this.simpleButton_agree.StyleController = this.layoutControl1;
+            this.simpleButton_agree.TabIndex = 8;
+            this.simpleButton_agree.Text = "Aceptar";
+            this.simpleButton_agree.Click += new System.EventHandler(this.simpleButton_agree_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(137, 19);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 7;
+            this.labelControl1.Text = "Datos del Estado";
+            // 
+            // textEdit_nombreEstado
+            // 
+            this.textEdit_nombreEstado.Location = new System.Drawing.Point(114, 83);
+            this.textEdit_nombreEstado.Name = "textEdit_nombreEstado";
+            this.textEdit_nombreEstado.Size = new System.Drawing.Size(342, 20);
+            this.textEdit_nombreEstado.StyleController = this.layoutControl1;
+            this.textEdit_nombreEstado.TabIndex = 6;
+            // 
+            // textEdit_cEstado
+            // 
+            this.textEdit_cEstado.Location = new System.Drawing.Point(114, 35);
+            this.textEdit_cEstado.Name = "textEdit_cEstado";
+            this.textEdit_cEstado.Size = new System.Drawing.Size(342, 20);
+            this.textEdit_cEstado.StyleController = this.layoutControl1;
+            this.textEdit_cEstado.TabIndex = 4;
+            // 
+            // loopUpEdit_nombrePais
+            // 
+            this.loopUpEdit_nombrePais.Location = new System.Drawing.Point(114, 59);
+            this.loopUpEdit_nombrePais.Name = "loopUpEdit_nombrePais";
+            this.loopUpEdit_nombrePais.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.loopUpEdit_nombrePais.Properties.NullText = "";
+            this.loopUpEdit_nombrePais.Size = new System.Drawing.Size(342, 20);
+            this.loopUpEdit_nombrePais.StyleController = this.layoutControl1;
+            this.loopUpEdit_nombrePais.TabIndex = 5;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -90,14 +150,6 @@
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(468, 188);
             this.Root.TextVisible = false;
-            // 
-            // textEdit_cEstado
-            // 
-            this.textEdit_cEstado.Location = new System.Drawing.Point(114, 35);
-            this.textEdit_cEstado.Name = "textEdit_cEstado";
-            this.textEdit_cEstado.Size = new System.Drawing.Size(342, 20);
-            this.textEdit_cEstado.StyleController = this.layoutControl1;
-            this.textEdit_cEstado.TabIndex = 4;
             // 
             // layoutControlItem1
             // 
@@ -125,14 +177,6 @@
             this.layoutControlItem2.Text = "Pais";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(90, 13);
             // 
-            // textEdit_nombreEstado
-            // 
-            this.textEdit_nombreEstado.Location = new System.Drawing.Point(114, 83);
-            this.textEdit_nombreEstado.Name = "textEdit_nombreEstado";
-            this.textEdit_nombreEstado.Size = new System.Drawing.Size(342, 20);
-            this.textEdit_nombreEstado.StyleController = this.layoutControl1;
-            this.textEdit_nombreEstado.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.textEdit_nombreEstado;
@@ -141,28 +185,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem3.Text = "Nombre del Estado";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(90, 13);
-            // 
-            // loopUpEdit_nombrePais
-            // 
-            this.loopUpEdit_nombrePais.Location = new System.Drawing.Point(114, 59);
-            this.loopUpEdit_nombrePais.Name = "loopUpEdit_nombrePais";
-            this.loopUpEdit_nombrePais.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.loopUpEdit_nombrePais.Properties.NullText = "";
-            this.loopUpEdit_nombrePais.Size = new System.Drawing.Size(342, 20);
-            this.loopUpEdit_nombrePais.StyleController = this.layoutControl1;
-            this.loopUpEdit_nombrePais.TabIndex = 5;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(137, 19);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 7;
-            this.labelControl1.Text = "Datos del Estado";
             // 
             // layoutControlItem4
             // 
@@ -173,17 +195,6 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // simpleButton_agree
-            // 
-            this.simpleButton_agree.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_agree.ImageOptions.SvgImage")));
-            this.simpleButton_agree.Location = new System.Drawing.Point(12, 107);
-            this.simpleButton_agree.Name = "simpleButton_agree";
-            this.simpleButton_agree.Size = new System.Drawing.Size(220, 36);
-            this.simpleButton_agree.StyleController = this.layoutControl1;
-            this.simpleButton_agree.TabIndex = 8;
-            this.simpleButton_agree.Text = "Aceptar";
-            this.simpleButton_agree.Click += new System.EventHandler(this.simpleButton_agree_Click);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.simpleButton_agree;
@@ -192,17 +203,6 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(224, 40);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
-            // 
-            // simpleButton_cancel
-            // 
-            this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
-            this.simpleButton_cancel.Location = new System.Drawing.Point(236, 107);
-            this.simpleButton_cancel.Name = "simpleButton_cancel";
-            this.simpleButton_cancel.Size = new System.Drawing.Size(220, 36);
-            this.simpleButton_cancel.StyleController = this.layoutControl1;
-            this.simpleButton_cancel.TabIndex = 9;
-            this.simpleButton_cancel.Text = "Cancelar";
-            this.simpleButton_cancel.Click += new System.EventHandler(this.simpleButton_cancel_Click);
             // 
             // layoutControlItem6
             // 
@@ -225,14 +225,14 @@
             this.Text = "Datos Estado";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_nombreEstado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_cEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loopUpEdit_nombrePais.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_nombreEstado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loopUpEdit_nombrePais.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
