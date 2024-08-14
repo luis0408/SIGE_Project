@@ -67,11 +67,11 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Location = new System.Drawing.Point(288, 68);
+            this.layoutControl1.Location = new System.Drawing.Point(336, 84);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(120, 82);
+            this.layoutControl1.Size = new System.Drawing.Size(140, 101);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -80,7 +80,7 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(120, 82);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(140, 101);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControl2
@@ -94,7 +94,7 @@
             this.layoutControl2.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.Root;
-            this.layoutControl2.Size = new System.Drawing.Size(861, 584);
+            this.layoutControl2.Size = new System.Drawing.Size(1004, 719);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -102,10 +102,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(12, 12);
+            this.labelControl2.Location = new System.Drawing.Point(14, 14);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(92, 19);
+            this.labelControl2.Size = new System.Drawing.Size(114, 24);
             this.labelControl2.StyleController = this.layoutControl2;
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Estado civil";
@@ -113,14 +113,15 @@
             // gridControl_estadoCivil
             // 
             this.gridControl_estadoCivil.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl_estadoCivil.Location = new System.Drawing.Point(12, 35);
+            this.gridControl_estadoCivil.Location = new System.Drawing.Point(14, 42);
             this.gridControl_estadoCivil.MainView = this.gridView_estadoCivil;
             this.gridControl_estadoCivil.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl_estadoCivil.Name = "gridControl_estadoCivil";
-            this.gridControl_estadoCivil.Size = new System.Drawing.Size(662, 537);
+            this.gridControl_estadoCivil.Size = new System.Drawing.Size(772, 663);
             this.gridControl_estadoCivil.TabIndex = 5;
             this.gridControl_estadoCivil.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_estadoCivil});
+            this.gridControl_estadoCivil.Click += new System.EventHandler(this.gridControl_estadoCivil_Click);
             // 
             // gridView_estadoCivil
             // 
@@ -129,7 +130,7 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
-            this.gridView_estadoCivil.DetailHeight = 240;
+            this.gridView_estadoCivil.DetailHeight = 295;
             this.gridView_estadoCivil.GridControl = this.gridControl_estadoCivil;
             this.gridView_estadoCivil.Name = "gridView_estadoCivil";
             this.gridView_estadoCivil.OptionsBehavior.Editable = false;
@@ -140,39 +141,39 @@
             // 
             this.gridColumn1.Caption = "ID estado civil";
             this.gridColumn1.FieldName = "idEstadoCivil";
-            this.gridColumn1.MinWidth = 21;
+            this.gridColumn1.MinWidth = 24;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 81;
+            this.gridColumn1.Width = 94;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Descripcion";
             this.gridColumn2.FieldName = "descripcion";
-            this.gridColumn2.MinWidth = 21;
+            this.gridColumn2.MinWidth = 24;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 81;
+            this.gridColumn2.Width = 94;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "EstadoNum";
             this.gridColumn3.FieldName = "estado";
-            this.gridColumn3.MinWidth = 21;
+            this.gridColumn3.MinWidth = 24;
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Width = 81;
+            this.gridColumn3.Width = 94;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Estado";
             this.gridColumn4.FieldName = "estadoLetra";
-            this.gridColumn4.MinWidth = 21;
+            this.gridColumn4.MinWidth = 24;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 81;
+            this.gridColumn4.Width = 94;
             // 
             // navBarControl1
             // 
@@ -186,11 +187,11 @@
             this.navBarItem_editar,
             this.navBarItem_activarDesactivar,
             this.navBarItem_reportes});
-            this.navBarControl1.Location = new System.Drawing.Point(678, 35);
+            this.navBarControl1.Location = new System.Drawing.Point(790, 42);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 171;
-            this.navBarControl1.Size = new System.Drawing.Size(171, 537);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
+            this.navBarControl1.Size = new System.Drawing.Size(200, 663);
             this.navBarControl1.TabIndex = 4;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -214,7 +215,7 @@
             // 
             // navBarItem_nuevo
             // 
-            this.navBarItem_nuevo.Caption = "Nuevo";
+            this.navBarItem_nuevo.Caption = "Agregar";
             this.navBarItem_nuevo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_nuevo.ImageOptions.SvgImage")));
             this.navBarItem_nuevo.Name = "navBarItem_nuevo";
             this.navBarItem_nuevo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_nuevo_LinkClicked);
@@ -250,10 +251,10 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(8, 267);
+            this.labelControl1.Location = new System.Drawing.Point(9, 329);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(75, 13);
+            this.labelControl1.Size = new System.Drawing.Size(88, 16);
             this.labelControl1.StyleController = this.layoutControl2;
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "labelControl1";
@@ -267,24 +268,24 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(861, 584);
+            this.Root.Size = new System.Drawing.Size(1004, 719);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.navBarControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(666, 23);
+            this.layoutControlItem1.Location = new System.Drawing.Point(776, 28);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(175, 541);
+            this.layoutControlItem1.Size = new System.Drawing.Size(204, 667);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl_estadoCivil;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(666, 541);
+            this.layoutControlItem2.Size = new System.Drawing.Size(776, 667);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -293,15 +294,15 @@
             this.layoutControlItem3.Control = this.labelControl2;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(841, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(980, 28);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // catalogoEstadoCivil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 584);
+            this.ClientSize = new System.Drawing.Size(1004, 719);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoEstadoCivil.IconOptions.SvgImage")));

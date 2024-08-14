@@ -140,17 +140,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogo\catalogoBachilleratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoBachilleratos.Designer.cs">
+      <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoCicloEscolar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoCicloEscolar.Designer.cs">
       <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoCodigoPostal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCodigoPostal.Designer.cs">
+      <DependentUpon>catalogoCodigoPostal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoColonia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoColonia.Designer.cs">
+      <DependentUpon>catalogoColonia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoDepartamentos.Designer.cs">
       <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDiscapacidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDiscapacidad.Designer.cs">
+      <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\catalogoEstadoCivil.cs">
       <SubType>Form</SubType>
@@ -176,11 +200,29 @@
     <Compile Include="Catalogo\catalogoMediosDeDifusion.Designer.cs">
       <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\catalogoParentesco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoParentesco.Designer.cs">
+      <DependentUpon>catalogoParentesco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoPeriodos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\catalogoPeriodos.Designer.cs">
       <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoSemestres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoSemestres.Designer.cs">
+      <DependentUpon>catalogoSemestres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoSangre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoSangre.Designer.cs">
+      <DependentUpon>catalogoTipoSangre.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\catalogoTipoUsuarios.cs">
       <SubType>Form</SubType>
@@ -190,11 +232,15 @@
     </Compile>
     <Compile Include="Catalogo\ClsCicloEscolar.cs" />
     <Compile Include="Catalogo\ClsDepartamento.cs" />
+    <Compile Include="Catalogo\ClsDiscapacidad.cs" />
     <Compile Include="Catalogo\ClsEstadoCivil.cs" />
     <Compile Include="Catalogo\ClsGenero.cs" />
     <Compile Include="Catalogo\ClsLicenciatura.cs" />
+    <Compile Include="Catalogo\ClsParentesco.cs" />
     <Compile Include="Catalogo\ClsPeriodos.cs" />
     <Compile Include="Catalogo\ClsMedioDifusion.cs" />
+    <Compile Include="Catalogo\ClsSemestres.cs" />
+    <Compile Include="Catalogo\ClsTipoSangre.cs" />
     <Compile Include="Catalogo\ClsTipoUsuarios.cs" />
     <Compile Include="Catalogo\DatosCicloEscolar.cs">
       <SubType>Form</SubType>
@@ -208,6 +254,12 @@
     <Compile Include="Catalogo\DatosDepartamento.Designer.cs">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\DatosDiscapacidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosDiscapacidad.Designer.cs">
+      <DependentUpon>DatosDiscapacidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\DatosLicenciatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,11 +272,29 @@
     <Compile Include="Catalogo\DatosMedioDifusion.Designer.cs">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogo\DatosParentesco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosParentesco.Designer.cs">
+      <DependentUpon>DatosParentesco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\DatosPeriodos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogo\DatosPeriodos.Designer.cs">
       <DependentUpon>DatosPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosSemestres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosSemestres.Designer.cs">
+      <DependentUpon>DatosSemestres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosTipoSangre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosTipoSangre.Designer.cs">
+      <DependentUpon>DatosTipoSangre.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogo\DatosTipoUsuarios.cs">
       <SubType>Form</SubType>
@@ -414,11 +484,23 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogo\catalogoBachilleratos.resx">
+      <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoCicloEscolar.resx">
       <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoCodigoPostal.resx">
+      <DependentUpon>catalogoCodigoPostal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoColonia.resx">
+      <DependentUpon>catalogoColonia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoDepartamentos.resx">
       <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoDiscapacidad.resx">
+      <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoEstadoCivil.resx">
       <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
@@ -432,8 +514,17 @@
     <EmbeddedResource Include="Catalogo\catalogoMediosDeDifusion.resx">
       <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoParentesco.resx">
+      <DependentUpon>catalogoParentesco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoPeriodos.resx">
       <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoSemestres.resx">
+      <DependentUpon>catalogoSemestres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoTipoSangre.resx">
+      <DependentUpon>catalogoTipoSangre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoTipoUsuarios.resx">
       <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
@@ -444,14 +535,26 @@
     <EmbeddedResource Include="Catalogo\DatosDepartamento.resx">
       <DependentUpon>DatosDepartamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosDiscapacidad.resx">
+      <DependentUpon>DatosDiscapacidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosLicenciatura.resx">
       <DependentUpon>DatosLicenciatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
       <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosParentesco.resx">
+      <DependentUpon>DatosParentesco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosPeriodos.resx">
       <DependentUpon>DatosPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosSemestres.resx">
+      <DependentUpon>DatosSemestres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosTipoSangre.resx">
+      <DependentUpon>DatosTipoSangre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\DatosTipoUsuarios.resx">
       <DependentUpon>DatosTipoUsuarios.cs</DependentUpon>
