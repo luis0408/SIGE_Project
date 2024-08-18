@@ -257,5 +257,10 @@ namespace SIGE_Project
             Configuraciones.configInicial obj = new Configuraciones.configInicial();
             obj.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

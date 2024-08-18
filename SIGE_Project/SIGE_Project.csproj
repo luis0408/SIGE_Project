@@ -817,6 +817,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HONGO.ico" />
+    <None Include="Resources\Letras SIGE.jpg" />
+    <None Include="Resources\Letras SIGE1.jpg" />
     <Content Include="Resources\logo IESE.png" />
     <None Include="Resources\SIGE.png" />
     <None Include="Resources\logo IESE1.png" />
