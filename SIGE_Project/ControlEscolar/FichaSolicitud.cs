@@ -535,14 +535,19 @@ namespace SIGE_Project.ControlEscolar
                     }
                     if (objApsirante.insertarAspirante() != 1)
                     {
-                        throw new Exception("Error al insertar los datos de lengua indigena.");
+                        throw new Exception("Error al insertar los datos del aspirante.");
                     }
-
-
                     if (objTutor.insertarTutor() != 1)
                     {
                         throw new Exception("Error al insertar los datos del tutor.");
                     }
+
+                    #region DOCUMENTACION
+                    ////SE INSERTA LA TABLA VACIA DE LA DOCUMENTACION.
+                    objApsirante.fillTableDocsAspirante();////SE CREA LA TABLA DE DOCUMENTACION
+                    objApsirante.insertarAspirante();///SE INSERTA TABLA DE DOCUMENTACION
+                    #endregion
+
                     XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mostrarFicha(CURP);
                     limpiar();
