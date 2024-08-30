@@ -236,8 +236,9 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_addDocs_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            string curpSelect = gridView_enEspera.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "CURP").ToString();
             string nombreSelect = gridView_enEspera.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "nombre").ToString();
-            Documentacion objDocs = new Documentacion(nombreSelect);
+            Documentacion objDocs = new Documentacion(curpSelect, nombreSelect);
             objDocs.ShowDialog();
         }
     }
