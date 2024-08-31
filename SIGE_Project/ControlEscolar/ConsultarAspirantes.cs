@@ -29,6 +29,9 @@ namespace SIGE_Project.ControlEscolar
         {
             //consultarAspirantes();
             navBarControl_opciones.Enabled = false;
+            int anioActual = DateTime.Now.Year;
+            dateEdit_fechaConsultar.EditValue = DateTime.Now;
+            consultarAspirantes();
         }
         private void consultarAspirantes() 
         {
@@ -240,6 +243,72 @@ namespace SIGE_Project.ControlEscolar
             string nombreSelect = gridView_enEspera.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "nombre").ToString();
             Documentacion objDocs = new Documentacion(curpSelect, nombreSelect);
             objDocs.ShowDialog();
+        }
+
+        private void navBarItem_aceptar_ItemChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void navBarItem_reutilizar_ItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navBarItem_aceptar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ///SE ACTUALIZA ESTADO DEL ASPIRANTE
+            try
+            {
+                splashScreenManager1.ShowWaitForm();
+                ArrayList rowsPrev;
+                int aspirantesSelect = gridView_enEspera.SelectedRowsCount;
+                if (aspirantesSelect == 0)
+                {
+                    if (splashScreenManager1.IsSplashFormVisible)
+                        splashScreenManager1.CloseWaitForm();
+                    XtraMessageBox.Show("Selecciona al menos un aspirante.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                rowsPrev = new ArrayList();
+                for (int a = 0; a < gridView_enEspera.SelectedRowsCount; a++)
+                {
+                    /////se agregan las filas seleccionada a la lista
+                    if (gridView_enEspera.GetSelectedRows()[a] >= 0)
+                    {
+                        rowsPrev.Add(gridView_enEspera.GetDataRow(gridView_enEspera.GetSelectedRows()[a]));
+                    }
+                }
+                /////SE RECORRE LA LISTA CREADA Y SE OBTIENE LA RUTA DE CADA FILA SELECCIONADA PARA MOSTRAR EL PDF
+                for (int i = 0; i < rowsPrev.Count; i++)
+                {
+                    DataRow row = rowsPrev[i] as DataRow;
+
+
+                    string CURP = Convert.ToString(row["CURP"]);
+
+                    datos = new object[] { CURP, 2 };
+                    parametros = new string[] { "@CURP", "@status" };
+                    int resultUpdate = Utilerias.ejecutarprocedimiento("SIGE_ACTUALIZAR_ASPIRANTE_ESTADO", datos, parametros);
+                    if (resultUpdate == 0)
+                    {
+                        throw new Exception("Error al actualizar al aspirante con la CURP: " + CURP);
+                    }
+                }
+
+
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                XtraMessageBox.Show("Aspirante(s) actualizado(s) correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                consultarAspirantes();
+
+            }
+            catch (Exception exs)
+            {
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                XtraMessageBox.Show("Error al actualizaar estado de aspirante(s), detalles: " + exs.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

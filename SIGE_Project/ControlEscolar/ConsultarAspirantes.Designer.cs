@@ -216,6 +216,7 @@
             this.navBarItem_aceptar.Caption = "Aceptar";
             this.navBarItem_aceptar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_aceptar.ImageOptions.SvgImage")));
             this.navBarItem_aceptar.Name = "navBarItem_aceptar";
+            this.navBarItem_aceptar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_aceptar_LinkClicked);
             // 
             // navBarItem_inscribir
             // 
@@ -235,6 +236,7 @@
             this.navBarItem_reutilizar.Caption = "Reiniciar proceso";
             this.navBarItem_reutilizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_reutilizar.ImageOptions.SvgImage")));
             this.navBarItem_reutilizar.Name = "navBarItem_reutilizar";
+            this.navBarItem_reutilizar.ItemChanged += new System.EventHandler(this.navBarItem_reutilizar_ItemChanged);
             // 
             // navBarItem_editar
             // 

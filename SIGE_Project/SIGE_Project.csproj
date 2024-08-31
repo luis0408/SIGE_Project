@@ -404,6 +404,12 @@
     <Compile Include="ControlEscolar\FichaSolicitud.Designer.cs">
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finanzas\GenerarOrdenesPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finanzas\GenerarOrdenesPago.Designer.cs">
+      <DependentUpon>GenerarOrdenesPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +652,9 @@
     <EmbeddedResource Include="ControlEscolar\FichaSolicitud.resx">
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas\GenerarOrdenesPago.resx">
+      <DependentUpon>GenerarOrdenesPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -825,5 +834,6 @@
     <None Include="Resources\SIGE.png" />
     <None Include="Resources\logo IESE1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
