@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Documentacion));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.textEdit_CURP = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton_save = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_cancel = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl_docs = new DevExpress.XtraGrid.GridControl();
@@ -49,11 +50,12 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.textEdit_CURP = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_CURP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_docs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_docs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_original)).BeginInit();
@@ -66,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_CURP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,25 +87,36 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // textEdit_CURP
+            // 
+            this.textEdit_CURP.Location = new System.Drawing.Point(65, 12);
+            this.textEdit_CURP.Name = "textEdit_CURP";
+            this.textEdit_CURP.Properties.ReadOnly = true;
+            this.textEdit_CURP.Size = new System.Drawing.Size(299, 20);
+            this.textEdit_CURP.StyleController = this.layoutControl1;
+            this.textEdit_CURP.TabIndex = 8;
+            // 
             // simpleButton_save
             // 
-            this.simpleButton_save.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton_save.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_save.ImageOptions.SvgImage")));
             this.simpleButton_save.Location = new System.Drawing.Point(661, 431);
             this.simpleButton_save.Name = "simpleButton_save";
             this.simpleButton_save.Size = new System.Drawing.Size(239, 36);
             this.simpleButton_save.StyleController = this.layoutControl1;
             this.simpleButton_save.TabIndex = 7;
             this.simpleButton_save.Text = "Guardar";
+            this.simpleButton_save.Click += new System.EventHandler(this.simpleButton_save_Click);
             // 
             // simpleButton_cancel
             // 
-            this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
             this.simpleButton_cancel.Location = new System.Drawing.Point(422, 431);
             this.simpleButton_cancel.Name = "simpleButton_cancel";
             this.simpleButton_cancel.Size = new System.Drawing.Size(235, 36);
             this.simpleButton_cancel.StyleController = this.layoutControl1;
             this.simpleButton_cancel.TabIndex = 6;
             this.simpleButton_cancel.Text = "Cancelar";
+            this.simpleButton_cancel.Click += new System.EventHandler(this.simpleButton_cancel_Click);
             // 
             // gridControl_docs
             // 
@@ -126,7 +138,8 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn6});
             this.gridView_docs.GridControl = this.gridControl_docs;
             this.gridView_docs.Name = "gridView_docs";
             // 
@@ -150,6 +163,7 @@
             // 
             this.gridColumn3.Caption = "Original";
             this.gridColumn3.ColumnEdit = this.repositoryItemCheckEdit_original;
+            this.gridColumn3.FieldName = "original";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
@@ -158,11 +172,14 @@
             // 
             this.repositoryItemCheckEdit_original.AutoHeight = false;
             this.repositoryItemCheckEdit_original.Name = "repositoryItemCheckEdit_original";
+            this.repositoryItemCheckEdit_original.ValueChecked = 1;
+            this.repositoryItemCheckEdit_original.ValueUnchecked = 0;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Copia";
             this.gridColumn4.ColumnEdit = this.repositoryItemCheckEdit_copia;
+            this.gridColumn4.FieldName = "copia";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
@@ -171,10 +188,13 @@
             // 
             this.repositoryItemCheckEdit_copia.AutoHeight = false;
             this.repositoryItemCheckEdit_copia.Name = "repositoryItemCheckEdit_copia";
+            this.repositoryItemCheckEdit_copia.ValueChecked = 1;
+            this.repositoryItemCheckEdit_copia.ValueUnchecked = 0;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Observaciones";
+            this.gridColumn5.FieldName = "observaciones";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
@@ -256,15 +276,6 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(62, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // textEdit_CURP
-            // 
-            this.textEdit_CURP.Location = new System.Drawing.Point(65, 12);
-            this.textEdit_CURP.Name = "textEdit_CURP";
-            this.textEdit_CURP.Properties.ReadOnly = true;
-            this.textEdit_CURP.Size = new System.Drawing.Size(299, 20);
-            this.textEdit_CURP.StyleController = this.layoutControl1;
-            this.textEdit_CURP.TabIndex = 8;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textEdit_CURP;
@@ -277,6 +288,12 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Id registro";
+            this.gridColumn6.FieldName = "idRegistro";
+            this.gridColumn6.Name = "gridColumn6";
             // 
             // Documentacion
             // 
@@ -292,6 +309,7 @@
             this.Load += new System.EventHandler(this.Documentacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_CURP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_docs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_docs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_original)).EndInit();
@@ -304,7 +322,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_CURP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
@@ -335,5 +352,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit_CURP;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

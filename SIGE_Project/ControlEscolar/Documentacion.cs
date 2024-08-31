@@ -18,6 +18,7 @@ namespace SIGE_Project.ControlEscolar
         DataTable dtDocsAspirante;
         DataTable tablaDocumentos;
         DataTable tablaDocsAspirante;
+        DataTable tablaDocsFinal;
         public Documentacion(string _CURP, string _nombre)
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace SIGE_Project.ControlEscolar
                 if (ds.Tables[0].Rows.Count > 0) /////SI EXISTE, SE CARGAN DATOS
                 {
                     dtDocsAspirante = new DataTable();
+                    dtDocsAspirante = ds.Tables[0];
                     gridControl_docs.DataSource = dtDocsAspirante;
                     gridView_docs.BestFitColumns();
 
@@ -68,7 +70,11 @@ namespace SIGE_Project.ControlEscolar
         {
             getDocuments();
             fillTableDocsAspirante();
-            insertarTablaDocumentacion();
+            if (insertarTablaDocumentacion()!=1)
+            {
+                throw new Exception("El proceso termino con errores, por favor cierre el formulario e intentelo de nuevo. ");
+               
+            }
 
         }
         private void getDocuments()
@@ -85,7 +91,8 @@ namespace SIGE_Project.ControlEscolar
             }
             catch (Exception e)
             {
-                XtraMessageBox.Show("Se generó un error al cargar la lista de documentos. Detalles: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Se generó un error al cargar la lista de documentos. Detalles: " + e.Message);
+
 
             }
 
@@ -99,6 +106,17 @@ namespace SIGE_Project.ControlEscolar
             tablaDocsAspirante.Columns.Add("copia", typeof(int));
             tablaDocsAspirante.Columns.Add("observaciones");
             tablaDocsAspirante.Columns.Add("rutaArchivo");
+        }
+        private void createTableDocsFinal()
+        {
+            tablaDocsFinal = new DataTable();
+           // tablaDocsFinal.Columns.Add("idRegistro", typeof(int));
+            tablaDocsFinal.Columns.Add("CURP");
+            tablaDocsFinal.Columns.Add("idDocumento", typeof(int));
+            tablaDocsFinal.Columns.Add("original", typeof(int));
+            tablaDocsFinal.Columns.Add("copia", typeof(int));
+            tablaDocsFinal.Columns.Add("observaciones");
+            tablaDocsFinal.Columns.Add("rutaArchivo");
         }
         public void fillTableDocsAspirante()
         {
@@ -114,10 +132,75 @@ namespace SIGE_Project.ControlEscolar
 
         public int insertarTablaDocumentacion()
         {
-            datos = new object[] { tablaDocsAspirante };
-            parametros = new string[] { "@tableishon" };
-            int resultadoInsertDocumentacion = Utilerias.ejecutarprocedimiento("SIGE_INSERTAR_ASPIRANTE_TABLADOCUMENTACION", datos, parametros);
-            return resultadoInsertDocumentacion;
+            try
+            {
+                datos = new object[] { tablaDocsAspirante };
+                parametros = new string[] { "@tableishon" };
+                int resultadoInsertDocumentacion = Utilerias.ejecutarprocedimiento("SIGE_INSERTAR_ASPIRANTE_TABLADOCUMENTACION", datos, parametros);
+                return resultadoInsertDocumentacion;
+            }
+            catch (Exception ex) 
+            {
+                XtraMessageBox.Show("Se generó un error al insetar la tabla documentos del alumnos. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+
+            }
+
+        }
+
+        private void simpleButton_cancel_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Sí sale ahora los cambios no se guardaran, ¿Está seguro que desea salir?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void simpleButton_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ////SE CREA TABLA 
+                createTableDocsFinal();
+                ////SE RECORRE GRID Y SE INSERTAN VALORES EN EL DATATABLE tablaDocsFinal
+                for (int i = 0; i < gridView_docs.RowCount; i++)
+                {
+                    //int idRegGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "idRegistro").ToString());
+                    string curpGrid = gridView_docs.GetRowCellValue(i, "CURP").ToString();
+                    int idDocGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "idDocumento").ToString());
+                    int originalcGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "original").ToString());
+                    int copiaGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "copia").ToString());
+                    string observacionesGrid = gridView_docs.GetRowCellValue(i, "observaciones").ToString();
+
+                    tablaDocsFinal.Rows.Add(curpGrid, idDocGrid, originalcGrid, copiaGrid, observacionesGrid);
+                }
+                updateablaDocumentacion();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Se generó un error al crear la tabla final de documentos. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+        }
+        private void updateablaDocumentacion()
+        {
+            datos = new object[] { tablaDocsFinal,textEdit_CURP.Text};
+            parametros = new string[] {"@tableishon","@CURP" };
+            int resultUpdate=Utilerias.ejecutarprocedimiento("SIGE_ACTUALIZAR_ASPIRANTE_TABLADOCUMENTACION", datos, parametros);
+            if (resultUpdate > 0) 
+            {
+                XtraMessageBox.Show("La información se actualizó correctamente." , "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();   
+
+            }
+            else
+            
+            {
+                throw new Exception("Proceso terminado con errores,la información NO se actualizó.");
+
+            }
         }
     }
 }
