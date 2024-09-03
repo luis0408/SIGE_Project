@@ -1,5 +1,7 @@
 ﻿using DevExpress.Export;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
@@ -40,9 +42,14 @@ namespace SIGE_Project.ControlEscolar
             parametros = new string[] { "@anioConsulta" };  
             DataSet dsAspirantes = new DataSet();
             dsAspirantes = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_ASPIRANTES]", datos,parametros);
-            DataTable dtAspirantes=dsAspirantes.Tables[0];  
-            gridControl_enEspera.DataSource= dtAspirantes;
+            DataTable dtEnEspera=dsAspirantes.Tables[0];
+            DataTable dtAceptados = dsAspirantes.Tables[1];
+            DataTable dtDeclinados=dsAspirantes.Tables[2];
+            gridControl_enEspera.DataSource= dtEnEspera;
             gridView_enEspera.BestFitColumns();
+            gridControl_aceptados.DataSource = dtAceptados;
+            gridView_aceptados.BestFitColumns();
+            
             xtraTabControl_Aspirantes.SelectedTabPageIndex = 1;
             xtraTabControl_Aspirantes.SelectedTabPageIndex= 0;
             navBarControl_opciones.Enabled = true;
@@ -143,7 +150,7 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_reutilizar.Visible = false;
 
                     navBarItem_addDocs.Visible = true;
-                    navBarItem_editar.Visible = true;
+                    navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = true;
 
                     navBarItem_generarFicha.Visible = true;
@@ -257,13 +264,47 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_aceptar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            if (XtraMessageBox.Show("¿Desea cambiar es estado a 'Aceptado'?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                int estadoAceptado = 2;/////ESTADO PARA ACEPTADO
+
+                if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 0)/////EN ESPERA
+                {
+                    actualizarEstadoAspirante(gridView_enEspera, estadoAceptado);
+                }
+                if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 1)/////ACEPTADOS
+                {
+                    actualizarEstadoAspirante(gridView_aceptados, estadoAceptado);
+                }
+            }
+            
+        }
+
+        private void navBarItem_declinar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea cambiar es estado a 'Declinado'?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int estadoDeclinado = 3;/////ESTADO PARA DECLIANADO
+
+                if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 0)/////EN ESPERA
+                {
+                    actualizarEstadoAspirante(gridView_enEspera,estadoDeclinado);
+                }
+                if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 1)/////ACEPTADOS
+                {
+                    actualizarEstadoAspirante(gridView_aceptados, estadoDeclinado);
+                }
+            }
+        }
+        private void actualizarEstadoAspirante(GridView gdView, int estatus)
+        {
             ///SE ACTUALIZA ESTADO DEL ASPIRANTE
             try
             {
                 splashScreenManager1.ShowWaitForm();
                 ArrayList rowsPrev;
-                int aspirantesSelect = gridView_enEspera.SelectedRowsCount;
-                if (aspirantesSelect == 0)
+                int countSelect = gdView.SelectedRowsCount;
+                if (countSelect == 0)
                 {
                     if (splashScreenManager1.IsSplashFormVisible)
                         splashScreenManager1.CloseWaitForm();
@@ -271,12 +312,12 @@ namespace SIGE_Project.ControlEscolar
                     return;
                 }
                 rowsPrev = new ArrayList();
-                for (int a = 0; a < gridView_enEspera.SelectedRowsCount; a++)
+                for (int a = 0; a < gdView.SelectedRowsCount; a++)
                 {
                     /////se agregan las filas seleccionada a la lista
-                    if (gridView_enEspera.GetSelectedRows()[a] >= 0)
+                    if (gdView.GetSelectedRows()[a] >= 0)
                     {
-                        rowsPrev.Add(gridView_enEspera.GetDataRow(gridView_enEspera.GetSelectedRows()[a]));
+                        rowsPrev.Add(gdView.GetDataRow(gdView.GetSelectedRows()[a]));
                     }
                 }
                 /////SE RECORRE LA LISTA CREADA Y SE OBTIENE LA RUTA DE CADA FILA SELECCIONADA PARA MOSTRAR EL PDF
@@ -287,7 +328,7 @@ namespace SIGE_Project.ControlEscolar
 
                     string CURP = Convert.ToString(row["CURP"]);
 
-                    datos = new object[] { CURP, 2 };
+                    datos = new object[] { CURP, estatus };
                     parametros = new string[] { "@CURP", "@status" };
                     int resultUpdate = Utilerias.ejecutarprocedimiento("SIGE_ACTUALIZAR_ASPIRANTE_ESTADO", datos, parametros);
                     if (resultUpdate == 0)
@@ -309,6 +350,33 @@ namespace SIGE_Project.ControlEscolar
                     splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Error al actualizaar estado de aspirante(s), detalles: " + exs.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void navBarItem_editar_ItemChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void navBarItem_editar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            int countSelect = gridView_aceptados.SelectedRowsCount;
+            if (countSelect == 0)
+            {
+
+                XtraMessageBox.Show("Selecciona al menos un aspirante.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (countSelect > 1)
+            {
+                XtraMessageBox.Show("Solo se puede editar un alumno a la vez.", "Multiple selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string curpEdit = gridView_aceptados.GetRowCellValue(gridView_aceptados.FocusedRowHandle, "CURP").ToString();
+            FichaSolicitud obj = new FichaSolicitud(curpEdit);
+            //obj.ShowDialog();
+            obj.MdiParent = (MenuPrincipal)this.MdiParent;
+            obj.Show();
         }
     }
 }

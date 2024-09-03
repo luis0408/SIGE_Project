@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraRichEdit.Layout;
 using DevExpress.XtraRichEdit.Model;
 using System;
 using System.Collections.Generic;
@@ -17,15 +18,25 @@ namespace SIGE_Project.ControlEscolar
     {
         ClsApirante objApsirante;
         ClsTutor objTutor;
+        string curpEdit;
+        bool editar=false;
         public FichaSolicitud()
         {
             InitializeComponent();
         }
-
+        public FichaSolicitud(string _curpEdit)
+        {
+            InitializeComponent();
+            curpEdit = _curpEdit;   
+        }
         private void FichaSolicitud_Load(object sender, EventArgs e)
         {
             llenarLookups();
             cargarDiscapacidades();
+            if (editar==true)
+            {
+                cargarDatosAspiranteExistente();
+            }
         }
         private void llenarLookups()
         {
@@ -652,7 +663,7 @@ namespace SIGE_Project.ControlEscolar
 
         private void layoutControl1_KeyDown(object sender, KeyEventArgs e)
         {
-            ///ESTE CONTROL EL EL ROOT
+           
            
         }
 
@@ -669,9 +680,11 @@ namespace SIGE_Project.ControlEscolar
             {
                 llenarLookups();
                 XtraMessageBox.Show("Catálogos cargados correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
             }
+        }
+        private void cargarDatosAspiranteExistente()
+        {
+
         }
     }
 }

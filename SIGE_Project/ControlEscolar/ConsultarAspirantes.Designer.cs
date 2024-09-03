@@ -81,8 +81,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage_aceptados = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl_aceptados = new DevExpress.XtraGrid.GridControl();
+            this.gridView_aceptados = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage_declinados = new DevExpress.XtraTab.XtraTabPage();
@@ -115,8 +115,8 @@
             this.xtraTabPage_aceptados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_aceptados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_aceptados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.xtraTabPage_declinados.SuspendLayout();
@@ -236,19 +236,20 @@
             this.navBarItem_reutilizar.Caption = "Reiniciar proceso";
             this.navBarItem_reutilizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_reutilizar.ImageOptions.SvgImage")));
             this.navBarItem_reutilizar.Name = "navBarItem_reutilizar";
-            this.navBarItem_reutilizar.ItemChanged += new System.EventHandler(this.navBarItem_reutilizar_ItemChanged);
             // 
             // navBarItem_editar
             // 
             this.navBarItem_editar.Caption = "Editar";
             this.navBarItem_editar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_editar.ImageOptions.SvgImage")));
             this.navBarItem_editar.Name = "navBarItem_editar";
+            this.navBarItem_editar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_editar_LinkClicked);
             // 
             // navBarItem_declinar
             // 
             this.navBarItem_declinar.Caption = "Declinar";
             this.navBarItem_declinar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_declinar.ImageOptions.SvgImage")));
             this.navBarItem_declinar.Name = "navBarItem_declinar";
+            this.navBarItem_declinar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_declinar_LinkClicked);
             // 
             // navBarGroup_Reportes
             // 
@@ -648,7 +649,7 @@
             // 
             // layoutControl3
             // 
-            this.layoutControl3.Controls.Add(this.gridControl2);
+            this.layoutControl3.Controls.Add(this.gridControl_aceptados);
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl3.Location = new System.Drawing.Point(0, 0);
             this.layoutControl3.Name = "layoutControl3";
@@ -657,20 +658,20 @@
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
-            // gridControl2
+            // gridControl_aceptados
             // 
-            this.gridControl2.Location = new System.Drawing.Point(12, 12);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1134, 660);
-            this.gridControl2.TabIndex = 4;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gridControl_aceptados.Location = new System.Drawing.Point(12, 12);
+            this.gridControl_aceptados.MainView = this.gridView_aceptados;
+            this.gridControl_aceptados.Name = "gridControl_aceptados";
+            this.gridControl_aceptados.Size = new System.Drawing.Size(1134, 660);
+            this.gridControl_aceptados.TabIndex = 4;
+            this.gridControl_aceptados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_aceptados});
             // 
-            // gridView2
+            // gridView_aceptados
             // 
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
+            this.gridView_aceptados.GridControl = this.gridControl_aceptados;
+            this.gridView_aceptados.Name = "gridView_aceptados";
             // 
             // layoutControlGroup2
             // 
@@ -684,7 +685,7 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.gridControl2;
+            this.layoutControlItem6.Control = this.gridControl_aceptados;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(1138, 664);
@@ -861,8 +862,8 @@
             this.xtraTabPage_aceptados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_aceptados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_aceptados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.xtraTabPage_declinados.ResumeLayout(false);
@@ -948,8 +949,8 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem_generarGraficas;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl gridControl_aceptados;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView_aceptados;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControl layoutControl4;

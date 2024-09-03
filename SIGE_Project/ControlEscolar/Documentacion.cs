@@ -158,29 +158,33 @@ namespace SIGE_Project.ControlEscolar
 
         private void simpleButton_save_Click(object sender, EventArgs e)
         {
-            try
+            if (XtraMessageBox.Show("Verifique que la información sea correcta. ¿Desea continuar?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
-                ////SE CREA TABLA 
-                createTableDocsFinal();
-                ////SE RECORRE GRID Y SE INSERTAN VALORES EN EL DATATABLE tablaDocsFinal
-                for (int i = 0; i < gridView_docs.RowCount; i++)
+                try
                 {
-                    //int idRegGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "idRegistro").ToString());
-                    string curpGrid = gridView_docs.GetRowCellValue(i, "CURP").ToString();
-                    int idDocGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "idDocumento").ToString());
-                    int originalcGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "original").ToString());
-                    int copiaGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "copia").ToString());
-                    string observacionesGrid = gridView_docs.GetRowCellValue(i, "observaciones").ToString();
+                    ////SE CREA TABLA 
+                    createTableDocsFinal();
+                    ////SE RECORRE GRID Y SE INSERTAN VALORES EN EL DATATABLE tablaDocsFinal
+                    for (int i = 0; i < gridView_docs.RowCount; i++)
+                    {
+                        //int idRegGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "idRegistro").ToString());
+                        string curpGrid = gridView_docs.GetRowCellValue(i, "CURP").ToString();
+                        int idDocGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "idDocumento").ToString());
+                        int originalcGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "original").ToString());
+                        int copiaGrid = Convert.ToInt32(gridView_docs.GetRowCellValue(i, "copia").ToString());
+                        string observacionesGrid = gridView_docs.GetRowCellValue(i, "observaciones").ToString();
 
-                    tablaDocsFinal.Rows.Add(curpGrid, idDocGrid, originalcGrid, copiaGrid, observacionesGrid);
+                        tablaDocsFinal.Rows.Add(curpGrid, idDocGrid, originalcGrid, copiaGrid, observacionesGrid);
+                    }
+                    updateablaDocumentacion();
                 }
-                updateablaDocumentacion();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show("Se generó un error al crear la tabla final de documentos. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("Se generó un error al crear la tabla final de documentos. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
             }
+            
 
 
         }
