@@ -100,6 +100,34 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl_opciones)).BeginInit();
@@ -670,8 +698,42 @@
             // 
             // gridView_aceptados
             // 
+            this.gridView_aceptados.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn29,
+            this.gridColumn30,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn39,
+            this.gridColumn40,
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46,
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.gridColumn53,
+            this.gridColumn54,
+            this.gridColumn55,
+            this.gridColumn56});
             this.gridView_aceptados.GridControl = this.gridControl_aceptados;
             this.gridView_aceptados.Name = "gridView_aceptados";
+            this.gridView_aceptados.OptionsSelection.MultiSelect = true;
+            this.gridView_aceptados.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView_aceptados.OptionsView.ColumnAutoWidth = false;
+            this.gridView_aceptados.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_aceptados.OptionsView.ShowFooter = true;
             // 
             // layoutControlGroup2
             // 
@@ -837,6 +899,264 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "CURP";
+            this.gridColumn29.FieldName = "CURP";
+            this.gridColumn29.Name = "gridColumn29";
+            this.gridColumn29.Visible = true;
+            this.gridColumn29.VisibleIndex = 1;
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.Caption = "RFC";
+            this.gridColumn30.FieldName = "RFC";
+            this.gridColumn30.Name = "gridColumn30";
+            this.gridColumn30.Visible = true;
+            this.gridColumn30.VisibleIndex = 2;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "NSS";
+            this.gridColumn31.FieldName = "NSS";
+            this.gridColumn31.Name = "gridColumn31";
+            this.gridColumn31.Visible = true;
+            this.gridColumn31.VisibleIndex = 3;
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "Nombre";
+            this.gridColumn32.FieldName = "nombre";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 4;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "Género";
+            this.gridColumn33.FieldName = "genero";
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "genero", "Total: {0}")});
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 5;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.Caption = "Estado civil";
+            this.gridColumn34.FieldName = "estadoCivil";
+            this.gridColumn34.Name = "gridColumn34";
+            this.gridColumn34.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "estadoCivil", "Total: {0}")});
+            this.gridColumn34.Visible = true;
+            this.gridColumn34.VisibleIndex = 6;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "Email";
+            this.gridColumn35.FieldName = "email";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 7;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "Celular";
+            this.gridColumn36.FieldName = "celular";
+            this.gridColumn36.Name = "gridColumn36";
+            this.gridColumn36.Visible = true;
+            this.gridColumn36.VisibleIndex = 8;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "Tipo sangre";
+            this.gridColumn37.FieldName = "tipoSangre";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "tipoSangre", "Total: {0}")});
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 9;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "Fecha nacimiento";
+            this.gridColumn38.DisplayFormat.FormatString = "d";
+            this.gridColumn38.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn38.FieldName = "fechaNacimiento";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 10;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "País nacimiento";
+            this.gridColumn39.FieldName = "paisNacimiento";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "paisNacimiento", "Total: {0}")});
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 11;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "Estado nacimiento";
+            this.gridColumn40.FieldName = "estadoNacimiento";
+            this.gridColumn40.Name = "gridColumn40";
+            this.gridColumn40.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "estadoNacimiento", "Total: {0}")});
+            this.gridColumn40.Visible = true;
+            this.gridColumn40.VisibleIndex = 12;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "Municipio nacimiento";
+            this.gridColumn41.FieldName = "municipioNacimiento";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "municipioNacimiento", "Total: {0}")});
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 13;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "No. Ficha";
+            this.gridColumn42.FieldName = "idRegistro";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 14;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "Licenciatura";
+            this.gridColumn43.FieldName = "licenciatura";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "licenciatura", "Total:  {0}")});
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 15;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "Modalidad";
+            this.gridColumn44.FieldName = "modalidad";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "modalidad", "Total: {0}")});
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 16;
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.Caption = "Bachillerato";
+            this.gridColumn45.FieldName = "bachillerato";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "bachillerato", "Total: {0}")});
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 17;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "Promedio";
+            this.gridColumn46.FieldName = "promedio";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 18;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.Caption = "Medio difusión";
+            this.gridColumn47.FieldName = "medioDifusion";
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "medioDifusion", "Total: {0}")});
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 19;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "Fecha registro";
+            this.gridColumn48.DisplayFormat.FormatString = "d";
+            this.gridColumn48.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn48.FieldName = "fechaRegistro";
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 20;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.Caption = "Dirección";
+            this.gridColumn49.FieldName = "direccion";
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 21;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.Caption = "C.P.";
+            this.gridColumn50.FieldName = "CP";
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 22;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.Caption = "Colonia";
+            this.gridColumn51.FieldName = "colonia";
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "colonia", "Total: {0}")});
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 23;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.Caption = "Estado domicilio";
+            this.gridColumn52.FieldName = "estadoDomicilio";
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "estadoDomicilio", "Total: {0}")});
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 24;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "Localidad domicilio";
+            this.gridColumn53.FieldName = "localidadDomicilio";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "localidadDomicilio", "Total: {0}")});
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 25;
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "Muncipio domicilio";
+            this.gridColumn54.FieldName = "municipioDomicilio";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "municipioDomicilio", "Total: {0}")});
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 26;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.Caption = "¿Habla lengua indigena?";
+            this.gridColumn55.FieldName = "hablaLI";
+            this.gridColumn55.Name = "gridColumn55";
+            this.gridColumn55.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "hablaLI", "Total: {0}")});
+            this.gridColumn55.Visible = true;
+            this.gridColumn55.VisibleIndex = 27;
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "Lengua indigena";
+            this.gridColumn56.FieldName = "descLI";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 28;
+            // 
             // ConsultarAspirantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -959,5 +1279,33 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_addDocs;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
     }
 }
