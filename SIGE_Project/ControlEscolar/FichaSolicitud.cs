@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraLayout;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraRichEdit.Layout;
 using DevExpress.XtraRichEdit.Model;
@@ -36,7 +37,12 @@ namespace SIGE_Project.ControlEscolar
             if (editar==true)
             {
                 cargarDatosAspiranteExistente();
+
+               
             }
+            ////SE OCULTA EL LOOKUP DE LOS BACHILLERATOS QUE NO TIENEN CCT
+           layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+
         }
         private void llenarLookups()
         {
@@ -185,6 +191,20 @@ namespace SIGE_Project.ControlEscolar
                 lookUpEdit_municipio.Properties.ValueMember = "c_Municipio";
 
                 lookUpEdit_localidad.Properties.DataSource = Utilerias.llenarlookupeditvalue("select c_Localidad,descripcion  from SIGE_Catalogo_Localidad where c_Estado='" + estadoLookup + "'");
+                lookUpEdit_localidad.Properties.DisplayMember = "descripcion";
+                lookUpEdit_localidad.Properties.ValueMember = "c_Localidad";
+            }
+            catch (Exception ex) { }
+        }
+        private void lookUpEdit_municipio_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ////AL SELECCIONAR EL VALOR SE FILTRA EL LOOKUP "lookUpEdit_municipio"
+                string estadoLookup = lookUpEdit_estado.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
+                string municipioLookup = lookUpEdit_municipio.EditValue.ToString();///SE OBTIENE EL VALOR SELECCIONADO
+
+                lookUpEdit_localidad.Properties.DataSource = Utilerias.llenarlookupeditvalue("select c_Localidad,descripcion  from SIGE_Catalogo_Localidad where c_Estado='" + estadoLookup + "' and c_Municipio='" + municipioLookup + "'");
                 lookUpEdit_localidad.Properties.DisplayMember = "descripcion";
                 lookUpEdit_localidad.Properties.ValueMember = "c_Localidad";
             }
@@ -685,6 +705,36 @@ namespace SIGE_Project.ControlEscolar
         private void cargarDatosAspiranteExistente()
         {
 
+        }
+
+        private void checkEdit_noExisteBachillerato_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkEdit_noExisteBachillerato.Checked)
+            {
+                ////SI SE CHEQUEA SE MUESTRA EL LOOKUP Y SE INHABILITAN LOS OTROS CAMPOS
+                textEdit_estadoBachillerato.ReadOnly = true;
+                textEdit_municipioBachillerato.ReadOnly=true;
+                lookUpEdit_bachillerato.ReadOnly=true;
+
+                layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+                cargarLookupBachilleratosSinCCT();
+            }
+            else
+            {
+                ////SI SE QUITA EL CHECK SE HABILITAN LOS OTROS CONTROLES
+                textEdit_estadoBachillerato.ReadOnly = false;
+                textEdit_municipioBachillerato.ReadOnly = false;
+                lookUpEdit_bachillerato.ReadOnly = false;
+
+                layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            }
+        }
+        private void cargarLookupBachilleratosSinCCT()
+        {
+            ////BACHILLERATO SIN CCT
+            lookUpEdit_bachillerato.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idBachillerato, descripcion from SIGE_Catalogo_Bachillerato_NoCertificados where estado=1");
+            lookUpEdit_bachillerato.Properties.DisplayMember = "descripcion";
+            lookUpEdit_bachillerato.Properties.ValueMember = "idBachillerato";
         }
     }
 }
