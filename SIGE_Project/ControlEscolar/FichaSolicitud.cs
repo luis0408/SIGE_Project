@@ -380,21 +380,34 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Seleccione el municipio donde reside actualmente.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (textEdit_estadoBachillerato.EditValue == null)
+            if (!checkEdit_noExisteBachillerato.Checked)///SI NO ESTA CHEKEADO SE SOLICITA INFORMACION DEL BACHILLERATO CON CCT
             {
-                XtraMessageBox.Show("Seleccione el estado de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                if (textEdit_estadoBachillerato.EditValue == null)
+                {
+                    XtraMessageBox.Show("Seleccione el estado de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (textEdit_municipioBachillerato.EditValue == null)
+                {
+                    XtraMessageBox.Show("Seleccione el municipio de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (lookUpEdit_bachillerato.EditValue == null)
+                {
+                    XtraMessageBox.Show("Seleccione su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
-            if (textEdit_municipioBachillerato.EditValue == null)
+            else
             {
-                XtraMessageBox.Show("Seleccione el municipio de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                ////SI ESTA CHECKEADO SE REQUIERE QUE SELECCIONE ALGUNO O AGUERE A LA LISTA
+                if (lookUpEdit_bachilleratoManual.EditValue==null)
+                {
+                    XtraMessageBox.Show("Seleccione su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
-            if (lookUpEdit_bachillerato.EditValue == null)
-            {
-                XtraMessageBox.Show("Seleccione su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            
             //if (string.IsNullOrEmpty(textEdit_promedio.Text))
             //{
             //    XtraMessageBox.Show("Ingrese el promedio que salio de su bachillerato.", "Faltan campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -493,7 +506,18 @@ namespace SIGE_Project.ControlEscolar
                     {
                         periodoEscolar = null;
                     }
-                    string bachillerato = lookUpEdit_bachillerato.EditValue == null ? null : lookUpEdit_bachillerato.EditValue.ToString();
+                    string bachillerato = "";
+                    int ckdBachilleratoManual=checkEdit_noExisteBachillerato.Checked ? 1 : 0;
+                    if (!checkEdit_noExisteBachillerato.Checked)///SE VALIDA SI ESTA CHECKEADO
+                    {
+                        bachillerato = lookUpEdit_bachillerato.EditValue == null ? null : lookUpEdit_bachillerato.EditValue.ToString();
+                    }
+                    else
+                    {
+                        bachillerato = lookUpEdit_bachilleratoManual.EditValue == null ? null : lookUpEdit_bachilleratoManual.EditValue.ToString();
+
+                    }
+
                     decimal? promedio;
                     if (!string.IsNullOrEmpty(textEdit_promedio.Text))
                     {
@@ -513,7 +537,7 @@ namespace SIGE_Project.ControlEscolar
                     {
                         idGeneracion = null;
                     }
-                    objApsirante.setDatosAspirante(cveLicenciatura, cveModalidad, cicloEscolar, periodoEscolar, bachillerato, promedio, cveMedioDifusion, variables.varUser, idGeneracion);
+                    objApsirante.setDatosAspirante(cveLicenciatura, cveModalidad, cicloEscolar, periodoEscolar, bachillerato,ckdBachilleratoManual ,promedio, cveMedioDifusion, variables.varUser, idGeneracion);
                     #endregion
 
                     #region DATOS TUTOR
@@ -702,10 +726,7 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Catálogos cargados correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void cargarDatosAspiranteExistente()
-        {
-
-        }
+        
 
         private void checkEdit_noExisteBachillerato_CheckedChanged(object sender, EventArgs e)
         {
@@ -735,6 +756,34 @@ namespace SIGE_Project.ControlEscolar
             lookUpEdit_bachillerato.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idBachillerato, descripcion from SIGE_Catalogo_Bachillerato_NoCertificados where estado=1");
             lookUpEdit_bachillerato.Properties.DisplayMember = "descripcion";
             lookUpEdit_bachillerato.Properties.ValueMember = "idBachillerato";
+        }
+        private void cargarDatosAspiranteExistente()
+        {
+            try
+            {
+                ////SE OBTIENEN DATOS DESDE LA BASE DE DATOS
+                datos = new object[] { };
+                parametros = new string[] { };
+                DataSet ds = new DataSet();
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_ASPIRANTE_DATOS", datos, parametros);
+                if (ds.Tables.Count > 0)
+                {
+                    if (ds.Tables[0].Rows.Count>0)
+                    {
+
+                    }
+                }
+                else
+                {
+                    throw new Exception("La consulta retorno un valor vacio.");
+                }
+            }
+            catch (Exception ex) 
+            {
+                XtraMessageBox.Show("Se generó un error al cargar la información del alumno seleccionado. Detalles: "+ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
+
         }
     }
 }

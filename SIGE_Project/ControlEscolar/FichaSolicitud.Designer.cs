@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FichaSolicitud));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.checkEdit_noExisteBachillerato = new DevExpress.XtraEditors.CheckEdit();
             this.textEdit_apellidoMaterno = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_apellidoPaterno = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_NSS = new DevExpress.XtraEditors.TextEdit();
@@ -76,6 +77,7 @@
             this.lookUpEdit_licenciatura = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit_generacion = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit_estadoCivil = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit_bachilleratoManual = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -119,6 +121,8 @@
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -153,12 +157,9 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.actualizarCatálogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkEdit_noExisteBachillerato = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lookUpEdit_bachilleratoManual = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_noExisteBachillerato.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_apellidoMaterno.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_apellidoPaterno.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NSS.Properties)).BeginInit();
@@ -202,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_licenciatura.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_generacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_estadoCivil.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_bachilleratoManual.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -245,6 +247,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
@@ -277,10 +281,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_noExisteBachillerato.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_bachilleratoManual.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -341,6 +341,16 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             this.layoutControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.layoutControl1_KeyDown);
+            // 
+            // checkEdit_noExisteBachillerato
+            // 
+            this.checkEdit_noExisteBachillerato.Location = new System.Drawing.Point(1115, 378);
+            this.checkEdit_noExisteBachillerato.Name = "checkEdit_noExisteBachillerato";
+            this.checkEdit_noExisteBachillerato.Properties.Caption = "Mostrar otros";
+            this.checkEdit_noExisteBachillerato.Size = new System.Drawing.Size(136, 20);
+            this.checkEdit_noExisteBachillerato.StyleController = this.layoutControl1;
+            this.checkEdit_noExisteBachillerato.TabIndex = 56;
+            this.checkEdit_noExisteBachillerato.CheckedChanged += new System.EventHandler(this.checkEdit_noExisteBachillerato_CheckedChanged);
             // 
             // textEdit_apellidoMaterno
             // 
@@ -856,6 +866,19 @@
             this.lookUpEdit_estadoCivil.StyleController = this.layoutControl1;
             this.lookUpEdit_estadoCivil.TabIndex = 19;
             // 
+            // lookUpEdit_bachilleratoManual
+            // 
+            this.lookUpEdit_bachilleratoManual.Location = new System.Drawing.Point(790, 402);
+            this.lookUpEdit_bachilleratoManual.Name = "lookUpEdit_bachilleratoManual";
+            this.lookUpEdit_bachilleratoManual.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit_bachilleratoManual.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Descripción")});
+            this.lookUpEdit_bachilleratoManual.Properties.NullText = "";
+            this.lookUpEdit_bachilleratoManual.Size = new System.Drawing.Size(234, 20);
+            this.lookUpEdit_bachilleratoManual.StyleController = this.layoutControl1;
+            this.lookUpEdit_bachilleratoManual.TabIndex = 57;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -1286,6 +1309,24 @@
             this.layoutControlItem36.Text = "Promedio:";
             this.layoutControlItem36.TextSize = new System.Drawing.Size(124, 13);
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.checkEdit_noExisteBachillerato;
+            this.layoutControlItem6.Location = new System.Drawing.Point(461, 24);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(140, 24);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.lookUpEdit_bachilleratoManual;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(374, 24);
+            this.layoutControlItem11.Text = "Bachillerato:";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(124, 13);
+            // 
             // layoutControlGroup5
             // 
             this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1577,45 +1618,6 @@
             this.actualizarCatálogosToolStripMenuItem.Text = "Actualizar catálogos";
             this.actualizarCatálogosToolStripMenuItem.Click += new System.EventHandler(this.actualizarCatálogosToolStripMenuItem_Click);
             // 
-            // checkEdit_noExisteBachillerato
-            // 
-            this.checkEdit_noExisteBachillerato.Location = new System.Drawing.Point(1115, 378);
-            this.checkEdit_noExisteBachillerato.Name = "checkEdit_noExisteBachillerato";
-            this.checkEdit_noExisteBachillerato.Properties.Caption = "Mostrar otros";
-            this.checkEdit_noExisteBachillerato.Size = new System.Drawing.Size(136, 20);
-            this.checkEdit_noExisteBachillerato.StyleController = this.layoutControl1;
-            this.checkEdit_noExisteBachillerato.TabIndex = 56;
-            this.checkEdit_noExisteBachillerato.CheckedChanged += new System.EventHandler(this.checkEdit_noExisteBachillerato_CheckedChanged);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.checkEdit_noExisteBachillerato;
-            this.layoutControlItem6.Location = new System.Drawing.Point(461, 24);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(140, 24);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.lookUpEdit_bachilleratoManual;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(374, 24);
-            this.layoutControlItem11.Text = "Bachillerato:";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(124, 13);
-            // 
-            // lookUpEdit_bachilleratoManual
-            // 
-            this.lookUpEdit_bachilleratoManual.Location = new System.Drawing.Point(790, 402);
-            this.lookUpEdit_bachilleratoManual.Name = "lookUpEdit_bachilleratoManual";
-            this.lookUpEdit_bachilleratoManual.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit_bachilleratoManual.Properties.NullText = "";
-            this.lookUpEdit_bachilleratoManual.Size = new System.Drawing.Size(234, 20);
-            this.lookUpEdit_bachilleratoManual.StyleController = this.layoutControl1;
-            this.lookUpEdit_bachilleratoManual.TabIndex = 57;
-            // 
             // FichaSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1630,7 +1632,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FichaSolicitud_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_noExisteBachillerato.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_apellidoMaterno.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_apellidoPaterno.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NSS.Properties)).EndInit();
@@ -1674,6 +1676,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_licenciatura.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_generacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_estadoCivil.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_bachilleratoManual.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -1717,6 +1720,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
@@ -1749,10 +1754,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_noExisteBachillerato.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_bachilleratoManual.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
