@@ -28,7 +28,8 @@ namespace SIGE_Project.ControlEscolar
         public FichaSolicitud(string _curpEdit)
         {
             InitializeComponent();
-            curpEdit = _curpEdit;   
+            curpEdit = _curpEdit;
+            editar = true;
         }
         private void FichaSolicitud_Load(object sender, EventArgs e)
         {
@@ -559,49 +560,106 @@ namespace SIGE_Project.ControlEscolar
                     objTutor.setDatosTutor(CURP, nombreTutor, apellidoPaternoTutor, apellidoMaternoTutor, numeroTelfonoTutor, correoTutor, idParentesco);
                     #endregion
 
-                    if (objApsirante.insertarPersona() != 1)
+                    if(editar==false)
                     {
-                        throw new Exception("Error al insertar datos de la persona.");
-                    }
-                    if (objApsirante.insertarPersonaDomicilio() != 1)
-                    {
-                        throw new Exception("Error al insertar datos de domicilio.");
-                    }
-                    if (objApsirante.insertarPersonaNacimiento() != 1)
-                    {
-                        throw new Exception("Error al insertar datos de nacimiento.");
-                    }
-                    if (objApsirante.insertarPersonaLenguaIndigena() != 1)
-                    {
-                        throw new Exception("Error al insertar los datos de lengua indigena.");
-                    }
-                    ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
-                    int itemsSeleccionados = checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
-                    for (int i = 0; i < itemsSeleccionados; i++)
-                    {
-                        ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
-                        int valorCheckDiscapacidad = Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
-                        objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
-                        if (objApsirante.insertarPersonaDiscapacidad() != 1)
+                        #region INSERT
+                        if (objApsirante.insertarPersona() != 1)
                         {
-                            throw new Exception("Error al insertar los datos de discapcidad.");
+                            throw new Exception("Error al insertar datos de la persona.");
+                        }
+                        if (objApsirante.insertarPersonaDomicilio() != 1)
+                        {
+                            throw new Exception("Error al insertar datos de domicilio.");
+                        }
+                        if (objApsirante.insertarPersonaNacimiento() != 1)
+                        {
+                            throw new Exception("Error al insertar datos de nacimiento.");
+                        }
+                        if (objApsirante.insertarPersonaLenguaIndigena() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos de lengua indigena.");
+                        }
+                        #region DATOS DISCAPACIDAD
+                        ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
+                        int itemsSeleccionados = checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
+                        for (int i = 0; i < itemsSeleccionados; i++)
+                        {
+                            ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
+                            int valorCheckDiscapacidad = Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
+                            objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
+                            if (objApsirante.insertarPersonaDiscapacidad() != 1)
+                            {
+                                throw new Exception("Error al insertar los datos de discapcidad.");
+                            }
+
+                        }
+                        #endregion
+                        if (objApsirante.insertarAspirante() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos del aspirante.");
+                        }
+                        if (objTutor.insertarTutor() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos del tutor.");
                         }
 
+                        #region DOCUMENTACION
+                        ////SE INSERTA LA TABLA VACIA DE LA DOCUMENTACION.
+                        objApsirante.fillTableDocsAspirante();////SE CREA LA TABLA DE DOCUMENTACION
+                        objApsirante.insertarAspirante();///SE INSERTA TABLA DE DOCUMENTACION
+                        #endregion
+                        XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mostrarFicha(CURP);
+                        #endregion
                     }
-                    if (objApsirante.insertarAspirante() != 1)
+                    else
                     {
-                        throw new Exception("Error al insertar los datos del aspirante.");
-                    }
-                    if (objTutor.insertarTutor() != 1)
-                    {
-                        throw new Exception("Error al insertar los datos del tutor.");
+                        #region UPDATE
+                        if (objApsirante.updatePersona() != 1)
+                        {
+                            throw new Exception("Error al insertar datos de la persona.");
+                        }
+                        if (objApsirante.updatePersonaDomicilio() != 1)
+                        {
+                            throw new Exception("Error al insertar datos de domicilio.");
+                        }
+                        if (objApsirante.updatePersonaDomicilio() != 1)
+                        {
+                            throw new Exception("Error al insertar datos de nacimiento.");
+                        }
+                        if (objApsirante.updatePersonaLenguaIndigena() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos de lengua indigena.");
+                        }
+                        #region DATOS DISCAPACIDAD
+                        ////SE INSERTAN DATOS DE PERSONADISCAPACIDAD
+                        int itemsSeleccionados = checkedListBoxControl_discapacidades.CheckedItemsCount;////SE OBTIENE LA CANTIDAD DE ITEMS SELECCIONADOS
+                        for (int i = 0; i < itemsSeleccionados; i++)
+                        {
+                            ////SE ITERA CADA VALOR, Y SE INSERTA EN LA TABLA DE DISCAPACIDADES
+                            int valorCheckDiscapacidad = Convert.ToInt32(checkedListBoxControl_discapacidades.CheckedItems[i].ToString());
+                            objApsirante.setDatosPersonaDiscapacidad(valorCheckDiscapacidad);
+                            if (objApsirante.updatePersonaDiscapacidad() != 1)
+                            {
+                                throw new Exception("Error al insertar los datos de discapcidad.");
+                            }
+
+                        }
+                        #endregion
+                        if (objApsirante.updateAspirante() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos del aspirante.");
+                        }
+                        if (objTutor.updateTutor() != 1)
+                        {
+                            throw new Exception("Error al insertar los datos del tutor.");
+                        }
+                        XtraMessageBox.Show("El aspirante se actualizó corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mostrarFicha(CURP);
+                        #endregion
                     }
 
-                    #region DOCUMENTACION
-                    ////SE INSERTA LA TABLA VACIA DE LA DOCUMENTACION.
-                    objApsirante.fillTableDocsAspirante();////SE CREA LA TABLA DE DOCUMENTACION
-                    objApsirante.insertarAspirante();///SE INSERTA TABLA DE DOCUMENTACION
-                    #endregion
+
 
                     XtraMessageBox.Show("El aspirante se registró corerctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mostrarFicha(CURP);
@@ -762,16 +820,135 @@ namespace SIGE_Project.ControlEscolar
             try
             {
                 ////SE OBTIENEN DATOS DESDE LA BASE DE DATOS
-                datos = new object[] { };
-                parametros = new string[] { };
+                datos = new object[] {curpEdit };
+                parametros = new string[] {"@CURP" };
                 DataSet ds = new DataSet();
                 ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_ASPIRANTE_DATOS", datos, parametros);
                 if (ds.Tables.Count > 0)
                 {
+
+                    /************Tablas del dataset depende de su posicion***********/
+                    /*  [0]-SIGE_Licenciatura_Aspirantes
+                        [1]-SIGE_Persona
+                        [2]-SIGE_Persona_LenguaIndigena
+                        [3]-SIGE_Persona_Nacimiento
+                        [4]-SIGE_Licenciatura_Tutores
+                        [5]-SIGE_Persona_Domicilio
+                        [6]-SIGE_Licenciatura_Aspirantes
+                        [7]-SIGE_Persona_Discapacidad */
+
+                    ////SE SETEAN VALORES
+                    DataTable dtSetValues;
                     if (ds.Tables[0].Rows.Count>0)
                     {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[0];
+                        lookUpEdit_generacion.EditValue = dtSetValues.Rows[0]["idGeneracion"];
+                        lookUpEdit_cicloEscolar.EditValue = dtSetValues.Rows[0]["idCicloEscolar"];
+                        lookUpEdit_periodo.EditValue = dtSetValues.Rows[0]["idPeriodo"];
+                        lookUpEdit_licenciatura.EditValue = dtSetValues.Rows[0]["cveLicenciatura"].ToString();
+                        lookUpEdit_modalidad.EditValue = dtSetValues.Rows[0]["cveModalidad"].ToString();
+
+                        textEdit_promedio.Text= dtSetValues.Rows[0]["promedio"].ToString();
+                        textEdit_medioDifusion.Text= dtSetValues.Rows[0]["cveMedio"].ToString();
+                        int bachManual = Convert.ToInt32(dtSetValues.Rows[0]["bachilleratoManual"].ToString());
+                        if (bachManual == 1)
+                        {
+                            ////SI ES BACHILLERATO MANUAL SE MARCA EL CHECK Y SE PONE EL VALOR EN EL EDITVALUE DEL BACHILLERATO MANUAL(SIN CCT)
+                            checkEdit_noExisteBachillerato.Checked = true;
+                            lookUpEdit_bachilleratoManual.EditValue = dtSetValues.Rows[0]["CCT_Bachillerato"].ToString();
+                        }
+                        else
+                        {
+                            if (ds.Tables[6].Rows.Count > 0)
+                            {
+                                dtSetValues = new DataTable();
+                                dtSetValues = ds.Tables[6];
+
+                                textEdit_estadoBachillerato.EditValue= dtSetValues.Rows[0]["cveEntidad"].ToString();
+                                textEdit_municipioBachillerato.EditValue= dtSetValues.Rows[0]["cveMunicipio"].ToString();
+                                lookUpEdit_bachillerato.EditValue= dtSetValues.Rows[0]["CCT"].ToString();
+
+                            }
+                        }
+                        
+                    }
+                    if (ds.Tables[1].Rows.Count > 0)
+                    {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[1];
+                        textEdit_nombre.Text = dtSetValues.Rows[0]["nombre"].ToString();
+                        textEdit_apellidoPaterno.Text = dtSetValues.Rows[0]["apellidoPaterno"].ToString();
+                        textEdit_apellidoMaterno.Text = dtSetValues.Rows[0]["apellidoMaterno"].ToString();
+                        textEdit_CURP.Text = dtSetValues.Rows[0]["CURP"].ToString();
+                        textEdit_RFC.Text = dtSetValues.Rows[0]["RFC"].ToString();
+                        textEdit_NSS.Text = dtSetValues.Rows[0]["NSS"].ToString();
+                        lookUpEdit_genero.EditValue = dtSetValues.Rows[0]["cveGenero"].ToString();
+                        lookUpEdit_estadoCivil.EditValue = dtSetValues.Rows[0]["idEstadoCivil"];
+                        textEdit_correoElectronico.Text = dtSetValues.Rows[0]["email"].ToString();
+                        textEdit_numTelefono.Text = dtSetValues.Rows[0]["celular"].ToString();
+                        lookUpEdit_tipoSangre.EditValue = dtSetValues.Rows[0]["cveTipoSangre"].ToString();
 
                     }
+                    if (ds.Tables[2].Rows.Count > 0)
+                    {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[2];
+                        int hablaLI = Convert.ToInt32(dtSetValues.Rows[0]["hablaLenguaIndigena"].ToString());
+                        radioGroup_lenguaIndigena.EditValue = hablaLI;
+                        if (hablaLI==1)
+                        {
+                            ////SI HABLA SE COLOCA LA DESCRIPCION
+                            memoEdit_especifique.Text = dtSetValues.Rows[0]["descripcion"].ToString();
+                        }
+                    }
+                    if (ds.Tables[3].Rows.Count > 0)
+                    {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[3];
+                        dateEdit_fechaNacimiento.EditValue= dtSetValues.Rows[0]["fechaNacimiento"].ToString();
+                        lookUpEdit_paisNacimiento.EditValue= dtSetValues.Rows[0]["cvePais"].ToString();
+                        lookUpEdit_estadoNacimiento.EditValue= dtSetValues.Rows[0]["cveEstado"].ToString(); 
+                        lookUpEdit_municipioNacimiento.EditValue= dtSetValues.Rows[0]["cveMunicipio"].ToString();
+
+                    }
+                    if (ds.Tables[4].Rows.Count > 0)
+                    {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[4];
+                        textEdit_nombreTutor.Text= dtSetValues.Rows[0]["nombre"].ToString();
+                        textEdit_apellidoPaternoTutor.Text= dtSetValues.Rows[0]["apellidoPaterno"].ToString();
+                        textEdit_apellidoMaternoTutor.Text= dtSetValues.Rows[0]["apellidoMaterno"].ToString();
+                        textEdit_numeroTelfonoTutor.Text= dtSetValues.Rows[0]["numeroTelefono"].ToString();
+                        textEdit_correoElectronicoTutor.Text= dtSetValues.Rows[0]["email"].ToString();
+                        lookUpEdit_parentesco.EditValue= dtSetValues.Rows[0]["idParentesco"];
+                    }
+                    if (ds.Tables[5].Rows.Count > 0)
+                    {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[5];
+                        textEdit_calle.Text= dtSetValues.Rows[0]["calle"].ToString();
+                        textEdit_numExterior.Text= dtSetValues.Rows[0]["numeroExterior"].ToString();
+                        textEdit_numInterior.Text= dtSetValues.Rows[0]["numeroInterior"].ToString();
+                        textEdit_codigoPostal.Text= dtSetValues.Rows[0]["CP"].ToString();
+                        lookUpEdit_colonia.EditValue= dtSetValues.Rows[0]["cveColonia"].ToString();
+                        lookUpEdit_estado.EditValue= dtSetValues.Rows[0]["cveEstado"].ToString();
+                        lookUpEdit_municipio.EditValue= dtSetValues.Rows[0]["cveLocalidad"].ToString();
+                        lookUpEdit_localidad.EditValue= dtSetValues.Rows[0]["cveMunicipio"].ToString();
+
+                    }
+                    if (ds.Tables[7].Rows.Count > 0)
+                    {
+                        dtSetValues = new DataTable();
+                        dtSetValues = ds.Tables[7];
+
+                        for (int i = 0; i < dtSetValues.Rows.Count; i++)///SE RECORERAN LOS VALORES DE TODA LA TABLA Y SE SELECCIONARAN LOS CHECKS
+                        {
+                            int valorDiscacidad= Convert.ToInt32(dtSetValues.Rows[0]["idDiscapacidad"].ToString());
+                            checkedListBoxControl_discapacidades.SetItemCheckState(valorDiscacidad,CheckState.Checked);
+                        }
+                    }
+
                 }
                 else
                 {
