@@ -162,6 +162,13 @@ namespace SIGE_Project.ControlEscolar
             int resultadoUpdate = Utilerias.ejecutarprocedimiento("SIGE_ACTUALIZAR_PERSONALENGUAINDIGENA", datos, parametros);
             return resultadoUpdate;
         }
+        public int updatePersonaDiscapacidad()
+        {
+            datos = new object[] { CURP, idDiscapacidad };
+            parametros = new string[] { "@CURP", "@idDiscapacidad" };
+            int resultadoInsert = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_PERSONADISCAPACIDAD]", datos, parametros);
+            return resultadoInsert;
+        }
         public int deleteDiscpacidades()
         {
             datos = new object[] { CURP };

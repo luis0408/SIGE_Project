@@ -8,7 +8,7 @@ namespace SIGE_Project.ControlEscolar
 {
     internal class ClsTutor
     {
-        public string noControl { get; set; }////EL NUMERO DE CONTROL PUEDE SER LA CURP, YA QUE 
+        public string noControl { get; set; }////EL NUMERO DE CONTROL PUEDE SER LA CURP, YA QUE SE PUEDEN DATOS EN EL PROCESO DE INSCRIPCION
         public string nombre { get; set; }
         public string apellidoPaterno { get; set; }
         public string apellidoMaterno { get; set; }
@@ -42,7 +42,7 @@ namespace SIGE_Project.ControlEscolar
         public int updateTutor()
         {
             datos = new object[] { noControl, nombre, apellidoPaterno, apellidoMaterno, numeroTelefono, email, idParentesco };
-            parametros = new string[] { "@CURP", "@nombre", "@apellidoPaterno", "@apellidoMaterno", "@numeroTelefono", "@email", "@idParentesco" };
+            parametros = new string[] { "@CURPaspirante", "@nombre", "@apellidoPaterno", "@apellidoMaterno", "@numeroTelefono", "@email", "@idParentesco" };
             int resultadoUpdate = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_TUTOR]", datos, parametros);
             return resultadoUpdate;
         }

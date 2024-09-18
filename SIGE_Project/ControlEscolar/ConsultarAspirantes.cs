@@ -4,6 +4,7 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraRichEdit.Layout;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Collections;
@@ -152,6 +153,8 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = true;
                     navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = true;
+                    navBarItem_cartaCompromiso.Visible = false;
+                    navBarItem_seguroFacultativo.Visible = false;
 
                     navBarItem_generarFicha.Visible = true;
                     break;
@@ -162,6 +165,8 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = true;
                     navBarItem_editar.Visible = true;
                     navBarItem_declinar.Visible = true;
+                    navBarItem_cartaCompromiso.Visible = true;
+                    navBarItem_seguroFacultativo.Visible = true;
 
                     navBarItem_generarFicha.Visible = true;
                     break;
@@ -172,6 +177,8 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = false;
                     navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = false;
+                    navBarItem_cartaCompromiso.Visible = false;
+                    navBarItem_seguroFacultativo.Visible = false;
 
                     navBarItem_generarFicha.Visible = false;
                     break;
@@ -264,7 +271,7 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_aceptar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            if (XtraMessageBox.Show("¿Desea cambiar es estado a 'Aceptado'?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (XtraMessageBox.Show("¿Desea cambiar el estado a 'Aceptado'?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
                 int estadoAceptado = 2;/////ESTADO PARA ACEPTADO
 
@@ -293,9 +300,11 @@ namespace SIGE_Project.ControlEscolar
                 if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 1)/////ACEPTADOS
                 {
                     actualizarEstadoAspirante(gridView_aceptados, estadoDeclinado);
+                    
                 }
             }
         }
+       
         private void actualizarEstadoAspirante(GridView gdView, int estatus)
         {
             ///SE ACTUALIZA ESTADO DEL ASPIRANTE
@@ -327,6 +336,7 @@ namespace SIGE_Project.ControlEscolar
 
 
                     string CURP = Convert.ToString(row["CURP"]);
+                    
 
                     datos = new object[] { CURP, estatus };
                     parametros = new string[] { "@CURP", "@status" };
@@ -377,6 +387,40 @@ namespace SIGE_Project.ControlEscolar
             //obj.ShowDialog();
             obj.MdiParent = (MenuPrincipal)this.MdiParent;
             obj.Show();
+        }
+
+        private void navBarItem_inscribir_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea inscribir a este aspirante?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int estadoInscribir = 4;/////ESTADO PARA DECLIANADO
+    
+                if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 1)/////ACEPTADOS
+                {
+                    inscribirAlumno();
+                    actualizarEstadoAspirante(gridView_declinados, estadoInscribir);
+
+                }
+            }
+        }
+        private void inscribirAlumno()
+        {
+
+        }
+
+        private void navBarItem_reutilizar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            int estadoReutilizar = 1;/////ESTADO PARA DECLIANADO
+            if (XtraMessageBox.Show("¿Desea cambiar el estado a 'Pendiente'?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 2)/////DECLINADOS
+                {
+                    actualizarEstadoAspirante(gridView_declinados, estadoReutilizar);
+
+                }
+            }
+
+                
         }
     }
 }
