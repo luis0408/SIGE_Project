@@ -906,7 +906,7 @@ namespace SIGE_Project.ControlEscolar
                     {
                         dtSetValues = new DataTable();
                         dtSetValues = ds.Tables[3];
-                        dateEdit_fechaNacimiento.EditValue= dtSetValues.Rows[0]["fechaNacimiento"].ToString();
+                        dateEdit_fechaNacimiento.EditValue = Convert.ToDateTime(dtSetValues.Rows[0]["fechaNacimiento"].ToString());
                         lookUpEdit_paisNacimiento.EditValue= dtSetValues.Rows[0]["cvePais"].ToString();
                         lookUpEdit_estadoNacimiento.EditValue= dtSetValues.Rows[0]["cveEstado"].ToString(); 
                         lookUpEdit_municipioNacimiento.EditValue= dtSetValues.Rows[0]["cveMunicipio"].ToString();
@@ -945,7 +945,7 @@ namespace SIGE_Project.ControlEscolar
                         for (int i = 0; i < dtSetValues.Rows.Count; i++)///SE RECORERAN LOS VALORES DE TODA LA TABLA Y SE SELECCIONARAN LOS CHECKS
                         {
                             int valorDiscacidad= Convert.ToInt32(dtSetValues.Rows[0]["idDiscapacidad"].ToString());
-                            checkedListBoxControl_discapacidades.SetItemCheckState(valorDiscacidad,CheckState.Checked);
+                            checkedListBoxControl_discapacidades.SetItemCheckState(valorDiscacidad-1,CheckState.Checked);
                         }
                     }
 
