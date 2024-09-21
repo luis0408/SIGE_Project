@@ -1,10 +1,13 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -206,5 +209,122 @@ namespace SIGE_Project.ControlEscolar
 
             }
         }
+
+        private void simpleButton_createCartaCompromiso_Click(object sender, EventArgs e)
+        {
+           
+            
+            try
+            {
+                ////SE SOLICTA LA FECHA DE VENCIMIENTO
+                XtraInputBoxArgs args = new XtraInputBoxArgs();
+                DateEdit editor = new DateEdit();
+                args.Editor = editor;
+                args.Caption = "Fecha limite";
+                args.Prompt = "Ingrese la fecha limite para la entrega de documentos:";
+                args.DefaultResponse = DateTime.Now;
+                var resultado = XtraInputBox.Show(args);
+                DateTime fechaLimite = Convert.ToDateTime(string.IsNullOrEmpty(Convert.ToString(resultado)) ? DateTime.Now.ToString() : Convert.ToString(resultado));
+
+                splashScreenManager1.ShowWaitForm();
+                ArrayList rowsPrev;
+               int numDocsSelect = gridView_docs.SelectedRowsCount;
+                if (numDocsSelect == 0)
+                {
+                    if (splashScreenManager1.IsSplashFormVisible)
+                        splashScreenManager1.CloseWaitForm();
+                    XtraMessageBox.Show("Selecciona al menos un documento para generar la carta compromiso.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                rowsPrev = new ArrayList();
+                for (int vp = 0; vp < gridView_docs.SelectedRowsCount; vp++)
+                {
+                    /////se agregan las filas seleccionada a la lista
+                    if (gridView_docs.GetSelectedRows()[vp] >= 0)
+                    {
+                        rowsPrev.Add(gridView_docs.GetDataRow(gridView_docs.GetSelectedRows()[vp]));
+                    }
+                }
+                if (1==1)
+                {
+                    /////CONFIRMACION DEL NUMERO DE ARCHIVOS CON EL QUE DESEA GENERAR LA CARTA
+                }
+                if (validarCartaCompromisoExistente()==1)
+                {
+                    ////se valida que no exista info de la curp selecionada
+                }
+                crearDTcartaCompromiso();
+               
+                /////SE RECORRE LA LISTA CREADA Y SE OBTIENEN LOS DATOS NECESARIOS
+                for (int i = 0; i < rowsPrev.Count; i++)
+                {
+                    
+
+                    DataRow row = rowsPrev[i] as DataRow;
+
+                    string observacionesDoc = Convert.ToString(row["observaciones"]);////LAS OBESERVACIONES DEBEN SER OBLIGATORIAS PARA UNA CARTA COMPROMISO
+                    if (string.IsNullOrEmpty(observacionesDoc))
+                    {
+                        throw new Exception("Debe agregar observaciones a todo los docuemntos seleccionados.");
+                        
+                    }
+                    string idDocumento = Convert.ToString(row["idDocumento"]);
+
+                    dtCartaCompromiso.Rows.Add(textEdit_CURP.Text,idDocumento,variables.varUser,fechaLimite,1);
+                }
+                int resulInsert = insertCartaCompromiso();
+                if (resulInsert == 1)
+                {
+                    /////Se muestra carta compromiso
+                    if (splashScreenManager1.IsSplashFormVisible)
+                        splashScreenManager1.CloseWaitForm();
+
+                    XtraMessageBox.Show("La carta compromiso se generó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (resulInsert==0)
+                {
+                    ////No se pudo insertar se muestra mensaje de error
+                    if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                }
+
+            }
+            catch (Exception exs)
+            {
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                XtraMessageBox.Show("Error al generar la carta comrpomiso " + exs.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        DataTable dtCartaCompromiso;
+        private void crearDTcartaCompromiso()
+        {
+            dtCartaCompromiso = new DataTable();
+            dtCartaCompromiso.Columns.Add("CURP");
+            dtCartaCompromiso.Columns.Add("idDocumento", typeof(int));
+            dtCartaCompromiso.Columns.Add("usuarioRegistro");
+            dtCartaCompromiso.Columns.Add("fechaLimite", typeof(DateTime));
+            dtCartaCompromiso.Columns.Add("estado", typeof(int)); 
+        }
+        private int validarCartaCompromisoExistente()
+        {
+            ////SE VALIDA SI YA EXISTEN DATOS DE UNA CARTA COMPROMISO EN ESTADO PENDIENTE
+            return 0;
+        }
+        private int insertCartaCompromiso()
+        {
+            try
+            {
+                datos = new object[] {dtCartaCompromiso };
+                parametros = new string[] { "@tableishon" };
+                int resulInsert = Utilerias.ejecutarprocedimiento("SIGE_INSERTAR_CARTACOMPROMISO", datos, parametros);
+                return resulInsert;
+            }
+            catch { return 0; }
+            
+            
+           
+        }
+
     }
 }

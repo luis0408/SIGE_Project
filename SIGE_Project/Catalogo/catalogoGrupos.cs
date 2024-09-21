@@ -62,36 +62,36 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_editar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string // = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString();
-            string // = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString();
-            int // = Convert.ToInt32(gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString());
-            DatosGrupos objGrupos = new DatosGrupos("","","");
-            objGrupos.ShowDialog();
-            if (objGrupos.DialogResult == DialogResult.OK)
-            {
-                consultarDatos();
-            }
+            //string // = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString();
+            //string // = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString();
+            //int // = Convert.ToInt32(gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString());
+            //DatosGrupos objGrupos = new DatosGrupos("","","");
+            //objGrupos.ShowDialog();
+            //if (objGrupos.DialogResult == DialogResult.OK)
+            //{
+            //    consultarDatos();
+            //}
         }
 
         Utilerias util = new Utilerias();
 
         private void navBarItem_activarDesactivar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string cveLic = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "").ToString();
-            int estado = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "").ToString());
-            estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
-            int resul = util.EjecutarQueryNonQuery("update "" set estado=" + estado + " where ""='" + cveLic + "'");
-            if (resul != 0)
-            {
-                XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           // string cveLic = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "").ToString();
+           // int estado = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "").ToString());
+           // estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
+           //// int resul = util.EjecutarQueryNonQuery("update "" set estado=" + estado + " where ""='" + cveLic + "'");
+           // if (resul != 0)
+           // {
+           //     XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            else
-            {
-                XtraMessageBox.Show("Se generó un error al actualiar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           // }
+           // else
+           // {
+           //     XtraMessageBox.Show("Se generó un error al actualiar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-            consultarDatos();
+           // }
+           // consultarDatos();
         }
 
 

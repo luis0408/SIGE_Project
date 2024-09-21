@@ -22,18 +22,18 @@ namespace SIGE_Project.Catalogo
             nuevo = true;
         }
 
-        public DatosGrupo(int _idGrupo, char _grupo, int _cveLicenciatura, int _idGeneracion, int _estadoGrupo)
-        {
-            InitializeComponent();
-            objGrupos = new ClsGrupos();
-            objGrupos.idGrupo = _idGrupo;
-            objGrupos.grupo = _grupo;
-            objGrupos.cveLicenciatura = _cveLicenciatura;
-            objGrupos.idGeneracion = _idGeneracion;
-            objGrupos.estadoGrupo = _estadoGrupo;
-            setValores();
-            nuevo = false;
-        }
+        //public DatosGrupo(int _idGrupo, char _grupo, int _cveLicenciatura, int _idGeneracion, int _estadoGrupo)
+        //{
+        //    InitializeComponent();
+        //    objGrupos = new ClsGrupos();
+        //    objGrupos.idGrupo = _idGrupo;
+        //    objGrupos.grupo = _grupo;
+        //    objGrupos.cveLicenciatura = _cveLicenciatura;
+        //    objGrupos.idGeneracion = _idGeneracion;
+        //    objGrupos.estadoGrupo = _estadoGrupo;
+        //    setValores();
+        //    nuevo = false;
+        //}
 
         private void llenarLookups()
         {
@@ -58,13 +58,13 @@ namespace SIGE_Project.Catalogo
         }
         private void setValores()
         {
-            ////ESTE METODO SE OCUPA PARA COLOCAR LOS VALORES EN LOS CONTROLES 
-            spinEdit_grupo.Text = objGrupos.grupo;
-            lookUpEdit_licenciatura.Text = Convert.ToInt32(objGrupos.cveLicenciatura).ToString();
-            lookUpEdit_generacion.Text = Convert.ToInt32(objGrupos.idGeneracion).ToString();
-            checkEdit_estado.Checked = objGrupos.estadoGrupo == 1 ? true : false;
+            //////ESTE METODO SE OCUPA PARA COLOCAR LOS VALORES EN LOS CONTROLES 
+            //spinEdit_grupo.Text = objGrupos.grupo;
+            //lookUpEdit_licenciatura.Text = Convert.ToInt32(objGrupos.cveLicenciatura).ToString();
+            //lookUpEdit_generacion.Text = Convert.ToInt32(objGrupos.idGeneracion).ToString();
+            //checkEdit_estado.Checked = objGrupos.estadoGrupo == 1 ? true : false;
 
-            spinEdit_grupo.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
+            //spinEdit_grupo.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
         }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -79,24 +79,24 @@ namespace SIGE_Project.Catalogo
             //    return;
             //}
 
-            objGrupos.grupo = Convert.ToInt32(spinEdit_grupo.Text);
-            objGrupos.cveLicenciatura = Convert.ToInt32(lookUpEdit_licenciatura.Text);
-            objGrupos.idGeneracion = Convert.ToInt32(lookUpEdit_generacion.Text);
-            objGrupos.estadoGrupo = checkEdit_estado.Checked == true ? 1 : 0;
+            //objGrupos.grupo = Convert.ToInt32(spinEdit_grupo.Text);
+            //objGrupos.cveLicenciatura = Convert.ToInt32(lookUpEdit_licenciatura.Text);
+            //objGrupos.idGeneracion = Convert.ToInt32(lookUpEdit_generacion.Text);
+            //objGrupos.estadoGrupo = checkEdit_estado.Checked == true ? 1 : 0;
 
-            int result = nuevo == true ? objGrupos.insertarDatosGrupo() : objGrupos.updateDescGrupo();
-            if (result == 1)
-            {
-                XtraMessageBox.Show("Los datos se guardarón correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+            //int result = nuevo == true ? objGrupos.insertarDatosGrupo() : objGrupos.updateDescGrupo();
+            //if (result == 1)
+            //{
+            //    XtraMessageBox.Show("Los datos se guardarón correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    this.DialogResult = DialogResult.OK;
+            //    this.Close();
 
-            }
-            else
-            {
-                XtraMessageBox.Show("Se generó un error al insertar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else
+            //{
+            //    XtraMessageBox.Show("Se generó un error al insertar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
+            //}
         }
         private void simpleButton_cancelar_Click(object sender, EventArgs e)
         {

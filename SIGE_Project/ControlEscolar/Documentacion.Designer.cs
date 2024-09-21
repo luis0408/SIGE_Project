@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Documentacion));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.simpleButton_createCartaCompromiso = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit_CURP = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton_save = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_cancel = new DevExpress.XtraEditors.SimpleButton();
@@ -42,6 +43,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit_copia = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textEdit_name = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -51,8 +53,8 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_CURP.Properties)).BeginInit();
@@ -69,10 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButton_createCartaCompromiso);
             this.layoutControl1.Controls.Add(this.textEdit_CURP);
             this.layoutControl1.Controls.Add(this.simpleButton_save);
             this.layoutControl1.Controls.Add(this.simpleButton_cancel);
@@ -86,6 +90,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(912, 479);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // simpleButton_createCartaCompromiso
+            // 
+            this.simpleButton_createCartaCompromiso.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_createCartaCompromiso.ImageOptions.SvgImage")));
+            this.simpleButton_createCartaCompromiso.Location = new System.Drawing.Point(12, 431);
+            this.simpleButton_createCartaCompromiso.Name = "simpleButton_createCartaCompromiso";
+            this.simpleButton_createCartaCompromiso.Size = new System.Drawing.Size(171, 36);
+            this.simpleButton_createCartaCompromiso.StyleController = this.layoutControl1;
+            this.simpleButton_createCartaCompromiso.TabIndex = 9;
+            this.simpleButton_createCartaCompromiso.Text = "Generar carta compromiso";
+            this.simpleButton_createCartaCompromiso.Click += new System.EventHandler(this.simpleButton_createCartaCompromiso_Click);
             // 
             // textEdit_CURP
             // 
@@ -142,6 +157,8 @@
             this.gridColumn6});
             this.gridView_docs.GridControl = this.gridControl_docs;
             this.gridView_docs.Name = "gridView_docs";
+            this.gridView_docs.OptionsSelection.MultiSelect = true;
+            this.gridView_docs.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
@@ -156,6 +173,7 @@
             this.gridColumn2.Caption = "Documento";
             this.gridColumn2.FieldName = "descripcion";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
@@ -199,6 +217,12 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Id registro";
+            this.gridColumn6.FieldName = "idRegistro";
+            this.gridColumn6.Name = "gridColumn6";
+            // 
             // textEdit_name
             // 
             this.textEdit_name.Location = new System.Drawing.Point(421, 12);
@@ -219,7 +243,8 @@
             this.layoutControlItem4,
             this.emptySpaceItem1,
             this.emptySpaceItem2,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(912, 479);
             this.Root.TextVisible = false;
@@ -263,9 +288,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 419);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(175, 419);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(410, 40);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(235, 40);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -285,15 +310,18 @@
             this.layoutControlItem5.Text = "CURP:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(41, 13);
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.simpleButton_createCartaCompromiso;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 419);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(175, 40);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Id registro";
-            this.gridColumn6.FieldName = "idRegistro";
-            this.gridColumn6.Name = "gridColumn6";
             // 
             // Documentacion
             // 
@@ -323,6 +351,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,5 +382,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_createCartaCompromiso;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
