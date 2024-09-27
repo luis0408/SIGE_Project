@@ -140,6 +140,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumnos_Licenciatura\OrdenesCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos_Licenciatura\OrdenesCobro.Designer.cs">
+      <DependentUpon>OrdenesCobro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo\catalogoBachilleratos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -417,11 +423,11 @@
     <Compile Include="ControlEscolar\FichaSolicitud.Designer.cs">
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Finanzas\GenerarOrdenesPago.cs">
+    <Compile Include="Finanzas\GenerarOrdenesCobro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Finanzas\GenerarOrdenesPago.Designer.cs">
-      <DependentUpon>GenerarOrdenesPago.cs</DependentUpon>
+    <Compile Include="Finanzas\GenerarOrdenesCobro.Designer.cs">
+      <DependentUpon>GenerarOrdenesCobro.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -542,6 +548,9 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Alumnos_Licenciatura\OrdenesCobro.resx">
+      <DependentUpon>OrdenesCobro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\catalogoBachilleratos.resx">
       <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
     </EmbeddedResource>
@@ -671,8 +680,8 @@
     <EmbeddedResource Include="ControlEscolar\FichaSolicitud.resx">
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Finanzas\GenerarOrdenesPago.resx">
-      <DependentUpon>GenerarOrdenesPago.cs</DependentUpon>
+    <EmbeddedResource Include="Finanzas\GenerarOrdenesCobro.resx">
+      <DependentUpon>GenerarOrdenesCobro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -845,6 +854,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HONGO.ico" />
+    <None Include="Resources\solicitud-de-propuesta.png" />
     <None Include="Resources\logo IESE3.png" />
     <None Include="Resources\logo IESE2.png" />
     <None Include="Resources\Letras SIGE.jpg" />

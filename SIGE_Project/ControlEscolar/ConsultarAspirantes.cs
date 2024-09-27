@@ -150,11 +150,10 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_inscribir.Visible = false;
                     navBarItem_reutilizar.Visible = false;
 
-                    navBarItem_addDocs.Visible = true;
+                    navBarItem_addDocs.Visible = false;
                     navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = true;
-                    navBarItem_cartaCompromiso.Visible = false;
-                    navBarItem_seguroFacultativo.Visible = false;
+                    
 
                     navBarItem_generarFicha.Visible = true;
                     break;
@@ -165,8 +164,7 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = true;
                     navBarItem_editar.Visible = true;
                     navBarItem_declinar.Visible = true;
-                    navBarItem_cartaCompromiso.Visible = true;
-                    navBarItem_seguroFacultativo.Visible = true;
+                    
 
                     navBarItem_generarFicha.Visible = true;
                     break;
@@ -177,8 +175,7 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = false;
                     navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = false;
-                    navBarItem_cartaCompromiso.Visible = false;
-                    navBarItem_seguroFacultativo.Visible = false;
+                    
 
                     navBarItem_generarFicha.Visible = false;
                     break;
@@ -253,8 +250,9 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_addDocs_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            string curpSelect = gridView_enEspera.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "CURP").ToString();
-            string nombreSelect = gridView_enEspera.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "nombre").ToString();
+
+            string curpSelect = gridView_aceptados.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "CURP").ToString();
+            string nombreSelect = gridView_aceptados.GetRowCellValue(gridView_enEspera.FocusedRowHandle, "nombre").ToString();
             Documentacion objDocs = new Documentacion(curpSelect, nombreSelect);
             objDocs.ShowDialog();
         }

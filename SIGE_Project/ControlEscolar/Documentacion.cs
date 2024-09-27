@@ -199,7 +199,7 @@ namespace SIGE_Project.ControlEscolar
             if (resultUpdate > 0) 
             {
                 XtraMessageBox.Show("La información se actualizó correctamente." , "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();   
+                //this.Close();   
 
             }
             else
@@ -212,10 +212,18 @@ namespace SIGE_Project.ControlEscolar
 
         private void simpleButton_createCartaCompromiso_Click(object sender, EventArgs e)
         {
-           
-            
+
+            ////se valida que no exista info de la curp selecionada
+            if (validarCartaCompromisoExistente() == 1)
+            {
+                XtraMessageBox.Show("Existe una carta compromiso pendiente, finalicela o cancelela para poder generar una nueva.", "Carta comrpomiso pendiente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mostrarCartaCompromiso(CURP);
+                return;
+            }
+            simpleButton_save_Click(sender, e); ///SE GUARADAN CAMBIOS POR SI NO LOS HA GUARDADO EL USUARIO
             try
             {
+
                 ////SE SOLICTA LA FECHA DE VENCIMIENTO
                 XtraInputBoxArgs args = new XtraInputBoxArgs();
                 DateEdit editor = new DateEdit();
@@ -245,14 +253,15 @@ namespace SIGE_Project.ControlEscolar
                         rowsPrev.Add(gridView_docs.GetDataRow(gridView_docs.GetSelectedRows()[vp]));
                     }
                 }
-                if (1==1)
+                /////CONFIRMACION DEL NUMERO DE ARCHIVOS CON EL QUE DESEA GENERAR LA CARTA
+                if (XtraMessageBox.Show("¿Desea generar una carta compromiso con " + rowsPrev.Count.ToString() + " docuementos pendientes?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)!=DialogResult.Yes)
                 {
-                    /////CONFIRMACION DEL NUMERO DE ARCHIVOS CON EL QUE DESEA GENERAR LA CARTA
+                    ///SI NO RESPONDE 'SI' SE CANCELA EL PROCESO
+                    XtraMessageBox.Show("Proceso cancelado","Cancelado",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                    
                 }
-                if (validarCartaCompromisoExistente()==1)
-                {
-                    ////se valida que no exista info de la curp selecionada
-                }
+
                 crearDTcartaCompromiso();
                
                 /////SE RECORRE LA LISTA CREADA Y SE OBTIENEN LOS DATOS NECESARIOS
@@ -278,6 +287,8 @@ namespace SIGE_Project.ControlEscolar
                     /////Se muestra carta compromiso
                     if (splashScreenManager1.IsSplashFormVisible)
                         splashScreenManager1.CloseWaitForm();
+                    mostrarCartaCompromiso(CURP);
+                   
 
                     XtraMessageBox.Show("La carta compromiso se generó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -296,6 +307,16 @@ namespace SIGE_Project.ControlEscolar
                 XtraMessageBox.Show("Error al generar la carta comrpomiso " + exs.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void mostrarCartaCompromiso(string CURP)
+        {
+            Reportes.CartaCompromiso rptCartaCompromiso = new Reportes.CartaCompromiso();
+            rptCartaCompromiso.sqlDataSource1.ConnectionParameters = Utilerias.GetConnectionParametersBase();
+            rptCartaCompromiso.Parameters["CURP"].Value = CURP;
+            rptCartaCompromiso.RequestParameters = false;
+            ReportPrintTool p = new ReportPrintTool(rptCartaCompromiso);
+            p.AutoShowParametersPanel = false;
+            p.ShowPreview();
+        }
         DataTable dtCartaCompromiso;
         private void crearDTcartaCompromiso()
         {
@@ -309,7 +330,21 @@ namespace SIGE_Project.ControlEscolar
         private int validarCartaCompromisoExistente()
         {
             ////SE VALIDA SI YA EXISTEN DATOS DE UNA CARTA COMPROMISO EN ESTADO PENDIENTE
-            return 0;
+            datos = new object[] { };
+            parametros = new string[] { };
+            DataSet dsCartaCompromiso= new DataSet();
+            dsCartaCompromiso = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_CARTACOMPROMISO", datos,parametros);
+            if (dsCartaCompromiso.Tables[0].Rows.Count>0)
+            {
+                /////EXISTE CARTA CON ESTADO PENDIENTE
+                return 1;
+            }
+            else
+            {
+                ////NO EXISTE CARTA PENDIENTE, SE PUEDE REALIZAR UNA NUEVA
+                return 0;
+
+            }
         }
         private int insertCartaCompromiso()
         {
