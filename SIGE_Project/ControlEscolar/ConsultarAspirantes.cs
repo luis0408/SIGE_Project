@@ -1,4 +1,5 @@
 ﻿using DevExpress.Export;
+using DevExpress.PivotGrid.OLAP.AdoWrappers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
@@ -419,6 +420,25 @@ namespace SIGE_Project.ControlEscolar
             }
 
                 
+        }
+        
+
+        private void navBarItem_generateFichaCobro_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            int countSelect = gridView_aceptados.SelectedRowsCount;
+            if (countSelect == 0)
+            {
+
+                XtraMessageBox.Show("Selecciona al menos un aspirante.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (countSelect > 1)
+            {
+                XtraMessageBox.Show("Solo se puede generar la orden de cobro de un aspirante a la vez.", "Multiple selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Finanzas.clsOrdenCobro objOC = new Finanzas.clsOrdenCobro();
+            //objOC.setValoresOrdenCobroInsert(,)
         }
     }
 }

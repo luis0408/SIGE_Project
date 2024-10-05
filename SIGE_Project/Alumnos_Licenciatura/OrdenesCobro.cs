@@ -18,12 +18,15 @@ namespace SIGE_Project.Alumnos_Licenciatura
         {
             InitializeComponent();
         }
+        object[] datos;
+        string[] parametros;
 
         private void simpleButton_solicitarOrdenCobro_Click(object sender, EventArgs e)
         {
+
             if (validarSolicitudPendiente()==true)
             {
-                XtraMessageBox.Show("Actualmente existe uan solicictud pendiente, ponganse en contacto con el depsartamento de finanzas.");
+                XtraMessageBox.Show("Actualmente existe una solicictud pendiente, ponganse en contacto con el depsartamento de finanzas.");
                 return;
             }
             string msg = "Antes de continuar recuerda que una vez enviada la orden de cobro a tu correo electronico, " +
@@ -51,6 +54,15 @@ namespace SIGE_Project.Alumnos_Licenciatura
         private void realizarSolicitudOrdenCobro()
         {
 
+        }
+        private void validarInscrito()
+        {
+            ////SE VALIDA SI ESTA INSCRITO Y HACE PROCESO DE REINSCRIPCION O ES NUEVO ALUMNO PARA SABER SOBRE QUE TABLA BUSCAR
+            datos= new object[] { };
+            parametros = new string[] { "@CURP" };
+            DataSet dsValidar=Utilerias.consultarProcedimiento("SIGE_CONSULTAR_ASPIRANTEOALUMNO", datos,parametros);
+            /////LA TABLA 0 ES DE LOS ASAPIRANTES
+            /////LA TABLA 1 ES DE LOS ALUMNOS
         }
     }
 }

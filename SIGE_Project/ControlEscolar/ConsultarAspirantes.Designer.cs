@@ -156,6 +156,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
+            this.navBarItem_generateFichaCobro = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl_opciones)).BeginInit();
@@ -246,7 +247,8 @@
             this.navBarItem_inscribir,
             this.navBarItem_reutilizar,
             this.navBarItem_generarGraficas,
-            this.navBarItem_addDocs});
+            this.navBarItem_addDocs,
+            this.navBarItem_generateFichaCobro});
             this.navBarControl_opciones.Location = new System.Drawing.Point(1103, 75);
             this.navBarControl_opciones.Name = "navBarControl_opciones";
             this.navBarControl_opciones.OptionsNavPane.ExpandedWidth = 181;
@@ -264,7 +266,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_addDocs),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_reutilizar),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_editar),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_declinar)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_declinar),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_generateFichaCobro)});
             this.navBarGroup_accionesEspera.Name = "navBarGroup_accionesEspera";
             // 
             // navBarItem_aceptar
@@ -1480,6 +1483,13 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // navBarItem_generateFichaCobro
+            // 
+            this.navBarItem_generateFichaCobro.Caption = "Generar ficha de cobro";
+            this.navBarItem_generateFichaCobro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_generateFichaPago.ImageOptions.SvgImage")));
+            this.navBarItem_generateFichaCobro.Name = "navBarItem_generateFichaCobro";
+            this.navBarItem_generateFichaCobro.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_generateFichaCobro_LinkClicked);
+            // 
             // ConsultarAspirantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1658,5 +1668,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn82;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn83;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn84;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem_generateFichaCobro;
     }
 }

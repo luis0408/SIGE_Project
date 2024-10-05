@@ -43,6 +43,7 @@ namespace SIGE_Project
         private void progressPanel1_Click(object sender, EventArgs e)
         {
 
+
         }
     }
 }

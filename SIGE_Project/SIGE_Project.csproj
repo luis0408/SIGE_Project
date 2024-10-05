@@ -423,6 +423,7 @@
     <Compile Include="ControlEscolar\FichaSolicitud.Designer.cs">
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finanzas\clsOrdenCobro.cs" />
     <Compile Include="Finanzas\GenerarOrdenesCobro.cs">
       <SubType>Form</SubType>
     </Compile>
