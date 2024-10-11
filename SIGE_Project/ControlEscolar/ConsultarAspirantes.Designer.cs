@@ -40,6 +40,7 @@
             this.navBarItem_reutilizar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_editar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_declinar = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem_generateFichaCobro = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup_Reportes = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem_exportar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem_generarFicha = new DevExpress.XtraNavBar.NavBarItem();
@@ -156,7 +157,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.WaitForm1), true, true);
-            this.navBarItem_generateFichaCobro = new DevExpress.XtraNavBar.NavBarItem();
+            this.gridColumn85 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl_opciones)).BeginInit();
@@ -311,6 +312,13 @@
             this.navBarItem_declinar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_declinar.ImageOptions.SvgImage")));
             this.navBarItem_declinar.Name = "navBarItem_declinar";
             this.navBarItem_declinar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_declinar_LinkClicked);
+            // 
+            // navBarItem_generateFichaCobro
+            // 
+            this.navBarItem_generateFichaCobro.Caption = "Solicitar orden de cobro";
+            this.navBarItem_generateFichaCobro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_generateFichaCobro.ImageOptions.SvgImage")));
+            this.navBarItem_generateFichaCobro.Name = "navBarItem_generateFichaCobro";
+            this.navBarItem_generateFichaCobro.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_generateFichaCobro_LinkClicked);
             // 
             // navBarGroup_Reportes
             // 
@@ -759,7 +767,8 @@
             this.gridColumn53,
             this.gridColumn54,
             this.gridColumn55,
-            this.gridColumn56});
+            this.gridColumn56,
+            this.gridColumn85});
             this.gridView_aceptados.GridControl = this.gridControl_aceptados;
             this.gridView_aceptados.Name = "gridView_aceptados";
             this.gridView_aceptados.OptionsSelection.MultiSelect = true;
@@ -1483,12 +1492,11 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
-            // navBarItem_generateFichaCobro
+            // gridColumn85
             // 
-            this.navBarItem_generateFichaCobro.Caption = "Generar ficha de cobro";
-            this.navBarItem_generateFichaCobro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_generateFichaPago.ImageOptions.SvgImage")));
-            this.navBarItem_generateFichaCobro.Name = "navBarItem_generateFichaCobro";
-            this.navBarItem_generateFichaCobro.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_generateFichaCobro_LinkClicked);
+            this.gridColumn85.Caption = "Clave licenciatura";
+            this.gridColumn85.FieldName = "cveLicenciatura";
+            this.gridColumn85.Name = "gridColumn85";
             // 
             // ConsultarAspirantes
             // 
@@ -1669,5 +1677,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn83;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn84;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_generateFichaCobro;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn85;
     }
 }

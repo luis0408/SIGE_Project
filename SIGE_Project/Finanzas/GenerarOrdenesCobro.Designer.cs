@@ -40,13 +40,12 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage_Inscripciones = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage_Pendientes = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl_inscripciones = new DevExpress.XtraGrid.GridControl();
             this.gridView_inscripciones = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtraTabPage_Reinscripcion = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage_Enviadas = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage_Finalizadas = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage_Vencidas = new DevExpress.XtraTab.XtraTabPage();
@@ -63,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage_Inscripciones.SuspendLayout();
+            this.xtraTabPage_Pendientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_inscripciones)).BeginInit();
@@ -145,7 +144,7 @@
             // 
             // navBarItem_sendMail
             // 
-            this.navBarItem_sendMail.Caption = "Adjuntar orden de cobro";
+            this.navBarItem_sendMail.Caption = "Adjuntar y enviar orden de cobro";
             this.navBarItem_sendMail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_sendMail.ImageOptions.SvgImage")));
             this.navBarItem_sendMail.Name = "navBarItem_sendMail";
             // 
@@ -179,22 +178,21 @@
             // 
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 38);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage_Inscripciones;
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage_Pendientes;
             this.xtraTabControl1.Size = new System.Drawing.Size(981, 553);
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage_Inscripciones,
-            this.xtraTabPage_Reinscripcion,
+            this.xtraTabPage_Pendientes,
             this.xtraTabPage_Enviadas,
             this.xtraTabPage_Finalizadas,
             this.xtraTabPage_Vencidas});
             // 
-            // xtraTabPage_Inscripciones
+            // xtraTabPage_Pendientes
             // 
-            this.xtraTabPage_Inscripciones.Controls.Add(this.layoutControl2);
-            this.xtraTabPage_Inscripciones.Name = "xtraTabPage_Inscripciones";
-            this.xtraTabPage_Inscripciones.Size = new System.Drawing.Size(979, 528);
-            this.xtraTabPage_Inscripciones.Text = "Inscripciones";
+            this.xtraTabPage_Pendientes.Controls.Add(this.layoutControl2);
+            this.xtraTabPage_Pendientes.Name = "xtraTabPage_Pendientes";
+            this.xtraTabPage_Pendientes.Size = new System.Drawing.Size(979, 528);
+            this.xtraTabPage_Pendientes.Text = "Pendientes";
             // 
             // layoutControl2
             // 
@@ -240,12 +238,6 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(959, 508);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
-            // 
-            // xtraTabPage_Reinscripcion
-            // 
-            this.xtraTabPage_Reinscripcion.Name = "xtraTabPage_Reinscripcion";
-            this.xtraTabPage_Reinscripcion.Size = new System.Drawing.Size(979, 528);
-            this.xtraTabPage_Reinscripcion.Text = "Reinscripción";
             // 
             // xtraTabPage_Enviadas
             // 
@@ -339,7 +331,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage_Inscripciones.ResumeLayout(false);
+            this.xtraTabPage_Pendientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_inscripciones)).EndInit();
@@ -361,8 +353,7 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage_Inscripciones;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage_Reinscripcion;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage_Pendientes;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_Enviadas;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_Finalizadas;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_Vencidas;

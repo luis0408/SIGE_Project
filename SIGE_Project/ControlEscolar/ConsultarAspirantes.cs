@@ -37,25 +37,25 @@ namespace SIGE_Project.ControlEscolar
             dateEdit_fechaConsultar.EditValue = DateTime.Now;
             consultarAspirantes();
         }
-        private void consultarAspirantes() 
+        private void consultarAspirantes()
         {
-            int fechaSelect =  Convert.ToDateTime(dateEdit_fechaConsultar.EditValue).Year;
-            datos = new object[] {fechaSelect };
-            parametros = new string[] { "@anioConsulta" };  
+            int fechaSelect = Convert.ToDateTime(dateEdit_fechaConsultar.EditValue).Year;
+            datos = new object[] { fechaSelect };
+            parametros = new string[] { "@anioConsulta" };
             DataSet dsAspirantes = new DataSet();
-            dsAspirantes = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_ASPIRANTES]", datos,parametros);
-            DataTable dtEnEspera=dsAspirantes.Tables[0];
+            dsAspirantes = Utilerias.consultarProcedimiento("[SIGE_CONSULTAR_ASPIRANTES]", datos, parametros);
+            DataTable dtEnEspera = dsAspirantes.Tables[0];
             DataTable dtAceptados = dsAspirantes.Tables[1];
-            DataTable dtDeclinados=dsAspirantes.Tables[2];
-            gridControl_enEspera.DataSource= dtEnEspera;
+            DataTable dtDeclinados = dsAspirantes.Tables[2];
+            gridControl_enEspera.DataSource = dtEnEspera;
             gridView_enEspera.BestFitColumns();
             gridControl_aceptados.DataSource = dtAceptados;
             gridView_aceptados.BestFitColumns();
-            
+
             xtraTabControl_Aspirantes.SelectedTabPageIndex = 1;
-            xtraTabControl_Aspirantes.SelectedTabPageIndex= 0;
+            xtraTabControl_Aspirantes.SelectedTabPageIndex = 0;
             navBarControl_opciones.Enabled = true;
-            
+
         }
 
         private void navBarItem_exportar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -144,7 +144,7 @@ namespace SIGE_Project.ControlEscolar
             string nomPag = xtraTabControl_Aspirantes.SelectedTabPage.Name;////SE OBTIENE EL NOMBRE DE LA PAGINA SELECCIONADA
 
 
-            switch(nomPag)
+            switch (nomPag)
             {
                 case "xtraTabPage_espera":
                     navBarItem_aceptar.Visible = true;
@@ -157,6 +157,8 @@ namespace SIGE_Project.ControlEscolar
                     
 
                     navBarItem_generarFicha.Visible = true;
+
+                    navBarItem_generateFichaCobro.Visible = false;
                     break;
                 case "xtraTabPage_aceptados":
                     navBarItem_aceptar.Visible = false;
@@ -165,9 +167,11 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = true;
                     navBarItem_editar.Visible = true;
                     navBarItem_declinar.Visible = true;
-                    
+
 
                     navBarItem_generarFicha.Visible = true;
+
+                    navBarItem_generateFichaCobro.Visible = true;
                     break;
                 case "xtraTabPage_declinados":
                     navBarItem_aceptar.Visible = false;
@@ -176,9 +180,11 @@ namespace SIGE_Project.ControlEscolar
                     navBarItem_addDocs.Visible = false;
                     navBarItem_editar.Visible = false;
                     navBarItem_declinar.Visible = false;
-                    
+
 
                     navBarItem_generarFicha.Visible = false;
+
+                    navBarItem_generateFichaCobro.Visible = false;
                     break;
                 default:
                     break;
@@ -215,7 +221,7 @@ namespace SIGE_Project.ControlEscolar
 
 
                     string CURP = Convert.ToString(row["CURP"]);
-                   
+
                     Reportes.FichaAspirante rptFichaAspirante = new Reportes.FichaAspirante();
                     rptFichaAspirante.sqlDataSource1.ConnectionParameters = Utilerias.GetConnectionParametersBase();
                     rptFichaAspirante.Parameters["CURP"].Value = CURP;
@@ -260,7 +266,7 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_aceptar_ItemChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void navBarItem_reutilizar_ItemChanged(object sender, EventArgs e)
@@ -270,7 +276,7 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_aceptar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            if (XtraMessageBox.Show("¿Desea cambiar el estado a 'Aceptado'?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (XtraMessageBox.Show("¿Desea cambiar el estado a 'Aceptado'?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int estadoAceptado = 2;/////ESTADO PARA ACEPTADO
 
@@ -283,7 +289,7 @@ namespace SIGE_Project.ControlEscolar
                     actualizarEstadoAspirante(gridView_aceptados, estadoAceptado);
                 }
             }
-            
+
         }
 
         private void navBarItem_declinar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -294,16 +300,16 @@ namespace SIGE_Project.ControlEscolar
 
                 if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 0)/////EN ESPERA
                 {
-                    actualizarEstadoAspirante(gridView_enEspera,estadoDeclinado);
+                    actualizarEstadoAspirante(gridView_enEspera, estadoDeclinado);
                 }
                 if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 1)/////ACEPTADOS
                 {
                     actualizarEstadoAspirante(gridView_aceptados, estadoDeclinado);
-                    
+
                 }
             }
         }
-       
+
         private void actualizarEstadoAspirante(GridView gdView, int estatus)
         {
             ///SE ACTUALIZA ESTADO DEL ASPIRANTE
@@ -335,7 +341,7 @@ namespace SIGE_Project.ControlEscolar
 
 
                     string CURP = Convert.ToString(row["CURP"]);
-                    
+
 
                     datos = new object[] { CURP, estatus };
                     parametros = new string[] { "@CURP", "@status" };
@@ -364,7 +370,7 @@ namespace SIGE_Project.ControlEscolar
 
         private void navBarItem_editar_ItemChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void navBarItem_editar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -393,7 +399,7 @@ namespace SIGE_Project.ControlEscolar
             if (XtraMessageBox.Show("¿Desea inscribir a este aspirante?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int estadoInscribir = 4;/////ESTADO PARA DECLIANADO
-    
+
                 if (xtraTabControl_Aspirantes.SelectedTabPageIndex == 1)/////ACEPTADOS
                 {
                     inscribirAlumno();
@@ -419,9 +425,9 @@ namespace SIGE_Project.ControlEscolar
                 }
             }
 
-                
+
         }
-        
+
 
         private void navBarItem_generateFichaCobro_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -429,16 +435,49 @@ namespace SIGE_Project.ControlEscolar
             if (countSelect == 0)
             {
 
-                XtraMessageBox.Show("Selecciona al menos un aspirante.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Selecciona al menos un aspirante.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (countSelect > 1)
             {
-                XtraMessageBox.Show("Solo se puede generar la orden de cobro de un aspirante a la vez.", "Multiple selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Solo se puede generar la orden de cobro de un aspirante a la vez.", "Multiple selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //Finanzas.clsOrdenCobro objOC = new Finanzas.clsOrdenCobro();
-            //objOC.setValoresOrdenCobroInsert(,)
+            try
+            {
+                /////SE OBTIENE DATOS DEL SOLCITANTE
+                string curpSolicitante = gridView_aceptados.GetRowCellValue(gridView_aceptados.FocusedRowHandle, "CURP").ToString();
+
+                string cveLicenciatura = gridView_aceptados.GetRowCellValue(gridView_aceptados.FocusedRowHandle, "cveLicenciatura").ToString();
+
+                Finanzas.clsOrdenCobro objOC = new Finanzas.clsOrdenCobro(curpSolicitante);
+                if (objOC.validarSolicitudesOrdenCobroPendiente()==true)
+                {
+                    XtraMessageBox.Show("Ya existe una solicitud pendiente con la cupr seleccionada.", "Solicitud pendiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                objOC.setValoresOrdenCobroInsert(1, cveLicenciatura, 1, variables.varUser);
+                int resultInsert = objOC.insertSolicitudOrdenCobro();
+                if (resultInsert == 0)
+                {
+                    throw new Exception("Error al realizar  el método insertSolicitudOrdenCobro().Contacte al departamento de sistemas.");
+                }
+                else
+                {
+                    XtraMessageBox.Show("La solicitud se realizó correctamente, espera el correo electrónico con la orden de cobro adjunta.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    consultarAspirantes();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Se genero un error al generar la orden de cobro. Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
         }
+        
+
     }
 }
