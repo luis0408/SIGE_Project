@@ -360,6 +360,7 @@
     <Compile Include="Catalogo\DatosTipoUsuarios.Designer.cs">
       <DependentUpon>DatosTipoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsMail.cs" />
     <Compile Include="Configuraciones\AgregarBotones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -424,6 +425,12 @@
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Finanzas\clsOrdenCobro.cs" />
+    <Compile Include="Finanzas\EnviarOrdenCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finanzas\EnviarOrdenCobro.Designer.cs">
+      <DependentUpon>EnviarOrdenCobro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finanzas\GenerarOrdenesCobro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -680,6 +687,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlEscolar\FichaSolicitud.resx">
       <DependentUpon>FichaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas\EnviarOrdenCobro.resx">
+      <DependentUpon>EnviarOrdenCobro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finanzas\GenerarOrdenesCobro.resx">
       <DependentUpon>GenerarOrdenesCobro.cs</DependentUpon>
