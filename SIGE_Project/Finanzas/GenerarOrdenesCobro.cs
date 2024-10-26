@@ -43,7 +43,7 @@ namespace SIGE_Project.Finanzas
             {
                 datos = new object[] {dateEdit_fechaIncial.EditValue,dateEdit_fechaFinal.EditValue };
                 parametros = new string[] { "@fechaIni", "@fechaFin" };
-                DataSet ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_SOCITUDESORDENCOBRO", datos, parametros);
+                DataSet ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_SOLICITUDESORDENCOBRO", datos, parametros);
                 if (ds.Tables[0].Rows.Count>0)////PENDIENTES
                 {
                     DataTable dt = ds.Tables[0];
@@ -103,6 +103,34 @@ namespace SIGE_Project.Finanzas
                 dateEdit_fechaFinal.ReadOnly = true;
                 simpleButton_consultar.Enabled = false;
             }
+        }
+
+        private void navBarItem_sendMail_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            int rowsSelectCount = gridView_Pendientes.SelectedRowsCount;////CUENTA CUANTAS FILAS FUERON SELECCIONADAS
+            if (rowsSelectCount == 0)
+            {
+                XtraMessageBox.Show("Selecciona una solicitud para enviar.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (rowsSelectCount >1)
+            {
+                XtraMessageBox.Show("Solo se puede enviar una solicitud a la vez", "Multiselcción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string curpSolicitante=gridView_Pendientes.GetRowCellValue(gridView_Pendientes.FocusedRowHandle, "CURP").ToString();
+            string correoSolicitante= gridView_Pendientes.GetRowCellValue(gridView_Pendientes.FocusedRowHandle, "email").ToString();
+            int idSolicitud = Convert.ToInt32(gridView_Pendientes.GetRowCellValue(gridView_Pendientes.FocusedRowHandle, "idSolicitud").ToString());
+            EnviarOrdenCobro objSendOrdenCobro = new EnviarOrdenCobro(curpSolicitante,correoSolicitante,idSolicitud);
+            objSendOrdenCobro.ShowDialog();
+            if (objSendOrdenCobro.DialogResult==DialogResult.OK)
+            {
+                consultarSolcitudes();
+            }
+            {
+
+            }
+            
         }
     }
 }

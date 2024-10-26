@@ -12,6 +12,11 @@ namespace SIGE_Project
         public static string varUser = "";
         public static string nombreCompleto = "";
         public static string cveTipoUser = "";
+
+        ///DATOS DE FTP
+        public static string rutaFTP = "ftp://wyb.ddns.net/";
+        public static string userFTP = "clienteFTP";
+        public static string passwordFTP = "cl13nt3ftp";
     }
 
 

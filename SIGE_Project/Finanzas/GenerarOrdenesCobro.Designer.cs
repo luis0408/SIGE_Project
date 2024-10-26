@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerarOrdenesCobro));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.checkEdit_searchPerzonalizada = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dateEdit_fechaIncial = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit_fechaFinal = new DevExpress.XtraEditors.DateEdit();
@@ -45,13 +46,51 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage_Pendientes = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.checkButton1 = new DevExpress.XtraEditors.CheckButton();
             this.gridControl_Pendientes = new DevExpress.XtraGrid.GridControl();
             this.gridView_Pendientes = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage_Enviadas = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl_Enviadas = new DevExpress.XtraGrid.GridControl();
+            this.gridView_Enviadas = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage_Finalizadas = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl1_Finalizadas = new DevExpress.XtraGrid.GridControl();
+            this.gridView_Finalizadas = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage_Vencidas = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl_Vencidas = new DevExpress.XtraGrid.GridControl();
+            this.gridView_Vencidas = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabPage_Canceladas = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl_Canceladas = new DevExpress.XtraGrid.GridControl();
+            this.gridView_Canceladas = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -60,49 +99,13 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.checkEdit_searchPerzonalizada = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.checkButton1 = new DevExpress.XtraEditors.CheckButton();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.gridControl_Enviadas = new DevExpress.XtraGrid.GridControl();
-            this.gridView_Enviadas = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutConverter1 = new DevExpress.XtraLayout.Converter.LayoutConverter(this.components);
-            this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.gridControl1_Finalizadas = new DevExpress.XtraGrid.GridControl();
-            this.gridView_Finalizadas = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridControl_Vencidas = new DevExpress.XtraGrid.GridControl();
-            this.gridView_Vencidas = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtraTabPage_Canceladas = new DevExpress.XtraTab.XtraTabPage();
-            this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.gridControl_Canceladas = new DevExpress.XtraGrid.GridControl();
-            this.gridView_Canceladas = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_searchPerzonalizada.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaIncial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaIncial.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaFinal.Properties)).BeginInit();
@@ -117,9 +120,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Pendientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.xtraTabPage_Enviadas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
+            this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Enviadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Enviadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.xtraTabPage_Finalizadas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
+            this.layoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1_Finalizadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Finalizadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             this.xtraTabPage_Vencidas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
+            this.layoutControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Vencidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Vencidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            this.xtraTabPage_Canceladas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
+            this.layoutControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Canceladas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Canceladas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -128,34 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_searchPerzonalizada.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
-            this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Enviadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Enviadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
-            this.layoutControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
-            this.layoutControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1_Finalizadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Finalizadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Vencidas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Vencidas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            this.xtraTabPage_Canceladas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
-            this.layoutControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Canceladas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Canceladas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -175,6 +177,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(1216, 603);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // checkEdit_searchPerzonalizada
+            // 
+            this.checkEdit_searchPerzonalizada.Location = new System.Drawing.Point(512, 12);
+            this.checkEdit_searchPerzonalizada.Name = "checkEdit_searchPerzonalizada";
+            this.checkEdit_searchPerzonalizada.Properties.Caption = "Busqueda perzonalizada";
+            this.checkEdit_searchPerzonalizada.Size = new System.Drawing.Size(692, 20);
+            this.checkEdit_searchPerzonalizada.StyleController = this.layoutControl1;
+            this.checkEdit_searchPerzonalizada.TabIndex = 11;
+            this.checkEdit_searchPerzonalizada.CheckedChanged += new System.EventHandler(this.checkEdit_searchPerzonalizada_CheckedChanged);
             // 
             // labelControl1
             // 
@@ -259,6 +271,7 @@
             this.navBarItem_sendMail.Caption = "Adjuntar y enviar orden de cobro";
             this.navBarItem_sendMail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_sendMail.ImageOptions.SvgImage")));
             this.navBarItem_sendMail.Name = "navBarItem_sendMail";
+            this.navBarItem_sendMail.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_sendMail_LinkClicked);
             // 
             // navBarItem1
             // 
@@ -319,6 +332,15 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // checkButton1
+            // 
+            this.checkButton1.Location = new System.Drawing.Point(12, 456);
+            this.checkButton1.Name = "checkButton1";
+            this.checkButton1.Size = new System.Drawing.Size(955, 22);
+            this.checkButton1.StyleController = this.layoutControl2;
+            this.checkButton1.TabIndex = 5;
+            this.checkButton1.Text = "checkButton1";
+            // 
             // gridControl_Pendientes
             // 
             this.gridControl_Pendientes.Location = new System.Drawing.Point(12, 12);
@@ -346,12 +368,129 @@
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14,
-            this.gridColumn15});
+            this.gridColumn15,
+            this.gridColumn16,
+            this.gridColumn17});
             this.gridView_Pendientes.GridControl = this.gridControl_Pendientes;
             this.gridView_Pendientes.Name = "gridView_Pendientes";
+            this.gridView_Pendientes.OptionsBehavior.ReadOnly = true;
             this.gridView_Pendientes.OptionsView.ColumnAutoWidth = false;
             this.gridView_Pendientes.OptionsView.ShowAutoFilterRow = true;
             this.gridView_Pendientes.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "CURP";
+            this.gridColumn1.FieldName = "CURP";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Nombre";
+            this.gridColumn2.FieldName = "nombreCompleto";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Promedio anterior";
+            this.gridColumn3.FieldName = "promedioSemAnterior";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 3;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Semestre";
+            this.gridColumn4.FieldName = "semestre";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 4;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Licenciatura";
+            this.gridColumn5.FieldName = "licenciatura";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 5;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Estatus";
+            this.gridColumn6.FieldName = "estadoOrden";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 7;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Fecha solicitud";
+            this.gridColumn7.DisplayFormat.FormatString = "d";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn7.FieldName = "fechaRegistro";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 8;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Usuario registró";
+            this.gridColumn9.FieldName = "usuRegistro";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 9;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Fecha expira";
+            this.gridColumn8.DisplayFormat.FormatString = "d";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn8.FieldName = "fechaExpira";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Fecha envio";
+            this.gridColumn10.DisplayFormat.FormatString = "d";
+            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn10.FieldName = "fechaEnvio";
+            this.gridColumn10.Name = "gridColumn10";
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Usuario envió";
+            this.gridColumn11.FieldName = "usuEnvio";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Fecha cancelación";
+            this.gridColumn12.DisplayFormat.FormatString = "d";
+            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn12.FieldName = "fechaCancelacion";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "Usuario canceló";
+            this.gridColumn13.FieldName = "usuCancelo";
+            this.gridColumn13.Name = "gridColumn13";
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "dirSolicitudPago";
+            this.gridColumn14.FieldName = "dirSolicitudPago";
+            this.gridColumn14.Name = "gridColumn14";
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "dirComprobante";
+            this.gridColumn15.FieldName = "dirComprobante";
+            this.gridColumn15.Name = "gridColumn15";
             // 
             // layoutControlGroup1
             // 
@@ -373,12 +512,66 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.checkButton1;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 444);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(959, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
             // xtraTabPage_Enviadas
             // 
             this.xtraTabPage_Enviadas.Controls.Add(this.layoutControl3);
             this.xtraTabPage_Enviadas.Name = "xtraTabPage_Enviadas";
             this.xtraTabPage_Enviadas.Size = new System.Drawing.Size(979, 490);
             this.xtraTabPage_Enviadas.Text = "Enviadas";
+            // 
+            // layoutControl3
+            // 
+            this.layoutControl3.Controls.Add(this.gridControl_Enviadas);
+            this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.Root = this.layoutControlGroup2;
+            this.layoutControl3.Size = new System.Drawing.Size(979, 490);
+            this.layoutControl3.TabIndex = 0;
+            this.layoutControl3.Text = "layoutControl3";
+            // 
+            // gridControl_Enviadas
+            // 
+            this.gridControl_Enviadas.Location = new System.Drawing.Point(12, 12);
+            this.gridControl_Enviadas.MainView = this.gridView_Enviadas;
+            this.gridControl_Enviadas.Name = "gridControl_Enviadas";
+            this.gridControl_Enviadas.Size = new System.Drawing.Size(955, 466);
+            this.gridControl_Enviadas.TabIndex = 4;
+            this.gridControl_Enviadas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_Enviadas});
+            // 
+            // gridView_Enviadas
+            // 
+            this.gridView_Enviadas.GridControl = this.gridControl_Enviadas;
+            this.gridView_Enviadas.Name = "gridView_Enviadas";
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem10});
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(979, 490);
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.gridControl_Enviadas;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(959, 470);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // xtraTabPage_Finalizadas
             // 
@@ -387,12 +580,154 @@
             this.xtraTabPage_Finalizadas.Size = new System.Drawing.Size(979, 490);
             this.xtraTabPage_Finalizadas.Text = "Finalizadas";
             // 
+            // layoutControl4
+            // 
+            this.layoutControl4.Controls.Add(this.gridControl1_Finalizadas);
+            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl4.Name = "layoutControl4";
+            this.layoutControl4.Root = this.layoutControlGroup3;
+            this.layoutControl4.Size = new System.Drawing.Size(979, 490);
+            this.layoutControl4.TabIndex = 0;
+            this.layoutControl4.Text = "layoutControl4";
+            // 
+            // gridControl1_Finalizadas
+            // 
+            this.gridControl1_Finalizadas.Location = new System.Drawing.Point(12, 12);
+            this.gridControl1_Finalizadas.MainView = this.gridView_Finalizadas;
+            this.gridControl1_Finalizadas.Name = "gridControl1_Finalizadas";
+            this.gridControl1_Finalizadas.Size = new System.Drawing.Size(955, 466);
+            this.gridControl1_Finalizadas.TabIndex = 4;
+            this.gridControl1_Finalizadas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_Finalizadas});
+            // 
+            // gridView_Finalizadas
+            // 
+            this.gridView_Finalizadas.GridControl = this.gridControl1_Finalizadas;
+            this.gridView_Finalizadas.Name = "gridView_Finalizadas";
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem11});
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(979, 490);
+            this.layoutControlGroup3.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.gridControl1_Finalizadas;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(959, 470);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
             // xtraTabPage_Vencidas
             // 
             this.xtraTabPage_Vencidas.Controls.Add(this.layoutControl5);
             this.xtraTabPage_Vencidas.Name = "xtraTabPage_Vencidas";
             this.xtraTabPage_Vencidas.Size = new System.Drawing.Size(979, 490);
             this.xtraTabPage_Vencidas.Text = "Vencidas";
+            // 
+            // layoutControl5
+            // 
+            this.layoutControl5.Controls.Add(this.gridControl_Vencidas);
+            this.layoutControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl5.Name = "layoutControl5";
+            this.layoutControl5.Root = this.layoutControlGroup4;
+            this.layoutControl5.Size = new System.Drawing.Size(979, 490);
+            this.layoutControl5.TabIndex = 0;
+            this.layoutControl5.Text = "layoutControl5";
+            // 
+            // gridControl_Vencidas
+            // 
+            this.gridControl_Vencidas.Location = new System.Drawing.Point(12, 12);
+            this.gridControl_Vencidas.MainView = this.gridView_Vencidas;
+            this.gridControl_Vencidas.Name = "gridControl_Vencidas";
+            this.gridControl_Vencidas.Size = new System.Drawing.Size(955, 466);
+            this.gridControl_Vencidas.TabIndex = 4;
+            this.gridControl_Vencidas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_Vencidas});
+            // 
+            // gridView_Vencidas
+            // 
+            this.gridView_Vencidas.GridControl = this.gridControl_Vencidas;
+            this.gridView_Vencidas.Name = "gridView_Vencidas";
+            // 
+            // layoutControlGroup4
+            // 
+            this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup4.GroupBordersVisible = false;
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem12});
+            this.layoutControlGroup4.Name = "layoutControlGroup4";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(979, 490);
+            this.layoutControlGroup4.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.gridControl_Vencidas;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(959, 470);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // xtraTabPage_Canceladas
+            // 
+            this.xtraTabPage_Canceladas.Controls.Add(this.layoutControl6);
+            this.xtraTabPage_Canceladas.Name = "xtraTabPage_Canceladas";
+            this.xtraTabPage_Canceladas.Size = new System.Drawing.Size(979, 490);
+            this.xtraTabPage_Canceladas.Text = "Canceladas";
+            // 
+            // layoutControl6
+            // 
+            this.layoutControl6.Controls.Add(this.gridControl_Canceladas);
+            this.layoutControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl6.Name = "layoutControl6";
+            this.layoutControl6.Root = this.layoutControlGroup5;
+            this.layoutControl6.Size = new System.Drawing.Size(979, 490);
+            this.layoutControl6.TabIndex = 0;
+            this.layoutControl6.Text = "layoutControl6";
+            // 
+            // gridControl_Canceladas
+            // 
+            this.gridControl_Canceladas.Location = new System.Drawing.Point(12, 12);
+            this.gridControl_Canceladas.MainView = this.gridView_Canceladas;
+            this.gridControl_Canceladas.Name = "gridControl_Canceladas";
+            this.gridControl_Canceladas.Size = new System.Drawing.Size(955, 466);
+            this.gridControl_Canceladas.TabIndex = 4;
+            this.gridControl_Canceladas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_Canceladas});
+            // 
+            // gridView_Canceladas
+            // 
+            this.gridView_Canceladas.GridControl = this.gridControl_Canceladas;
+            this.gridView_Canceladas.Name = "gridView_Canceladas";
+            // 
+            // layoutControlGroup5
+            // 
+            this.layoutControlGroup5.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup5.GroupBordersVisible = false;
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem13});
+            this.layoutControlGroup5.Name = "layoutControlGroup5";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(979, 490);
+            this.layoutControlGroup5.TextVisible = false;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.gridControl_Canceladas;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(959, 470);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
             // 
             // Root
             // 
@@ -474,16 +809,6 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // checkEdit_searchPerzonalizada
-            // 
-            this.checkEdit_searchPerzonalizada.Location = new System.Drawing.Point(512, 12);
-            this.checkEdit_searchPerzonalizada.Name = "checkEdit_searchPerzonalizada";
-            this.checkEdit_searchPerzonalizada.Properties.Caption = "Busqueda perzonalizada";
-            this.checkEdit_searchPerzonalizada.Size = new System.Drawing.Size(692, 20);
-            this.checkEdit_searchPerzonalizada.StyleController = this.layoutControl1;
-            this.checkEdit_searchPerzonalizada.TabIndex = 11;
-            this.checkEdit_searchPerzonalizada.CheckedChanged += new System.EventHandler(this.checkEdit_searchPerzonalizada_CheckedChanged);
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.checkEdit_searchPerzonalizada;
@@ -493,324 +818,21 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // checkButton1
-            // 
-            this.checkButton1.Location = new System.Drawing.Point(12, 456);
-            this.checkButton1.Name = "checkButton1";
-            this.checkButton1.Size = new System.Drawing.Size(955, 22);
-            this.checkButton1.StyleController = this.layoutControl2;
-            this.checkButton1.TabIndex = 5;
-            this.checkButton1.Text = "checkButton1";
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.checkButton1;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 444);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(959, 26);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
-            // layoutControl3
-            // 
-            this.layoutControl3.Controls.Add(this.gridControl_Enviadas);
-            this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl3.Name = "layoutControl3";
-            this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(979, 490);
-            this.layoutControl3.TabIndex = 0;
-            this.layoutControl3.Text = "layoutControl3";
-            // 
-            // layoutControlGroup2
-            // 
-            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem10});
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(979, 490);
-            this.layoutControlGroup2.TextVisible = false;
-            // 
-            // gridControl_Enviadas
-            // 
-            this.gridControl_Enviadas.Location = new System.Drawing.Point(12, 12);
-            this.gridControl_Enviadas.MainView = this.gridView_Enviadas;
-            this.gridControl_Enviadas.Name = "gridControl_Enviadas";
-            this.gridControl_Enviadas.Size = new System.Drawing.Size(955, 466);
-            this.gridControl_Enviadas.TabIndex = 4;
-            this.gridControl_Enviadas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView_Enviadas});
-            // 
-            // gridView_Enviadas
-            // 
-            this.gridView_Enviadas.GridControl = this.gridControl_Enviadas;
-            this.gridView_Enviadas.Name = "gridView_Enviadas";
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.gridControl_Enviadas;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(959, 470);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem10.TextVisible = false;
-            // 
-            // layoutControl4
-            // 
-            this.layoutControl4.Controls.Add(this.gridControl1_Finalizadas);
-            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl4.Name = "layoutControl4";
-            this.layoutControl4.Root = this.layoutControlGroup3;
-            this.layoutControl4.Size = new System.Drawing.Size(979, 490);
-            this.layoutControl4.TabIndex = 0;
-            this.layoutControl4.Text = "layoutControl4";
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup3.GroupBordersVisible = false;
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem11});
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(979, 490);
-            this.layoutControlGroup3.TextVisible = false;
-            // 
-            // layoutControl5
-            // 
-            this.layoutControl5.Controls.Add(this.gridControl_Vencidas);
-            this.layoutControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl5.Name = "layoutControl5";
-            this.layoutControl5.Root = this.layoutControlGroup4;
-            this.layoutControl5.Size = new System.Drawing.Size(979, 490);
-            this.layoutControl5.TabIndex = 0;
-            this.layoutControl5.Text = "layoutControl5";
-            // 
-            // layoutControlGroup4
-            // 
-            this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup4.GroupBordersVisible = false;
-            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem12});
-            this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(979, 490);
-            this.layoutControlGroup4.TextVisible = false;
-            // 
-            // gridControl1_Finalizadas
-            // 
-            this.gridControl1_Finalizadas.Location = new System.Drawing.Point(12, 12);
-            this.gridControl1_Finalizadas.MainView = this.gridView_Finalizadas;
-            this.gridControl1_Finalizadas.Name = "gridControl1_Finalizadas";
-            this.gridControl1_Finalizadas.Size = new System.Drawing.Size(955, 466);
-            this.gridControl1_Finalizadas.TabIndex = 4;
-            this.gridControl1_Finalizadas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView_Finalizadas});
-            // 
-            // gridView_Finalizadas
-            // 
-            this.gridView_Finalizadas.GridControl = this.gridControl1_Finalizadas;
-            this.gridView_Finalizadas.Name = "gridView_Finalizadas";
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.gridControl1_Finalizadas;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(959, 470);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
-            // 
-            // gridControl_Vencidas
-            // 
-            this.gridControl_Vencidas.Location = new System.Drawing.Point(12, 12);
-            this.gridControl_Vencidas.MainView = this.gridView_Vencidas;
-            this.gridControl_Vencidas.Name = "gridControl_Vencidas";
-            this.gridControl_Vencidas.Size = new System.Drawing.Size(955, 466);
-            this.gridControl_Vencidas.TabIndex = 4;
-            this.gridControl_Vencidas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView_Vencidas});
-            // 
-            // gridView_Vencidas
-            // 
-            this.gridView_Vencidas.GridControl = this.gridControl_Vencidas;
-            this.gridView_Vencidas.Name = "gridView_Vencidas";
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.gridControl_Vencidas;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(959, 470);
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem12.TextVisible = false;
-            // 
-            // xtraTabPage_Canceladas
-            // 
-            this.xtraTabPage_Canceladas.Controls.Add(this.layoutControl6);
-            this.xtraTabPage_Canceladas.Name = "xtraTabPage_Canceladas";
-            this.xtraTabPage_Canceladas.Size = new System.Drawing.Size(979, 490);
-            this.xtraTabPage_Canceladas.Text = "Canceladas";
-            // 
-            // layoutControl6
-            // 
-            this.layoutControl6.Controls.Add(this.gridControl_Canceladas);
-            this.layoutControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl6.Name = "layoutControl6";
-            this.layoutControl6.Root = this.layoutControlGroup5;
-            this.layoutControl6.Size = new System.Drawing.Size(979, 490);
-            this.layoutControl6.TabIndex = 0;
-            this.layoutControl6.Text = "layoutControl6";
-            // 
-            // layoutControlGroup5
-            // 
-            this.layoutControlGroup5.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup5.GroupBordersVisible = false;
-            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem13});
-            this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(979, 490);
-            this.layoutControlGroup5.TextVisible = false;
-            // 
-            // gridControl_Canceladas
-            // 
-            this.gridControl_Canceladas.Location = new System.Drawing.Point(12, 12);
-            this.gridControl_Canceladas.MainView = this.gridView_Canceladas;
-            this.gridControl_Canceladas.Name = "gridControl_Canceladas";
-            this.gridControl_Canceladas.Size = new System.Drawing.Size(955, 466);
-            this.gridControl_Canceladas.TabIndex = 4;
-            this.gridControl_Canceladas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView_Canceladas});
-            // 
-            // gridView_Canceladas
-            // 
-            this.gridView_Canceladas.GridControl = this.gridControl_Canceladas;
-            this.gridView_Canceladas.Name = "gridView_Canceladas";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.gridControl_Canceladas;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(959, 470);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "CURP";
-            this.gridColumn1.FieldName = "CURP";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Nombre";
-            this.gridColumn2.FieldName = "nombreCompleto";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Promedio anterior";
-            this.gridColumn3.FieldName = "promedioSemAnterior";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Semestre";
-            this.gridColumn4.FieldName = "semestre";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Licenciatura";
-            this.gridColumn5.FieldName = "licenciatura";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Estatus";
-            this.gridColumn6.FieldName = "estadoOrden";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Fecha solicitud";
-            this.gridColumn7.DisplayFormat.FormatString = "d";
-            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn7.FieldName = "fechaRegistro";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Fecha expira";
-            this.gridColumn8.DisplayFormat.FormatString = "d";
-            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn8.FieldName = "fechaExpira";
-            this.gridColumn8.Name = "gridColumn8";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Usuario registró";
-            this.gridColumn9.FieldName = "usuRegistro";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 7;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Fecha envio";
-            this.gridColumn10.DisplayFormat.FormatString = "d";
-            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn10.FieldName = "fechaEnvio";
-            this.gridColumn10.Name = "gridColumn10";
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Usuario envió";
-            this.gridColumn11.FieldName = "usuEnvio";
-            this.gridColumn11.Name = "gridColumn11";
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "Fecha cancelación";
-            this.gridColumn12.DisplayFormat.FormatString = "d";
-            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn12.FieldName = "fechaCancelacion";
-            this.gridColumn12.Name = "gridColumn12";
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.Caption = "Usuario canceló";
-            this.gridColumn13.FieldName = "usuCancelo";
-            this.gridColumn13.Name = "gridColumn13";
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.Caption = "dirSolicitudPago";
-            this.gridColumn14.FieldName = "dirSolicitudPago";
-            this.gridColumn14.Name = "gridColumn14";
-            // 
-            // gridColumn15
-            // 
-            this.gridColumn15.Caption = "dirComprobante";
-            this.gridColumn15.FieldName = "dirComprobante";
-            this.gridColumn15.Name = "gridColumn15";
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "Correo electronico";
+            this.gridColumn16.FieldName = "email";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 6;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "Id solicitud";
+            this.gridColumn17.FieldName = "idSolicitud";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 0;
             // 
             // GenerarOrdenesCobro
             // 
@@ -823,6 +845,7 @@
             this.Load += new System.EventHandler(this.GenerarOrdenesCobro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_searchPerzonalizada.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaIncial.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaIncial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_fechaFinal.Properties.CalendarTimeProperties)).EndInit();
@@ -837,9 +860,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Pendientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.xtraTabPage_Enviadas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
+            this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Enviadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Enviadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.xtraTabPage_Finalizadas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
+            this.layoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1_Finalizadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Finalizadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             this.xtraTabPage_Vencidas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
+            this.layoutControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Vencidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Vencidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            this.xtraTabPage_Canceladas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).EndInit();
+            this.layoutControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Canceladas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Canceladas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -848,34 +897,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit_searchPerzonalizada.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
-            this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Enviadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Enviadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
-            this.layoutControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
-            this.layoutControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1_Finalizadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Finalizadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Vencidas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Vencidas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            this.xtraTabPage_Canceladas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).EndInit();
-            this.layoutControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Canceladas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_Canceladas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -953,5 +975,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
     }
 }

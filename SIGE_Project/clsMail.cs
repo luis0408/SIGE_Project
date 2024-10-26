@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,21 +27,22 @@ namespace SIGE_Project
         public string error = "";
 
         Utilerias util = new Utilerias();
+        string Desencrypted = "";
+        string cveUsuario;
         public Mail()
         {
-
-
         }
 
         public void setDatosEmisor(string _cveUsuario)
         {
             /////SE CONULTA EL CORREO EN BASE AL USUARIO
-            DataSet ds = util.ejecutarQueryDataset("tblCorreo", "select correoElectronico from SIGE_Configuracion_Usuarios_CorreosElectronicos where cuentaUsuario='" + _cveUsuario + "'");
+            DataSet ds = util.ejecutarQueryDataset("tblCorreo", "select correoElectronico,passwordCorreoElectronico from SIGE_Configuracion_Usuarios_CorreosElectronicos where cuentaUsuario='" + _cveUsuario + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 DataTable dt = new DataTable();
                 dt = ds.Tables[0];
                 From = dt.Rows[0]["correoElectronico"].ToString();
+                PASS= Desencriptar(dt.Rows[0]["passwordCorreoElectronico"].ToString());
             }
         }
 
@@ -96,6 +98,36 @@ namespace SIGE_Project
             }
 
             return false;
+
+        }
+        public string Desencriptar(string TextEncripted)
+        {
+            string functionReturnValue = null;
+            if (string.IsNullOrEmpty(TextEncripted))
+            {
+                return null;
+                return functionReturnValue;
+            }
+            try
+            {
+                byte[] IV = ASCIIEncoding.ASCII.GetBytes("qualityi");
+                //La clave debe ser de 8 caracteres  
+                byte[] EncryptionKey = Convert.FromBase64String("rpaSPvIvVLlrcmtzPU9/c67Gkj7yL1S5");
+                //No se puede alterar la cantidad de caracteres pero si la clave  
+                byte[] buffer = Convert.FromBase64String(TextEncripted);
+                TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
+                des.Key = EncryptionKey;
+                des.IV = IV;
+                return Encoding.UTF8.GetString(des.CreateDecryptor().TransformFinalBlock(buffer, 0, buffer.Length));
+
+
+            }
+            catch (Exception exc)
+            {
+                //	Interaction.MsgBox("Un error ha ocurrido en la desencriptación.");
+            }
+            return Desencrypted;
+            return functionReturnValue;
 
         }
     }
