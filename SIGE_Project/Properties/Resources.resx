@@ -124,6 +124,9 @@
   <data name="icons8_close_window_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-close-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="horizontalSIGE_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horizontalSIGE_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="invalido" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invalido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,12 @@
   </data>
   <data name="actions_rating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actions_rating.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="sige_simple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sige_simple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Letras SIGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Letras SIGE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +199,9 @@
   <data name="icons8_minimize_window_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-minimize-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="solicitud-de-propuesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solicitud-de-propuesta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="actions_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actions_calendar.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -202,7 +214,7 @@
   <data name="SIGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SIGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="solicitud-de-propuesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solicitud-de-propuesta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="horizontalSIGE_simple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horizontalSIGE_simple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

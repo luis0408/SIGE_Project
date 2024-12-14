@@ -41,61 +41,9 @@ namespace SIGE_Project
             }
             
         }
-        SplashLoadInicial objSplash= new SplashLoadInicial();
+        
 
-        void BaseInitialization()
-        {
-            // Set progress stage to be displayed by SplashImagePainter
-
-            //SplashImagePainter.Painter.ViewInfo.Stage = "Inicializando aplicación";
-            objSplash.labelStatus.Text = "Inicializando aplicación...";
-            for (int i = 1; i <= 100; i++)
-            {
-                System.Threading.Thread.Sleep(20);
-
-                // Change progress to be displayed by SplashImagePainter
-                //SplashImagePainter.Painter.ViewInfo.Counter = i;
-                //objSplash.labelStatus.Text +=i.ToString()+ "%";
-
-                //Force SplashImagePainter to repaint information
-                //objSplash.Default.Invalidate();
-
-            }
-        }
-        void LoadFonts()
-        {
-            // Set progress stage to be displayed by SplashImagePainter
-            //SplashImagePainter.Painter.ViewInfo.Stage = "Actualizando archivos";
-            objSplash.labelStatus.Text = "Actualizando archivos...";
-
-            for (int i = 1; i <= 100; i++)
-            {
-                System.Threading.Thread.Sleep(20);
-
-                // Change progress to be displayed by SplashImagePainter
-                //SplashImagePainter.Painter.ViewInfo.Counter = i;
-                //objSplash.labelStatus.Text += i.ToString() + "%";
-
-                //Force SplashImagePainter to repaint information
-                //SplashScreenManager.Default.Invalidate();
-            }
-        }
-        void LoadTextures()
-        {
-            // Set progress stage to be displayed by SplashImagePainter
-            //SplashImagePainter.Painter.ViewInfo.Stage = "Cargando base de datos";
-            objSplash.labelStatus.Text = "Cargando base de datos...";
-
-            for (int i = 1; i <= 100; i++)
-            {
-                System.Threading.Thread.Sleep(20);
-
-                // Change progress to be displayed by SplashImagePainter
-                //objSplash.labelStatus.Text += i.ToString() + "%";
-                //Force SplashImagePainter to repaint information
-                //SplashScreenManager.Default.Invalidate();
-            }
-        }
+        
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             ingresar();
@@ -277,22 +225,14 @@ namespace SIGE_Project
 
         private void LOGIN_Load(object sender, EventArgs e)
         {
-            //for (int i = 0; i < 100; i++)
-            //{
+            for (int i = 0; i < 100; i++)
+            {
 
-            //    Thread.Sleep(100);
-            //}
-            LongInitialization();
+                Thread.Sleep(100);
+            }
         }
 
-        protected void LongInitialization()
-        {
-            
-            BaseInitialization();
-            
-            //LoadFonts();
-            //LoadTextures();
-        }
+
         private void simpleButton_exit_Click(object sender, EventArgs e)
         {
             Application.ExitThread();

@@ -73,7 +73,7 @@ namespace SIGE_Project.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("WXI")]
+        [global::System.Configuration.DefaultSettingValueAttribute("WXI Compact")]
         public string stilodev {
             get {
                 return ((string)(this["stilodev"]));

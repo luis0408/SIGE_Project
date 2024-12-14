@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -965,6 +966,47 @@ namespace SIGE_Project.ControlEscolar
             }
             
 
+        }
+
+        private void simpleButton_verificarCurp_Click(object sender, EventArgs e)
+        {
+            if (CurpValida(textEdit_CURP.Text)==true)
+            {
+                XtraMessageBox.Show("La CURP ingresada es correcta.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textEdit_CURP.ReadOnly = true;
+            }
+            else
+            {
+                XtraMessageBox.Show("La CURP ingresada es incorrecta, verifique los digitos ingresados.", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textEdit_CURP.ReadOnly = false;
+            }
+        }
+        private bool CurpValida(string curp)
+        {
+            var re = @"^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$";
+            Regex rx = new Regex(re, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            var validado = rx.IsMatch(curp);
+
+            if (!validado)  //Coincide con el formato general?
+                return false;
+
+            //Validar que coincida el dígito verificador
+            if (!curp.EndsWith(DigitoVerificador(curp.ToUpper())))
+                return false;
+
+            return true; //Validado
+        }
+        private string DigitoVerificador(string curp17)
+        {
+            //Fuente https://consultas.curp.gob.mx/CurpSP/
+            var diccionario = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+            var suma = 0.0;
+            var digito = 0.0;
+            for (var i = 0; i < 17; i++)
+                suma = suma + diccionario.IndexOf(curp17[i]) * (18 - i);
+            digito = 10 - suma % 10;
+            if (digito == 10) return "0";
+            return digito.ToString();
         }
     }
 }

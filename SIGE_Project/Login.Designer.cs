@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SIGE_Project.SplashLoadInicial), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGIN));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,9 +73,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(13)))), ((int)(((byte)(36)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(90)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(500, 100);
@@ -99,7 +100,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(13)))), ((int)(((byte)(36)))));
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
@@ -129,12 +130,12 @@
             // label_errorMensaje
             // 
             this.label_errorMensaje.AutoSize = true;
-            this.label_errorMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(90)))));
+            this.label_errorMensaje.BackColor = System.Drawing.Color.Red;
             this.label_errorMensaje.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_errorMensaje.ForeColor = System.Drawing.Color.White;
-            this.label_errorMensaje.Location = new System.Drawing.Point(105, 119);
+            this.label_errorMensaje.Location = new System.Drawing.Point(142, 124);
             this.label_errorMensaje.Name = "label_errorMensaje";
-            this.label_errorMensaje.Size = new System.Drawing.Size(338, 19);
+            this.label_errorMensaje.Size = new System.Drawing.Size(255, 14);
             this.label_errorMensaje.TabIndex = 11;
             this.label_errorMensaje.Text = "Usuario o contraseña incorrectos";
             this.label_errorMensaje.Visible = false;
@@ -160,7 +161,7 @@
             this.textBox_password.ForeColor = System.Drawing.Color.DarkGray;
             this.textBox_password.Location = new System.Drawing.Point(145, 68);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(298, 45);
+            this.textBox_password.Size = new System.Drawing.Size(298, 37);
             this.textBox_password.TabIndex = 4;
             this.textBox_password.Text = "Contraseña";
             this.textBox_password.Click += new System.EventHandler(this.textBox_password_Click);
@@ -175,7 +176,7 @@
             this.textBox_user.ForeColor = System.Drawing.Color.DarkGray;
             this.textBox_user.Location = new System.Drawing.Point(145, 22);
             this.textBox_user.Name = "textBox_user";
-            this.textBox_user.Size = new System.Drawing.Size(298, 38);
+            this.textBox_user.Size = new System.Drawing.Size(298, 30);
             this.textBox_user.TabIndex = 3;
             this.textBox_user.Text = "Usuario";
             this.textBox_user.Click += new System.EventHandler(this.textBox_user_Click);
@@ -220,6 +221,10 @@
             this.simpleButton_configConex.TabIndex = 0;
             this.simpleButton_configConex.Click += new System.EventHandler(this.simpleButton_configConex_Click);
             // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 500;
+            // 
             // checkEdit_recordar
             // 
             this.checkEdit_recordar.Location = new System.Drawing.Point(163, 141);
@@ -229,7 +234,7 @@
             this.checkEdit_recordar.Properties.Appearance.Options.UseFont = true;
             this.checkEdit_recordar.Properties.Appearance.Options.UseForeColor = true;
             this.checkEdit_recordar.Properties.Caption = "Recordar crendenciales";
-            this.checkEdit_recordar.Size = new System.Drawing.Size(200, 24);
+            this.checkEdit_recordar.Size = new System.Drawing.Size(200, 20);
             this.checkEdit_recordar.TabIndex = 0;
             // 
             // simpleButton2
@@ -254,22 +259,22 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(13)))), ((int)(((byte)(36)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(303, 0);
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::SIGE_Project.Properties.Resources.horizontalSIGE_2;
+            this.pictureBox2.Location = new System.Drawing.Point(286, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(211, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(13)))), ((int)(((byte)(36)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(277, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -287,9 +292,9 @@
             this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton5.ImageOptions.Image = global::SIGE_Project.Properties.Resources.icons8_minimize_window_32;
             this.simpleButton5.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton5.Location = new System.Drawing.Point(421, 2);
+            this.simpleButton5.Location = new System.Drawing.Point(432, 0);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(37, 31);
+            this.simpleButton5.Size = new System.Drawing.Size(36, 35);
             this.simpleButton5.TabIndex = 12;
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton_minisize);
             // 

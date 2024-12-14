@@ -14,7 +14,7 @@ namespace SIGE_Project
         public SplashLoadInicial()
         {
             InitializeComponent();
-            this.labelCopyright.Text = "Copyright © 1998-" + DateTime.Now.Year.ToString();
+            this.labelCopyright.Text = "Copyright © 2023-" + DateTime.Now.Year.ToString();
         }
 
         #region Overrides

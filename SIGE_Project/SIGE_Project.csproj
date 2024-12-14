@@ -876,11 +876,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HONGO.ico" />
+    <None Include="Resources\sige_simple.png" />
     <None Include="Resources\solicitud-de-propuesta.png" />
     <None Include="Resources\logo IESE3.png" />
     <None Include="Resources\logo IESE2.png" />
     <None Include="Resources\Letras SIGE.jpg" />
     <None Include="Resources\Letras SIGE1.jpg" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\horizontalSIGE_2.png" />
+    <None Include="Resources\horizontalSIGE_simple.png" />
     <Content Include="Resources\logo IESE.png" />
     <None Include="Resources\SIGE.png" />
     <None Include="Resources\logo IESE1.png" />

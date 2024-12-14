@@ -61,6 +61,16 @@ namespace SIGE_Project.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage actions_calendar {
@@ -187,6 +197,26 @@ namespace SIGE_Project.Properties {
             get {
                 object obj = ResourceManager.GetObject("exporttoxlsx1", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap horizontalSIGE_2 {
+            get {
+                object obj = ResourceManager.GetObject("horizontalSIGE_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap horizontalSIGE_simple {
+            get {
+                object obj = ResourceManager.GetObject("horizontalSIGE_simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -336,6 +366,16 @@ namespace SIGE_Project.Properties {
         internal static System.Drawing.Bitmap SIGE {
             get {
                 object obj = ResourceManager.GetObject("SIGE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sige_simple {
+            get {
+                object obj = ResourceManager.GetObject("sige_simple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
