@@ -213,9 +213,29 @@ namespace SIGE_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap horizontalSIGE_blanco {
+            get {
+                object obj = ResourceManager.GetObject("horizontalSIGE_blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap horizontalSIGE_simple {
             get {
                 object obj = ResourceManager.GetObject("horizontalSIGE_simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap horizontalSIGE_simple2 {
+            get {
+                object obj = ResourceManager.GetObject("horizontalSIGE_simple2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +276,16 @@ namespace SIGE_Project.Properties {
         internal static System.Drawing.Bitmap icons8_minimize_window_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_minimize_window_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IESE_horizontal {
+            get {
+                object obj = ResourceManager.GetObject("IESE_horizontal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,9 +403,29 @@ namespace SIGE_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sige_icono {
+            get {
+                object obj = ResourceManager.GetObject("sige_icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sige_simple {
             get {
                 object obj = ResourceManager.GetObject("sige_simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sige_simple1 {
+            get {
+                object obj = ResourceManager.GetObject("sige_simple1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

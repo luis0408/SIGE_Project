@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93CF603E-E753-40DF-B625-461B177FF95C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIGE_Project</RootNamespace>
+    <AssemblyName>SIGE_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\InstaladorSIGE\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://servicewyb.ddns.net:3306/SIGE_INSTALADOR/</UpdateUrl>
+    <TargetCulture>es-MX</TargetCulture>
+    <ProductName>SIGE</ProductName>
+    <PublisherName>Raúl SImón</PublisherName>
+    <MinimumRequiredVersion>1.0.0.7</MinimumRequiredVersion>
+    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>HONGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A51F44FA095DC37DFCF0CDA64845A0628DED38B6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SIGE_Project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v22.2.Win, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\RAUL SIMON\Documents\DevExpress.Data.v22.2_x86 (1)\DevExpress.Data.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.2.Drawing, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.Wizard, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Presets, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Win, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alumnos_Licenciatura\OrdenesCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos_Licenciatura\OrdenesCobro.Designer.cs">
+      <DependentUpon>OrdenesCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoBachilleratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoBachilleratos.Designer.cs">
+      <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCicloEscolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCicloEscolar.Designer.cs">
+      <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCodigoPostal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoCodigoPostal.Designer.cs">
+      <DependentUpon>catalogoCodigoPostal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoColonia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoColonia.Designer.cs">
+      <DependentUpon>catalogoColonia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDepartamentos.Designer.cs">
+      <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDiscapacidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoDiscapacidad.Designer.cs">
+      <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstado.Designer.cs">
+      <DependentUpon>catalogoEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstadoCivil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoEstadoCivil.Designer.cs">
+      <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGeneraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGeneraciones.Designer.cs">
+      <DependentUpon>catalogoGeneraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGenero.Designer.cs">
+      <DependentUpon>catalogoGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoGrupos.Designer.cs">
+      <DependentUpon>catalogoGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciatura.Designer.cs">
+      <DependentUpon>catalogoLicenciatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciaturaMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoLicenciaturaMaterias.Designer.cs">
+      <DependentUpon>catalogoLicenciaturaMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoMediosDeDifusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoMediosDeDifusion.Designer.cs">
+      <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoParentesco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoParentesco.Designer.cs">
+      <DependentUpon>catalogoParentesco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoPeriodos.Designer.cs">
+      <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoSemestres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoSemestres.Designer.cs">
+      <DependentUpon>catalogoSemestres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoSangre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoSangre.Designer.cs">
+      <DependentUpon>catalogoTipoSangre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\catalogoTipoUsuarios.Designer.cs">
+      <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\ClsCicloEscolar.cs" />
+    <Compile Include="Catalogo\ClsDepartamento.cs" />
+    <Compile Include="Catalogo\ClsDiscapacidad.cs" />
+    <Compile Include="Catalogo\ClsEstado.cs" />
+    <Compile Include="Catalogo\ClsEstadoCivil.cs" />
+    <Compile Include="Catalogo\ClsGeneracion.cs" />
+    <Compile Include="Catalogo\ClsGenero.cs" />
+    <Compile Include="Catalogo\ClsGrupos.cs" />
+    <Compile Include="Catalogo\ClsLicenciatura.cs" />
+    <Compile Include="Catalogo\ClsLicenciaturaMaterias.cs" />
+    <Compile Include="Catalogo\ClsParentesco.cs" />
+    <Compile Include="Catalogo\ClsPeriodos.cs" />
+    <Compile Include="Catalogo\ClsMedioDifusion.cs" />
+    <Compile Include="Catalogo\ClsSemestres.cs" />
+    <Compile Include="Catalogo\ClsTipoSangre.cs" />
+    <Compile Include="Catalogo\ClsTipoUsuarios.cs" />
+    <Compile Include="Catalogo\DatosCicloEscolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosCicloEscolar.Designer.cs">
+      <DependentUpon>DatosCicloEscolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosDepartamento.Designer.cs">
+      <DependentUpon>DatosDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosDiscapacidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosDiscapacidad.Designer.cs">
+      <DependentUpon>DatosDiscapacidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstado.Designer.cs">
+      <DependentUpon>DatosEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosGeneracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosGeneracion.Designer.cs">
+      <DependentUpon>DatosGeneracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosGrupos.Designer.cs">
+      <DependentUpon>DatosGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciatura.Designer.cs">
+      <DependentUpon>DatosLicenciatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciaturaMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosLicenciaturaMaterias.Designer.cs">
+      <DependentUpon>DatosLicenciaturaMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosMedioDifusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosMedioDifusion.Designer.cs">
+      <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosParentesco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosParentesco.Designer.cs">
+      <DependentUpon>DatosParentesco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosPeriodos.Designer.cs">
+      <DependentUpon>DatosPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosSemestres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosSemestres.Designer.cs">
+      <DependentUpon>DatosSemestres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosTipoSangre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosTipoSangre.Designer.cs">
+      <DependentUpon>DatosTipoSangre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosTipoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosTipoUsuarios.Designer.cs">
+      <DependentUpon>DatosTipoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsMail.cs" />
+    <Compile Include="Configuraciones\AgregarBotones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\AgregarBotones.Designer.cs">
+      <DependentUpon>AgregarBotones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\AgregarPestanias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\AgregarPestanias.Designer.cs">
+      <DependentUpon>AgregarPestanias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\AgregarrCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\AgregarrCategoria.Designer.cs">
+      <DependentUpon>AgregarrCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\configInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\configInicial.Designer.cs">
+      <DependentUpon>configInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\Configmenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\Configmenus.Designer.cs">
+      <DependentUpon>Configmenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlEscolar\ClsApirante.cs" />
+    <Compile Include="ControlEscolar\ClsPersona.cs" />
+    <Compile Include="ControlEscolar\ClsTutor.cs" />
+    <Compile Include="ControlEscolar\ConsultarAspirantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlEscolar\ConsultarAspirantes.Designer.cs">
+      <DependentUpon>ConsultarAspirantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstadoCivil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosEstadoCivil.Designer.cs">
+      <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\DatosGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\DatosGenero.Designer.cs">
+      <DependentUpon>DatosGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlEscolar\Documentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlEscolar\Documentacion.Designer.cs">
+      <DependentUpon>Documentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlEscolar\FichaSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlEscolar\FichaSolicitud.Designer.cs">
+      <DependentUpon>FichaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas\clsOrdenCobro.cs" />
+    <Compile Include="Finanzas\EnviarOrdenCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finanzas\EnviarOrdenCobro.Designer.cs">
+      <DependentUpon>EnviarOrdenCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas\GenerarOrdenesCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finanzas\GenerarOrdenesCobro.Designer.cs">
+      <DependentUpon>GenerarOrdenesCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerforms.cs" />
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\CartaCompromiso.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\CartaCompromiso.Designer.cs">
+      <DependentUpon>CartaCompromiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FichaAspirante.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FichaAspirante.Designer.cs">
+      <DependentUpon>FichaAspirante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasAspirantes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasAspirantes.Designer.cs">
+      <DependentUpon>GraficasAspirantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosBachullerato.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosBachullerato.Designer.cs">
+      <DependentUpon>GraficasDatosBachullerato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosDomicilio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosDomicilio.Designer.cs">
+      <DependentUpon>GraficasDatosDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasEdades.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasEdades.Designer.cs">
+      <DependentUpon>GraficasEdades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasEstadoCivil.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasEstadoCivil.Designer.cs">
+      <DependentUpon>GraficasEstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasGeneros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasGeneros.Designer.cs">
+      <DependentUpon>GraficasGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosNacimiento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasDatosNacimiento.Designer.cs">
+      <DependentUpon>GraficasDatosNacimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GraficasTipoSangre.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GraficasTipoSangre.Designer.cs">
+      <DependentUpon>GraficasTipoSangre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Inscripcion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Inscripcion.Designer.cs">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\SeguroFacultativo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\SeguroFacultativo.Designer.cs">
+      <DependentUpon>SeguroFacultativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashLoadInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashLoadInicial.Designer.cs">
+      <DependentUpon>SplashLoadInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\AgregraUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\AgregraUsuario.Designer.cs">
+      <DependentUpon>AgregraUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\CambiarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\CambiarContrasenia.Designer.cs">
+      <DependentUpon>CambiarContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\RecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\RecuperarContrasenia.Designer.cs">
+      <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias.cs" />
+    <Compile Include="variables.cs" />
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alumnos_Licenciatura\OrdenesCobro.resx">
+      <DependentUpon>OrdenesCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoBachilleratos.resx">
+      <DependentUpon>catalogoBachilleratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoCicloEscolar.resx">
+      <DependentUpon>catalogoCicloEscolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoCodigoPostal.resx">
+      <DependentUpon>catalogoCodigoPostal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoColonia.resx">
+      <DependentUpon>catalogoColonia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoDepartamentos.resx">
+      <DependentUpon>catalogoDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoDiscapacidad.resx">
+      <DependentUpon>catalogoDiscapacidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoEstado.resx">
+      <DependentUpon>catalogoEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoEstadoCivil.resx">
+      <DependentUpon>catalogoEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoGeneraciones.resx">
+      <DependentUpon>catalogoGeneraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoGenero.resx">
+      <DependentUpon>catalogoGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoGrupos.resx">
+      <DependentUpon>catalogoGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoLicenciatura.resx">
+      <DependentUpon>catalogoLicenciatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoLicenciaturaMaterias.resx">
+      <DependentUpon>catalogoLicenciaturaMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoMediosDeDifusion.resx">
+      <DependentUpon>catalogoMediosDeDifusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoParentesco.resx">
+      <DependentUpon>catalogoParentesco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoPeriodos.resx">
+      <DependentUpon>catalogoPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoSemestres.resx">
+      <DependentUpon>catalogoSemestres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoTipoSangre.resx">
+      <DependentUpon>catalogoTipoSangre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\catalogoTipoUsuarios.resx">
+      <DependentUpon>catalogoTipoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosCicloEscolar.resx">
+      <DependentUpon>DatosCicloEscolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosDepartamento.resx">
+      <DependentUpon>DatosDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosDiscapacidad.resx">
+      <DependentUpon>DatosDiscapacidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosEstado.resx">
+      <DependentUpon>DatosEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosGeneracion.resx">
+      <DependentUpon>DatosGeneracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosGrupos.resx">
+      <DependentUpon>DatosGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosLicenciatura.resx">
+      <DependentUpon>DatosLicenciatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosLicenciaturaMaterias.resx">
+      <DependentUpon>DatosLicenciaturaMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosMedioDifusion.resx">
+      <DependentUpon>DatosMedioDifusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosParentesco.resx">
+      <DependentUpon>DatosParentesco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosPeriodos.resx">
+      <DependentUpon>DatosPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosSemestres.resx">
+      <DependentUpon>DatosSemestres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosTipoSangre.resx">
+      <DependentUpon>DatosTipoSangre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosTipoUsuarios.resx">
+      <DependentUpon>DatosTipoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\AgregarBotones.resx">
+      <DependentUpon>AgregarBotones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\AgregarPestanias.resx">
+      <DependentUpon>AgregarPestanias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\AgregarrCategoria.resx">
+      <DependentUpon>AgregarrCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\configInicial.resx">
+      <DependentUpon>configInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\Configmenus.resx">
+      <DependentUpon>Configmenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEscolar\ConsultarAspirantes.resx">
+      <DependentUpon>ConsultarAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosEstadoCivil.resx">
+      <DependentUpon>DatosEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\DatosGenero.resx">
+      <DependentUpon>DatosGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEscolar\Documentacion.resx">
+      <DependentUpon>Documentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEscolar\FichaSolicitud.resx">
+      <DependentUpon>FichaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas\EnviarOrdenCobro.resx">
+      <DependentUpon>EnviarOrdenCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas\GenerarOrdenesCobro.resx">
+      <DependentUpon>GenerarOrdenesCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\CartaCompromiso.resx">
+      <DependentUpon>CartaCompromiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FichaAspirante.resx">
+      <DependentUpon>FichaAspirante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasAspirantes.resx">
+      <DependentUpon>GraficasAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasDatosBachullerato.resx">
+      <DependentUpon>GraficasDatosBachullerato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasDatosDomicilio.resx">
+      <DependentUpon>GraficasDatosDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasEdades.resx">
+      <DependentUpon>GraficasEdades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasEstadoCivil.resx">
+      <DependentUpon>GraficasEstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasGeneros.resx">
+      <DependentUpon>GraficasGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasDatosNacimiento.resx">
+      <DependentUpon>GraficasDatosNacimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficasTipoSangre.resx">
+      <DependentUpon>GraficasTipoSangre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Inscripcion.resx">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\SeguroFacultativo.resx">
+      <DependentUpon>SeguroFacultativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashLoadInicial.resx">
+      <DependentUpon>SplashLoadInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\AgregraUsuario.resx">
+      <DependentUpon>AgregraUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\CambiarContrasenia.resx">
+      <DependentUpon>CambiarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\RecuperarContrasenia.resx">
+      <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SIGE_Project_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Customize_user_profile_Account_man_1_4484738.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_lock_safe_password_2992204 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invalido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movedown.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_calendar.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_calendar1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addparagraphtotableofcontents.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_edit.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_rating.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sendxlsx.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_user1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addparagraphtotableofcontents1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_rating1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HONGO.ico" />
+    <None Include="Resources\sige_simple.png" />
+    <None Include="Resources\solicitud-de-propuesta.png" />
+    <None Include="Resources\logo IESE3.png" />
+    <None Include="Resources\logo IESE2.png" />
+    <None Include="Resources\Letras SIGE.jpg" />
+    <None Include="Resources\Letras SIGE1.jpg" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\horizontalSIGE_2.png" />
+    <None Include="Resources\horizontalSIGE_simple.png" />
+    <Content Include="Resources\logo IESE.png" />
+    <None Include="Resources\SIGE.png" />
+    <None Include="Resources\logo IESE1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

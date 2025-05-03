@@ -15,7 +15,7 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="stilodev" Type="System.String" Scope="User">
-      <Value Profile="(Default)">WXI Compact</Value>
+      <Value Profile="(Default)">The Bezier</Value>
     </Setting>
     <Setting Name="CadenaConexion" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -24,6 +24,9 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=wyb.ddns.net,52090\SERV08;Initial Catalog=BD_SIGE;User ID=adminBD;Password=4dm1n;Encrypt=True;TrustServerCertificate=True</Value>
+    </Setting>
+    <Setting Name="colordev" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Plastic Space</Value>
     </Setting>
   </Settings>
 </SettingsFile>

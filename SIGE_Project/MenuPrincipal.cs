@@ -378,22 +378,39 @@ namespace SIGE_Project
             //*************************************************
             RibbonGalleryBarItem galleryBarItem = new RibbonGalleryBarItem(ribbon.Manager);
             galleryBarItem.GalleryItemClick += new GalleryItemClickEventHandler(ribbonGalleryBarItem1_GalleryItemClick);
+
+
+            SkinPaletteRibbonGalleryBarItem paletteItem = new SkinPaletteRibbonGalleryBarItem(ribbon.Manager);
+            paletteItem.GalleryItemClick += new GalleryItemClickEventHandler(paletteGalleryBarItem_GalleryItemClick);
+
+
             GalleryItemGroup itemGroup1 = new GalleryItemGroup();
             galleryBarItem.Gallery.Groups.Add(itemGroup1);
 
 
-            page1 = new RibbonPage("Styles");
-            group1 = new RibbonPageGroup("Estilos");
+            page1 = new RibbonPage("Temas");
             grup_ant = grup;
-            //// ' Create another Ribbon page group.
+
+            group1 = new RibbonPageGroup("Estilos");
             group1.ItemLinks.Add(galleryBarItem);
+            page1.Groups.Add(group1);
+            group1 = new RibbonPageGroup("Colores");
+            group1.ItemLinks.Add(paletteItem);
             page1.Groups.Add(group1);
             ribbon.Pages.Add(page1);
 
 
+
+
+
+            // RibbonControl1.Pages[0].Groups[0].ItemLinks.Add(galleryBarItem);
+
             BarLocalizer.Active = new MyBarLocalizer();
 
             SkinHelper.InitSkinGallery(galleryBarItem, true);
+            SkinHelper.InitSkinPopupMenu(popupMenu1);
+
+            SkinHelper.InitSkinPaletteGallery(paletteItem, true);
             SkinHelper.InitSkinPopupMenu(popupMenu1);
 
 
@@ -413,12 +430,24 @@ namespace SIGE_Project
             }
             /***************************Aplica el estilo guardado*************************/
             string skinName = SIGE_Project.Properties.Settings.Default.stilodev;
+            string paletteName = SIGE_Project.Properties.Settings.Default.colordev;
             if (skinName != null && (!skinName.Equals(string.Empty)))
             {
-                this.defaultLookAndFeel1.LookAndFeel.SkinName = skinName;
+                //this.defaultLookAndFeel1.LookAndFeel.SkinName = skinName;
+                this.defaultLookAndFeel1.LookAndFeel.SetSkinStyle(skinName, paletteName);
             }
 
             SplashScreenManager.CloseForm(false);
+        }
+        void paletteGalleryBarItem_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
+        {
+            string paletteSkin;
+            paletteSkin = Convert.ToString(e.Item.Tag);
+            paletteSkin = paletteSkin.Replace("(", "").Replace(")", "");
+
+
+            SIGE_Project.Properties.Settings.Default.colordev = paletteSkin;
+            SIGE_Project.Properties.Settings.Default.Save();
         }
         public class MyBarLocalizer : BarLocalizer
         {

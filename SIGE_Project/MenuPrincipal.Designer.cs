@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
@@ -44,10 +47,17 @@
             // 
             // ribbon
             // 
+            this.ribbon.ApplicationButtonImageOptions.Image = global::SIGE_Project.Properties.Resources.horizontalSIGE_simple2;
+            superToolTip1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem1.ImageOptions.Image = global::SIGE_Project.Properties.Resources.horizontalSIGE_simple2;
+            toolTipTitleItem1.Text = "SIGE";
+            toolTipItem1.Text = "Sistema de información y gestión educativa.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.ribbon.ApplicationButtonSuperTip = superToolTip1;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
-            this.ribbon.SearchEditItem,
             this.barStaticItem1,
             this.barStaticItem2,
             this.barStaticItem3,
@@ -56,7 +66,7 @@
             this.ribbon.MaxItemId = 5;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem_exit);
-            this.ribbon.Size = new System.Drawing.Size(1086, 83);
+            this.ribbon.Size = new System.Drawing.Size(1086, 58);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barStaticItem1
@@ -91,19 +101,15 @@
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem3);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 474);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 487);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1086, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1086, 24);
             // 
             // popupMenu1
             // 
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
-            // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "WXI";
             // 
             // MenuPrincipal
             // 
@@ -112,6 +118,7 @@
             this.ClientSize = new System.Drawing.Size(1086, 511);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::SIGE_Project.Properties.Resources.sige_icono;
             this.Name = "MenuPrincipal";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
