@@ -531,11 +531,24 @@
     <Compile Include="Reportes\SeguroFacultativo.Designer.cs">
       <DependentUpon>SeguroFacultativo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sistemas\Alumnos\clsAlumno.cs" />
+    <Compile Include="Sistemas\Alumnos\cosultarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistemas\Alumnos\cosultarAlumnos.Designer.cs">
+      <DependentUpon>cosultarAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sistemas\Alumnos\datosAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sistemas\Alumnos\datosAlumnos.Designer.cs">
       <DependentUpon>datosAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistemas\Reportes\ListaAsistencia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistemas\Reportes\ListaAsistencia.Designer.cs">
+      <DependentUpon>ListaAsistencia.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashLoadInicial.cs">
       <SubType>Form</SubType>
@@ -763,8 +776,14 @@
     <EmbeddedResource Include="Reportes\SeguroFacultativo.resx">
       <DependentUpon>SeguroFacultativo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\Alumnos\cosultarAlumnos.resx">
+      <DependentUpon>cosultarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sistemas\Alumnos\datosAlumnos.resx">
       <DependentUpon>datosAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\Reportes\ListaAsistencia.resx">
+      <DependentUpon>ListaAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashLoadInicial.resx">
       <DependentUpon>SplashLoadInicial.cs</DependentUpon>
