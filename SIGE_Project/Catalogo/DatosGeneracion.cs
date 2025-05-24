@@ -22,13 +22,14 @@ namespace SIGE_Project.Catalogo
             nuevo = true;
         }
 
-        public DatosGeneracion(int _anioInicio, int _anioFin, int _estado)
+        public DatosGeneracion(int _anioInicio, int _anioFin, int _estado, int _idGeneracion)
         {
             InitializeComponent();
             objGeneracion = new ClsGeneracion();
             objGeneracion.anioInicio = _anioInicio;
             objGeneracion.anioFin = _anioFin;
             objGeneracion.estado = _estado;
+            objGeneracion.idGeneracion = _idGeneracion;
             setValores();
             nuevo = false;
         }
@@ -40,6 +41,7 @@ namespace SIGE_Project.Catalogo
             string fin = "01/01/" + objGeneracion.anioFin.ToString();
             dateEdit_anioFin.EditValue = Convert.ToDateTime(fin);
             checkEdit_status.Checked = objGeneracion.estado == 1 ? true : false;
+            textEdit_idGeneracion.Text=objGeneracion.idGeneracion.ToString();
         }
 
         private void DatosGeneracion_Load(object sender, EventArgs e)
@@ -63,6 +65,8 @@ namespace SIGE_Project.Catalogo
             objGeneracion.anioInicio = Convert.ToInt32(dateEdit_anioInicio.Text);
             objGeneracion.anioFin = Convert.ToInt32(dateEdit_anioFin.Text);
             objGeneracion.estado = checkEdit_status.Checked == true ? 1 : 0;
+            if (nuevo == false)
+                objGeneracion.idGeneracion = Convert.ToInt32(textEdit_idGeneracion.Text.ToString());
 
             int result = nuevo == true ? objGeneracion.insertDatoGeneracion() : objGeneracion.updateDatoGeneracion();
             if (result == 1)

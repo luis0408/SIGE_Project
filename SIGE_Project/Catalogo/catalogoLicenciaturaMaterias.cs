@@ -159,5 +159,10 @@ namespace SIGE_Project.Catalogo
         {
             exportarDoc(gridView_licenciaturaMaterias, gridControl_licenciaturaMaterias, "CatalogoLicenciaturaMaterias");
         }
+
+        private void catalogoLicenciaturaMaterias_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

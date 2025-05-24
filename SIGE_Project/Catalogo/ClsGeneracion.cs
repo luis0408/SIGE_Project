@@ -11,6 +11,7 @@ namespace SIGE_Project.Catalogo
         public int anioInicio { get; set; }
         public int anioFin { get; set; }
         public int estado { get; set; }
+        public int idGeneracion { get; set; }
 
         public ClsGeneracion()
         { }
@@ -32,8 +33,9 @@ namespace SIGE_Project.Catalogo
         }
         public int updateDatoGeneracion()
         {
-            datos = new object[] { anioInicio, anioFin, estado };
-            parametros = new string[] { "@anioInicio", "@anioFin", "@estado" };
+            
+            datos = new object[] { anioInicio, anioFin, estado,idGeneracion };
+            parametros = new string[] { "@anioInicio", "@anioFin", "@estado","@idGeneracion" };
             int result = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_GENERACION]", datos, parametros);
             return result;
         }

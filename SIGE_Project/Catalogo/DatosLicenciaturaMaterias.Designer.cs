@@ -128,6 +128,8 @@
             this.lookUpEdit_cveLicenciatura.Name = "lookUpEdit_cveLicenciatura";
             this.lookUpEdit_cveLicenciatura.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit_cveLicenciatura.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Licenciatura")});
             this.lookUpEdit_cveLicenciatura.Size = new System.Drawing.Size(421, 20);
             this.lookUpEdit_cveLicenciatura.StyleController = this.layoutControl1;
             this.lookUpEdit_cveLicenciatura.TabIndex = 6;
@@ -172,15 +174,12 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(382, 24);
             this.layoutControlItem1.Text = "Clave Materia";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(66, 13);
             // 
             // emptySpaceItem1
             // 
-            this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 135);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(503, 48);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
@@ -189,7 +188,6 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(503, 24);
             this.layoutControlItem2.Text = "Descripcion";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(66, 13);
             // 
             // layoutControlItem3
             // 
@@ -198,7 +196,6 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(503, 24);
             this.layoutControlItem3.Text = "Licenciatura";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(66, 13);
             // 
             // layoutControlItem4
             // 
@@ -244,7 +241,9 @@
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosLicenciaturaMaterias.IconOptions.SvgImage")));
             this.Name = "DatosLicenciaturaMaterias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos Licenciatura Materias";
+            this.Load += new System.EventHandler(this.DatosLicenciaturaMaterias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).EndInit();

@@ -19,6 +19,7 @@ namespace SIGE_Project.Catalogo
         public catalogoGrupos()
         {
             InitializeComponent();
+             consultarDatos();
         }
 
         private void navBarItem_actualizar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -34,7 +35,7 @@ namespace SIGE_Project.Catalogo
                 object[] datos = { };
                 string[] parametros = { };
                 DataSet ds = new DataSet();
-                ds = Utilerias.consultarProcedimiento("", datos, parametros);
+                ds = Utilerias.consultarProcedimiento("SIGE_CONSULTAR_GRUPO", datos, parametros);
                 DataTable dt = ds.Tables[0];
                 gridControl_grupos.DataSource = dt;
                 gridView_grupos.BestFitColumns();
@@ -62,7 +63,16 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_editar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //string // = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString();
+            //int idGrupo = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "idGrupo").ToString());
+            //string cveLicenciatura = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "cveLicenciatura").ToString();
+            //int idGeneracion = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "idGeneracion").ToString());
+            //int idSemestre = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "idSemestre").ToString());
+            //int numAlumnos = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "numAlumnos").ToString());
+            //int estado = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "estado").ToString());
+            //string grupo = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "estado").ToString();
+
+
+
             //string // = gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString();
             //int // = Convert.ToInt32(gridView_licenciaturas.GetRowCellValue(gridView_licenciaturas.FocusedRowHandle, "").ToString());
             //DatosGrupos objGrupos = new DatosGrupos("","","");
@@ -77,21 +87,21 @@ namespace SIGE_Project.Catalogo
 
         private void navBarItem_activarDesactivar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-           // string cveLic = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "").ToString();
-           // int estado = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "").ToString());
-           // estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
-           //// int resul = util.EjecutarQueryNonQuery("update "" set estado=" + estado + " where ""='" + cveLic + "'");
-           // if (resul != 0)
-           // {
-           //     XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string idGrupo = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "idGrupo").ToString();
+            int estado = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "estado").ToString());
+            estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
+            int resul = util.EjecutarQueryNonQuery("update SIGE_Catalogo_Grupos set estado=" + estado + " where idGrupo=" + idGrupo + "'");
+            if (resul != 0)
+            {
+                XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-           // }
-           // else
-           // {
-           //     XtraMessageBox.Show("Se generó un error al actualiar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                XtraMessageBox.Show("Se generó un error al actualiar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-           // }
-           // consultarDatos();
+            }
+            consultarDatos();
         }
 
 

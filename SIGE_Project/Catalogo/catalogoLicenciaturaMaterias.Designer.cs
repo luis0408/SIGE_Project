@@ -46,9 +46,20 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_licenciaturaMaterias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_licenciaturaMaterias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarControl1
@@ -63,10 +74,10 @@
             this.navBarItem_edit,
             this.navBarItem_status,
             this.navBarItem_export});
-            this.navBarControl1.Location = new System.Drawing.Point(638, 37);
+            this.navBarControl1.Location = new System.Drawing.Point(838, 35);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 176;
-            this.navBarControl1.Size = new System.Drawing.Size(176, 339);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 272;
+            this.navBarControl1.Size = new System.Drawing.Size(272, 566);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -126,10 +137,10 @@
             // 
             // gridControl_licenciaturaMaterias
             // 
-            this.gridControl_licenciaturaMaterias.Location = new System.Drawing.Point(12, 37);
+            this.gridControl_licenciaturaMaterias.Location = new System.Drawing.Point(12, 35);
             this.gridControl_licenciaturaMaterias.MainView = this.gridView_licenciaturaMaterias;
             this.gridControl_licenciaturaMaterias.Name = "gridControl_licenciaturaMaterias";
-            this.gridControl_licenciaturaMaterias.Size = new System.Drawing.Size(620, 339);
+            this.gridControl_licenciaturaMaterias.Size = new System.Drawing.Size(822, 566);
             this.gridControl_licenciaturaMaterias.TabIndex = 1;
             this.gridControl_licenciaturaMaterias.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_licenciaturaMaterias});
@@ -145,6 +156,7 @@
             this.gridColumn6});
             this.gridView_licenciaturaMaterias.GridControl = this.gridControl_licenciaturaMaterias;
             this.gridView_licenciaturaMaterias.Name = "gridView_licenciaturaMaterias";
+            this.gridView_licenciaturaMaterias.OptionsBehavior.Editable = false;
             this.gridView_licenciaturaMaterias.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
@@ -198,25 +210,79 @@
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(71, 19);
+            this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Materias";
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.labelControl1);
+            this.layoutControl1.Controls.Add(this.navBarControl1);
+            this.layoutControl1.Controls.Add(this.gridControl_licenciaturaMaterias);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1122, 613);
+            this.layoutControl1.TabIndex = 3;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1122, 613);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridControl_licenciaturaMaterias;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(826, 570);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.navBarControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(826, 23);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(276, 570);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.labelControl1;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(1102, 23);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // catalogoLicenciaturaMaterias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 388);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.gridControl_licenciaturaMaterias);
-            this.Controls.Add(this.navBarControl1);
+            this.ClientSize = new System.Drawing.Size(1122, 613);
+            this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoLicenciaturaMaterias.IconOptions.SvgImage")));
             this.Name = "catalogoLicenciaturaMaterias";
             this.Text = "Licenciatura Materias";
+            this.Load += new System.EventHandler(this.catalogoLicenciaturaMaterias_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_licenciaturaMaterias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_licenciaturaMaterias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -239,5 +305,10 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_export;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

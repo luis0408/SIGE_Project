@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,20 +21,27 @@ namespace SIGE_Project.Catalogo
             InitializeComponent();
             objGrupos = new ClsGrupos();
             nuevo = true;
-        }
 
-        //public DatosGrupo(int _idGrupo, char _grupo, int _cveLicenciatura, int _idGeneracion, int _estadoGrupo)
-        //{
-        //    InitializeComponent();
-        //    objGrupos = new ClsGrupos();
-        //    objGrupos.idGrupo = _idGrupo;
-        //    objGrupos.grupo = _grupo;
-        //    objGrupos.cveLicenciatura = _cveLicenciatura;
-        //    objGrupos.idGeneracion = _idGeneracion;
-        //    objGrupos.estadoGrupo = _estadoGrupo;
-        //    setValores();
-        //    nuevo = false;
-        //}
+        }
+        public DatosGrupos(int _idGrupo, int _alumnos, string _cveLicenciatura, int _idGeneracion, int _estadoGrup, int _semestre, string _grupo )
+        {
+            InitializeComponent();
+            objGrupos = new ClsGrupos();
+            nuevo = false;
+
+            objGrupos.idGrupo = _idGrupo;
+            objGrupos.alumnos = _alumnos;
+            objGrupos.cveLicenciatura= _cveLicenciatura;
+            objGrupos.idGeneracion= _idGeneracion;
+            objGrupos.estadoGrupo = _estadoGrup;
+            objGrupos.idSemestre = _semestre;
+            objGrupos.grupo = _grupo;
+
+            setValores();
+
+        }
+        
+
 
         private void llenarLookups()
         {
@@ -41,11 +49,11 @@ namespace SIGE_Project.Catalogo
             lookUpEdit_generacion.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idGeneracion,CONCAT(anioInicio,'-',anioFin)as descripcion from SIGE_Catalogo_Generaciones where estado=1 order by idGeneracion desc");
             lookUpEdit_generacion.Properties.DisplayMember = "descripcion";
             lookUpEdit_generacion.Properties.ValueMember = "idGeneracion";
-            
+
             ////CICLO ESCOLAR
-            //lookUpEdit_cicloEscolar.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idCicloEscolar,CONCAT(anioInicio,'-',anioFin)as descripcion from [SIGE_Catalogo_CicloEscolar] where estado=1 order by idCicloEscolar desc");
-            //lookUpEdit_cicloEscolar.Properties.DisplayMember = "descripcion";
-            //lookUpEdit_cicloEscolar.Properties.ValueMember = "idCicloEscolar";
+            lookUpEdit_semestre.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idSemestre,descripcion from [SIGE_Catalogo_Semestres] where estado=1 order by idSemestre desc");
+            lookUpEdit_semestre.Properties.DisplayMember = "descripcion";
+            lookUpEdit_semestre.Properties.ValueMember = "idSemestre";
 
 
             ////LICENCIATURA
@@ -58,46 +66,17 @@ namespace SIGE_Project.Catalogo
         }
         private void setValores()
         {
-            //////ESTE METODO SE OCUPA PARA COLOCAR LOS VALORES EN LOS CONTROLES 
-            //spinEdit_grupo.Text = objGrupos.grupo;
-            //lookUpEdit_licenciatura.Text = Convert.ToInt32(objGrupos.cveLicenciatura).ToString();
-            //lookUpEdit_generacion.Text = Convert.ToInt32(objGrupos.idGeneracion).ToString();
-            //checkEdit_estado.Checked = objGrupos.estadoGrupo == 1 ? true : false;
-
-            //spinEdit_grupo.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE MEDIO
+            ////ESTE METODO SE OCUPA PARA COLOCAR LOS VALORES EN LOS CONTROLES 
+            spinEdit_numAlumnos.Text = objGrupos.alumnos.ToString();
+            lookUpEdit_licenciatura.Text = objGrupos.cveLicenciatura.ToString();
+            lookUpEdit_generacion.Text = objGrupos.idGeneracion.ToString();
+            lookUpEdit_semestre.Text = objGrupos.idSemestre.ToString();
+            checkEdit_estado.Checked = objGrupos.estadoGrupo == 1 ? true : false;
+            textEdit_grupo.Text = objGrupos.grupo;
+            textEdit_idGrupo.ReadOnly = true;///SE BLOQUEA CAMPO DE CLAVE 
+            
         }
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            //if (string.IsNullOrEmpty(textEdit_claveGenero.Text))
-            //{
-            //    XtraMessageBox.Show("Ingrese una clave para el genero.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //if (string.IsNullOrEmpty(memoEdit_descripcion.Text))
-            //{
-            //    XtraMessageBox.Show("Ingrese una descripción para el genero.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //objGrupos.grupo = Convert.ToInt32(spinEdit_grupo.Text);
-            //objGrupos.cveLicenciatura = Convert.ToInt32(lookUpEdit_licenciatura.Text);
-            //objGrupos.idGeneracion = Convert.ToInt32(lookUpEdit_generacion.Text);
-            //objGrupos.estadoGrupo = checkEdit_estado.Checked == true ? 1 : 0;
-
-            //int result = nuevo == true ? objGrupos.insertarDatosGrupo() : objGrupos.updateDescGrupo();
-            //if (result == 1)
-            //{
-            //    XtraMessageBox.Show("Los datos se guardarón correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    this.DialogResult = DialogResult.OK;
-            //    this.Close();
-
-            //}
-            //else
-            //{
-            //    XtraMessageBox.Show("Se generó un error al insertar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //}
-        }
+        
         private void simpleButton_cancelar_Click(object sender, EventArgs e)
         {
             if (XtraMessageBox.Show("¿Esta seguro de querer cerrar esta ventana sin guardar los cambios?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -109,6 +88,63 @@ namespace SIGE_Project.Catalogo
         private void lookUpEdit_generacion_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DatosGrupos_Load(object sender, EventArgs e)
+        {
+            llenarLookups();
+        }
+
+        private void simpleButton_aceptar_Click(object sender, EventArgs e)
+        {
+
+            if (lookUpEdit_generacion.EditValue==null)
+            {
+                XtraMessageBox.Show("Seleccione la generación a la que pertenecera el grupo.", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (lookUpEdit_licenciatura.EditValue==null)
+            {
+                XtraMessageBox.Show("Seleccione la licenciatura del grupo.", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (lookUpEdit_semestre.EditValue==null)
+            {
+                XtraMessageBox.Show("Seleccione el semestre destinado para el grupo.", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Convert.ToInt32(spinEdit_numAlumnos.EditValue)<=0)
+            {
+                XtraMessageBox.Show("El número de alumnos debe ser mayor a cero.", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(textEdit_grupo.Text))
+            {
+                XtraMessageBox.Show("Ingrese la descripción del grupo (Ejem. 'A,B,C,etc.')", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int idGrupo = nuevo==true?0:Convert.ToInt32(textEdit_idGrupo.Text);
+            string cveLicenciatura = lookUpEdit_licenciatura.EditValue.ToString();
+            int idGeneracion= Convert.ToInt32(lookUpEdit_generacion.EditValue);
+            int idSemestre= Convert.ToInt32(lookUpEdit_semestre.EditValue);
+            int alumnos = Convert.ToInt32(spinEdit_numAlumnos.EditValue);
+            int estado = checkEdit_estado.Checked == true ? 1 : 0;
+            string grupo = textEdit_grupo.Text;
+            objGrupos.setDatosGrupo(idGrupo, alumnos, cveLicenciatura, idGeneracion, estado,idSemestre,grupo);
+            int result = nuevo==true?objGrupos.insertarDatosGrupo():objGrupos.updateDescGrupo();
+            if (result !=0)
+            {
+                XtraMessageBox.Show("Los datos se ingresaron correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
+            }
+            else
+            {
+                XtraMessageBox.Show("Ocurrió un error al intentar ingresar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
         }
     }
 }

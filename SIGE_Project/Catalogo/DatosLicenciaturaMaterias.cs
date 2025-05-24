@@ -38,7 +38,7 @@ namespace SIGE_Project.Catalogo
         {
             textEdit_cveMateria.Text = objLicenciaturaMaterias.cveMateria;
             textEdit_descripcion.Text = objLicenciaturaMaterias.descripcion;
-            lookUpEdit_cveLicenciatura.Text = objLicenciaturaMaterias.cveLicenciatura;
+            lookUpEdit_cveLicenciatura.EditValue = objLicenciaturaMaterias.cveLicenciatura;
             checkEdit_status.Checked = objLicenciaturaMaterias.estado == 1 ? true : false;
         }
 
@@ -62,7 +62,7 @@ namespace SIGE_Project.Catalogo
 
             objLicenciaturaMaterias.cveMateria = textEdit_cveMateria.Text;
             objLicenciaturaMaterias.descripcion = textEdit_descripcion.Text;
-            objLicenciaturaMaterias.cveLicenciatura = lookUpEdit_cveLicenciatura.Text;
+            objLicenciaturaMaterias.cveLicenciatura = lookUpEdit_cveLicenciatura.EditValue.ToString();
             objLicenciaturaMaterias.estado = checkEdit_status.Checked == true ? 1 : 0;
 
             int result = nuevo == true ? objLicenciaturaMaterias.insertDatoLicenciaturaMaterias() : objLicenciaturaMaterias.updateDatoLicenciaturaMaterias();
@@ -87,6 +87,14 @@ namespace SIGE_Project.Catalogo
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
+        }
+
+        private void DatosLicenciaturaMaterias_Load(object sender, EventArgs e)
+        {
+            ////LICENCIATURA
+            lookUpEdit_cveLicenciatura.Properties.DataSource = Utilerias.llenarlookupeditvalue("select cveLicenciatura,descripcionLicenciatura as descripcion FROM [SIGE_Catalogo_Licenciatura] where estado=1");
+            lookUpEdit_cveLicenciatura.Properties.DisplayMember = "descripcion";
+            lookUpEdit_cveLicenciatura.Properties.ValueMember = "cveLicenciatura";
         }
     }
 }

@@ -45,6 +45,9 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.textEdit_idGeneracion = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit_status.Properties)).BeginInit();
@@ -61,10 +64,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_idGeneracion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.textEdit_idGeneracion);
             this.dataLayoutControl1.Controls.Add(this.labelControl1);
             this.dataLayoutControl1.Controls.Add(this.checkEdit_status);
             this.dataLayoutControl1.Controls.Add(this.simpleButton_cancel);
@@ -74,6 +81,7 @@
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
+            this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(2498, 0, 650, 400);
             this.dataLayoutControl1.Root = this.Root;
             this.dataLayoutControl1.Size = new System.Drawing.Size(530, 170);
             this.dataLayoutControl1.TabIndex = 0;
@@ -102,7 +110,7 @@
             // simpleButton_cancel
             // 
             this.simpleButton_cancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_cancel.ImageOptions.SvgImage")));
-            this.simpleButton_cancel.Location = new System.Drawing.Point(262, 83);
+            this.simpleButton_cancel.Location = new System.Drawing.Point(262, 107);
             this.simpleButton_cancel.Name = "simpleButton_cancel";
             this.simpleButton_cancel.Size = new System.Drawing.Size(256, 36);
             this.simpleButton_cancel.StyleController = this.dataLayoutControl1;
@@ -113,7 +121,7 @@
             // simpleButton_agree
             // 
             this.simpleButton_agree.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton_agree.ImageOptions.SvgImage")));
-            this.simpleButton_agree.Location = new System.Drawing.Point(12, 83);
+            this.simpleButton_agree.Location = new System.Drawing.Point(12, 107);
             this.simpleButton_agree.Name = "simpleButton_agree";
             this.simpleButton_agree.Size = new System.Drawing.Size(246, 36);
             this.simpleButton_agree.StyleController = this.dataLayoutControl1;
@@ -124,7 +132,7 @@
             // dateEdit_anioInicio
             // 
             this.dateEdit_anioInicio.EditValue = null;
-            this.dateEdit_anioInicio.Location = new System.Drawing.Point(71, 35);
+            this.dateEdit_anioInicio.Location = new System.Drawing.Point(71, 59);
             this.dateEdit_anioInicio.Name = "dateEdit_anioInicio";
             this.dateEdit_anioInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -147,7 +155,7 @@
             // dateEdit_anioFin
             // 
             this.dateEdit_anioFin.EditValue = null;
-            this.dateEdit_anioFin.Location = new System.Drawing.Point(71, 59);
+            this.dateEdit_anioFin.Location = new System.Drawing.Point(71, 83);
             this.dateEdit_anioFin.Name = "dateEdit_anioFin";
             this.dateEdit_anioFin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -179,7 +187,9 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.emptySpaceItem2,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.emptySpaceItem3});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(530, 170);
             this.Root.TextVisible = false;
@@ -187,33 +197,29 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dateEdit_anioInicio;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 47);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(365, 24);
             this.layoutControlItem1.Text = "Año Inicio";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(47, 13);
             // 
             // emptySpaceItem1
             // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 111);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 135);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(510, 39);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(510, 15);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.dateEdit_anioFin;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 47);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 71);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(365, 24);
             this.layoutControlItem2.Text = "Año Fin";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(47, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.simpleButton_agree;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 71);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 95);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(250, 40);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -222,7 +228,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton_cancel;
-            this.layoutControlItem4.Location = new System.Drawing.Point(250, 71);
+            this.layoutControlItem4.Location = new System.Drawing.Point(250, 95);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(260, 40);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -233,17 +239,15 @@
             this.layoutControlItem5.Control = this.checkEdit_status;
             this.layoutControlItem5.Location = new System.Drawing.Point(365, 23);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(145, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(145, 48);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(365, 47);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(365, 71);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(145, 24);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
@@ -254,6 +258,29 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // textEdit_idGeneracion
+            // 
+            this.textEdit_idGeneracion.Location = new System.Drawing.Point(71, 35);
+            this.textEdit_idGeneracion.Name = "textEdit_idGeneracion";
+            this.textEdit_idGeneracion.Properties.ReadOnly = true;
+            this.textEdit_idGeneracion.Size = new System.Drawing.Size(119, 20);
+            this.textEdit_idGeneracion.StyleController = this.dataLayoutControl1;
+            this.textEdit_idGeneracion.TabIndex = 10;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.textEdit_idGeneracion;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(182, 24);
+            this.layoutControlItem7.Text = "Id:";
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.Location = new System.Drawing.Point(182, 23);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(183, 24);
+            // 
             // DatosGeneracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +289,7 @@
             this.Controls.Add(this.dataLayoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DatosGeneracion.IconOptions.SvgImage")));
             this.Name = "DatosGeneracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos Generacion";
             this.Load += new System.EventHandler(this.DatosGeneracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
@@ -280,6 +308,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_idGeneracion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +333,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.DateEdit dateEdit_anioInicio;
         private DevExpress.XtraEditors.DateEdit dateEdit_anioFin;
+        private DevExpress.XtraEditors.TextEdit textEdit_idGeneracion;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
     }
 }

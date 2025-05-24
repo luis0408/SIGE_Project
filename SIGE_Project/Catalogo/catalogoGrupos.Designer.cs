@@ -43,6 +43,17 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -59,9 +70,10 @@
             this.layoutControl1.Controls.Add(this.gridControl_grupos);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(777, 630);
+            this.layoutControl1.Size = new System.Drawing.Size(938, 550);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -77,10 +89,11 @@
             this.navBarItem_editar,
             this.navBarItem_activarDesactivar,
             this.navBarItem_exportar});
-            this.navBarControl1.Location = new System.Drawing.Point(562, 12);
+            this.navBarControl1.Location = new System.Drawing.Point(680, 12);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 203;
-            this.navBarControl1.Size = new System.Drawing.Size(203, 606);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 246;
+            this.navBarControl1.Size = new System.Drawing.Size(246, 526);
             this.navBarControl1.TabIndex = 5;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -98,28 +111,29 @@
             // navBarItem_actualizar
             // 
             this.navBarItem_actualizar.Caption = "Actualizar";
-            this.navBarItem_actualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
+            this.navBarItem_actualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_actualizar.ImageOptions.SvgImage")));
             this.navBarItem_actualizar.Name = "navBarItem_actualizar";
             this.navBarItem_actualizar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_actualizar_LinkClicked);
             // 
             // navBarItem_nuevo
             // 
             this.navBarItem_nuevo.Caption = "Nuevo";
-            this.navBarItem_nuevo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
+            this.navBarItem_nuevo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_nuevo.ImageOptions.SvgImage")));
             this.navBarItem_nuevo.Name = "navBarItem_nuevo";
             this.navBarItem_nuevo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_nuevo_LinkClicked);
             // 
             // navBarItem_editar
             // 
             this.navBarItem_editar.Caption = "Editar";
-            this.navBarItem_editar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem3.ImageOptions.SvgImage")));
+            this.navBarItem_editar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_editar.ImageOptions.SvgImage")));
             this.navBarItem_editar.Name = "navBarItem_editar";
+            this.navBarItem_editar.Visible = false;
             this.navBarItem_editar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_editar_LinkClicked);
             // 
             // navBarItem_activarDesactivar
             // 
             this.navBarItem_activarDesactivar.Caption = "Activar/Desactivar";
-            this.navBarItem_activarDesactivar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
+            this.navBarItem_activarDesactivar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_activarDesactivar.ImageOptions.SvgImage")));
             this.navBarItem_activarDesactivar.Name = "navBarItem_activarDesactivar";
             this.navBarItem_activarDesactivar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_activarDesactivar_LinkClicked);
             // 
@@ -134,24 +148,41 @@
             // navBarItem_exportar
             // 
             this.navBarItem_exportar.Caption = "Exportar";
-            this.navBarItem_exportar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
+            this.navBarItem_exportar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem_exportar.ImageOptions.SvgImage")));
             this.navBarItem_exportar.Name = "navBarItem_exportar";
             this.navBarItem_exportar.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_exportar_LinkClicked);
             // 
             // gridControl_grupos
             // 
+            this.gridControl_grupos.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl_grupos.Location = new System.Drawing.Point(12, 12);
             this.gridControl_grupos.MainView = this.gridView_grupos;
+            this.gridControl_grupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl_grupos.Name = "gridControl_grupos";
-            this.gridControl_grupos.Size = new System.Drawing.Size(546, 606);
+            this.gridControl_grupos.Size = new System.Drawing.Size(664, 526);
             this.gridControl_grupos.TabIndex = 4;
             this.gridControl_grupos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_grupos});
             // 
             // gridView_grupos
             // 
+            this.gridView_grupos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11});
+            this.gridView_grupos.DetailHeight = 284;
             this.gridView_grupos.GridControl = this.gridControl_grupos;
             this.gridView_grupos.Name = "gridView_grupos";
+            this.gridView_grupos.OptionsBehavior.ReadOnly = true;
+            this.gridView_grupos.OptionsEditForm.PopupEditFormWidth = 686;
             this.gridView_grupos.OptionsView.ShowGroupPanel = false;
             // 
             // Root
@@ -162,7 +193,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(777, 630);
+            this.Root.Size = new System.Drawing.Size(938, 550);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -170,26 +201,105 @@
             this.layoutControlItem1.Control = this.gridControl_grupos;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(550, 610);
+            this.layoutControlItem1.Size = new System.Drawing.Size(668, 530);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.navBarControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(550, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(668, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(207, 610);
+            this.layoutControlItem2.Size = new System.Drawing.Size(250, 530);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Id";
+            this.gridColumn1.FieldName = "idGrupo";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Grupo";
+            this.gridColumn2.FieldName = "grupo";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Clave licenciatura";
+            this.gridColumn3.FieldName = "cvLicenciatura";
+            this.gridColumn3.Name = "gridColumn3";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Id generación";
+            this.gridColumn4.FieldName = "idGeneracion";
+            this.gridColumn4.Name = "gridColumn4";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Id semestre";
+            this.gridColumn5.FieldName = "idSemestre";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "idEstado";
+            this.gridColumn6.FieldName = "estado";
+            this.gridColumn6.Name = "gridColumn6";
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Alumnos";
+            this.gridColumn7.FieldName = "numAlumnos";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 3;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Estado";
+            this.gridColumn8.FieldName = "estadoLetra";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 5;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Licenciatura";
+            this.gridColumn9.FieldName = "descripcionLicenciatura";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 2;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Generación";
+            this.gridColumn10.FieldName = "descGen";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 4;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Semestre";
+            this.gridColumn11.FieldName = "semestreDesc";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 0;
+            // 
             // catalogoGrupos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 630);
+            this.ClientSize = new System.Drawing.Size(938, 550);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("catalogoGrupos.IconOptions.SvgImage")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "catalogoGrupos";
             this.Text = "Catálogo grupos";
             this.Load += new System.EventHandler(this.catalogoGrupos_Load);
@@ -221,5 +331,16 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem_activarDesactivar;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem_exportar;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
     }
 }

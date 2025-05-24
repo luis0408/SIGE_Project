@@ -19,7 +19,9 @@ namespace SIGE_Project.Catalogo
         Utilerias util = new Utilerias();
         public catalogoGeneraciones()
         {
+            
             InitializeComponent();
+            consultarDatos();
         }
 
         private void DatosGeneracion_Load(object sender, EventArgs e)
@@ -66,7 +68,8 @@ namespace SIGE_Project.Catalogo
             int anioInicio = Convert.ToInt32(gridView_generacion.GetRowCellValue(gridView_generacion.FocusedRowHandle, "anioInicio").ToString());
             int anioFin = Convert.ToInt32(gridView_generacion.GetRowCellValue(gridView_generacion.FocusedRowHandle, "anioFin").ToString());
             int estado = Convert.ToInt32(gridView_generacion.GetRowCellValue(gridView_generacion.FocusedRowHandle, "estado").ToString());
-            DatosGeneracion objGeneracion = new DatosGeneracion(anioInicio, anioFin, estado);
+            int idGeneracion = Convert.ToInt32(gridView_generacion.GetRowCellValue(gridView_generacion.FocusedRowHandle, "idGeneracion").ToString());
+            DatosGeneracion objGeneracion = new DatosGeneracion(anioInicio, anioFin, estado,idGeneracion);
             objGeneracion.ShowDialog();
             if (objGeneracion.DialogResult == DialogResult.OK)
                 consultarDatos();
@@ -157,6 +160,11 @@ namespace SIGE_Project.Catalogo
         private void navBarItem_export_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             exportarDoc(gridView_generacion, gridControl_generacion, "CatalogoGeneraciones");
+        }
+
+        private void catalogoGeneraciones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
