@@ -544,6 +544,24 @@
     <Compile Include="Sistemas\Alumnos\datosAlumnos.Designer.cs">
       <DependentUpon>datosAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sistemas\Calificaciones\administrarCalificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistemas\Calificaciones\administrarCalificaciones.Designer.cs">
+      <DependentUpon>administrarCalificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistemas\capturarAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistemas\capturarAsistencias.Designer.cs">
+      <DependentUpon>capturarAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistemas\Configuraciones\asignarGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistemas\Configuraciones\asignarGrupos.Designer.cs">
+      <DependentUpon>asignarGrupos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sistemas\Reportes\ListaAsistencia.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -782,6 +800,15 @@
     <EmbeddedResource Include="Sistemas\Alumnos\datosAlumnos.resx">
       <DependentUpon>datosAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\Calificaciones\administrarCalificaciones.resx">
+      <DependentUpon>administrarCalificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\capturarAsistencias.resx">
+      <DependentUpon>capturarAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistemas\Configuraciones\asignarGrupos.resx">
+      <DependentUpon>asignarGrupos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sistemas\Reportes\ListaAsistencia.resx">
       <DependentUpon>ListaAsistencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -917,6 +944,7 @@
     <None Include="Resources\horizontalSIGE_simple2.png" />
     <None Include="Resources\IESE_horizontal.png" />
     <None Include="Resources\horizontalSIGE_blanco.png" />
+    <None Include="Resources\2025-05-30 19_12_41-8vo. Semestre[1].pdf - Adobe Acrobat Pro %2864-bit%29.png" />
     <Content Include="Resources\logo IESE.png" />
     <None Include="Resources\SIGE.png" />
     <None Include="Resources\logo IESE1.png" />

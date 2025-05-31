@@ -49,6 +49,8 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lookUpEdit_modalidad = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_grupo.Properties)).BeginInit();
@@ -68,10 +70,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_modalidad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lookUpEdit_modalidad);
             this.layoutControl1.Controls.Add(this.textEdit_grupo);
             this.layoutControl1.Controls.Add(this.textEdit_idGrupo);
             this.layoutControl1.Controls.Add(this.lookUpEdit_generacion);
@@ -199,7 +204,7 @@
             this.lookUpEdit_semestre.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Semestre")});
             this.lookUpEdit_semestre.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.lookUpEdit_semestre.Size = new System.Drawing.Size(458, 20);
+            this.lookUpEdit_semestre.Size = new System.Drawing.Size(179, 20);
             this.lookUpEdit_semestre.StyleController = this.layoutControl1;
             this.lookUpEdit_semestre.TabIndex = 10;
             // 
@@ -216,7 +221,8 @@
             this.layoutControl_generacion,
             this.layoutControlItem3,
             this.layoutControlItem2,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem9});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(577, 227);
             this.Root.TextVisible = false;
@@ -262,7 +268,7 @@
             this.layoutControlItem1.CustomizationFormText = "Licenciatura";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(557, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(278, 24);
             this.layoutControlItem1.Text = "Semestre:";
             // 
             // layoutControl_generacion
@@ -298,6 +304,26 @@
             this.layoutControlItem8.Size = new System.Drawing.Size(278, 24);
             this.layoutControlItem8.Text = "Grupo:";
             // 
+            // lookUpEdit_modalidad
+            // 
+            this.lookUpEdit_modalidad.Location = new System.Drawing.Point(385, 84);
+            this.lookUpEdit_modalidad.Name = "lookUpEdit_modalidad";
+            this.lookUpEdit_modalidad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit_modalidad.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descripcion", "Modalidad")});
+            this.lookUpEdit_modalidad.Size = new System.Drawing.Size(180, 20);
+            this.lookUpEdit_modalidad.StyleController = this.layoutControl1;
+            this.lookUpEdit_modalidad.TabIndex = 14;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.lookUpEdit_modalidad;
+            this.layoutControlItem9.Location = new System.Drawing.Point(278, 72);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(279, 24);
+            this.layoutControlItem9.Text = "Modalidad:";
+            // 
             // DatosGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +356,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_modalidad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +384,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.TextEdit textEdit_grupo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit_modalidad;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

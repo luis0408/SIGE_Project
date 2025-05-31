@@ -90,7 +90,7 @@ namespace SIGE_Project.Catalogo
             string idGrupo = gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "idGrupo").ToString();
             int estado = Convert.ToInt32(gridView_grupos.GetRowCellValue(gridView_grupos.FocusedRowHandle, "estado").ToString());
             estado = estado == 1 ? 0 : 1;///SE CAMBIA AL VALOR CONTRARIO DEL VALOR ORIGINAL 
-            int resul = util.EjecutarQueryNonQuery("update SIGE_Catalogo_Grupos set estado=" + estado + " where idGrupo=" + idGrupo + "'");
+            int resul = util.EjecutarQueryNonQuery("update SIGE_Catalogo_Grupos set estado=" + estado + " where idGrupo=" + idGrupo);
             if (resul != 0)
             {
                 XtraMessageBox.Show("El registro se actualizó correctamente.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);

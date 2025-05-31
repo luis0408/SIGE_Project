@@ -15,10 +15,11 @@ namespace SIGE_Project.Catalogo
         public int estadoGrupo { set; get; }
         public int idSemestre {  set; get; }  
         public string grupo { set; get; }   
+        public string cveModalidad { get; set; }
 
         public ClsGrupos() { }
 
-        public void setDatosGrupo(int _idGrupo, int _alumnos, string _cveLicenciatura, int _idGeneracion, int _estadoGrupo,int _semestre, string _grupo)
+        public void setDatosGrupo(int _idGrupo, int _alumnos, string _cveLicenciatura, int _idGeneracion, int _estadoGrupo,int _semestre, string _grupo, string _cveModalidad)
         {
             idGrupo = _idGrupo;
             alumnos = _alumnos;
@@ -27,6 +28,8 @@ namespace SIGE_Project.Catalogo
             estadoGrupo = _estadoGrupo;
             idSemestre = _semestre;   
             grupo = _grupo; 
+            cveLicenciatura= _cveLicenciatura;
+            cveModalidad = _cveModalidad;
         }
 
         object[] datos = { };
@@ -34,16 +37,16 @@ namespace SIGE_Project.Catalogo
 
         public int insertarDatosGrupo()
         {
-            datos = new object[] {  grupo, cveLicenciatura, idGeneracion, idSemestre, estadoGrupo,alumnos };
-            parametros = new string[] { "@grupo", "@cveLicenciatura", "@idGeneracion", "@idSemestre", "@estado", "@numAlumnos" };
+            datos = new object[] {  grupo, cveLicenciatura, idGeneracion, idSemestre, estadoGrupo,alumnos,cveModalidad };
+            parametros = new string[] { "@grupo", "@cveLicenciatura", "@idGeneracion", "@idSemestre", "@estado", "@numAlumnos", "@cveModalidad" };
             int result = Utilerias.ejecutarprocedimiento("[SIGE_INSERTAR_GRUPO]", datos, parametros);
             return result;
         }
 
         public int updateDescGrupo()
         {
-            datos = new object[] {idGrupo, grupo, cveLicenciatura, idGeneracion, idSemestre, estadoGrupo, alumnos };
-            parametros = new string[] { "@idGrupo", "@grupo", "@cveLicenciatura", "@idGeneracion", "@idSemestre", "@estado", "@numAlumnos" };
+            datos = new object[] {idGrupo, grupo, cveLicenciatura, idGeneracion, idSemestre, estadoGrupo, alumnos,cveModalidad };
+            parametros = new string[] { "@idGrupo", "@grupo", "@cveLicenciatura", "@idGeneracion", "@idSemestre", "@estado", "@numAlumnos", "@cveModalidad" };
             int result = Utilerias.ejecutarprocedimiento("[SIGE_ACTUALIZAR_GRUPO]", datos, parametros);
             return result;
         }

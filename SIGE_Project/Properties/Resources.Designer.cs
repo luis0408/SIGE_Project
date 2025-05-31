@@ -71,6 +71,16 @@ namespace SIGE_Project.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2025_05_30_19_12_41_8vo__Semestre_1__pdf___Adobe_Acrobat_Pro__64_bit_ {
+            get {
+                object obj = ResourceManager.GetObject("2025-05-30 19_12_41-8vo. Semestre[1].pdf - Adobe Acrobat Pro (64-bit)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage actions_calendar {

@@ -62,6 +62,11 @@ namespace SIGE_Project.Catalogo
             lookUpEdit_licenciatura.Properties.ValueMember = "cveLicenciatura";
 
 
+            ////MODALIDAD
+            lookUpEdit_modalidad.Properties.DataSource = Utilerias.llenarlookupeditvalue("select [cveModalidad],[descripcion] FROM [SIGE_Catalogo_Modalidad] WHERE estado=1");
+            lookUpEdit_modalidad.Properties.DisplayMember = "descripcion";
+            lookUpEdit_modalidad.Properties.ValueMember = "cveModalidad";
+
 
         }
         private void setValores()
@@ -123,6 +128,11 @@ namespace SIGE_Project.Catalogo
                 XtraMessageBox.Show("Ingrese la descripción del grupo (Ejem. 'A,B,C,etc.')", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (lookUpEdit_modalidad.EditValue==null)
+            {
+                XtraMessageBox.Show("Seleccione la modalidad a la que pertenecera este grupo", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             int idGrupo = nuevo==true?0:Convert.ToInt32(textEdit_idGrupo.Text);
             string cveLicenciatura = lookUpEdit_licenciatura.EditValue.ToString();
@@ -131,7 +141,8 @@ namespace SIGE_Project.Catalogo
             int alumnos = Convert.ToInt32(spinEdit_numAlumnos.EditValue);
             int estado = checkEdit_estado.Checked == true ? 1 : 0;
             string grupo = textEdit_grupo.Text;
-            objGrupos.setDatosGrupo(idGrupo, alumnos, cveLicenciatura, idGeneracion, estado,idSemestre,grupo);
+            string cveModalidad= lookUpEdit_modalidad.EditValue.ToString();
+            objGrupos.setDatosGrupo(idGrupo, alumnos, cveLicenciatura, idGeneracion, estado,idSemestre,grupo,cveModalidad);
             int result = nuevo==true?objGrupos.insertarDatosGrupo():objGrupos.updateDescGrupo();
             if (result !=0)
             {

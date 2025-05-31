@@ -19,6 +19,7 @@ namespace SIGE_Project.Catalogo
         public catalogoLicenciatura()
         {
             InitializeComponent();
+            consultarDatos();
         }
 
         private void catalogoLicenciatura_Load(object sender, EventArgs e)

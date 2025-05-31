@@ -20,9 +20,33 @@ namespace SIGE_Project.Sistemas.Alumnos
             InitializeComponent();
             objAlumno = new clsAlumno();
             nuevoRegistro = true;
-            nuevoRegistro = true;
         }
+        public datosAlumnos(int _idAlumno, string _nombres, string _apellidoPaterno, string _apellidoMaterno,
+                            int _estadoAlumno, string _cvModalidad, string _cveLicenciatura, int _idGeneracion, int _idSemestre
+                            , string _curp, int _edad, string _noControl, string _email)
+        {
+            InitializeComponent();
+            objAlumno = new clsAlumno();
+            nuevoRegistro = false;
 
+
+
+            ////SE SETAN VALORES EN EL FORM
+            textEdit_idAlumno.Text = _idAlumno.ToString();
+            textEdit_nombre.Text = _nombres;
+            textEdit_apellidoPaterno.Text = _apellidoPaterno;
+            textEdit_apellidoMaterno.Text = _apellidoMaterno;
+            lookUpEdit_estadoAlumno.EditValue=_estadoAlumno;
+            lookUpEdit_modalidad.EditValue = _cvModalidad;
+            lookUpEdit_licenciatura.EditValue = _cveLicenciatura;
+            lookUpEdit_generacion.EditValue=_idGeneracion.ToString();
+            lookUpEdit_semestre.EditValue=_idSemestre.ToString();
+            textEdit_email.Text = _email;   
+
+
+
+        }
+        
         private void datosAlumnos_Load(object sender, EventArgs e)
         {
             ////LICENCIATURA
@@ -49,6 +73,7 @@ namespace SIGE_Project.Sistemas.Alumnos
             lookUpEdit_generacion.Properties.DataSource = Utilerias.llenarlookupeditvalue("select idGeneracion,CONCAT(anioInicio,'-',anioFin)as descripcion From SIGE_Catalogo_Generaciones where estado=1");
             lookUpEdit_generacion.Properties.DisplayMember = "descripcion";
             lookUpEdit_generacion.Properties.ValueMember = "idGeneracion";
+            textEdit_nombre.Focus();
         }
 
         private void simpleButton_cancelar_Click(object sender, EventArgs e)
