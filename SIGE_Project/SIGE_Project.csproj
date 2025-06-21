@@ -586,6 +586,12 @@
     <Compile Include="Usuarios\CambiarContrasenia.Designer.cs">
       <DependentUpon>CambiarContrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\RecuperarContrasenia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -820,6 +826,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\CambiarContrasenia.resx">
       <DependentUpon>CambiarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\RecuperarContrasenia.resx">
       <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
